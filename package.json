@@ -1,0 +1,30 @@
+{
+  "name": "myehr",
+  "version": "1.0.1",
+  "main": "myehr.html",
+  "description": "Shivam My EHR APP",
+  "dependencies": {
+  "cordova-android":"^8.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivam-medisoft/MyEHR.git"
+  },
+  "keywords": [
+    "crm"
+  ],
+  "author": "Shivam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shivam-medisoft/MyEHR/issues"
+  },
+  "homepage": "https://github.com/shivam-medisoft/MyEHR#readme",
+  "cordova": {
+    "platforms": [
+      "ios"
+    ]
+  }
+  
+}
