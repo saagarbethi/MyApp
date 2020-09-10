@@ -1,0 +1,371 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13 Aug, 2018, 2:44:47 PM
+    Author     : shivam
+*/
+    .datefiltrow{
+       position: absolute;
+        width: 100px;
+       background: #F5F5F5;
+        z-index: 999;
+        top: 0px;
+        bottom: 0px;
+        padding-bottom:40px;
+        padding-top: 60px;
+        vertical-align: top;
+        box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.1);
+        overflow: auto;
+    }
+    .Drscrolcontainr{
+        height: 100%;
+        overflow: auto;
+        padding-left: 100px;
+    }
+    .Drscrolcontainr .drdtailAppt{
+        display: block;
+        width: 100%;
+        float: left;
+        background: #F5F5F5;
+        padding: 4px 0px;
+    }
+   
+    .Drscrolcontainr .drdtailAppt .scandiv{
+        width: 25%;
+        float: left;
+        padding: 2px 8px;
+    }
+    .Drscrolcontainr .drdtailAppt .scandiv .lbl_txt{
+        width: 100%;
+    }
+    .Drscrolcontainr .drdtailAppt .scandiv .dtinput{
+        width: 100%;
+        border: 1px solid #EBEBEB;
+        text-align: center;
+        padding: 5px;
+        border-radius: 3px;
+        background: #FFF;
+    }
+    .Drscrolcontainr .drdtailAppt .scandiv .seldrap{
+        width: 100%;
+        border:1px solid #EBEBEB;
+        text-align: center;
+        padding: 5px;
+        border-radius: 3px;
+        background: #FFF;
+    }
+    
+    .Drscrolcontainr .slotmainDetail{
+        display: block;
+        width: 100%;
+        height: 74%;
+        overflow: auto;
+        float: left;
+    }
+    .daterow{
+        border-bottom: 1px solid #EFEFEF;
+    }
+    .daterow .iconcalender{
+        float: left;
+        display: inline-block;
+        font-size: 25px;
+        padding-left: 10px;
+        color: #367fa9;
+    }
+    .daterow .iconcalender i{}
+    .daterow .date_001{
+        width: auto;
+        float: left;
+        padding-left: 10px;
+        padding-top: 10px;
+        font-weight: 500;
+    }    
+    .daterow .day_001{
+        width: auto;
+        float: left;
+        padding-left: 10px;
+        padding-top: 10px;
+        font-weight: 500;
+    }
+    .daterow .icondateday{    }
+    .sloatrow{
+        text-align: center;
+        padding-top: 5px;
+        border-bottom: 1px solid #EFEFEF;
+        padding-bottom: 5px;
+    }
+    .btnslot{
+       cursor: pointer;
+        border: 0px;
+        font-weight: 500;
+        padding: 10px 8px;
+        font-size: 14px;
+        border-radius: 3px;
+        color: #000;
+        font-family: Roboto, Arial, sans-serif;
+        margin-bottom: 3px;
+    }
+    .sloatrow .btnslot.filslot{
+/*        background:-webkit-linear-gradient(#FFCCCC 50%, #FFC5C5 100%);
+        border: 1px solid #F69D9D;*/
+        text-decoration: line-through;
+        background: #FFFFFF;
+        color: #e61414;
+        cursor: no-drop;
+    }
+    .sloatrow .btnslot.Avlslot{
+        background: #FFF;
+        color: #3f951a;
+    }
+    
+    .drdtailAppt{
+        
+    }
+    .datefiltrow .Appdate{
+        width: 90%;
+        margin: 0px auto;
+        display: block;
+        background: #FFF;
+        margin-bottom: 5px;
+        padding: 5px;
+        border: 1px solid #E7E7E7;
+        border-radius: 3px;
+        text-align: center;
+    }
+    .Filterdiv{
+        width: 100%;
+        display: block;
+    }
+     .Filterdiv .aftbtndiv{
+        width: 100%;
+        padding: 5px;
+        padding-bottom: 0px;
+    }
+    
+    .Filterdiv .aftbtndiv .lika{
+        width: 100%;
+/*        border: 1px solid #4D8BD6;
+       background-color: #297EC2;*/
+        display: block;
+        padding: 8px 5px;
+        color: #FFF;
+        text-align: center;
+        border-radius: 3px;
+    }
+    .Filterdiv .aftbtndiv .after{
+        width: 100%;text-align: center;
+    }
+    
+/*    Appoint Css Started*/
+    
+    .shivam .ApptFixpopup{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+    }
+    .shivam .ApptFixpopup .block{
+        margin: 0px;
+        padding: 0px;
+        overflow: auto;
+        height: 100%;
+    }
+    .shivam .ApptFixpopup .block .popAppthed{
+        background: #367fa9;
+        height: 45px;
+        line-height: 45px;
+    }
+    .shivam .ApptFixpopup .block .popAppthed .closeicon_0A{
+        padding: 0px;
+        color: #FFF;
+        height: 40px;
+        width: 50px;
+        text-align: center;
+        float: right;
+    }
+    .shivam .ApptFixpopup .block .popAppthed .closeicon_0A .iconclose{
+        
+    }
+    .shivam .ApptFixpopup .popApptDetail01{
+        overflow: auto;
+    }
+    .shivam .ApptFixpopup .divbtnal_01{
+        text-align: center;
+    }
+    .shivam .ApptFixpopup .divbtnal_01 .btnsaveappt{
+        padding: 4px 30px;
+        font-size: 16px;
+        margin-top: 4px;
+        border: 1px solid #FFF;
+        outline: none;
+        background: transparent;
+        color: #FFF;
+    }
+    
+    .shivam .ApptFixpopup .popApptDetail01 .tblinfo{
+        width: 100%;
+    }
+    .shivam .ApptFixpopup .popApptDetail01 .tblinfo tr{
+        
+    }
+    .shivam .ApptFixpopup .popApptDetail01 .tblinfo tr td{
+        vertical-align: middle;
+        padding: 5px 15px;
+        border-bottom: 1px solid #EFEFEF;
+        position: relative;
+    }
+    .shivam .ApptFixpopup .popApptDetail01 .tblinfo tr td.tdleft{
+        background: #FCFCFC;
+        color: #000;
+        width: 25%;
+    }
+    .shivam .ApptFixpopup .popApptDetail01 .tblinfo tr td.tdright{
+        padding-right: 0px;
+        padding-left: 5px;
+        width: 75%;
+    }
+    .shivam .ApptFixpopup .popApptDetail01 .tblinfo tr td .mandetory{
+        position: absolute;
+        left: 4px;
+        vertical-align: middle;
+        color: #F00;
+        font-size: 20px;
+        top: 6px;
+    }
+    .shivam .ApptFixpopup .popApptDetail01 .tblinfo tr td .textbox_01{
+        padding: 5px;
+        width: 100%;
+        color: #000;
+    }
+    .shivam .ApptFixpopup .popApptDetail01 .tblinfo tr td .selcntrl{
+        padding: 5px;
+        width: 100%;
+    }
+    .shivam .ApptFixpopup .popApptDetail01 .tblinfo tr td  .srchimg{
+        position: absolute;
+        top: 8px;
+        right:5px;
+        width: 25px;
+        height: 25px;
+        z-index: 9999999;
+    }
+    .shivam .oplist .subhed_001{
+       width: 100%;
+        padding: 5px 8px;
+        background: #367fa9;
+        color: #FFF;
+        font-size: 18px; 
+    }
+     .shivam .oplist .opdetailcontnr .input-clear-button{display: none;}
+    .shivam .oplist .opdetailcontnr .item-content{
+         
+     }
+    .shivam .oplist .opdetailcontnr .item-content{
+         padding: 0px;
+    }
+    .shivam .oplist .opdetailcontnr .item-content .item-inner{
+         padding-right: 0px;
+    }
+    .shivam .oplist  .list .item-input-with-value .item-floating-label{
+        padding-left: 10px;
+    }
+    .shivam .oplist .list .item-input-wrap{
+        padding-left: 10px;
+    }
+    .shivam .oplist .frmdtdiv{
+        
+    }
+    .shivam .oplist .list input[type=text]{
+        font-size: 14px;
+    }
+    .shivam .oplist .frmdtdiv .tblfrmtodt{
+        width: 100%;
+    }
+    .shivam .oplist .frmdtdiv .tblfrmtodt tr td{
+        padding: 5px 10px;
+        border-bottom: 1px solid #EBE9E9;
+    }
+    .shivam .oplist .frmdtdiv .tblfrmtodt tr td .lbl_01dt{
+        
+    }
+    .shivam .oplist .frmdtdiv .tblfrmtodt tr td .txtdt_01{width: 100%;padding: 5px;}
+    .shivam .oplist .frmdtdiv .tblfrmtodt tr .lefttd{
+        width: 25%;
+        background: #F7F7F7;
+    }
+    .shivam .oplist .frmdtdiv .tblfrmtodt tr .righttd{
+         width: 75%;
+    }
+    .shivam .oplist .btnoplisdiv{
+      text-align: center;  
+    }  
+    .shivam .oplist .btnoplisdiv{
+        text-align: center;
+        padding: 5px;
+    }
+    .shivam .oplist .btnoplisdiv .btnrefrsh{
+        border: 0px;
+        font-size: 16px;
+        border-radius: 3px;
+        padding: 5px 10px;
+        outline: none;
+    }
+     .shivam .oplist .ListDetails{
+        border: 1px solid #F0F0F0;
+        border-bottom: 0px;
+        margin: 5px 3px;
+    }
+    .shivam .oplist .ListDetails .tbltetail{
+        width: 100%;
+        display: block;
+    }
+    .shivam .oplist .ListDetails .tbltetail .trblock{
+        display: block;
+        float: left;
+        width: 50%;
+    }
+/*    .shivam .oplist .ListDetails .tbltetail .trblock{
+        display: block;
+        float: left;
+        width: 50%;
+    }*/
+    .shivam .oplist .ListDetails .tbltetail .trblock td{
+        display: block;
+width: 50%;
+float: left;
+padding: 4px 5px;
+vertical-align: middle;
+border-bottom: 1px solid #F0F0F0;
+word-wrap: break-word;
+word-break: break-word;
+    }
+    .shivam .oplist .ListDetails .tbltetail .trblock td:nth-child(1){
+        
+    }
+     @media only screen and (max-width:800px){
+          .shivam .oplist .ListDetails .tbltetail .trblock{width: 50%;}
+    }
+     @media only screen and (max-width:590px){
+          .shivam .oplist .ListDetails .tbltetail .trblock{width: 100%;}
+    }
+    @media only screen and (max-width:620px){
+        .Drscrolcontainr .drdtailAppt .scandiv{
+            width: 50%;
+        }
+    }
+     @media only screen and (max-width:520px){
+        .shivam .ApptFixpopup .popApptDetail01 .tblinfo tr td.tdleft{width:40%;}
+        .shivam .ApptFixpopup .popApptDetail01 .tblinfo tr td.tdright{width:60%;}
+    }
+    @media only screen and (max-width:520px){
+        .shivam .oplist .frmdtdiv .tblfrmtodt tr .lefttd{ width: 35%;}
+    .shivam .oplist .frmdtdiv .tblfrmtodt tr .righttd{ width: 65%;}
+    }
+    
+    

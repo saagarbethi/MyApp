@@ -1,0 +1,679 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29 Aug, 2018, 9:49:17 AM
+    Author     : shivam
+*/
+
+    .shivam .theamesetting{
+
+    }
+    .shivam .theamesetting .navbar .homelnk{
+        width: 40px;
+        text-align: center;
+        font-size: 28px;
+    }
+    .shivam .theamesetting .navbar .homelnk .Homeicon{
+        
+    }
+    .shivam .theamesetting .cltrhemdiv{
+        display: block;
+        width: 100%;
+    }
+    .shivam .theamesetting .cltrhemdiv .inrow{
+        display: block;
+        width: 100%;
+        padding: 10px 0px;
+    }
+    .shivam .theamesetting .cltrhemdiv .inrow .inrowcol{
+        width: 33.33%;
+    float: left;
+    display: block;
+    padding: 3px 5px;
+    }
+    .shivam .theamesetting .cltrhemdiv .inrow .inrowcol .button{
+        line-height:45px;
+        height:45px;
+        font-size: 16px;
+        text-transform: capitalize;
+    }
+    .shivam .btnsuccess{
+        background-color: #449d44;
+        border-color: #255625;
+        color: #FFF;
+    }
+    .shivam .btnprimary{
+        border: 1px solid #4D8BD6;
+        background: #0679C3;
+        color: #FFF;
+    }
+    .shivam .DisFirst .noteContainer .Dtailebox .btnclse_note{
+        color: #FF0303;
+    }
+    .shivam .orderform .blockwise .Divdtl .intextbox{
+        background: #FCFCFC;
+        border: 1px solid #E4E4E4;
+    }
+    .shivam .footer_All a{
+        color: #FFF !important;
+    }
+/*==================== === Color Theme Red Strated Here ========================*/
+    .shivam.color-theme-red .navbar, .shivam.color-theme-red.navbar{
+        background: #f44336;
+    }
+    .shivam.color-theme-red .search_poupMobtemp .poppdfhed,
+    .shivam.color-theme-red .popup.popup-gridtr .block .poppdfhed,
+    .shivam.color-theme-red .ApptFixpopup .block .popAppthed,
+    .shivam.color-theme-red .popup-pdf .poppdfhed{
+        background: #f44336;
+    }
+    .shivam.color-theme-red .oplist .subhed_001,
+    .shivam.color-theme-red .orderform .blockwise .Divdtl .lblhedblck_01{
+        background-color: rgb(255,219,212) !important;
+        color: #000;
+    }
+    .shivam.color-theme-red .orderform .blockwise .Divdtl .link.popup-close.clsebtnBw{
+        color: #FF0303;
+    }
+    .shivam.color-theme-red .sheet-modal.my-sheet.IpconfigDetail .toolbar,
+    .shivam.color-theme-red .flip,
+    .shivam.color-theme-red .mobileTemplate .subhed_001,    
+    .shivam.color-theme-red .DisFirst .Headrow{
+        background: rgb(255,219,212);
+        color: #000;
+    }
+    .shivam.color-theme-red .DisFirst .Headrow .hedlbl{
+      color: #000;
+    }
+    .shivam.color-theme-red .mobileTemplate .grid_divMain .tblgrid tr td.textartd .textareainfo{
+     color: #f44336;   
+    }
+    .shivam.color-theme-red .Dis2Sceen .History .list li.accordion-item-opened .item-content{
+          background: rgb(255,219,212) !important;
+    }
+    .shivam.color-theme-red .Dis2Sceen .History .list li.accordion-item-opened .item-content .item-inner .item-title{
+         color: #000;
+    }
+    .shivam.color-theme-red  .History .list li .row .item-radio.item-content.checklbl{
+        background: transparent !important;
+    }
+    .shivam.color-theme-red .DisFirst .noteContainer .Dtailebox .name_01{
+        background: rgb(255,219,212) !important;
+        color: #000;
+    }
+    .color-theme-red .footer_All {
+        background: #F15248;
+    }
+    .shivam.color-theme-red .popup-order .gridorder .prescptiondiv{
+        background: #F15248;
+    }
+    .shivam.color-theme-red .btnsuccess{
+        background: #f44336;
+        border: 1px solid #f44336;
+    }
+    .shivam.color-theme-red .btnprimary{
+         background: #f44336;
+        border: 1px solid #f44336;
+    }
+    .shivam.color-theme-red .popover.popover-links .iconleft,
+    .shivam.color-theme-red .popup-Attachment .list .list-button .iconleft,        
+    .shivam.color-theme-red .sheet-modal_01 .sheet-modal-inner .page-content .links-list .btnDis2 .Icon_03{
+        color: #f44336;
+    }
+    .shivam.color-theme-red .sheet-modal_01 .toolbar{
+       background: #f44336;
+    }
+    .shivam.color-theme-red .popup-Note .toolbar{
+        background: #f44336;
+    }
+/*  ====================== =================================================================  */
+    
+/*==================== === Color Theme Green Strated Here ========================*/
+    .shivam.color-theme-green .navbar, .shivam.color-theme-green.navbar{
+        background: #4caf50;
+    }
+    .shivam.color-theme-green .search_poupMobtemp .poppdfhed,
+    .shivam.color-theme-green .popup.popup-gridtr .block .poppdfhed,
+    .shivam.color-theme-green .ApptFixpopup .block .popAppthed,
+    .shivam.color-theme-green .popup-pdf .poppdfhed{
+        background: #4caf50;
+    }    
+    .shivam.color-theme-green .oplist .subhed_001,
+    .shivam.color-theme-green .orderform .blockwise .Divdtl .lblhedblck_01{
+        background-color: rgb(182, 252, 180) !important;
+        color: #000;
+    }
+    .shivam.color-theme-green .orderform .blockwise .Divdtl .link.popup-close.clsebtnBw{
+        color: #FF0303;
+    }    
+    .shivam.color-theme-green .sheet-modal.my-sheet.IpconfigDetail .toolbar,
+    .shivam.color-theme-green .flip,
+    .shivam.color-theme-green .mobileTemplate .subhed_001,    
+    .shivam.color-theme-green .DisFirst .Headrow{
+        background: rgb(182, 252, 180);
+        color: #000;
+    }    
+    .shivam.color-theme-green .DisFirst .Headrow .hedlbl{
+      color: #000;
+    }
+    .shivam.color-theme-green .mobileTemplate .grid_divMain .tblgrid tr td.textartd .textareainfo{
+     color: #4caf50;   
+    }
+    .shivam.color-theme-green .Dis2Sceen .History .list li.accordion-item-opened .item-content{
+          background: rgb(182, 252, 180) !important;
+    }
+    .shivam.color-theme-green .Dis2Sceen .History .list li.accordion-item-opened .item-content .item-inner .item-title{
+         color: #000;
+    }
+    .shivam.color-theme-green  .History .list li .row .item-radio.item-content.checklbl{
+        background: transparent !important;
+    }
+    .shivam.color-theme-green .DisFirst .noteContainer .Dtailebox .name_01{
+         background-color: rgb(182, 252, 180) !important;
+         color: #000;
+    }
+    .color-theme-green .footer_All {
+        background: #00A408;
+    }
+    .shivam.color-theme-green .popup-order .gridorder .prescptiondiv{
+        background: #4caf50;
+    }
+    .shivam.color-theme-green .btnsuccess{
+        background: #4caf50;
+        border: 1px solid #4caf50;
+    }
+    .shivam.color-theme-green .btnprimary{
+         background: #4caf50;
+        border: 1px solid #4caf50;
+    }
+    .shivam.color-theme-green .popover.popover-links .iconleft,
+    .shivam.color-theme-green .popup-Attachment .list .list-button .iconleft,        
+    .shivam.color-theme-green .sheet-modal_01 .sheet-modal-inner .page-content .links-list .btnDis2 .Icon_03{
+        color: #4caf50;
+    }
+    .shivam.color-theme-green .sheet-modal_01 .toolbar{
+       background: #4caf50;
+    }
+    .shivam.color-theme-green .popup-Note .toolbar{
+        background: #4caf50;
+    }
+    .shivam.color-theme-green .my-SreachTMDetail .toolbar{
+       background: #4caf50;
+    }
+/*  ====================== =================================================================  */
+    /*    background-color: #ab06da;*/
+
+/*==================== === Color Theme Purple Strated Here ========================*/
+    .shivam.color-theme-Purple .navbar, .shivam.color-theme-pink.navbar{
+        background: #ab06da;
+    }
+    .shivam.color-theme-Purple .search_poupMobtemp .poppdfhed,
+    .shivam.color-theme-Purple .popup.popup-gridtr .block .poppdfhed,
+    .shivam.color-theme-Purple .ApptFixpopup .block .popAppthed,
+    .shivam.color-theme-Purple .popup-pdf .poppdfhed{
+        background: #ab06da;
+    }    
+    .shivam.color-theme-Purple .oplist .subhed_001,
+    .shivam.color-theme-Purple .orderform .blockwise .Divdtl .lblhedblck_01{
+        background-color:#EFBBFE !important;
+        color: #000;
+    }
+    .shivam.color-theme-Purple .orderform .blockwise .Divdtl .link.popup-close.clsebtnBw{
+        color: #FF0303;
+    }    
+    .shivam.color-theme-Purple .sheet-modal.my-sheet.IpconfigDetail .toolbar,
+    .shivam.color-theme-Purple .flip,
+    .shivam.color-theme-Purple .mobileTemplate .subhed_001,    
+    .shivam.color-theme-Purple .DisFirst .Headrow{
+        background: #EFBBFE;
+        color: #000;
+    }   
+    .shivam.color-theme-Purple .DisFirst .noteContainer .Dtailebox .name_01{
+         background-color: #EFBBFE !important;
+         color: #000;
+    }
+    .shivam.color-theme-Purple .DisFirst .Headrow .hedlbl{
+      color: #000;
+    }
+    .shivam.color-theme-Purple .mobileTemplate .grid_divMain .tblgrid tr td.textartd .textareainfo{
+     color: #ab06da;   
+    }
+    .shivam.color-theme-Purple .Dis2Sceen .History .list li.accordion-item-opened .item-content{
+          background: #EFBBFE !important;
+    }
+    .shivam.color-theme-Purple .Dis2Sceen .History .list li.accordion-item-opened .item-content .item-inner .item-title{
+         color: #000;
+    }
+    .shivam.color-theme-Purple  .History .list li .row .item-radio.item-content.checklbl{
+        background: transparent !important;
+    }
+    .color-theme-Purple .footer_All {
+        background: #ab06da;
+    }
+    .shivam.color-theme-Purple .popup-order .gridorder .prescptiondiv{
+        background: #ab06da;
+    }
+    .shivam.color-theme-Purple .btnsuccess{
+        background: #ab06da;
+        border: 1px solid #ab06da;
+    }
+    .shivam.color-theme-Purple .btnprimary{
+         background: #ab06da;
+        border: 1px solid #ab06da;
+    }
+    .shivam.color-theme-Purple .popover.popover-links .iconleft,
+    .shivam.color-theme-Purple .popup-Attachment .list .list-button .iconleft,        
+    .shivam.color-theme-Purple .sheet-modal_01 .sheet-modal-inner .page-content .links-list .btnDis2 .Icon_03{
+        color: #ab06da;
+    }
+    .shivam.color-theme-Purple .sheet-modal_01 .toolbar{
+       background: #ab06da;
+    }
+    .shivam.color-theme-Purple .popup-Note .toolbar{
+        background: #ab06da;
+    }
+    .shivam.color-theme-Purple .my-SreachTMDetail .toolbar{
+       background: #ab06da;
+    }
+    
+
+    
+    
+/*  ====================== =================================================================  */
+/*    background-color: #F2598D;*/
+/*==================== === Color Theme Pink Strated Here ========================*/
+    .shivam.color-theme-pink .navbar, .shivam.color-theme-pink.navbar{
+        background: #F2598D;
+    }
+    .shivam.color-theme-pink .search_poupMobtemp .poppdfhed,
+    .shivam.color-theme-pink .popup.popup-gridtr .block .poppdfhed,
+    .shivam.color-theme-pink .ApptFixpopup .block .popAppthed,
+    .shivam.color-theme-pink .popup-pdf .poppdfhed{
+        background: #F2598D;
+    }    
+    .shivam.color-theme-pink .oplist .subhed_001,
+    .shivam.color-theme-pink .orderform .blockwise .Divdtl .lblhedblck_01{
+        background-color:#FFDAE7 !important;
+        color: #000;
+    }
+    .shivam.color-theme-pink .orderform .blockwise .Divdtl .link.popup-close.clsebtnBw{
+        color: #FF0303;
+    }    
+    .shivam.color-theme-pink .sheet-modal.my-sheet.IpconfigDetail .toolbar,
+    .shivam.color-theme-pink .flip,
+    .shivam.color-theme-pink .mobileTemplate .subhed_001,    
+    .shivam.color-theme-pink .DisFirst .Headrow{
+        background: #FFDAE7;
+        color: #000;
+    }   
+    .shivam.color-theme-pink .DisFirst .noteContainer .Dtailebox .name_01{
+         background-color: #FFDAE7 !important;
+         color: #000;
+    }
+    .shivam.color-theme-pink .DisFirst .Headrow .hedlbl{
+      color: #000;
+    }
+    .shivam.color-theme-pink .mobileTemplate .grid_divMain .tblgrid tr td.textartd .textareainfo{
+     color: #F2598D;   
+    }
+    .shivam.color-theme-pink .Dis2Sceen .History .list li.accordion-item-opened .item-content{
+          background: #FFDAE7 !important;
+    }
+    .shivam.color-theme-pink .Dis2Sceen .History .list li.accordion-item-opened .item-content .item-inner .item-title{
+         color: #000;
+    }
+    .shivam.color-theme-pink  .History .list li .row .item-radio.item-content.checklbl{
+        background: transparent !important;
+    }
+    .color-theme-pink .footer_All {
+        background: #F2598D;
+    }
+    .shivam.color-theme-pink .popup-order .gridorder .prescptiondiv{
+        background: #F2598D;
+    }
+    .shivam.color-theme-pink .btnsuccess{
+        background: #F2598D;
+        border: 1px solid #F2598D;
+    }
+    .shivam.color-theme-pink .btnprimary{
+         background: #F2598D;
+        border: 1px solid #F2598D;
+    }
+    .shivam.color-theme-pink .popover.popover-links .iconleft,
+    .shivam.color-theme-pink .popup-Attachment .list .list-button .iconleft,        
+    .shivam.color-theme-pink .sheet-modal_01 .sheet-modal-inner .page-content .links-list .btnDis2 .Icon_03{
+        color: #F2598D;
+    }
+    .shivam.color-theme-orange .my-SreachTMDetail .toolbar{
+       background: #F2598D;
+    }
+/*  ====================== =================================================================  */  
+/*==================== === Color Theme Orange Strated Here ========================*/    
+    .shivam.color-theme-orange .navbar, .shivam.color-theme-orange.navbar{
+        background: #F19208;
+    }
+    .shivam.color-theme-orange .search_poupMobtemp .poppdfhed,
+    .shivam.color-theme-orange .popup.popup-gridtr .block .poppdfhed,
+    .shivam.color-theme-orange .ApptFixpopup .block .popAppthed,
+    .shivam.color-theme-orange .popup-pdf .poppdfhed{
+        background: #F19208;
+    }
+    .shivam.color-theme-orange .oplist .subhed_001,
+    .shivam.color-theme-orange .orderform .blockwise .Divdtl .lblhedblck_01{
+        background-color:#FFD79D !important;
+        color: #000;
+    }
+    
+    .shivam.color-theme-orange .orderform .blockwise .Divdtl .link.popup-close.clsebtnBw{
+        color: #FF0303;
+    } 
+    
+    .shivam.color-theme-orange .sheet-modal.my-sheet.IpconfigDetail .toolbar,
+    .shivam.color-theme-orange .flip,
+    .shivam.color-theme-orange .mobileTemplate .subhed_001,    
+    .shivam.color-theme-orange .DisFirst .Headrow{
+        background: #FFD79D;
+        color: #000;
+    }
+     .shivam.color-theme-orange .DisFirst .Headrow .hedlbl{
+        color: #000;
+    }
+    .shivam.color-theme-orange .DisFirst .noteContainer .Dtailebox .name_01{
+        background: #FFD79D !important;
+        color: #000;
+    }
+    .shivam.color-theme-orange .mobileTemplate .grid_divMain .tblgrid tr td.textartd .textareainfo{
+      color: #F19208;   
+    }
+    .shivam.color-theme-orange .Dis2Sceen .History .list li.accordion-item-opened .item-content{
+          background: #FFD79D !important;
+    }
+    .shivam.color-theme-orange .Dis2Sceen .History .list li.accordion-item-opened .item-content .item-inner .item-title{
+        color: #000;
+    }
+    .shivam.color-theme-orange  .History .list li .row .item-radio.item-content.checklbl{
+        background: transparent !important;
+    }
+    
+    .color-theme-orange .footer_All {
+        background: #F19208;
+    }
+    .shivam.color-theme-orange .popup-order .gridorder .prescptiondiv{
+        background: #F19208;
+    }
+    .shivam.color-theme-orange .btnsuccess{
+        background: #F19208;
+        border: 1px solid #F19208;
+    }
+    .shivam.color-theme-orange .btnprimary{
+         background: #F19208;
+        border: 1px solid #F19208;
+    }
+    .shivam.color-theme-orange .popover.popover-links .iconleft,
+    .shivam.color-theme-orange .popup-Attachment .list .list-button .iconleft,        
+    .shivam.color-theme-orange .sheet-modal_01 .sheet-modal-inner .page-content .links-list .btnDis2 .Icon_03{
+        color: #F19208;
+    }
+    .shivam.color-theme-orange .my-SreachTMDetail .toolbar{
+       background: #F19208;
+    }
+    
+    
+    
+ /*  ====================== =================================================================  */
+/*    background: rgba(8,54,75,0.9);*/
+/*==================== === Color Theme navy Strated Here ========================*/
+    .shivam.color-theme-navy .navbar, .shivam.color-theme-navy.navbar{
+        background: rgba(8,54,75,0.9);
+    }
+    .shivam.color-theme-navy .search_poupMobtemp .poppdfhed,
+    .shivam.color-theme-navy .popup.popup-gridtr .block .poppdfhed,
+    .shivam.color-theme-navy .ApptFixpopup .block .popAppthed,
+    .shivam.color-theme-navy .popup-pdf .poppdfhed{
+        background: rgba(8,54,75,0.9);
+    }    
+    .shivam.color-theme-navy .oplist .subhed_001,
+    .shivam.color-theme-navy .orderform .blockwise .Divdtl .lblhedblck_01{
+        background-color:rgba(8,54,75,0.3) !important;
+        color: #000;
+    }
+    .shivam.color-theme-navy .orderform .blockwise .Divdtl .link.popup-close.clsebtnBw{
+        color: #FF0303;
+    }    
+    .shivam.color-theme-navy .sheet-modal.my-sheet.IpconfigDetail .toolbar,
+    .shivam.color-theme-navy .flip,
+    .shivam.color-theme-navy .mobileTemplate .subhed_001,    
+    .shivam.color-theme-navy .DisFirst .Headrow{
+        background: rgba(8,54,75,0.3);;
+        color: #000;
+    }   
+    .shivam.color-theme-navy .DisFirst .noteContainer .Dtailebox .name_01{
+         background-color: rgba(8,54,75,0.3) !important;
+         color: #000;
+    }
+    .shivam.color-theme-navy .DisFirst .Headrow .hedlbl{
+      color: #000;
+    }
+    .shivam.color-theme-navy .mobileTemplate .grid_divMain .tblgrid tr td.textartd .textareainfo{
+     color: #ab06da;   
+    }
+    .shivam.color-theme-navy .Dis2Sceen .History .list li.accordion-item-opened .item-content{
+          background: rgba(8,54,75,0.3) !important;
+    }
+    .shivam.color-theme-navy .Dis2Sceen .History .list li.accordion-item-opened .item-content .item-inner .item-title{
+        color: #000;
+    }
+    .shivam.color-theme-navy  .History .list li .row .item-radio.item-content.checklbl{
+        background: transparent !important;
+    }
+    .color-theme-navy .footer_All {
+        background: rgba(8,54,75,0.9);;
+    }
+    .shivam.color-theme-navy .popup-order .gridorder .prescptiondiv{
+        background: rgba(8,54,75,0.9);;
+    }
+    .shivam.color-theme-navy .btnsuccess{
+        background: rgba(8,54,75,0.9);
+        border: 1px solid rgba(8,54,75,0.9);;
+    }
+    .shivam.color-theme-navy .btnprimary{
+         background: rgba(8,54,75,0.9);
+        border: 1px solid rgba(8,54,75,0.9);
+    }
+    .shivam.color-theme-navy .popover.popover-links .iconleft,
+    .shivam.color-theme-navy .popup-Attachment .list .list-button .iconleft,        
+    .shivam.color-theme-navy .sheet-modal_01 .sheet-modal-inner .page-content .links-list .btnDis2 .Icon_03{
+        color: rgba(8,54,75,0.9);
+    }
+    .shivam.color-theme-navy .sheet-modal_01 .toolbar{
+        background: rgba(8,54,75,0.9);
+    }
+    .shivam.color-theme-navy .popup-Note .toolbar{
+        background: rgba(8,54,75,0.9);
+    }
+    .shivam.color-theme-navy .my-SreachTMDetail .toolbar{
+       background: rgba(8,54,75,0.9);
+    }
+/*  ====================== =================================================================  */
+        
+/*==================== === Color Theme Green Strated Here ========================*/
+    .shivam.color-theme-cyan .navbar, .shivam.color-theme-cyan.navbar{
+        background: #0BBEC1;
+    }
+    .shivam.color-theme-cyan .search_poupMobtemp .poppdfhed,
+    .shivam.color-theme-cyan .popup.popup-gridtr .block .poppdfhed,
+    .shivam.color-theme-cyan .ApptFixpopup .block .popAppthed,
+    .shivam.color-theme-cyan .popup-pdf .poppdfhed{
+        background: #0BBEC1;
+    }    
+    .shivam.color-theme-cyan .oplist .subhed_001,
+    .shivam.color-theme-cyan .orderform .blockwise .Divdtl .lblhedblck_01{
+        background-color: #BFF7F7 !important;
+        color: #000;
+    }
+    .shivam.color-theme-cyan .orderform .blockwise .Divdtl .link.popup-close.clsebtnBw{
+        color: #FF0303;
+    }    
+    .shivam.color-theme-cyan .sheet-modal.my-sheet.IpconfigDetail .toolbar,
+    .shivam.color-theme-cyan .flip,
+    .shivam.color-theme-cyan .mobileTemplate .subhed_001,    
+    .shivam.color-theme-cyan .DisFirst .Headrow{
+        background: #BFF7F7;
+        color: #000;
+    }    
+    .shivam.color-theme-cyan .DisFirst .Headrow .hedlbl{
+      color: #000;
+    }
+    .shivam.color-theme-cyan .mobileTemplate .grid_divMain .tblgrid tr td.textartd .textareainfo{
+     color: #0BBEC1;   
+    }
+    .shivam.color-theme-cyan .Dis2Sceen .History .list li.accordion-item-opened .item-content{
+          background: #BFF7F7 !important;
+    }
+    .shivam.color-theme-cyan .Dis2Sceen .History .list li.accordion-item-opened .item-content .item-inner .item-title{
+         color: #000;
+    }
+    .shivam.color-theme-cyan  .History .list li .row .item-radio.item-content.checklbl{
+        background: transparent !important;
+    }
+    .shivam.color-theme-cyan .DisFirst .noteContainer .Dtailebox .name_01{
+         background-color: #BFF7F7 !important;
+         color: #000;
+    }
+    .color-theme-cyan .footer_All {
+        background: #0BBEC1;
+    }
+    .shivam.color-theme-cyan .popup-order .gridorder .prescptiondiv{
+        background: #0BBEC1;
+    }
+    .shivam.color-theme-cyan .btnsuccess{
+        background: #0BBEC1;
+        border: 1px solid #0BBEC1;
+    }
+    .shivam.color-theme-cyan .btnprimary{
+         background: #0BBEC1;
+        border: 1px solid #0BBEC1;
+    }
+    .shivam.color-theme-cyan .popover.popover-links .iconleft,
+    .shivam.color-theme-cyan .popup-Attachment .list .list-button .iconleft,        
+    .shivam.color-theme-cyan .sheet-modal_01 .sheet-modal-inner .page-content .links-list .btnDis2 .Icon_03{
+        color: #0BBEC1;
+    }
+    .shivam.color-theme-cyan .sheet-modal_01 .toolbar{
+        background: #0BBEC1;
+    }
+    .shivam.color-theme-cyan .popup-Note .toolbar{
+        background: #0BBEC1;
+    }
+    .shivam.color-theme-cyan .my-SreachTMDetail .toolbar{
+       background: #0BBEC1;
+    }
+   
+ /*  ====================== =================================================================  */
+        
+/*==================== === Color Theme Gray Strated Here ========================*/
+    .shivam.color-theme-gray .navbar, .shivam.color-theme-gray.navbar{
+        background: #9C9A9A;
+    }
+    .shivam.color-theme-gray .search_poupMobtemp .poppdfhed,
+    .shivam.color-theme-gray .popup.popup-gridtr .block .poppdfhed,
+    .shivam.color-theme-gray .ApptFixpopup .block .popAppthed,
+    .shivam.color-theme-gray .popup-pdf .poppdfhed{
+        background: #9C9A9A;
+    }    
+    .shivam.color-theme-gray .oplist .subhed_001,
+    .shivam.color-theme-gray .orderform .blockwise .Divdtl .lblhedblck_01{
+        background-color: #E3E3E3 !important;
+        color: #000;
+    }
+    .shivam.color-theme-gray .orderform .blockwise .Divdtl .link.popup-close.clsebtnBw{
+        color: #FF0303;
+    }    
+    .shivam.color-theme-gray .sheet-modal.my-sheet.IpconfigDetail .toolbar,
+    .shivam.color-theme-gray .flip,
+    .shivam.color-theme-gray .mobileTemplate .subhed_001,    
+    .shivam.color-theme-gray .DisFirst .Headrow{
+        background: #E3E3E3;
+        color: #000;
+    }    
+    .shivam.color-theme-gray .DisFirst .Headrow .hedlbl{
+      color: #000;
+    }
+    .shivam.color-theme-gray .mobileTemplate .grid_divMain .tblgrid tr td.textartd .textareainfo{
+     color: #9C9A9A;   
+    }
+    .shivam.color-theme-gray .Dis2Sceen .History .list li.accordion-item-opened .item-content{
+          background: #E3E3E3 !important;
+    }
+    .shivam.color-theme-gray .Dis2Sceen .History .list li.accordion-item-opened .item-content .item-inner .item-title{
+         color: #000;
+    }
+    .shivam.color-theme-gray .History .list li .row .item-radio.item-content.checklbl{
+        background: transparent !important;
+    }
+    .shivam.color-theme-gray .DisFirst .noteContainer .Dtailebox .name_01{
+         background-color: #E3E3E3 !important;
+         color: #000;
+    }
+    .color-theme-gray .footer_All {
+        background: #9C9A9A;
+    }
+    .shivam.color-theme-gray .popup-order .gridorder .prescptiondiv{
+        background: #9C9A9A;
+    }
+    .shivam.color-theme-gray .btnsuccess{
+        background: #9C9A9A;
+        border: 1px solid #9C9A9A;
+    }
+    .shivam.color-theme-gray .btnprimary{
+         background: #9C9A9A;
+        border: 1px solid #9C9A9A;
+    }
+    .shivam.color-theme-gray .popover.popover-links .iconleft,
+    .shivam.color-theme-gray .popup-Attachment .list .list-button .iconleft,        
+    .shivam.color-theme-gray .sheet-modal_01 .sheet-modal-inner .page-content .links-list .btnDis2 .Icon_03{
+        color: #9C9A9A;
+    }
+    .shivam.color-theme-gray .sheet-modal_01 .toolbar{
+        background: #9C9A9A;
+    }
+    .shivam.color-theme-gray .popup-Note .toolbar{
+        background: #9C9A9A;
+    }
+    .shivam.color-theme-gray .my-SreachTMDetail .toolbar{
+        background: #9C9A9A;
+    }
+    
+    .shivam .fontstyle{
+        
+    }
+    .shivam .fontstyle .coldiv{
+        float: left;
+        width: 33.33%;
+        display: block;
+    }
+    .shivam .fontstyle .coldiv .btnstyle{
+        width: 90%;
+        margin: 0px auto;
+        display: block;
+        outline: none;
+        border: 0px;
+        padding: 5px 0px;
+        text-align: center;
+        border-radius: 9px;
+        height: 40px;
+        position: relative;overflow: hidden;
+    }
+    .shivam .fontstyle .coldiv .btn-fonstyle1{
+/*        font-family: cursive;
+        font-style: italic;*/
+    }
+    .btn-fonstyle2{
+/*        font-style: italic;*/
+    }
+/*    .shivam .Consaltant .loginContainer .toolbar .toolbar-inner .tab-link-highlight{
+        background: rgba(5, 89, 166, 0.8);
+    }*/

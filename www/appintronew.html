@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Welcome Screen</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="js/bxslider.js" type="text/javascript"></script>
+        <script src="js/bxslider.js" type="text/javascript"></script>
+        <link href="css/bxsliderforappintro.css" rel="stylesheet" type="text/css"/>
+        <script>
+             var errorcnt=0;
+            function loading() {
+                try {
+                    var htldo = window.innerHeight;
+                    var asgnmrgn = htldo / 2;
+                    $('#mydiv .imgnload').css("margin-top", parseInt(asgnmrgn) + -50 + "px");
+                } catch (err) {
+                }
+                convert(localStorage.newappath, localStorage.apporginalname, localStorage.newapppage);
+            }
+            function convert(path, appname, apppath) {
+                debugger;
+                $.ajax({
+                    url: path,
+                    type: "GET",
+                    success: function (data, textstatus, xhrreq) {
+                        debugger;
+                        data = data.trim();
+                        var url = data;
+                        if (data.indexOf("frame src") > 0) {
+                            debugger;
+                            data = data.substring(data.indexOf("frame src")).replace('frame src="', "");
+                            var dqts = data.indexOf('"');
+                            url = data.substring(0, dqts).trim();
+                            localStorage.mahappurl = url;
+                            localStorage.mah = '1';
+                            localStorage.appurl = url;
+                            localStorage.ipadrs = url;
+                        } else {
+                            localStorage.mahappurl = path;
+                            localStorage.mah = '1';
+                            localStorage.appurl = path;
+                            localStorage.ipadrs = path;
+                        }
+                        getIntro(localStorage.appurl);
+                    },
+                    error: function (jqXHR, exception) {
+                        debugger;
+                        $('#mydiv').hide();
+                        var msg = '';
+                        if (jqXHR.status === 0) {
+                            msg = 'Not connect.\n Verify Network';
+                        } else if (jqXHR.status == 404) {
+                            msg = 'Requested page not found. [404]';
+                        } else if (jqXHR.status == 500) {
+                            msg = 'Internal Server Error [500].';
+                        } else if (exception === 'parsererror') {
+                            msg = 'Requested JSON parse failed.';
+                        } else if (exception === 'timeout') {
+                            msg = 'Time out error.';
+                        } else if (exception === 'abort') {
+                            msg = 'Ajax request aborted.';
+                        } else {
+                            msg = 'Uncaught Error.\n' + jqXHR.responseText;
+                        }
+//                        alert(msg + " \n Path : "+path);
+//                        location.href = "404.html";
+                  if(errorcnt===5){
+                        alert(msg + " \n Path : "+path);
+                        location.href = "404.html";
+                    }else if (jqXHR.status === 0) {
+                   convert(localStorage.newappath, localStorage.apporginalname, localStorage.newapppage);
+                   errorcnt++;
+                   }else{
+                        alert(msg + " \n Path : "+path);
+                        location.href = "404.html";
+                   }
+                        if (localStorage.myehr == "1") {
+                            localStorage.addconnection = "1";
+                            location.href = "myehr.html";
+                        }
+                    }
+
+                });
+            }
+            function getIntro(url) {
+                $.ajax({
+                    url: url + '/formviewlogin?type=appintro',
+                    type: "GET",
+                    dataType: 'json',
+                    success: function (responseJson) {
+                        if (responseJson.length === 0) {
+                            location.href = 'connection.html';
+                        } else {
+                            appintroloading(responseJson[0]['WEBFORMID']);
+                        }
+                    },
+                    error: function (error) {
+                        location.href = 'connection.html';
+                    }
+                });
+            }
+            function appintroloading(formid) {
+                var appName = localStorage.appname;
+                $.ajax({
+                    url: localStorage.appurl + '/admin/appIntronew.jsp?webformid=' + formid  + "&appName=" + appName,
+                    type: 'POST',
+                    success: function (responseText) {
+                        $('#divIntro').html(responseText);
+
+                        try {
+                            if (localStorage.appname === 'fernandez') {
+
+                            } else {
+                                StatusBar.backgroundColorByHexString("black-opaque");
+                            }
+                        } catch (err) {
+                            //alert(err);
+                        }
+                    },
+                    error: function (jqXHR, exception) {
+                        debugger;
+                         $('#mydiv').hide();
+                        var msg = '';
+                        if (jqXHR.status === 0) {
+                            msg = 'Not connect.\n Verify Network.';
+                            alert(msg);
+                        } else if (jqXHR.status == 404) {
+                            msg = 'Requested page not found. [404]';
+                            location.href = localStorage.newapppage;
+                        } else if (jqXHR.status == 500) {
+                            msg = 'Internal Server Error [500].';
+                            alert(msg);
+                        } else if (exception === 'parsererror') {
+                            msg = 'Requested JSON parse failed.';
+                            alert(msg);
+                        } else if (exception === 'timeout') {
+                            msg = 'Time out error.';
+                            alert(msg);
+                        } else if (exception === 'abort') {
+                            msg = 'Ajax request aborted.';
+                            alert(msg);
+                        } else {
+                            msg = 'Uncaught Error.\n' + jqXHR.responseText;
+                            alert(msg);
+                        }
+                         
+                        
+                    }
+                });
+            }
+        </script>
+        <style>
+             body {
+padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+padding-top: env(safe-area-inset-top); /* iOS 11.2 */
+}
+            footer{
+margin-bottom: constant(safe-area-inset-bottom); /* iOS 11.0 */
+margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
+}
+        </style>
+    </head>
+    <body onload="loading()">
+        <div id="divIntro">
+            <div id="mydiv">
+                <img src="images/xda2.gif" class="imgnload" style="border-radius: 50%;">
+            </div>
+        </div>
+    </body>
+</html>

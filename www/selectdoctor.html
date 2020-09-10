@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Shivam Medisoft | Doctor Selection</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+<!--        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />-->
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+               <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+               <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+               <script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+               <script type="text/javascript" src="js/colorchanges.js"></script>
+         <!--<script type="text/javascript" src="js/jquery-1.9.1.js"></script>-->
+         <link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+         <script type="text/javascript" src="cordova.js"></script>
+         <link href="css/FontFamillyloading.css" rel="stylesheet" type="text/css"/>
+         <link href="css/settingsCSS.css" rel="stylesheet" type="text/css"/>
+<!--    <link href="themeCSS/styles.css?version=1" rel="alternate stylesheet" type="text/css" title="orange"/>
+     <link rel="alternate stylesheet" type="text/css" title="green" href="themeCSS/stylesGreentheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="blue" href="themeCSS/stylesBluetheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="teal" href="themeCSS/stylesTealtheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="yellow" href="themeCSS/stylesdarkorangetheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="gray" href="themeCSS/stylesGraytheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="peach" href="themeCSS/stylesPeach.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="pink" href="themeCSS/stylesPink.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="purple" href="themeCSS/stylesPurple.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="red" href="themeCSS/stylesRed.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="skyblue" href="themeCSS/stylesSkyblue.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="yellownew" href="themeCSS/stylesYellow.css?version=1">-->
+         
+        <script>
+            var cssFilesArr = ["styles.css", "stylesGreentheme.css",  
+"stylesBluetheme.css", "stylesTealtheme.css",  
+"stylesdarkorangetheme.css", "stylesGraytheme.css", "stylesPeach.css",  
+"stylesPink.css", "stylesPurple.css", "stylesRed.css",  
+"stylesSkyblue.css", "stylesYellow.css"];
+   var cssFilesTitle = ["orange", "green", "blue", "teal", "yellow",  
+"gray", "peach", "pink", "purple", "red", "skyblue", "yellownew"];
+function loadcssfiles(cssFilesArr){
+for(var x = 0; x < cssFilesArr.length; x++) {
+   var fileref=document.createElement("link");
+   fileref.setAttribute("rel", "stylesheet");
+   fileref.setAttribute("type", "text/css");
+   fileref.setAttribute("title", cssFilesTitle[x]);
+cssFilesArr[x] = localStorage.ipadrs + "/themeCSS/" + cssFilesArr[x];
+   fileref.setAttribute("href", cssFilesArr[x]);
+   document.getElementsByTagName("head")[0].appendChild(fileref);
+
+  }
+ var i, link_tag ;
+  var isExists = 0;
+     var css_title = localStorage.themecolor;
+     if(css_title != undefined && css_title != ""){
+         for (i = 0, link_tag = document.getElementsByTagName("link"); i < link_tag.length ; i++ ) {
+             if ((link_tag[i].rel.indexOf( "stylesheet" ) !== -1) &&
+                 link_tag[i].title) {
+                 link_tag[i].disabled = true ;
+                 if (link_tag[i].title === css_title) {
+                     link_tag[i].disabled = false ;
+                     isExists = 1;
+                 }
+             }
+         }
+     }
+     if(isExists == 0){
+         var color = localStorage.themecolor;
+         color = color.replace("%23","#");
+         //confirm(color);
+         chnagecssnew(color);
+         //confirm(cssdata);
+     }
+}
+
+$(document).ready(function () {
+                loadcssfiles(cssFilesArr);
+                });
+        </script>
+        <style>
+            body, button, input, select, textarea {
+                font-family: Roboto, Arial, sans-serif;
+            }
+            body {
+                background-color: #ffffff;
+                color: #212121;
+                line-height: 1.4;
+            }
+
+
+            html {
+                height: 100%;
+            }
+            html body {
+                height: 100%;
+                overflow: hidden;
+            }
+            html body .container-fluid.body-content {
+                position: absolute;
+                top: 100px;
+                bottom: 50px;
+                right: 0;
+                left: 0;
+                overflow-y: auto;
+                padding: 0px;
+            }
+            header {
+                position: absolute !important;
+                left: 0;
+                right: 0;
+                top: 0;
+                background-color: #367fa9;
+                height: 50px;
+            }
+            .btn-back{color:#fff; background: transparent;border: none;}
+            .btn-back:hover{color: #000; background: #ccc;transition: all 0.5s ease;
+                            -moz-transition: all 0.5s ease;
+                            -webkit-transition: all 0.5s ease;
+                            -o-transition: all 0.5s ease;
+                            -ms-transition: all 0.5s ease;}
+            .btn-back:focus{color: #000; background:#ccc;transition: all 0.5s ease;
+                            -moz-transition: all 0.5s ease;
+                            -webkit-transition: all 0.5s ease;
+                            -o-transition: all 0.5s ease;
+                            -ms-transition: all 0.5s ease;}
+            .searchdoctor{
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 50px;
+            }
+            footer {
+               position: absolute !important;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #fff;
+                height: 50px;
+                padding-top: 3px;
+                color:#000;
+            }
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+    background-color: #FFFFFF;
+    border-color: #bbb;
+    color: #333;
+    text-shadow:none;
+}
+            .ui-content {
+    border-width: 0;
+    overflow: visible;
+    overflow-x: hidden;
+    padding: 1em;
+}
+.ui-listview-inset>.ui-li-static, .ui-listview-inset>.ui-li-divider, .ui-listview-inset>li>a.ui-btn {
+    border-right-width: 1px;
+    border-left-width: 1px;
+}
+.ui-listview>.ui-li-static, .ui-listview>.ui-li-divider, .ui-listview>li>a.ui-btn {
+    border-width: 1px 0 0;
+    border-style: solid;
+}
+.ui-listview>.ui-li-static, .ui-listview>.ui-li-divider, .ui-listview>li>a.ui-btn {
+    margin: 0;
+    display: block;
+    position: relative;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head+body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head+body .ui-btn.ui-btn-a:visited {
+    background-color:#ffffff;
+    border-color: #EEEEEE;
+    color: #333;
+    text-shadow:none;
+}
+            .ui-content{padding: 0px;}
+.ui-listview>.ui-li-divider {
+    padding: 5px 1.143em;
+    font-size: 19px;
+    font-weight:500;
+    cursor: default;
+    outline: 0;
+    text-shadow: none;
+    color: #367fa9;
+    text-shadow: none;
+}
+.ui-btn{font-size: 13px;}
+.ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after {
+    background-color: #666;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+}
+.ui-btn-icon-right:after {
+    right: .1625em;
+}
+.ui-btn-icon-notext:after, .ui-btn-icon-left:after, .ui-btn-icon-right:after {
+    top: 55%;
+    margin-top: -11px;
+}
+.ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after {
+       content: "\e258";
+    position: absolute;
+    display: block;
+    /* width: 22px; */
+    /* height: 22px; */
+    font-family: 'Glyphicons Halflings';
+    color: #BDBDBD;
+    font-weight: normal;
+    font-size: 16px;
+}
+.ui-listview>li.ui-first-child, .ui-listview>li.ui-first-child>a.ui-btn {
+    -webkit-border-top-right-radius: 0px;
+    border-top-right-radius: 0px;
+    -webkit-border-top-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+.ui-content .ui-listview-inset, .ui-panel-inner>.ui-listview-inset {
+    margin: 1em 0;
+    margin-top: 0px;
+}
+.ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {
+    color: #38c;
+    font-weight: 500;
+}
+.ui-listview>li {
+    display: block;
+    position: relative;
+    overflow: visible;
+}
+.ui-listview, .ui-listview>li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head+body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head+body .ui-btn.ui-btn-a:visited{
+    text-shadow: none;
+}
+            .filter-modal{padding:20px;}
+            .list-group-item:first-child{border-radius:0px;}
+            .list-group-item:last-child{border-radius:0px;}
+            .list-group{margin:0px;}
+            .sdhead{font-size:22px;font-weight: 500;color:#fff;padding-left: 20px;vertical-align: middle;}
+            label.sdheadlbl{vertical-align: middle;padding-top: 10px;margin: 0px;font-size:22px;font-weight:500;}
+    .ui-listview>.ui-li-has-thumb>.ui-btn, .ui-listview>.ui-li-static.ui-li-has-thumb{font-family: Roboto, Arial, sans-serif;font-weight:500;padding-left:5px;}
+     #btnmore .btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+#btnmore .btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight:500;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: Roboto, Arial, sans-serif;
+    text-shadow: none;
+}
+.ui-mobile label.nmrlbl{
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0px;
+    text-align: center;
+    font-size: 30px;
+    color: #222;
+    margin-top: 25px;
+    border-top: 1px solid #ECECEC;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;  
+}
+.glyphicon .glyphicon-search{color: #367fa9;}
+.ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit{background-color: #f7f7f7;border-color: #ECECEC;}
+         </style>
+         
+       
+        <script>
+            
+            function loadjsfile(){
+                var filename="doctorselection.js"
+filename = localStorage.ipadrs + "/mobilejs/"+filename; 
+$('<script  type="text/javascript" src="'+filename+'" >').appendTo("head");
+}
+
+            $(document).ready(function () {
+//                 var locid = "";
+//                 var formid ="";
+//                 $('#mydiv').show();
+//               var  path = localStorage.ipadrs + "/disdoctorselection.jsp?";
+//        $.get(path, function (responseText) {
+//        $('#mydiv').hide();
+//          $('#ddlDoctor').html(responseText);
+//           searchKeyup();
+//                    loadgrid(1);
+//        });
+loadjsfile();
+//loadgrid(0,'');
+            });
+//            function loadkey(id){
+//                debugger;
+//               var val=$('#srch-term').val();
+//               if(val==""){ loadgrid(0,  'search'); }
+//            }
+//            function searchKeyup() {
+//                debugger;
+//       
+//    
+//      
+//var val=$('#srch-term').val();
+//document.getElementById("mydiv").style.display="block";
+//if(val!=""){
+//$('#myul li').empty();
+//            loadgrid(0, 'search');
+//            }else{
+//                loadgrid(0,  'search'); 
+//            }
+//
+//    
+//}
+//
+//function loadgrid(pageno, keyup) {
+//    debugger;
+//    document.getElementById("mydiv").style.display="block";
+//    pageno=parseInt(pageno)+1;
+//    $('#hidnpage').val(pageno);
+//    var qry = "SELECT distinct  DoctorInfo.DoctorNm,(DoctorInfo.DocID||'@'||DoctorInfo.speid) docid,DoctorInfo.docid imgdocid  ";
+//    if ($('#qryflag').val() != 1) {
+//        $('#finqry').val(qry);
+//    }
+//    var tab = "admin.DoctorInfo where  nvl(doctorinfo.ACTIVE,0) = 1  ";
+//    if ($('#qryflag').val() != 1)
+//        $('#fintab').val(tab);
+//    $('#qryflag').val("1");
+//    var ordy = "order by doctornm";
+//    var search = $('#srch-term').val().replace(/`/g, "'");
+//    var serfield = "DoctorNm";
+//    tab = encodeURIComponent(tab);
+//    var path = localStorage.ipadrs + "/doctorsselectionsearch?search=" + search + "&ordby=" + ordy + "&serfield=" + serfield;
+//    path = path + "&tab=" + tab + "&qry=" + qry + "&sidx=&sord=asc&page=" + pageno;
+//    $.get(path, function (respneText) {
+//        debugger;
+//        if(respneText==""){
+//            document.getElementById("btnmore").style.display="none";
+//        }else{
+//            var respneText1=respneText.split("@@");
+//            if(respneText1[1]!=""){ 
+//            if(respneText1[1].indexOf("Records")>0){
+//                pageno=parseInt(pageno)-1;
+//              $('#hidnpage').val(pageno);
+//                  document.getElementById("btnmore").style.display="none";
+////                  $('#srch-term').val('');
+//            }
+//        }else{
+//            document.getElementById("btnmore").style.display="block";
+//            }
+//        
+//        }
+//        
+//        if (keyup == 'search') {
+//             document.getElementById("myul").innerHTML="";
+//        }
+//          if(respneText1[0]==""){
+//             $('#myul').append(respneText1[1]);    
+//            }else{
+//        $('#myul').append(respneText1[0]);}
+//       
+//          $('#myul').listview('refresh');
+//           document.getElementById("mydiv").style.display="none";
+//          //refresh();
+//    });
+//
+//
+//}
+//function refresh(){
+//    $("#myul").listview({
+//		    autodividers: true,
+////		    autodividersSelector: function (li) {
+////		        var out = li.attr('date');
+////		        return out;
+////		    }
+//		}).listview('refresh');
+//	
+//}
+//            function gohome(id1){
+//    debugger;
+//   var doc= id1.id.split("@");
+//  localStorage.docid =doc[0];
+//  localStorage.speid =doc[1];
+//     localStorage.menuform = localStorage.formid;
+//      localStorage.nodoc="1";
+//                localStorage.docnm =id1.textContent
+//                location.href = 'disfirstscreen.html';
+//    
+//}
+//function outfromdoc(){
+//    debugger;
+//    localStorage.formid = localStorage.menuform;
+//    localStorage.nodoc="1";
+//     location.href = 'dashboardmenubuttons.html';
+//}
+//
+//function searchdoc(id1){
+//    debugger;
+//    var val=document.getElementById(id1.id).value;
+//    var uiid=document.getElementById("mymenu");
+//    var len=uiid.children.length;
+//    if(len>0){
+//        for(var i=0;i<len;i++){
+//            if(uiid.children[i].textContent.indexOf(val.toUpperCase())>=0){
+//               uiid.children[i].style.display="block"; 
+//            }
+//            else{
+//               uiid.children[i].style.display="none"; 
+//            }
+//        }
+//    }
+//    
+//}
+ 
+   function statusbar() {
+try{
+                   if(localStorage.devicetype.toLowerCase()==='iphone' || localStorage.devicetype.toLowerCase()==='ipad'){
+//                         confirm(localStorage.devicetype); 
+                        $('.iosstatusbar').css('display','block');
+                        $('.dmmanav').css('top','20px');
+                        $('.searchdoctor').css('top','70px');
+                        $('.body-content').css('top','115px');
+                    }
+    }catch(err){}
+    };
+            </script>
+            <style>
+                .iosstatusbar{height:20px;background: #31708F;width:100%;display:none;}
+            </style>
+ </head>
+
+    <body onload="statusbar();">
+        <div id="mydiv" style="display: none">
+            <img src="images/xda2.gif" class="imgnload" style="border-radius: 50%;">
+        </div>
+        <div class="col-md-12 iosstatusbar"> </div>
+        <header class="sdhead sdheadnew dmmanav">
+            <label class="sdheadlbl">Select Doctor</label>
+        </header>
+        <div style="padding: 5px 10px;" class="searchdoctor">
+            <div class="input-group add-on">
+                <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text" onkeyup="loadkey(this)" >
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid body-content">
+
+
+            <div data-role="listview" data-autodividers="true" style="padding: 5px 20px;" id="ddlDoctor">
+                <div data-role="page" id="pageone" style="margin-bottom:20px;">
+    <div data-role="main" id="mymenu" class="ui-content" >
+        <ul data-role="listview" data-autodividers="true" id="myul"  data-inset="true">
+            
+        </ul>
+</div>
+    <div id="btnmore" style="display:none;padding: 0px 10px;" >
+        <button class="btn btn-success " onclick="loadgrid($('#hidnpage').val(),'')" /> More Records </button>
+    </div>
+            </div>
+            </div>
+        </div>
+        <footer class="setfooter">
+            <button type="button" class="btn btn-back" style="cursor: pointer; font-size: 25px;float: left;padding-left: 15px;color: inherit;" id="btnBack" onclick="outfromdoc();">
+                <span class="fa fa-arrow-circle-left"></span>
+            </button>  
+        </footer>
+        <input type="hidden" id="qryflag"/>
+        <input type="hidden" id="fintab"/>
+        <input type="hidden" id="hidnpage"/>
+        <script>
+            
+        </script>
+    </body>
+</html>
+
+

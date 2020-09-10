@@ -1,0 +1,379 @@
+@charset "utf-8";
+
+body{
+    font-family: Roboto, Arial, sans-serif;
+/*    font-family: Arial, Helvetica, sans-serif;*/
+    background: url(cloud-background.jpg);
+    background-repeat:no-repeat;
+	background-attachment:fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   -ms-background-size: cover;
+}
+
+.main {
+    background: url(cloud-background.jpg);
+    background-repeat:no-repeat;
+	background-attachment:fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+    font-family: Roboto, Arial, sans-serif;
+    
+}
+.panel {
+ 
+    height: 60px;
+   
+    
+}
+
+.lbl{
+    text-shadow: 5px 5px 10px red;
+}
+.box{
+    margin-top: 0px;
+    padding: 20px 20px 20px 20px;
+   border-top:5px solid cadetblue;
+   border-left:5px solid cadetblue;
+   border-bottom:5px solid cadetblue;
+   border-right:5px solid  cadetblue;
+    width:300px;
+    height: 350px;
+    background-color: #fff;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+  /* box-shadow: 0px 0px 10px blue;*/
+}
+.txtinput{
+    text-align: center;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    height: 35px;
+    box-shadow: 0px 0px 20px lightgray;
+}
+.txtinput:focus{
+    box-shadow:0px 0px 20px cadetblue;
+}
+
+.btnconnect {
+    background-color: rgba(64, 128, 128, 0.8);
+      border: none;
+    width: 90px;
+ 
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+   box-shadow: 0px 0px 30px darkgray;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.btnconnect:before {
+    color: #fff;
+
+    font-size: 24px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.btnconnect:hover {
+    background-color:#fff;
+    box-shadow:0px 0px 30px cadetblue;
+}
+
+@media screen and (max-width: 1024px)
+{
+    
+   
+body{
+    font-family: Roboto, Arial, sans-serif;
+    background: url(cloud-background.jpg);
+    background-repeat:no-repeat;
+	background-attachment:fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   -ms-background-size: cover;
+}
+
+.main {
+    background: url(cloud-background.jpg);
+    background-repeat:no-repeat;
+	background-attachment:fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+   
+font-family: Roboto, Arial, sans-serif;
+    
+}
+.panel {
+ 
+    height: 60px;
+   
+    
+}
+.lbl{
+    text-shadow: 5px 5px 10px red;
+}
+.box{
+    margin-top: 0px;
+    padding: 20px 20px 20px 20px;
+   border-top:5px solid cadetblue;
+   border-left:5px solid cadetblue;
+   border-bottom:5px solid cadetblue;
+   border-right:5px solid  cadetblue;
+    width:300px;
+    height: 350px;
+    background-color: #fff;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+  /* box-shadow: 0px 0px 10px blue;*/
+    
+    
+}
+.txtinput{
+    text-align: center;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    height: 35px;
+    box-shadow: 0px 0px 20px lightgray;
+}
+
+.txtinput:focus{
+    box-shadow:0px 0px 20px cadetblue;
+}
+
+.btnconnect {
+    background-color: rgba(64, 128, 128, 0.8);
+      border: none;
+    width: 90px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+   box-shadow: 0px 0px 30px darkgray;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.btnconnect:before {
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 24px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.btnconnect:hover {
+    background-color:#fff;
+    box-shadow:0px 0px 30px cadetblue;
+}
+}
+
+@media screen and (max-width: 800px)
+{
+    
+ body{
+    font-family: Roboto, Arial, sans-serif;
+    background: url(cloud-background.jpg);
+    background-repeat:no-repeat;
+	background-attachment:fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   -ms-background-size: cover;
+}
+
+.main {
+    background: url(cloud-background.jpg);
+    background-repeat:no-repeat;
+	background-attachment:fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+   
+font-family: Roboto, Arial, sans-serif;
+    
+}
+.panel {
+ 
+    height: 60px;
+   
+    
+}
+.lbl{
+    text-shadow: 5px 5px 10px red;
+}
+.box{
+    margin-top: 0px;
+    padding: 20px 20px 20px 20px;
+   border-top:5px solid cadetblue;
+   border-left:5px solid cadetblue;
+   border-bottom:5px solid cadetblue;
+   border-right:5px solid  cadetblue;
+    width:300px;
+    height: 350px;
+    background-color: #fff;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+  /* box-shadow: 0px 0px 10px blue;*/
+    
+    
+}
+.txtinput{
+    text-align: center;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    height: 35px;
+    box-shadow: 0px 0px 20px lightgray;
+}
+
+.txtinput:focus{
+    box-shadow:0px 0px 20px cadetblue;
+}
+
+.btnconnect {
+    background-color: rgba(64, 128, 128, 0.8);
+      border: none;
+    width: 90px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+   box-shadow: 0px 0px 30px darkgray;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.btnconnect:before {
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 24px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.btnconnect:hover {
+    background-color:#fff;
+    box-shadow:0px 0px 30px cadetblue;
+}
+}
+
+@media screen and (max-width: 200px)
+{
+body{
+    font-family: Roboto, Arial, sans-serif;
+    background: url(cloud-background.jpg);
+    background-repeat:no-repeat;
+	background-attachment:fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   -ms-background-size: cover;
+}
+
+.main {
+    background: url(cloud-background.jpg);
+    background-repeat:no-repeat;
+	background-attachment:fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+   
+font-family: Roboto, Arial, sans-serif;
+    
+}
+.panel {
+ 
+    height: 60px;
+   
+    
+}
+.lbl{
+    text-shadow: 5px 5px 10px red;
+}
+.box{
+    margin-top: 0px;
+    padding: 20px 20px 20px 20px;
+   border-top:5px solid cadetblue;
+   border-left:5px solid cadetblue;
+   border-bottom:5px solid cadetblue;
+   border-right:5px solid  cadetblue;
+    width:300px;
+    height: 350px;
+    background-color: #fff;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+  /* box-shadow: 0px 0px 10px blue;*/
+    
+    
+}
+.txtinput{
+    text-align: center;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    height: 35px;
+    box-shadow: 0px 0px 20px lightgray;
+}
+.txtinput:focus{
+    box-shadow:0px 0px 20px cadetblue;
+}
+
+.btnconnect {
+    background-color: rgba(64, 128, 128, 0.8);
+      border: none;
+    width: 90px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+   box-shadow: 0px 0px 30px darkgray;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.btnconnect:before {
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 24px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.btnconnect:hover {
+    background-color:#fff;
+    box-shadow:0px 0px 30px cadetblue;
+}
+}

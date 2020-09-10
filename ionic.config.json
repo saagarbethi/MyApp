@@ -1,0 +1,8 @@
+{
+  "name": "MyEHR",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "custom",
+  "id": "1d74a5a7"
+}

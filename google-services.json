@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "165870326014",
+    "firebase_url": "https://myehr-d0807.firebaseio.com",
+    "project_id": "myehr-d0807",
+    "storage_bucket": "myehr-d0807.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165870326014:android:e6f3af49d36e476c",
+        "android_client_info": {
+          "package_name": "com.shivam.myemr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165870326014-vqbggn5dbivoqm3anj6dn6ji2ok46mk2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shivam.myemr",
+            "certificate_hash": "0cbbfac6b72e637a2c296defd712c18ad69267b5"
+          }
+        },
+        {
+          "client_id": "165870326014-rc68k7tca1fabue3vo5rq4311ldqo9a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBksAYj5yokaateYGKwQ8Ouzzf0-G6bC-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165870326014-rc68k7tca1fabue3vo5rq4311ldqo9a7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

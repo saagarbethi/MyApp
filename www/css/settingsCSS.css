@@ -1,0 +1,270 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 19, 2019, 11:13:47 AM
+    Author     : Ajab
+*/
+
+
+  /******* Style Switcher *******/
+            .switcher-box {
+/*                top:4px;
+                width: 212px;
+                position: fixed;
+                right: -212px;
+                text-align: center;
+                z-index: 99999999;
+                background-color: #fff;
+                border-radius: 0 0 2px 0;
+                border-radius: 0 5px 5px 0;
+                -webkit-box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+                -moz-box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+                transition: all 0.4s ease-in-out;
+                -moz-transition: all 0.4s ease-in-out;
+                -webkit-transition: all 0.4s ease-in-out;
+                -o-transition: all 0.4s ease-in-out;*/
+background: #fff;
+    padding: 5px 5px;
+            }
+            .containerd{padding: 3px 0px;}
+            .lblcontainerd{margin-bottom:0px;font-weight: 500;}
+            .switcher-box a{cursor: pointer;}
+            .switcher-box h4 {
+                display: block;
+/*                height: 40px;*/
+/*                line-height: 42px;*/
+                font-size: 17px;
+                font-weight: 700;
+                color: #000;
+/*                background-color: #333;*/
+                margin:0px;
+                border-bottom:1px solid #d3d3d3;
+                padding-bottom: 5px;
+            }
+            .switcher-box span {
+                display: block;
+                padding: 5px 10px;
+                text-align: left;
+            }
+            .switcher-box .colors-list {
+                padding: 0 3px 0 3px;
+                margin-bottom: 0px;
+                line-height: 20px;
+                margin-top: 5px;
+            }
+            .switcher-box .colors-list li {
+                display: inline-block;
+                margin-right: 2px;
+            }
+            .switcher-box .colors-list li input {
+                display: block;
+                width: 24px;
+                height: 18px;
+                cursor: pointer;
+                border:none;
+            }
+            .switcher-box .colors-list li input.blue {
+                background: #074684;
+            }
+            .switcher-box .colors-list li input.blue:hover{background-color: #0a9fd8;}
+            .switcher-box .colors-list li input.cyan {
+                background: #00908a;
+            }
+            .switcher-box .colors-list li input.cyan:hover{background-color: #27bebe;}
+            .switcher-box .colors-list li input.jade {
+                background-color: #0bb586;
+            }
+            .switcher-box .colors-list li input.red {
+                background-color: #6d0c74;
+            }
+            .switcher-box .colors-list li input.red:hover{
+                background: rgb(170, 17, 197);
+            }
+            .switcher-box .colors-list li input.peach {
+                background-color: #cc6200;
+            }
+            .switcher-box .colors-list li input.peach:hover{  background-color: #f49237;}
+            .switcher-box .colors-list li input.sky-blue {
+                background: #008594;
+            }
+            .switcher-box .colors-list li input.sky-blue:hover{background-color: #38cbcb;}
+            .switcher-box .colors-list li input.yellow {
+                background: #bd8d00;
+            }
+            .switcher-box .colors-list li input.yellow:hover{background-color: #f8ba01;}
+            .switcher-box .colors-list li input.green {
+                background-color: #94c523;
+            }
+            .switcher-box .colors-list li input.darkgreen {
+                background: #5e8c00;
+            }
+            .switcher-box .colors-list li input.darkgreen:hover{background-color:  #42A22F;}
+            .switcher-box .colors-list li input.lightgreen {
+                background-color:#8a8e00;
+            }
+            .switcher-box .colors-list li input.lightgreen:hover{ background-color: #B1B50B;}
+            .switcher-box .colors-list li input.orange {
+                background-color: #f36510;
+            }
+            .switcher-box .colors-list li input.darkorange {
+                background: #e94f31;
+            }
+            .switcher-box .colors-list li input.darkorange:hover{
+                background-color: #e94f31;
+            }
+            .switcher-box .colors-list li input.pink {
+                /*                background-color: #f1505b;*/
+                background: #f54291;
+            }
+            .switcher-box .colors-list li input.pink:hover{ background-color: #f1505b;}
+            .switcher-box .colors-list li input.purple {
+                background: #512c96;
+            }
+            .switcher-box .colors-list li input.purple:hover{background-color: #6a3da3;}
+            .switcher-box .colors-list li input.beige {
+                background-color: #fdb655;
+            } 
+            .switcher-box .colors-list li input.gray {
+                background: #5f6769;
+            }
+            .switcher-box .colors-list li input.gray:hover{background-color: #A9A9A9;}
+            .switcher-box .open-switcher {
+                width: 30px;
+                height: 33px;
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 103%;
+                border-radius: 2px 0px 0px 2px;
+                background: #444 center no-repeat;
+                background: transparent;
+/*                -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.2);
+                -moz-box-shadow: 0 0 4px rgba(0,0,0,0.2);
+                box-shadow: 0 0 4px rgba(0,0,0,0.2);*/
+                color: #fff;
+            }
+            .switcher-box .open-switcher:hover {
+                background: url(../images/icons/switcher.png) #444 center no-repeat;
+                -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.2);
+                -moz-box-shadow: 0 0 4px rgba(0,0,0,0.2);
+                box-shadow: 0 0 4px rgba(0,0,0,0.2);
+                color: #fff;
+            }
+            .switcher-box .open-switcher i {
+                text-align: center;
+                font-size:25px;
+                margin-top: 3px;
+            }
+            
+            .main-header{background: #367fa9;position: fixed; z-index: 9999; top: 0;width: 100%;}
+            .setfooter{background-color:#fff; position: fixed; color: #000;padding-left: 0px; margin: 0px;left: 0;right: 0;
+                      text-align: center; vertical-align: middle; bottom:0; width: 100%; z-index: 9;height: 50px;border-top: 1px solid #d3d3d3;}
+            .info-box-icon{background-color: #367fa9 !important; color: #fff;}
+            .hedrowtop{background: #367fa9;}
+            
+              @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+/*      for all*/
+        .iosstatusbar{height:40px !important;}
+        
+/*        Login Html*/
+        .loginixcont{top:80px !important;margin-top: 0px !important;position: absolute;width: 100%;}
+        
+/*        calendar html*/
+        .calhead{height:80px !important;}
+        .cntnrnagn{margin-top: 90px !important;}
+        
+/*        Notificationdashboardmenubutns html*/
+        .iphonexhead{height:85px !important;}
+        #displayforms{top:85px !important;}
+        .nofoot{height: 65px !important;}
+        footer .btnsettings1{margin-right:10px !important;}
+        
+/*        Defconfig html*/
+        .iphonexdiv{padding-top: 90px !important;}
+        
+        /*        Setting html*/
+        .setcont{top:20px !important;position: absolute;z-index: 9 !important;}
+        
+        /*       Location html*/
+        .loccont{top:25px !important;position: absolute;}
+        
+        /*        SubDepartment html*/
+        .subdcont{top:25px !important;position: absolute;margin-bottom: 50px;}
+        
+        /*        DashboardMenu html*/
+        .dmenucont{top:25px !important;position: absolute;margin-bottom: 50px;}
+        
+        /*        TemplateMobile JSP*/
+    .topnavbar{height:85px !important;}
+    .menutopicon{top: 60px !important;}
+    .divforsearch{top: 40px !important;}
+    .tempmbcont{margin-top:67px !important;}
+    .tempfooter{height: 65px !important;}
+    
+    /*        SelectDoctor Html*/
+    .sdheadnew.dmmanav{top: 40px !important;}
+     .searchdoctor{top: 90px !important;}
+      .body-content{top: 130px !important;}
+      
+      /*        ReportError Html*/
+      .reperrorcont{padding-top: 90px !important;}
+      .reperrorhd{height: 90px !important;}
+      
+      /*        404 Html*/
+      .fzfcont{margin-top: 90px !important;}
+      
+       /*        treeframework Html*/
+      .treefooter{}
+      
+      /*        treeframework Html*/
+      .globreppdf{top:90px !important;}
+      .globreppdful{padding-top: 5px !important;}
+    }
+     
+       @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+        .iosstatusbar{display: none !important;}
+         .loginixcont{top:5px !important;position: absolute;width: 100%;}
+        .calhead{height:40px !important;padding-top: 5px !important;padding-left: 10px !important;}
+        .cntnrnagn{margin-top: 50px !important;}
+        .iphonexdiv{padding-top: 50px !important;}
+        .logo1{padding-left: 20px !important;}
+        .iphonexhead{height:45px !important;padding:0px 15px;}
+        #displayforms{top:45px !important;padding-left: 30px;}
+        .setcont{top:0px !important;position: absolute;z-index: 9 !important;padding-left: 40px;}
+        .loccont{top:0px !important;position: absolute;padding-left: 40px;}
+        .subdcont{top:0px !important;position: absolute;padding-left: 40px;}
+        .dmenucont{top:0px !important;position: absolute;padding-left: 30px;}
+    .topnavbar{height:45px !important;}
+    .menutopicon{top: 40px !important;}
+    .divforsearch{top: 20px !important;}
+    .tempmbcont{margin-top:47px !important;}
+    .tempfooter{height: 45px !important;}
+    .nofoot{height: 65px !important;}
+    footer .btnsettings1{margin-right:10px !important;}
+    
+    /*        SelectDoctor Html*/
+    .sdheadnew.dmmanav{top: 0px !important;}
+     .searchdoctor{top: 50px !important;left: 30px !important;}
+      .body-content{top: 100px !important;left: 30px !important;}
+      
+       /*        ReportError Html*/
+      .reperrorcont{padding-left: 30px !important;}
+      /*        404 Html*/
+      .fzfcont{padding-left: 30px !important;}
+      
+      /*        treeframework Html*/
+      .globreppdf{top:40px !important;}
+      .globreppdful{padding-left: 30px !important;}
+    }

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>UPM Hospitals Login Form</title>
+        <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/zoi.js"></script>
+        <script src="bootstrap/bootstrap.min.js" type="text/javascript"></script>
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css"> 
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script  src="js/SQLitePlugin.js" type="text/javascript"  ></script>
+          <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".showpw").click(function () {
+                    if ($(this).next().attr("type") === "password") {
+                        $(this).next().attr("type", "text");
+                        $(this).removeClass("glyphicon glyphicon-eye-close lbleye");
+                        $(this).addClass("glyphicon glyphicon-eye-open lbleye1");
+                    } else {
+                        $(this).next().attr("type", "password");
+                        $(this).removeClass("glyphicon glyphicon-eye-open lbleye1");
+                        $(this).addClass("glyphicon glyphicon-eye-close lbleye");
+                    }
+                });
+                //Mobile Button
+                $("#topbtn1").click(function () {
+                    $('#topbtn2').removeClass('top1');
+                    $("#topbtn3").removeClass("top1");
+                    $('#topbtn1').addClass('top1');
+                    $("#UHIDMRNO").css("display", "none")
+                    $("#Email").css("display", "none");
+                    $("#Mobile").css("display", "block");
+                });
+                //Email Button
+                $("#topbtn2").click(function () {
+                    debugger;
+                    $("#topbtn1").removeClass("top1 mob");
+                    $('#topbtn2').addClass('top1');
+                    $("#topbtn3").removeClass("top1");
+                    $("#Mobile").css("display", "none");
+                    $("#UHIDMRNO").css("display", "none");
+                    $("#Email").css("display", "block");
+                });
+                //            UHIDMRNO
+                $("#topbtn3").click(function () {
+                    $("#topbtn1").removeClass("top1 mob");
+                    $('#topbtn2').removeClass('top1');
+                    $("#topbtn3").addClass("top1");
+                    $("#Mobile").css("display", "none");
+                    $("#Email").css("display", "none");
+                    $("#UHIDMRNO").css("display", "block")
+                });
+            });
+            function retrive()
+            {
+                debugger;
+//             alert("retrivemethod");
+                debugger;
+                var db = window.openDatabase("Database", "1.0", "SHIVAMDB", 200000);
+                db.transaction(queryDBi, errorCBi);
+//      db.transaction(populateDB,errorCB,successCB);
+
+            }
+
+            function queryDBi(tx)
+            {
+//                alert("in querydb");
+                debugger;
+                // //PatSignUp(pid INTEGER PRIMARY KEY AUTOINCREMENT,patname TEXT,patmobile TEXT,patemail TEXT,patuid TEXT,patpwd TEXT,patlogintype TEXT ,patloginurl TEXT ) pid INTEGER PRIMARY KEY AUTOINCREMENT,patname TEXT,patmobile TEXT,patemail TEXT,patuid TEXT,patpwd TEXT,patlogintype TEXT ,patloginurl TEXT 
+                tx.executeSql('CREATE TABLE IF NOT EXISTS patSignUp(pid INTEGER PRIMARY KEY AUTOINCREMENT,patname TEXT,patmobile TEXT,patemail TEXT,patuid TEXT,patpwd TEXT,patlogintype TEXT ,patloginurl TEXT ) ');
+                tx.executeSql('SELECT distinct pid,patname,patmobile,patemail,patuid,patpwd,patlogintype,patloginurl FROM patSignUp', [], querrySuccessi, errorCBi);
+            }
+            function errorCBi(err)
+            {
+                debugger;
+                alert("Error processing SQL" + err.code);
+            }
+            function  querrySuccessi(tx, results) {
+                debugger;
+                var len = 0;
+                var len = results.rows.length;
+                var logintype, idval, mobile, email, patmrno, fname, patpassword = "";
+                try{
+                   navigator.notification.activityStop()
+                 }catch(err){
+                     
+                 }
+                if (localStorage.getItem("adduser") !== null) {
+                    localStorage.removeItem("adduser");
+                    location.href = 'upm.html';
+                } else {
+                    if (len > 0) {
+                        if (len == 1) {
+                            //                     alert("len ===1"+results.rows.item(0).id);
+                            fname = results.rows.item(0).patname;
+                            idval = results.rows.item(0).pid;
+                            mobile = results.rows.item(0).patmobile;
+                            email = results.rows.item(0).patemail;
+                            patmrno = results.rows.item(0).patuid;
+                            patpassword = results.rows.item(0).patpwd;
+                            localStorage.patname = fname;
+                            localStorage.patmrno = patmrno;
+                            location.href = 'PatientLoginThirdScreen.html';
+                            return;
+                        } else {
+                            location.href = 'addusers1.html';
+                            return;
+                        }
+                    }else{
+                        location.href = 'upm.html';
+                    }
+                }
+            }
+            function onLoad() {
+                localStorage.appname = "upm";
+                document.addEventListener("deviceready", onDeviceReady, false);
+            }
+            function onDeviceReady() {
+                try{
+                    try{
+                StatusBar.backgroundColorByHexString("#007098");
+                
+                }catch(err){
+                    //alert(err);
+                }
+                    navigator.notification.activityStart("UPM Hospitals","Connecting,Please Wait...", true);
+                }catch(err){
+                    
+                }
+                convert("http://upm.myemrhub.com/");
+            }
+        </script>
+    </head>
+    <body onload="onLoad()">
+        
+    </body>
+</html>

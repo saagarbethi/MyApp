@@ -1,0 +1,1163 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11 Dec, 2017, 4:38:18 PM
+    Author     : shivam
+*/
+        * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        }
+        .row{margin: 0px;display: block;}
+        a:hover{text-decoration: none;}
+        label{margin: 0px;font-weight:500;}
+        body{
+/*            -moz-user-select: none;        
+            -webkit-user-select: none;        
+            user-select: none;*/
+        }
+        .shivam .item-input-with-value .item-floating-label{
+            color: #165F89;
+            font-size: 14px;
+        }
+        .shivam .page>.searchbar input[type=search], .shivam .page>.searchbar input[type=text], .shivam .searchbar-expandable input[type=search], .shivam .searchbar-expandable input[type=text], .shivam .subnavbar .searchbar input[type=search], .shivam .subnavbar .searchbar input[type=text] {
+            padding-left: 50px;
+            font-size: 16px;
+        }
+        
+         .shivam .list  .item-input-with-value .item-floating-label{
+            color: #165F89;
+            font-size: 14px;
+        }
+       .shivam .list  .item-input-focused .item-floating-label,.md .item-input-focused .item-label{
+            color: #165F89;
+        }
+        .shivam .item-input-focused .item-floating-label,.md .item-input-focused .item-label{
+            color: #165F89;
+        }
+        .shivam .list .item-floating-label{
+             color: rgba(0,0,0,.35);
+             font-weight: 500;
+        }
+        .navbar .left, .navbar .right{
+            margin: 0px;
+            height: 45px;
+        }
+        .shivam .navbar .title{
+            margin: 0px;
+            padding: 0px 10px;
+        }
+        .shivam  .item-floating-label{
+            color: rgba(0,0,0,.35);
+        }
+         .list-block a:hover{text-decoration: none;}
+        .list-block .item-title{
+            color: #000;
+        }
+        .md .list .item-content:hover{text-decoration: none !important;}
+        .imgprofile{
+            width: 40px;
+            height:40px;
+            border-radius: 50%;
+        }
+        .rghtimg{
+          width:40px;
+          height:40px;
+        }
+        .md .ptr-preloader{top: 0px;}
+        .page .navbar, .view .navbar, .views .navbar{
+          height: 50px;
+          min-height: 50px;
+            background: #367fa9;
+            margin: 0px;
+            border-radius: 0px;
+            border: 0px;
+        }
+        .shivam .navbar, .shivam .subnavbar, .shivam.toolbar{
+             background: #367fa9;
+              height: 50px;
+          min-height: 50px;
+            background: #367fa9;
+            margin: 0px;
+            border-radius: 0px;
+            border: 0px;
+        }
+        .md .list .item-link .item-inner, .md .list .list-button .item-inner{padding-right: 25px;}
+        .navbar .right{padding-right:0px;}
+        .photo-browser .navbar, .photo-browser .toolbar, .views .view[data-page=photo-browser-slides] .navbar, .views .view[data-page=photo-browser-slides] .toolbar{
+             background: rgba(54, 127, 169, 0.94);
+        }
+        .list .item-title{font-size: 14px;color: #000;text-decoration: none;font-weight: 500;}
+        .navbar .right .memuicn{
+            width: 58px;
+            text-align: center;
+            height: 40px;
+            background: transparent;
+            vertical-align: middle;
+            padding-top: 10px;
+        }
+       .navbar~* .page-content, .md .navbar~.page-content{
+          padding-top:51px;
+        }
+        .page .list{margin:0px;}
+        .imgprofile{
+          width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #FFF;
+            margin-left:10px;
+        }
+       .navbar a.link{padding:0px 5px;height: 50px;}
+      .navbar .title{margin: 0px 5px;}
+      .page-content{padding:0px;padding-top:45px;padding-bottom: 45px;}
+      .list-block{margin:0px;padding:0px;}
+      .list-block .item-content{padding-left: 5px;}
+      .item-link{color:#000;}
+        .navbar .formname{
+            width: 100%;
+            float: left;
+            line-height: normal;
+            font-weight: 500;
+            font-size: 20px;
+            margin: 0px;
+        }
+        .patname{
+            width: 100%;
+/*            float: left;*/
+            line-height: normal;
+            font-size: 16px;
+            font-weight:500;
+        }
+        .navbar .Homerighdiv{}
+        .navbar .Homerighdiv .Atag .icn{}
+        .navbar .Homerighdiv .Atag{
+            width: 45px;
+            height: 37px;
+            color: #FFF;
+            text-align: center;
+            padding-top: 13px;
+        }
+        .aqua{background-color: #00c0ef !important;}
+        .yellow {background-color: #f39c12 !important;}
+        .green { background-color: #00a65a !important;}
+        .red { background-color: #dd4b39 !important;}
+        .blue {background-color: #3c8dbc !important;}
+        .bg-aqua{background-color: #00c0ef !important;}
+        .bg-yellow {background-color: #f39c12 !important;}
+        .bg-green { background-color: #00a65a !important;}
+        .bg-red { background-color: #dd4b39 !important;}
+        .bg-blue {background-color: #3c8dbc !important;}
+    .location{
+
+    }
+    .location .list .locanchtag .item-title{
+        white-space: normal;
+            text-overflow: inherit;
+            word-wrap: break-word;
+            max-width: 95%;
+    }
+    .location .item-media .loclft_01{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: #FFF;
+        display: inline-block;
+    }
+    .location .item-media .loclft_01 .loc{
+       width: 40px;
+        height: 40px;
+        font-size: 25px;
+        float: left;
+        margin: 0px auto;
+        display: inline-flex;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        position: relative;
+        box-sizing: border-box;
+    }
+    .item-media .loclft_01 .Depticon{
+        font-size: 20px;
+        margin: 0px auto;
+        display: inline-flex;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        position: relative;
+        box-sizing: border-box;
+        width: 40px;
+        height: 40px;        
+    }
+    
+    .footer_All{
+        position: fixed;
+        bottom:0px;
+        left: 0px;
+        right: 0px;
+        height: 40px;
+        background: #C60;
+        z-index: 99999;
+    }
+    
+    .footer_All .link_ftr{
+        width: 40px;
+        height:40px;
+        color: #FFF !important;
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: relative;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        z-index: 1;
+    }
+    .footer_All .left{
+        float: left;
+        height: 40px;
+        width: 40px;
+          width: 10%;
+        text-align: left;
+    }
+    .footer_All .title{
+        display: inline-block;
+        float: left;
+        width: 80%;
+    }
+    .footer_All .right{
+         float: right;
+        height: 40px;
+        width: 40px;
+        width: 10%;
+        text-align: right;
+    }
+    .footer_All .right .setting{
+       display: inline-block;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+/*==========================*/
+.MenuForm{}
+    .Dashbrdbtn .content-block{
+        margin: 0px;
+        padding: 0px;
+        display: inline-block;
+        width: 100%;
+    }
+    .Dashbrdbtn .contentdiv{
+        width: 16.666666%;
+        padding: 15px 5px;
+        padding-bottom: 5px;
+        float: left;
+        border-bottom: 1px solid #E3E3E3;
+        border-right: 1px solid #E3E3E3;
+        cursor: pointer;
+    }
+    .Dashbrdbtn .contentdiv:hover{
+        background: rgb(255,219,212);
+        cursor: pointer;
+    }
+    .Dashbrdbtn .contentdiv .icondiv_01{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        height: 75px;
+        overflow: hidden;
+    }
+    .Dashbrdbtn .contentdiv .icondiv_01 .img_01{
+        width: 70px;
+        height: 70px;
+    }
+    .Dashbrdbtn .contentdiv .Infodiv{
+        display: table;
+        width: 100%;
+    }    
+    .Dashbrdbtn .contentdiv .textdiv{
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        cursor: pointer
+    }
+    .Dashbrdbtn .contentdiv .textdiv .btntxt{
+        display: inline-block;
+        vertical-align: middle;
+        height: 35px;
+        position: relative;
+        overflow: hidden;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: Roboto, Arial, sans-serif;
+        border: 0px;
+        width: 100%;
+        outline: none;
+        background: transparent;
+        word-break: break-word;
+        cursor: pointer;
+        line-height: normal;
+    }
+    .Dashbrdbtn .contentdiv  .frmrepdiv{
+        width: 70px;
+        height: 70px;
+        display: inline-block;
+    }
+    .Dashbrdbtn .contentdiv .frmdtl{
+        width: 100%;
+        display: inline-block;
+        background: #EDEDED;
+        font-size: 16px;
+        border-top: 2px solid #E1E0E0;
+        font-weight: 500;
+    }
+    .Dashbrdbtn .contentdiv .tochar{
+        color: #ffffff;
+        padding-top: 10px;
+        display: inline-block;
+        font-size: 16px;
+    }
+    @media only screen and (max-width:900px) {
+        .Dashbrdbtn .contentdiv{width: 20%;}
+    }
+    @media only screen and (max-width:768px) {
+        .Dashbrdbtn .contentdiv{width: 25%;}
+    }
+     @media only screen and (max-width:550px) {
+        .Dashbrdbtn .contentdiv{width:33.33333%;}
+    }
+/*degConfig Css Started*/
+
+/* ================   Select Doctor Css Started ============================*/
+
+    .SelectDr.page>.searchbar{
+        top: 46px;
+    padding: 0px 5px;
+    background: transparent;
+    height: 40px;
+    }
+    .SelectDr{
+
+    }
+    .SelectDr.page>.searchbar~.page-content{
+        padding-top: 95px;
+    }
+    .SelectDr .searchbar .searchbar-input{
+        height: 35px;
+    border: 0px;
+    border-radius: 3px;
+    box-shadow: none;
+    background: #468CC2;
+    }
+    .SelectDr .searchbar input[type=search]{
+        color: #000;
+    padding: 0px 30px;
+    font-size: 14px;
+    padding-left: 50px !important;
+    }
+    
+/* ================   Select Doctor Css Started ============================*/
+.shivam .SelectDr  .subnavbar:after{
+    content: '';
+}
+.shivam .SelectDr .searchbar-disable-button.icn{
+    
+}
+.SelectDr .searchdiv{
+    margin-top: 45px;
+    position: relative;
+}
+.SelectDr .searchdiv .inputtxt{
+    width: 94%;
+margin-left: 3%;
+height: 35px;
+margin-top: 2px;
+border: 1px solid #d3d3d3;
+border-radius: 3px;
+font-size: 15px;
+padding-left: 40px;
+color: #000;
+}
+/*.SelectDr .searchdiv .srchicon{
+    position: absolute;
+left: 3%;
+width: 35px;
+font-size: 25px;
+color: #0E59A6;
+border-right: 1px solid #d3d3d3;
+height: 33px;
+top: 3px;
+text-align: center;
+padding-top: 4px;
+}*/
+.SelectDr .searchdiv .searchbar-clear{
+    
+}
+.SelectDr .page-content{
+    padding-top:3px;
+    padding-bottom: 125px;
+}
+
+.SelectDr .list .listgroup .item-inner{
+    padding: 0px;
+min-height: 30px;
+background: #F0F0F0;
+padding-left: 15px;
+}
+.SelectDr .list .listgroup .item-title{
+    color:#367fa9;
+    font-size: 20px;
+    font-weight: 500;
+}
+.SelectDr .list .listgroup  .item-inner:after{
+    height: 0px;
+}
+.SelectDr .Drimg{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.SelectDr .list .twochr{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+/*.ipconfig .inputfrorm{
+    padding: 0px 10px;
+}
+.item-content{
+    
+}
+.ipconfig .inputfrorm ul{
+    
+}
+.ipconfig .inputfrorm .item-inner:after{
+    height: 0px;
+}
+.ipconfig .inputfrorm .item-inner{
+   padding: 0px;
+   padding-top: 10px;
+}
+.shivam .ipconfig  .inputtxt{
+    height: 40px !important;
+}
+
+
+.ipconfig .buttons-row{
+    padding: 0px 5px;
+}
+.ipconfig .contacts-block .buttons-row .button{
+   font-weight: 500;
+        font-size: 20px;
+        text-transform: capitalize;
+        width: 48%;
+        float: left;
+        margin-left: 1%;
+        padding: 4px 5px;
+        height: auto;
+}
+.ipconfig .block-title{
+    margin: 0px;
+}
+.ipconfig .lblcong{
+   background: #F6F6F6;
+    width: 100%;
+    display: inline-block;
+    padding:10px;
+    font-size: 18px;
+    color: #000;
+}*/
+.shivam  .sheet-modal.my-sheet.IpconfigDetail{
+    height:380px;
+    overflow: auto;
+}
+.shivam  .sheet-modal.my-sheet.IpconfigDetail .dfllblconfig{
+    padding: 5px 15px;
+    font-size: 20px;
+}
+.shivam  .sheet-modal.my-sheet.IpconfigDetail .toolbar{
+    background: #c60;
+}
+.shivam .sheet-modal.my-sheet.IpconfigDetail .sheet-close{
+    
+}
+.shivam .sheet-modal.my-sheet.IpconfigDetail .sheet-close .spicn{
+    
+}
+.shivam .sheet-modal.my-sheet.IpconfigDetail .sheet-modal-inner{
+    overflow: auto;
+}
+.shivam .sheet-modal.my-sheet.IpconfigDetail .sheet-modal-inner .block{
+    margin: 0px;
+padding: 0px;
+}
+.shivam .sheet-modal.my-sheet.IpconfigDetail .sheet-modal-inner .block .inputfrorm{
+    margin: 0px;
+}
+.shivam .sheet-modal.my-sheet.IpconfigDetail .sheet-modal-inner .block .inputfrorm ul{
+    padding-top: 10px;
+}
+.shivam .sheet-modal.my-sheet.IpconfigDetail .sheet-modal-inner .block .list ul:after{
+    height: 0px;
+}
+.shivam .sheet-modal.my-sheet.IpconfigDetail .contacts-block {
+    
+}
+.shivam .sheet-modal.my-sheet.IpconfigDetail .contacts-block .buttons-row{
+    
+}
+.shivam .sheet-modal.my-sheet.IpconfigDetail .contacts-block .buttons-row .button{
+   width: 46%;
+float: left;
+margin-left: 2%;
+font-weight: 500;
+margin-right: 2%; 
+}
+@media only screen and (max-width:700px) {
+    .popup.popup-config{
+        width: 96%;
+        margin: 0px auto;
+        left: 2%;
+        top: 10px;
+        height: 90%;
+        right: 2%;
+    }
+}
+
+.Notification{}
+.Notification .list-block .item-link .item-inner{background-image: none;padding: 0px;}
+.Notification .mainli_01{position: relative;}
+.Notification .mainli_01 .item-content{padding: 0px;}
+.Notification .mainli_01 .notmassage{padding: 0px;margin-left: 10px;min-width: 30px;margin-top: 5px;}
+.Notification .mainli_01 .massageicon{
+    width: 30px;
+    text-align: center;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 16px;
+    color: #FFF;
+}
+.Notification .mainli_01 .massageicon i{
+    font-weight: bold;
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.Notification  .mainli_01 .datenotifiction{
+/*    position: absolute;*/
+    right: 10px;
+    line-height: normal;
+    font-size: 13px;
+    top: 5px;
+    color: #A4A2A2;
+}
+.Notification  .mainli_01 .mesgtxt{
+    padding-top: 15px;
+    text-overflow: initial;
+    display: block;
+    white-space: normal;
+    word-break: break-all;
+    padding-right: 10px;
+}
+
+.notifblock{
+   display: block;
+width: 100%;
+padding: 5px;
+padding-left: 0px;
+padding-right: 3px;
+padding-bottom: 2px;
+}
+.notifblock .Msgtitle{
+    float: left;
+    width: 100%;
+    padding-right: 5px;
+}
+.notifblock .lbltitil{
+    color: #000;
+    display: block;
+    width: 70%;
+    float: left;
+}
+.notifblock .lbldate{
+    color: #777777;
+    font-size: 12px;
+    float: left;
+    width: 30%;
+    display: block;
+    text-align: right;
+}
+.notifblock .lblcontent{
+    width: 100%;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    color: #000;
+}
+.notifblock .MagBody{
+    float: left;
+    width: 100%;line-height: normal;
+}
+.notifblock .MagBody .lbltextmsg{
+   white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    color: #000;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.bg-aqua{ background-color: #00c0ef !important;}
+.bg-yellow{background-color: #f39c12 !important;}
+.bg-green{background-color: #00a65a !important;}
+.bg-red {background-color: #dd4b39 !important;}
+.bg-blue {background-color: #3c8dbc !important;}
+
+.notifications{
+    top: 0px;
+    bottom: inherit;
+    transform: translate3d(0px, 0px, 0px);
+-webkit-transform: translate3d(0px, 0px, 0px);
+}
+.notifications .notification-item.NotifictionDshbord{
+     background: #FFF;
+     box-shadow: 0 2px 4px rgba(0,0,0,.22),0 1px 2px rgba(0,0,0,.24);
+     margin-bottom: 15px;
+}
+.NotifictionDshbord{
+   
+}
+.NotifictionDshbord .item-content{}
+.NotifictionDshbord .list-block .item-media+.item-inner{}
+.list-block .NotifictionDshbord .item-media+.item-inner{
+    padding:0px;
+}
+.list-block .NotifictionDshbord .item-subtitle{
+    color: #000;
+}
+.list-block .NotifictionDshbord .item-text{
+    padding-bottom: 5px;
+}
+.list-block .NotifictionDshbord .item-title {
+color: #000;
+margin: 0px;
+padding: 0px;
+padding-top: 5px;}
+
+
+.item-input .label-switch{
+   top: 9px;
+    background: #FFF;
+    display: block;
+    padding: 5px;
+    padding-right: 0px;
+    height: 24px;
+    width: 45px;
+    border-radius: 50px;
+}
+
+
+.label-switch .checkbox:after {
+content: ' ';
+height: 22px;
+width: 22px;
+border-radius: 22px;
+background: #ED6969;
+position: absolute;
+z-index: 2;
+top: 1px;
+left: 0px;
+box-shadow: 0 2px 5px rgba(0,0,0,.4);
+-webkit-transform: translateX(0);
+transform: translateX(0);
+-webkit-transition-duration: .3s;
+transition-duration: .3s; }
+.label-switch input[type=checkbox]:checked+.checkbox:after{
+    -webkit-transform: translateX(18px);
+transform: translateX(18px);
+background: #2196f3;
+}
+.NotifictionDshbord .item-after {
+    margin: 0px;
+    position: absolute;
+    right: 0px;
+    width: auto;
+    line-height: normal;
+    height: auto;
+    display: block;
+}
+.NotifictionDshbord .item-after .noticlose{
+    font-size: 30px;
+color: #BDBCBC;
+width: 50px;
+display: block;
+text-align: center;
+}
+.Notification .accordion-item-expanded>.accordion-item-content{
+    border-bottom: 1px solid #d3d3d3;
+}
+.Notification  .lbldescription{
+    margin-left: 55px;
+display: block;
+}
+.Notification  .list-block:not(.media-list) .accordion-item-expanded:not(.media-item)>.item-link .item-inner{
+    background-image: none;
+}
+
+
+/*Dis Css Started Heare*/
+.DisFirst .right .cubicals{
+    font-size: 14px;
+    display: inline-block;
+    padding:7px 5px;
+    background: #FFF;
+    color: #000;
+    margin-right: 5px;
+    border-radius: 3px;
+    height: 34px;
+}
+.shivam .DisFirst .fab[class*="-bottom"] {
+    bottom: 0px;
+    border-radius: 0px;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    height: auto;
+    box-shadow: none;
+    display: inline-block;
+    float: none;
+}
+
+.shivam .DisFirst .demo-fab-fullscreen-sheet {
+    left: 20%;
+    width: 60%;
+    right: auto;
+    height: auto;
+    top: auto;
+}
+.shivam .DisFirst .navbar .title{padding: 0px;}
+.shivam .DisFirst .inputsrchdiv{
+    position: relative;
+    width: 250px;
+    padding: 0px;
+}
+.shivam .DisFirst .srcmrnotxbox{
+    width: 100%;
+    background: #FFF;
+    padding: 9px 5px;
+    padding-right: 40px;
+    font-size: 14px;
+    border-radius: 3px;
+    font-weight: normal;
+    color: #000;
+}
+.shivam .DisFirst .serchbtndis{
+    display: inline-block;
+    border: 0px;
+    height: 35px;
+    vertical-align: middle;
+    position: absolute;
+    right: 2px;
+    z-index: 999999999;
+    top: 0px;
+    background: #FFF;
+    width: 40px;
+    border-radius: 2px;
+    outline: none;
+    padding: 0px;
+}
+.shivam .DisFirst .serchbtndis .searchbar-icon{
+    height: 34px;
+left: 0px;
+top: 60%;
+margin-top: -21px;
+width: 42px;
+border-left: 1px solid #d3d3d3;
+}
+.shivam .DisFirst .pd{padding: 0px;}
+
+.shivam .DisFirst .footer_All .title.clrinicaotpopup{
+/*    display: flex;*/
+height: 40px;
+overflow: auto;
+overflow-y: hidden;
+}
+
+.shivam .DisFirst .footer_All .title.clrinicaotpopup{
+    text-align: center;
+}
+.shivam .DisFirst .footer_All .title.clrinicaotpopup .clsedemofab{
+    
+}
+.shivam .DisFirst .footer_All .title.clrinicaotpopup .clsedemofab .block-title{
+    margin: 0px;
+}
+.shivam .DisFirst .footer_All .title.clrinicaotpopup .clsedemofab .block-title .clsefabatag{
+    width: 100%;
+display: inline-block;
+padding: 10px 20px;
+color: #000;
+font-weight: 500;
+font-size: 20px;
+}
+.shivam .DisFirst .footer_All .title.clrinicaotpopup .clsedemofab .block-title .clsefabatag .sptxt{
+    float: left;
+    display: inline-block;
+    padding-top: 5px;
+}
+.shivam .DisFirst .footer_All .title.clrinicaotpopup .clsedemofab .block-title .clsefabatag .spicn{
+    float: right;
+}
+.shivam .DisFirst .footer_All .title.clrinicaotpopup .fabbtn{
+   height: 38px;
+    margin-top: 2px;
+    background: transparent;
+    display: block;
+    vertical-align: top;
+    color: #FFF;
+}
+.shivam .DisFirst .footer_All .title.clrinicaotpopup .fabbtn .inicon{
+  top: 0px;
+font-size: 16px;
+width: 100%;
+float: left;
+text-align: center;
+padding-top: 2px;
+padding-bottom: 2px;
+}
+.shivam .DisFirst .footer_All .title.clrinicaotpopup .fabbtn .glyphicon-bullhorn{
+    font-size: 14px;
+    padding-top: 3px;
+}
+.shivam .DisFirst .footer_All .title.clrinicaotpopup .fabbtn a{
+/*    height: 40px;
+    width: auto;
+    border-radius: 0px;
+    padding: 0px 5px;*/
+}
+.shivam .DisFirst .footer_All .title.clrinicaotpopup .fabbtn .intxt{
+    line-height: normal;
+display: block;
+font-weight: normal;
+}
+.shivam .DisFirst .footer_All .disftrbtn{
+    display: inline-block;
+    margin-left: 15px;
+    vertical-align: top;
+}
+.shivam .DisFirst .footer_All .disftrbtn .Refresh{
+    
+}
+.shivam .DisFirst .footer_All .disftrbtn .callnextpatient{
+    
+}
+.shivam .DisFirst .footer_All .disftrbtn .dattxt{
+    width: 90px;
+background: #FFF;
+display: inline-block;
+left: 0px;
+border-radius: 3px;
+z-index: 999;
+text-align: center;
+padding: 10px 0px;
+height: 35px;
+margin-top: 3px;
+color: #000;
+font-weight: 500;
+}
+.ios .navbar~.page-content, .ios .navbar~:not(.no-navbar) .page-content{
+    padding-top: 51px;
+}
+
+    .shivam .SelectDr .doctitle .ripple-wave{
+        display: none;
+    }
+    .shivam .DisFirst .Patdtlblk{
+        display: block;
+        width: 100%;
+    }
+    .shivam .DisFirst .lftcn{
+        width: 50px;
+        padding: 0px !important;
+        text-align: center;
+        height: 50px !important;
+    }
+    .shivam .DisFirst .lftcn .ripple-wave{display: none;}
+    .shivam .DisFirst .lftcn{
+        
+    }
+    .shivam .DisFirst .lftcn .icon{
+        font-weight: normal;
+        font-size: 24px;
+        width: 40px;
+        display: inline-block;
+        display: none;
+    }
+    .ios .navbar.DisFirst .left{
+        
+    }
+    .md .DisFirst .lftcn .anmd{
+        display: block;
+    }
+    .ios .DisFirst .lftcn .iosicn{
+        display: block;
+    }
+    .popup-Note{
+       border-radius: 0px;
+       z-index: 999999999;
+       border: 0px;
+    }
+    .popup-Note .dfllblconfig{
+        padding: 5px 15px;
+        font-size: 20px;
+    }
+    .popup-Note .toolbar{
+        background: #c60;
+        padding: 0px;
+        height: 40px;
+    }
+    .popup-Note .sheet-modal-inner{
+        overflow: auto;
+    }
+    .popup-Note .sheet-modal-inner .list{
+        margin: 0px;
+        padding: 0px;
+    }
+    .popup-Note .block{
+        margin: 0px;
+        padding: 0px 5px;
+        padding-top: 10px;
+    }
+    .popup-Note .notespan{
+        font-size: 14px;
+    }
+    .popup-Note .sheet-modal-inner .block .inputfrorm{
+        margin: 0px;
+    }
+    .popup-Note .sheet-modal-inner .block .inputfrorm ul{
+        padding-top: 10px;
+    }
+    .popup-Note .sheet-modal-inner .list ul:after{
+        height: 0px;
+    }
+    .popup-Note .btnli .clrsquer{
+       width: 20px;
+    height: 20px !important;
+    border: none;
+    vertical-align: middle;
+    float: left;
+    }
+    .popup-Note .btnli .clrincatediv{
+        display:block;
+        padding:4px 5px;
+    }
+    .popup-Note .list ul.btnul:before{
+        content: "";
+        height: 0px;
+    }
+.DisFirst .apptdetail{
+    text-align: center;
+    width: 100%;
+    padding:5px 2px;
+    padding-bottom:3px;
+    white-space: nowrap;
+    padding-left: 10px;
+}
+.DisFirst .apptdetail .countdiv{
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    padding: 1px 0px;
+    padding-top: 0px;
+    margin-right: 4px;
+    margin-top: 0px;
+}
+.DisFirst .apptdetail .countnumber{
+    font-size: 15px;
+    font-weight: 500;
+    display: block;
+    padding: 0px;
+    color: #FFF;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding-top:5px;
+}
+.DisFirst .apptdetail .countlabel{
+    font-weight: normal;
+    color: #000;
+}
+    .DisFirst .Headrow{
+       background: #ececec;
+    padding-right: 10px;
+    color:#000;
+    border-bottom: 1px solid #e6e6e6;
+    }
+    .DisFirst .row:before{
+       content: '';
+        display: block;
+    }
+    .DisFirst .Headrow .hedlbl{
+        color: #000;
+        font-weight: 500;
+        font-size: 20px;
+        padding:2px 10px;
+    }
+    .DisFirst .Headrow .btnrecalall{
+        float: right;
+        padding: 2px 20px;
+        margin-top: 2px;
+/*        background: transparent;*/
+        color: #FFFFFF;
+        font-size: 16px;
+        border: 1px solid #FFF;
+        outline: none;
+        display: inline-block;
+        margin-right:4px;
+    }
+    .DisFirst .Headrow .btnrecalall:hover{
+        cursor: pointer;
+    background: #05659B;
+    border: 1px solid #CFCFCF
+    
+    }
+    .DisFirst .mainpatdiv{
+border-bottom: 1px solid #EEEEEE;
+    }
+    .DisFirst .mainpatdiv .infotbl{
+        display: table;
+        width: 100%;
+    }
+    .DisFirst .mainpatdiv .infotbl .infotbltd{
+        display: table-cell;
+        vertical-align: middle;
+        padding: 5px 2px;
+    }  
+    .DisFirst .mainpatdiv .infotbl .lfttd{
+        width: 60px;
+    }
+    .DisFirst .mainpatdiv .infotbl .rfttd{
+        
+    }
+    .DisFirst .mainpatdiv .infotbl .colorindicate{
+        padding-right: 10px;
+        width: 50px;
+        text-align: right;
+    }
+     .DisFirst .mainpatdiv .infotbl .colorindicate span{}
+     .DisFirst .mainpatdiv .infotbl .colorindicate .rghtaro{
+         color: #E0E0E0;
+        font-size: 16px;
+     }
+    .DisFirst .mainpatdiv .infotbl .lfttd .apptimg{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin-left: 5px;
+    }
+    .DisFirst .mainpatdiv .infotbl .lfttd .patPhoton{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: #FFF;
+        text-align: center;
+        font-size: 18px;
+        line-height: 40px;
+        vertical-align: middle;
+        font-weight: normal;
+        margin-left: 4px;
+    }
+    .DisFirst .mainpatdiv .infotbl .rfttd .patname{
+        color: #000;
+    }
+    .DisFirst .mainpatdiv .infotbl .rfttd .patdata{
+        font-size: 12px;
+        color: #757474;
+    }
+
+    @media only screen and (max-width:980px) {
+        .DisFirst .mainpatdiv{width: 50%;}
+    }  
+@media only screen and (max-width:768px) {
+    
+     .DisFirst .mainpatdiv{width: 100%;float: none;}
+    .DisFirst .Headrow .pd{width: 100%;}
+    .shivam .DisFirst .demo-fab-fullscreen-sheet {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: initial;
+    bottom:0px;
+    background: #fff;
+    z-index: 1600;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.4);
+    overflow: hidden;
+    width: 95%;
+}
+    .footer_All .left{width: 15%;}
+    .footer_All .title{width: 70%;}
+    .footer_All .right{width: 15%;}
+    
+    .shivam .DisFirst .footer_All .left{width: 10%;}
+    .shivam .DisFirst .footer_All .title{width: 90%; }
+    .shivam .DisFirst .footer_All .right{width: 15%;}
+}
+
+@media only screen and (max-width:620px){
+    .DisFirst .folderdiv{ width: 25%;margin: 0px; }
+    .DisFirst .folderdiv .fldername{
+        text-overflow: ellipsis;
+        width: 100%;
+        display: block;
+        height: auto;
+        line-height: 25px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+@media only screen and (max-width:540px){
+     .DisFirst .folderdiv{ width:33.33%;margin: 0px; }
+    .shivam .DisFirst .inputsrchdiv{width: 170px;}
+    .shivam .DisFirst .footer_All .title.clrinicaotpopup .fabbtn .intxt{font-size: 13px;}
+    .shivam .DisFirst .footer_All .disftrbtn .dattxt{font-size: 13px;}
+    .shivam .DisFirst .footer_All .disftrbtn{margin-left: 10px;}
+    .shivam .DisFirst .footer_All .disftrbtn .dattxt{width: 80px;}
+}
+@media only screen and (max-width:460px){
+    .shivam .DisFirst .footer_All .title.clrinicaotpopup{text-align: left;}
+     .DisFirst .folderdiv{ width:33.33%;margin: 0px; }
+     .DisFirst .folderdiv .fldername{font-size: 12px;padding:0px 3px;}
+     .DisFirst .Headrow .hedlbl{font-weight: normal;font-size: 18px;}
+     .DisFirst .Headrow .btnrecalall{padding: 0px 20px;}
+}

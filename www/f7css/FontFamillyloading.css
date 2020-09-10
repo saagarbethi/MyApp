@@ -1,0 +1,122 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2 Aug, 2017, 2:13:01 PM
+    Author     : shivam
+*/
+            @font-face {
+                    font-family: 'Roboto';
+                    font-weight: 400;
+                    font-style: normal;
+                    src:
+                        url(fonts/roboto-regular-webfont.woff2) format('woff2'),
+                        url(fonts/roboto-regular-webfont.woff) format('woff'),
+                        url(fonts/roboto-regular-webfont.ttf) format('truetype');
+            }
+            @font-face {
+                    font-family: 'Roboto';
+                    font-weight: 500;
+                    font-style: normal;
+                    src:
+                            url(fonts/roboto-medium-webfont.woff2) format('woff2'),
+                            url(fonts/Roboto-Medium-webfont.woff) format('woff'),
+                            url(fonts/roboto-medium-webfont.ttf) format('truetype');
+            }
+    html,body{
+/*      font-family: Helvetica,Arial,sans-serif;*/
+           font-family: Roboto, Arial, sans-serif;
+           -webkit-font-smoothing: subpixel-antialiased;
+            font-size: 90%;
+            font-size: 14px;
+   }
+   .main-header .logo{font-family: Roboto, Arial, sans-serif;font-weight:500;}
+    body{font-family: Roboto, Arial, sans-serif;font-size: 14px;}
+    #mydiv {
+            height:100%;
+            width:100%;
+            position:fixed;
+            top:0;
+            padding: 0px;
+            text-align: center;
+/*            z-index:10000;*/
+            z-index:999999999;
+            filter:alpha(opacity=70);
+        }
+    #mydiv .imgnload{
+        border-radius: 50%;
+        height:80px;
+        width:80px;
+    }
+    #mydiv img {
+            border-radius: 50%;
+            height:80px;
+            width:80px;
+    }
+/* ======================================================================================*/
+/*    Started Css For Ripple Wave*/
+     .ripple{
+              position: absolute;
+              top:0; left:0; bottom:0; right:0;
+              overflow: hidden;
+              -webkit-transform: translateZ(0); /* to contain zoomed ripple */
+              transform: translateZ(0);
+              border-radius: inherit; /* inherit from parent (rounded buttons etc) */
+              pointer-events: none; /* allow user interaction */
+                      animation: ripple-shadow 0.4s forwards;
+              -webkit-animation: ripple-shadow 0.4s forwards;
+            }
+            .rippleWave{
+              backface-visibility: hidden;
+              position: absolute;
+              border-radius: 50%;
+              transform: scale(0.7); -webkit-transform: scale(0.7);
+              background: rgba(255,255,255, 1);
+              opacity: 0.45;
+                      animation: ripple 1s forwards;
+              -webkit-animation: ripple 1s forwards;
+            }
+
+            @keyframes ripple {
+              to {transform: scale(80); opacity:0;}
+            }
+            @-webkit-keyframes ripple {
+              to {-webkit-transform: scale(80); opacity:0;}
+            }
+ /* ======================================================================================*/
+/*    Started Css For Input focus or floting label Wave*/
+
+            
+            .flotlbl{
+                font-size: 16px;
+                font-weight: 500;
+                width: 95%;
+                position: absolute !important;
+                color:#999;
+                padding-left: 5px;
+                min-height: 32px;
+                text-align: left;
+                padding-left:5px;
+                transform: translate3d(0, 0, 0);
+                transition: all 0.1s;pointer-events: none;
+                transition: transform .4s cubic-bezier(.25,.8,.25,1),width .4s cubic-bezier(.25,.8,.25,1),-webkit-transform .4s cubic-bezier(.25,.8,.25,1);
+            }
+            .fltlblactiov{
+                font-weight: normal;
+                color: #0073b7 !important;
+                font-size: 14px;
+                transform: translate3d(0, -20px, 0);
+                padding: 0px 0px !important;
+            }
+            .inputbx{
+                min-width:95%;
+                border: 0px;
+                border-bottom: 1px solid #d3d3d3;
+            }
+            .inputbx:focus{   
+                background: #fff;
+                border-bottom: 1px solid #367fa9;transition: border-bottom .5s ease-in-out;
+                outline: none;
+            }

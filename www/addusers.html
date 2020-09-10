@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Add users</title>
+        <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+
+        <script src="js/jquery-1.11.3.js" type="text/javascript"></script>
+        <script src="bootstrap/bootstrap.min.js" type="text/javascript"></script>
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css"> 
+        <script type="text/javascript" src="cordova.js"></script>
+        <script>
+            function getParameterByName(name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                        results = regex.exec(location.search);
+                return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+            }
+            debugger;
+            var users = getParameterByName("users");
+            var logintype = getParameterByName("logintype");
+            function rightclick(id, div, val, uids) {
+                debugger;
+
+                event.stopPropagation();
+                $('.dropdownCont').hide();
+                $('#' + div).css('display', 'block');
+                var fn = 'deleteuser("' + div + '","' + val + '","' + uids + '")';
+                $('#' + div).attr('onclick', fn);
+//    $('.dropdownCont').show();
+                document.getElementById("editor-options").innerHTML = document.getElementById("custom-menu").innerHTML;
+                document.getElementById('editor-options').style.display = "block";
+            }
+            function deleteuser(div, i, mrno) {
+                debugger;
+
+
+                localStorage.entrance = '';
+                msg = 'Are you sure you want to delete this user?'
+                if (confirm(msg)) {
+                    $('#' + div).remove();
+                    $('#tr' + i).remove();
+                    var storedNames = JSON.parse(localStorage.getItem("emrnames"));
+                    var storedUrls = JSON.parse(localStorage.getItem("emrurls"));
+                    var storedUhids = JSON.parse(localStorage.getItem("emruhids"));
+                    var storedPwds = JSON.parse(localStorage.getItem("emrpasswords"));
+                    for (var i = 0; i < storedUhids.length; i++) {
+                        if (mrno === storedUhids[i]) {
+                            storedUhids.splice(i, 1);
+                            storedNames.splice(i, 1);
+                            storedUrls.splice(i, 1);
+                            storedPwds.splice(i, 1);
+                            break;
+                        }
+                    }
+                    localStorage.setItem("emrnames", JSON.stringify(storedNames));
+                    localStorage.setItem("emrurls", JSON.stringify(storedUrls));
+                    localStorage.setItem("emruhids", JSON.stringify(storedUhids));
+                    localStorage.setItem("emrpasswords", JSON.stringify(storedPwds));
+                    localStorage.adduser = '1';
+                    storedNames = JSON.parse(localStorage.getItem("emrnames"));
+                    if (storedUhids.length === 1) {
+                        localStorage.appurl = storedUrls[0];
+                        localStorage.patmrno = storedUhids[0];
+                    }
+                    $('.toggle').hide();
+                    event.stopPropagation();
+                    event.preventDefault();
+                    if (storedUrls.length === 1) {
+                        localStorage.patname = storedNames[0];
+                        localStorage.patmrno = storedUhids[0];
+                        location.href = 'PatientLoginThirdScreen.html';
+                    } else if (storedUrls.length > 1) {
+                        location.href = 'addusers.html';
+
+                    }
+                }
+                else {
+                    $('.toggle').hide();
+                    event.stopPropagation();
+                    event.preventDefault();
+                }
+            }
+
+            function  ladfun()
+            {
+                $(".dropdownCont").css("display", "none");
+            }
+        </script>
+
+        <style>
+            body {
+                overflow: hidden;
+            }
+            html {height: 100%;}
+            html body { height: 100%; overflow: hidden;}
+            html body .body-content {
+                position: absolute;
+                /*background-color:#E2E2E2;*/
+                background-color: #F5F2F2;
+                width: 100%;
+                top:50px;
+                bottom:50px;
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+            header {
+                position: absolute;
+                height:50px;
+                left: 0;
+                right: 0;
+                top: 0;
+                background: #367fa9;
+                color: #FFF;
+            }
+            footer {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: #C60;
+                height:50px;
+            }
+            .lblpatientName{ width: 100%;padding: 5px;font-size:12px;margin-bottom: 0px;}
+            .lblmrno{padding: 5px;font-weight: normal;font-size:12px;}
+            .imglog{margin-top: 5px;}
+            .lblhospitalname{font-weight: normal;font-size: 20px;padding-top: 10px;}
+            .glphicon{font-size: 30px;margin-left: -10px;margin-top: 10px;}
+
+            .row{margin: 0px;padding: 0px;}
+            .glphicon{font-size: 30px;}
+            .lblhospitalname{ width: 100%;text-align: center;}
+            .lblhospitalname{font-weight: normal;font-size: 20px;padding-top: 10px;}
+            .glphicon{color:rgb(216, 152, 182);}
+            .usericon{height: 70px;background: transparent;border: none;}
+            .mainrow{margin-top:10px; height: 70px;background: #FFF;box-shadow: 0 5px 5px rgba(0,0,0,0.1);}
+
+            .icon-container{width: 70px;border-right:1px solid #d3d3d3;height: 70px;}
+
+            .iconmark{width:4%;}
+            .pop{
+                text-align: right;
+                padding: 10px;
+                /*            margin-top:7px;;*/
+                padding-right: 4%; 
+            }
+            .main-container{width:90%;}
+            @media only screen and (max-width:1085px){
+                .main-container{width:88%;}
+            }
+            @media only screen and (max-width:815px){
+                .main-container{width:86%;}
+            }
+            @media only screen and (max-width:800px){
+                .icon-container{height: 70px;border-right:1px solid #d3d3d3;}
+                .lblpatientName{}
+                .lblpatientName1{margin-left: 10px;}
+                .imglog{margin-top: 5px;}
+                .lblhospitalname{font-weight: normal;font-size: 20px;padding-top: 10px;}
+                .glphicon{font-size: 30px;margin-left: -10px;margin-top: 10px;}
+            }
+            @media only screen and (max-width: 768px) {
+                .icon-container{height: 70px;border-right:1px solid #d3d3d3;}
+                .lblpatientName{}
+                .lblpatientName1{}
+                .imglog{margin-top: 5px;}
+                .main-container{ width:82%;}
+                .lblhospitalname{font-weight: normal;font-size: 20px;padding-top: 10px;}
+                .glphicon{font-size: 30px;margin-left: -10px;margin-top: 10px;}
+            }
+
+            @media only screen and (max-width:600px) {
+                .icon-container {height: 70px;border-right:1px solid #d3d3d3;}
+                .lblpatientName{}
+                .lblpatientName1{margin-left: 10px;}
+                .imglog{margin-top: 5px;}
+                .glphicon{font-size: 30px;margin-left: -10px;margin-top: 10px;}
+                .main-container{ width:78%;}
+            }
+
+            @media only screen and (max-width:420px) {
+                .icon-container{height: 70px;border-right:1px solid #d3d3d3;}
+                .lblpatientName{}
+                .lblpatientName1{margin-left: 10px;}
+                .imglog{margin-top: 5px;}
+                .pop{padding-right: 7.5%;}
+                .imglog{margin-top: 5px;}
+                .glphicon{font-size: 30px;margin-left: -10px;margin-top: 10px;}
+                .main-container{ width:74%;}
+            }
+            @media only screen and (max-width:364px) {
+                .icon-container {height:70px;border-right:1px solid #d3d3d3;}
+                .lblpatientName{font-size: 12px;margin-bottom: 0px;}
+                .lblpatientName1{}
+                .iconmark{width:8%;}
+                .imglog{margin-top: 5px;}
+                .pop{padding-right: 7.5%;}
+                .main-container{ width:70%;}
+                .lblhospitalname{font-weight: normal;font-size: 20px;padding-top: 10px;}
+                .glphicon{font-size: 30px;margin-left: -10px;margin-top: 10px;color:rgb(216, 152, 182);}
+            }
+
+
+        </style>
+
+        <style>
+            /*             .mainrow:hover{
+                            background: #e3e3e3;
+                            -webkit-transition-property: all;
+                            transition-property: all;
+                            -webkit-transition-duration: .3s;
+                            transition-duration: .3s;
+                            box-shadow: 0px 10px 6px -6px #777;
+                            -webkit-box-shadow: 0px 10px 6px -6px #777;
+                        }*/
+
+            .mainrow:visited{
+                background: #f7ecb5;
+                -webkit-transition-property: all;
+                transition-property: all;
+                -webkit-transition-duration: .3s;
+                transition-duration: .3s;
+                box-shadow: 0px 10px 6px -6px #777;
+                -webkit-box-shadow: 0px 10px 6px -6px #777;
+            }
+            .mainrow:focus{
+                /*                background: #f7ecb5;
+                                -webkit-transition-property: all;
+                                transition-property: all;
+                                -webkit-transition-duration: .3s;
+                                transition-duration: .3s;
+                                box-shadow: 0px 10px 6px -6px #777;
+                                -webkit-box-shadow: 0px 10px 6px -6px #777;*/
+            }
+            .mainrow:active{
+                /*                background: #f7ecb5;
+                                -webkit-transition-property: all;
+                                transition-property: all;
+                                -webkit-transition-duration: .3s;
+                                transition-duration: .3s;
+                                box-shadow: 0px 10px 6px -6px #777;
+                                -webkit-box-shadow: 0px 10px 6px -6px #777;*/
+            }
+            .lblpatientName1{font-weight: normal;}
+            .pad{padding: 0px;}
+            .imglog{width: 60px;height: 60px;}
+            /*             .imgcontainer{width: 5%;border-right: 1px solid #d3d3d3;}*/
+
+
+            .container-fluid{padding-left: 1px;padding-right: 1px;}
+            #multiusers{
+                text-align: center;
+                font-weight: bold;
+                color: #367fa9;
+                /*                margin-top: 25px;*/
+            }
+
+            .test:after {
+                content: '\2807';
+                font-size: 25px;
+                float: right;
+            }
+            div.dropdownCont{
+                padding:7px;
+                background: #fff;
+                font-weight: normal;
+                padding-left: 25px;
+                padding-right: 25px;
+                border: 1px solid #d3d3d3;
+                box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+                transform: scale(0,0);
+                -webkit-animation: bummer 2s;
+                -moz-animation: bummer 0.5s;
+                -webkit-animation: bummer 0.5s;
+                -o-animation: bummer 0.5s;
+                animation: bummer 0.5s;
+                -moz-animation-fill-mode: forwards;
+                -webkit-animation-fill-mode: forwards;
+                -o-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+            }
+            @-webkit-keyframes bummer {
+
+                100% {
+                    transform: scale(1,1);
+                }
+            }
+            .iclr{color:rgb(179, 172, 175);}
+        </style>
+        <style>
+            .mainrow{
+                float: left;
+                width: 100%;
+            }
+            div.dropdownCont {
+                position: absolute;
+                z-index: 500;
+                display: none;
+                right: 10px;
+                top:15px;
+                border: 1px solid #d3d3d3;
+                border-radius: 3px;
+                box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+            }
+
+            div.dropdownCont .dcWrapper {
+                background-color: #fff;
+                padding:3px;
+                margin: 0;
+                color:#d3d3d3;
+                white-space:nowrap;
+                list-style: none;
+                font-size: 13px;
+            }
+            .dcWrapper div{padding: 3px;  color:#000;text-align: left;}
+            .dcWrapper div:hover{background: #ececec;}
+
+            .dcWrapper div:hover{
+                background: #FFF;
+            }
+            div.dropdownCont:hover{
+                cursor: pointer;
+            }
+
+            .dcWrapper div .lblalrtms{
+                margin: 0px;
+                font-weight: normal;
+                padding-left: 2px;
+                padding-right: 2px;
+                cursor: pointer;
+                color:red;
+            }
+        </style>
+    </head>
+
+    <body onclick="ladfun()">
+        <header> 
+            <div class="row">
+                <!--                <div class="col-xs-2 col-sm-6">
+                                    <img  src="icon_mah.png" class="img-responsive" alt=""/>
+                                </div>-->
+                <div class="col-xs-12  col-sm-12 pad">
+                    <label class="lblhospitalname"> </label>
+                </div>
+            </div>
+        </header>
+
+
+
+        <div class="body-content">
+            <div class="row" id="multiusers">
+
+            </div>
+            <div class="container-fluid">
+
+
+
+            </div>
+
+
+        </div>
+        <footer>
+            <div class="row">
+                <div class="col-sm-12" style="text-align: center;margin-top:8px;">
+                    <input type="button" class="btn btn-success" value=" Add Users" onclick="adduser()" />
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            if (users === "") {
+
+                var storedNames = JSON.parse(localStorage.getItem("emrnames"));
+                var storedUrls = JSON.parse(localStorage.getItem("emrurls"));
+                var storedUhids = JSON.parse(localStorage.getItem("emruhids"));
+                var storedPwds = JSON.parse(localStorage.getItem("emrpasswords"));
+                var storedLogins = JSON.parse(localStorage.getItem("emrlogintype"));
+            }
+            else {
+                $('#multiusers').html(users + " MR Numbers/UHIDS are Exist with this " + logintype);
+                var storedNames = JSON.parse(localStorage.getItem("multinames"));
+                var storedUrls = JSON.parse(localStorage.getItem("multiurls"));
+                var storedUhids = JSON.parse(localStorage.getItem("multiuhids"));
+                var storedPwds = JSON.parse(localStorage.getItem("multipasswords"));
+                var storedLogins = JSON.parse(localStorage.getItem("multilogintype"));
+            }
+
+            var str = "";
+            for (var i = 0; i < storedUrls.length; i++) {
+                var str = str + " <div class='row mainrow' onclick=login('" + localStorage.mahappurl + "','" + storedUhids[i] + "','" + storedPwds[i] + "','" + storedNames[i].trim().replace(/ /g, '&nbsp;') + "','1','UHID/MR_NO');> ";
+                str = str + "<div class='col-xs-2 col-sm-1 pad icon-container'>";
+                str = str + "  <span class='input-group-addon imglog usericon'>";
+                str = str + " <i class='glyphicon glyphicon-user  glphicon'></i></span>";
+                str = str + "</div>";
+                str = str + "<div class='col-xs-8 col-sm-8 pad main-container'>";
+                str = str + "<div class='col-sm-12 pad'>";
+                str = str + "  <label class='lblpatientName'>" + storedNames[i] + "</label>";
+                str = str + "<label class='lblmrno'>" + storedUhids[i] + "</label>";
+                str = str + "<label class='lblpwd' style='display:none'>" + storedPwds[i] + "</label>";
+                str = str + "<label class='lbllogintype' style='display:none'>" + storedLogins[i] + "</label>";
+                str = str + " </div>";
+                str = str + "</div>";
+
+                str = str + "<div class='col-sm-1 iconmark pad ' style='font-size:25px;float: left;cursor:pointer;margin-left:-5px;padding-top:15px;' onclick=rightclick(this,'divs" + i + "','" + i + "','" + storedUhids[i] + "') ><span ><i class='glyphicon glyphicon-option-vertical iclr'></span></i>";
+                str = str + "<div style='display:none;' id='divs" + i + "' class='dropdownCont' onclick=deleteuser('divs" + i + "','" + i + "','" + storedUhids[i] + "')><div class='dcWrapper' id='editor-options'><div><label class='lblalrtms'>Delete</label> </div> </div></div>";
+//                  str = str + "</div>";
+//                 str=str+"<div id='divs"+i+"' class='pop toggle' style='display:none' onclick=deleteuser('divs"+i+"','"+i+"','"+storedUhids[i]+"')><div style='width:auto'><label class='del'><span> Delete </span></label></div></div>";
+                str = str + "</div>";
+
+            }
+            $('.container-fluid').html(str);
+            if (localStorage.appname === 'mah') {
+                $('.lblhospitalname').html("Maharaja Agrasen Hospital")
+            } else if (localStorage.appname === 'fernandez') {
+                $('.lblhospitalname').html("Feranandez Hospital")
+            } else {
+                $('.lblhospitalname').html("Add users")
+            }
+
+        </script>
+        <script>
+            function adduser() {
+                if (localStorage.appname == 'myemr') {
+                    localStorage.adduser = '1';
+                    location.href = 'emr.html';
+                } else if (localStorage.appname == "mah") {
+                    localStorage.adduser = '1';
+                    location.href = 'mah_index.html';
+                } else if (localStorage.appname == "fernandez") {
+                    localStorage.adduser = '1';
+                    location.href = 'fh_index.html';
+                }
+            }
+            function login(url, uhid, pwd, name) {
+                event.stopPropagation();
+                localStorage.patname = name;
+                localStorage.patmrno = uhid;
+                location.href = 'PatientLoginThirdScreen.html';
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">      
+        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="js/colorchanges.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+       <link rel="stylesheet" type="text/css" href="js/Calendar-ui.css">
+        <link rel="stylesheet" type="text/css" href="css/appointments.css">
+<script type="text/javascript" src="js/highcharts.js"></script>
+        <script type="application/javascript" src="js/iscroll.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <link href="css/FontFamillyloading.css" rel="stylesheet" type="text/css"/>
+         <link rel="stylesheet" type="text/css" title="" href="newcalander/css/mdDateTimePicker.min.css"> 
+         <script src="newcalander/js/moment.min.js"></script>
+        <script src="newcalander/js/mdDateTimePicker.js"></script>
+        <link href="css/settingsCSS.css" rel="stylesheet" type="text/css"/>
+<!--    <link href="themeCSS/styles.css?version=1" rel="alternate stylesheet" type="text/css" title="orange"/>
+     <link rel="alternate stylesheet" type="text/css" title="green" href="themeCSS/stylesGreentheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="blue" href="themeCSS/stylesBluetheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="teal" href="themeCSS/stylesTealtheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="yellow" href="themeCSS/stylesdarkorangetheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="gray" href="themeCSS/stylesGraytheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="peach" href="themeCSS/stylesPeach.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="pink" href="themeCSS/stylesPink.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="purple" href="themeCSS/stylesPurple.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="red" href="themeCSS/stylesRed.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="skyblue" href="themeCSS/stylesSkyblue.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="yellownew" href="themeCSS/stylesYellow.css?version=1">-->
+       
+           <script>
+         var cssFilesArr = ["styles.css", "stylesGreentheme.css",  
+"stylesBluetheme.css", "stylesTealtheme.css",  
+"stylesdarkorangetheme.css", "stylesGraytheme.css", "stylesPeach.css",  
+"stylesPink.css", "stylesPurple.css", "stylesRed.css",  
+"stylesSkyblue.css", "stylesYellow.css"];
+   var cssFilesTitle = ["orange", "green", "blue", "teal", "yellow",  
+"gray", "peach", "pink", "purple", "red", "skyblue", "yellownew"];
+function loadcssfiles(cssFilesArr){
+for(var x = 0; x < cssFilesArr.length; x++) {
+   var fileref=document.createElement("link");
+   fileref.setAttribute("rel", "stylesheet");
+   fileref.setAttribute("type", "text/css");
+   fileref.setAttribute("title", cssFilesTitle[x]);
+cssFilesArr[x] = localStorage.ipadrs + "/themeCSS/" + cssFilesArr[x] + "?version=1";
+   fileref.setAttribute("href", cssFilesArr[x]);
+   document.getElementsByTagName("head")[0].appendChild(fileref);
+
+  }
+  var i, link_tag ;
+  var isExists = 0;
+     var css_title = localStorage.themecolor;
+     if(css_title != undefined && css_title != ""){
+         for (i = 0, link_tag = document.getElementsByTagName("link"); i < link_tag.length ; i++ ) {
+             if ((link_tag[i].rel.indexOf( "stylesheet" ) !== -1) &&
+                 link_tag[i].title) {
+                 link_tag[i].disabled = true ;
+                 if (link_tag[i].title === css_title) {
+                     link_tag[i].disabled = false ;
+                     isExists = 1;
+                 }
+             }
+         }
+     }
+     if(isExists == 0){
+         var color = localStorage.themecolor;
+         color = color.replace("%23","#");
+         //confirm(color);
+         chnagecssnew(color);
+         //confirm(cssdata);
+     }
+}
+
+$(document).ready(function () {
+                loadcssfiles(cssFilesArr);
+                });
+        </script>
+        <script>
+            loadjsfile("dissecondscreen.js");
+            
+            if( localStorage.appcheck != "1" || localStorage.appcheck === undefined ){
+            loadjsfile("LoadAppointment.js");
+            loadjsfile("disform.js");
+            loadjsfile("templatemob.js");
+//            loadjsfile("template.js");
+            loadjsfile("distemplate.js");
+            loadjsfile("tablejson.js");
+            loadjsfile("TemplateOrders.js");
+            loadjsfile("drilldashboard.js");
+            loadjsfile("chartFrameWork.js");
+            loadjsfile("planningvf.js");
+            loadjsfile("tinymce.min.js");
+            loadjsfile("textboxio.js");  
+    }
+//            loadjsfile("LoadAppointment.js");
+//            loadjsfile("disform.js");
+//            loadjsfile("templatemob.js");
+////            loadjsfile("template.js");
+//            loadjsfile("distemplate.js");
+//            loadjsfile("tablejson.js");
+//            loadjsfile("TemplateOrders.js");
+//            loadjsfile("drilldashboard.js");
+//            loadjsfile("chartFrameWork.js");
+//            loadjsfile("planningvf.js");
+//            loadjsfile("tinymce.min.js");
+//            loadjsfile("textboxio.js");
+        </script>
+        <style type="text/css" media="all">
+            #wrapper {
+                position:absolute; 
+                top:25px; 
+                bottom:5px; 
+                left:0;
+                width:100%;
+                background:#aaa;
+                overflow:auto;
+            }
+            .scroller {
+                position:relative;
+                -webkit-tap-highlight-color:rgba(0,0,0,0);
+            /*	width:640px;*/
+                padding:0;
+                background:#444;
+            }
+            p {
+                display:block;
+                width:624px;
+                margin-bottom:1em;
+                padding:8px;
+                font-size:14px;
+            }
+            p img {
+                margin:4px 8px;
+                -webkit-transform:translate3d(0,0,0);
+            }
+            .imgthumb{
+                width: 85px;
+                height: 100px;
+            }
+            img {width: 100% ;}
+        </style>
+    </head>
+
+    <body style="overflow:auto; height:100%;">
+        <div id="mydiv" align="center" style="display: none">
+            <input type="image" src="images/xda2.gif" class="imgnload" style="border: 0px; border-radius: 50%;">
+        </div>
+        <div id="divDis">
+
+        </div>
+    </body>
+</html>

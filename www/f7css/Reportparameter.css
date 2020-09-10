@@ -1,0 +1,320 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27 Sep, 2018, 2:27:04 PM
+    Author     : Nagnath
+*/
+/*.shivam */
+    .RepotparaAll{
+
+    }
+    .RepotparaAll .pdr{padding: 0px;width: 100%;}
+    .RepotparaAll .hdlbl{
+        width: 100%;
+        background: #F0F0F0;
+        padding: 4px 5px;
+        font-size: 16px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+/*        overflow: hidden;*/
+        color: #000;
+    }
+    .RepotparaAll .hdlbl1{
+        width: 100%;
+        background: #F0F0F0;
+        padding:0px;
+        font-size: 16px;
+    }
+     .RepotparaAll .frtodtconnr{
+        text-align: center;
+        padding: 5px 2px;
+        border-bottom: 1px solid #F0F0F0;
+    }
+     .RepotparaAll .frtodtconnr .Lcontnr{
+        display: inline-block;
+        vertical-align: top;
+    }
+     .RepotparaAll .frtodtconnr .Lcontnr .snfromto{
+        display: inline-block;
+    }
+     .RepotparaAll .frtodtconnr .Lcontnr .calfrmtodt{
+        display: inline-block;
+        border: 1px solid #E7E6E6;
+        padding: 3px 5px;
+        width: 100px;
+        text-align: center;
+        border-radius: 2px;
+        height: 34px;
+    }
+     .RepotparaAll .DescDetail{
+        padding: 3px 5px;font-weight: normal;
+    }
+     .RepotparaAll .frtodtconnr .Rcontnr{
+        display: inline-block;
+        vertical-align: top;
+    }
+     .RepotparaAll .frtodtconnr .Rcontnr .btnsetdt{
+        display:block;
+        border: 1px solid #E7E6E6;
+        padding: 3px 5px;
+        text-align: center;
+        border-radius: 3px;
+        height: 34px;
+        outline: none;
+        float: left;
+    }
+    .shivam .RepotparaAll .list ul .item-content{
+      padding-left: 5px;  
+    }
+    .shivam .RepotparaAll .list ul:after{
+        height: 0px;
+    }
+    .shivam .RepotparaAll label.item-checkbox>.icon-checkbox{
+        margin-right: 8px;
+        border: 1px solid #C9C9C9;
+        height: 16px;
+        width: 16px;
+    }
+    .shivam .RepotparaAll .list .item-inner{
+       padding-right: 2px;
+    }
+    .shivam .RepotparaAll .list ul .item-title{
+        white-space: normal;
+        line-height: normal; font-weight: normal;
+    }
+    .shivam .RepotparaAll .list .ulbranches{
+        
+    }
+    .shivam .RepotparaAll .list .ulbranches .selAlllocli{
+        
+    }
+    .shivam .RepotparaAll .reportsrch{
+        margin: 0px;
+        box-shadow: none;
+        border-radius: 0px;
+        height: 40px;
+        font-size: 14px;
+        width:98%;;
+        overflow: hidden;
+    }
+    .shivam .RepotparaAll .reportsrch .searchbar-inner{
+        border-radius: 0px;
+    }
+    .shivam .RepotparaAll .reportsrch .searchbar-input-wrap{
+        position: relative;
+    }
+    .shivam .RepotparaAll .reportsrch .searchbar-input-wrap .srchtxt{
+        padding-left: 50px;
+        font-size: 16px;
+    }
+    .shivam .RepotparaAll .reportsrch .searchbar-input-wrap .srchicon{
+        height: 40px;
+        margin-top: -20px;
+    }
+    .shivam .RepotparaAll .reportsrch .searchbar-input-wrap .txtclrbtn{
+        height: 40px;
+        margin-top: -20px;
+    }
+    .shivam .RepotparaAll .ulalllocation{
+        
+    }
+    .shivam .RepotparaAll .ulalllocation li{
+        
+    }
+    .shivam .RepotparaAll .footer_All .reportpdfon{
+        text-align: center;
+    }
+    .shivam .RepotparaAll .footer_All .reportpdfon .inriconbtndiv{
+        display: inline-block;margin-left:10px;
+    }
+    .shivam .RepotparaAll .footer_All .reportpdfon .inriconbtndiv .fabbtn{
+        height: 38px;
+        margin-top: 2px;
+        background: transparent;
+        display: block;
+        vertical-align: top;
+    }
+    .shivam .RepotparaAll .footer_All .reportpdfon .inriconbtndiv .fabbtn .inicon{
+        top: 0px;
+        font-size: 16px;
+        width: 100%;
+        float: left;
+        text-align: center;
+        padding-top: 2px;
+        padding-bottom: 0px;
+    }
+    .shivam .RepotparaAll .footer_All .reportpdfon .inriconbtndiv .fabbtn .intxt{
+        font-size: 14px;
+    }
+    .shivam .Pdfreport{
+        
+    }
+    .shivam .Pdfreport .pdfdiv{
+         width: 100%;
+        height: 100%;
+    }
+     .shivam .Pdfreport .pdfdiv .img_01{
+        width: 100%;
+        height: 100%;
+    }
+    .shivam .Pdfreport .page-error{
+        background: #EBEBEB;
+    }
+    .shivam .Pdfreport .firstrow{
+        padding: 0px;
+        margin: 0px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: #000;
+        background: #FFF;
+        text-align: center;
+        border-bottom: 1px solid #D8D8D8;
+        margin-bottom: 14px;
+    }
+    .shivam .Pdfreport .firstrow .lblreperr{
+        font-size: 20PX;
+    }
+    .shivam .Pdfreport .content{
+        background: #FFF;
+        margin: 5px;
+        border: 1px solid #DDDDDD;
+        padding: 0px;
+    }
+    .shivam .Pdfreport .content .error-page{
+        width: 100%;
+        margin: 0px;
+    }
+    .shivam .Pdfreport .content .error-page .error-content{
+        
+    }
+    .shivam .Pdfreport .content .error-page .error-content h3{
+        padding: 5px;
+        margin: 0px;
+        background: #f7f7f7;
+        text-align: center;
+        border-bottom: 1px solid #ECECEC;
+        font-size: 20px;
+        color: red;
+        font-weight: 400;
+    }
+    .shivam .Pdfreport .content .error-page .para1{
+        margin: 0px;
+        padding: 5px;
+        font-weight: normal;
+    }
+    .shivam .Pdfreport .content .error-page .para2{
+        
+    }
+    .shivam .Pdfreport .content .error-page .para2 .lblerror{
+        color: red;
+        width: 100%;
+        background: whitesmoke;
+        margin: 0px;
+        padding: 5px;
+        font-size: 16PX;
+        font-weight: normal;
+    }
+    .shivam .Pdfreport .content .error-page .Errdiv{
+        font-weight: normal;
+    }
+    
+    @media only screen and (max-width:440px){
+       .RepotparaAll .frtodtconnr .Rcontnr{margin-top: 3px;}
+    }
+    @media only screen and (max-width:390px){
+        .RepotparaAll .frtodtconnr .Lcontnr .snfromto{}
+        .RepotparaAll .frtodtconnr .Lcontnr .calfrmtodt{}
+       .RepotparaAll .frtodtconnr .Rcontnr .btnsetdt{padding: 3px 5px;font-size: 13px;}
+    }
+    .doublpara  .dbleparacontainer{
+        display: inline-block;
+        width: 100%;
+    }
+    .doublpara .lftcntenr{
+        display: block;
+        float: left;
+        width: 50%;
+        border-right: 1px solid #ECECEC;
+        border-bottom: 1px solid #ECECEC;
+    }
+    .doublpara .rghtcntenr{
+        display: block;
+        float: left;
+        width: 50%;
+        border-bottom: 1px solid #ECECEC;
+    }
+    .shivam .doublpara .reportsrch .searchbar-input-wrap .srchicon{
+        width: 35px;background-size: 20px 22px;
+    }
+    .shivam .RepotparaAll .reportsrch .searchbar-input-wrap .txtclrbtn{
+        width: 35px;background-size: 20px 22px;
+    }
+    .shivam .RepotparaAll .reportsrch .searchbar-input-wrap .srchtxt{
+        padding-left: 40px;
+        font-size: 16px;
+        padding-right: 35px;
+    }
+    .doublpara .lftcntenr{
+        
+    }
+    .popup-reportsearch .block{
+        padding: 0px;margin: 0px;height: 100%;
+    }
+    .popup-reportsearch .block .list{
+        padding: 0px;margin: 0px;
+    }
+    .popup-reportsearch{
+        width: 100% !important;
+        left: 0px !important;
+        margin: 0px !important;
+        top: 0px !important;
+        height: 100% !important;
+    }
+    .popup-reportsearch .clsereppop{
+        color: #FFF !important;
+        opacity: 1;
+        box-shadow: none;
+        font-size: 13px;
+        margin: 0px;
+        padding: 0px;
+        width: 40px;
+        display: block;
+        min-height: 50px;
+        min-width: 40px;
+        line-height: 40px;
+        padding-top: 12px;
+        vertical-align: middle;
+    }
+    .popup-reportsearch .serchconrep_01{
+        height:85%;
+        overflow: auto;
+        display: block;
+        width: 100%;
+        padding-top: 5px;
+    }
+     .shivam .RepotparaAll .dbleparacontainer .inrpotht{
+        height: 40px;padding: 0px;
+    }
+    .shivam .RepotparaAll .dbleparacontainer .reportsrch{
+        height: 40px;padding: 0px;min-height: 40px;
+    }
+    .shivam .RepotparaAll .clsebtnrep_01{
+            color: #FFF;
+            width: 90px;
+            margin: 0px auto;
+            text-transform: capitalize;
+            font-size: 16px;
+            border: 1px solid #FFF;
+            padding: 0px 0px;
+            height: 35px;
+            line-height: normal;
+            margin-top: 3px;
+            outline: none;
+    }
+    @media only screen and (max-width:450px){
+       .doublpara .rghtcntenr{width: 100%;}
+       .doublpara .lftcntenr{width: 100%;}
+    }

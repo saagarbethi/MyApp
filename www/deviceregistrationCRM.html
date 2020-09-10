@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <script type="text/javascript" src="cordova.js"></script>
+        
+        <script>
+            function onDeviceReady() {
+                try {
+                    debugger;
+                    //ref = cordova.InAppBrowser.open("https://www.npmjs.com/package/phonegap-plugin-push-pgb", '_blank', 'location=no,toolbar=yes,closebuttoncaption=Close');
+                    try {
+                        var i, link_tag ;
+                        var isExists = 0;
+                              link_tag = document.getElementsByTagName("link") ;
+    var css_title = localStorage.themecolor;
+            StatusBar.backgroundColorByHexString("#31708F");
+            if(css_title != undefined && css_title != ""){
+                   for (i = 0, link_tag = document.getElementsByTagName("link"); i < link_tag.length ; i++ ) {
+             if ((link_tag[i].rel.indexOf( "stylesheet" ) !== -1) &&
+                 link_tag[i].title) {
+                 if (link_tag[i].title === css_title) {
+                     isExists = 1;
+                 }
+             }
+         }
+                if (css_title === "orange") {
+                    StatusBar.backgroundColorByHexString("#c72915");
+                    }
+                    else if (css_title === "green"){
+                         StatusBar.backgroundColorByHexString("#496b03");
+                    }
+                    else if (css_title === "blue"){
+                         StatusBar.backgroundColorByHexString("#033261");
+                    }
+                    else if (css_title === "teal"){
+                         StatusBar.backgroundColorByHexString("#00635f");
+                    }
+                    else if (css_title === "yellow"){
+                         StatusBar.backgroundColorByHexString("#5e6100");
+                    }
+                    else if (css_title === "gray"){
+                         StatusBar.backgroundColorByHexString("#383838");
+                    }
+                    else if (css_title === "peach"){
+                         StatusBar.backgroundColorByHexString("#a04d00");
+                    }
+                    else if (css_title === "pink"){
+                         StatusBar.backgroundColorByHexString("#ca1967");
+                    }
+                    else if (css_title === "purple"){
+                         StatusBar.backgroundColorByHexString("#37196f");
+                    }
+                    else if (css_title === "red"){
+                         StatusBar.backgroundColorByHexString("#4b0150");
+                    }
+                    else if (css_title === "skyblue"){
+                         StatusBar.backgroundColorByHexString("#005b65");
+                    }
+                    else if (css_title === "yellownew"){
+                         StatusBar.backgroundColorByHexString("#946e00");
+                    }
+                    }
+                    if(isExists == 0){
+         var color = localStorage.themecolor;
+         color = color.replace("%23","#");
+         //confirm(color);
+         chnagecssnew(color);
+         //confirm(cssdata);
+     }
+                    } catch (err) {
+                        //alert(err);
+                    }
+                    var push = PushNotification.init({
+                        android: {
+//                            senderID: "756359640025"
+senderID: "940836237549"
+                        },
+                        browser: {
+                            pushServiceURL: 'http://push.api.phonegap.com/v1/push'
+                        },
+                        ios: {
+                            alert: "true",
+                            badge: "true",
+                            sound: "true"
+                        },
+                        windows: {}
+                    });
+                    push.on('registration', function (data) {
+                        saveRegid(data.registrationId);
+                    });
+
+                } catch (err) {
+                    alert(err);
+                }
+            }
+            $(document).ready(function () {
+                try{ var htldo = window.innerHeight;
+                        var asgnmrgn=htldo/2;
+                        $('#mydiv .imgnload').css("margin-top",parseInt(asgnmrgn)+-50+"px");
+                  }catch(err){}
+                    location.href = 'locations.html';
+//                if(localStorage.getItem("registrationId")!==null){
+                try {
+                    document.addEventListener("deviceready", onDeviceReady, false);
+                } catch (err) {
+                    location.href = 'locations.html';
+                }
+//                }else{
+//                    
+//                }
+            });
+            function saveRegid(regid) {
+                try {
+                    var xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4) {
+                            var data = xhr.responseText;
+                            location.href = 'locations.html';
+                        }
+                    };
+                   // var devicenm = device.name;
+                    var platform = device.platform;
+//                    var uuid = device.uuid;
+//                    var version = device.version;
+                    var manufacturer = device.manufacturer;
+                    var data = 'regid=' + regid + '&apptype=dashboard&userid=' + localStorage.userid + '&platform=' + platform + '&devicenm=' + manufacturer;
+                    var url = localStorage.ipadrs + '/DeviceRegistrations';
+                    xhr.open("POST", url, true);
+                    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    xhr.send(data);
+                } catch (err) {
+                    location.href = 'locations.html';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="mydiv" style="display: block;">
+            <img src="images/xda2.gif" class="imgnload" style="border-radius: 50%;">
+        </div>
+    </body>
+</html>

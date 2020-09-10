@@ -1,0 +1,58 @@
+        .list-block input[type=text].inputtxt:focus ~ .floatinglbl,.list-block input[type=text].inputtxt:valid ~ .floatinglbl{
+            font-size: 14px;
+            color: #367fa9;
+            top: -15px;
+            -webkit-transition: all 0.125s ease;
+            transition: all 0.125s ease;
+        }
+        .styled-input {
+          float: left;
+          width: 100%;
+          margin:0px;
+          position: relative;
+          padding: 5px 0px;
+          padding-bottom: 0px;
+        }
+        .styled-input .floatinglbl {
+          color: #999;
+            padding: 20px 5px;
+            padding-bottom: 0px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          -webkit-transition: all 0.25s ease;
+          transition: all 0.25s ease;
+          pointer-events: none;
+        }
+        .styled-input.wide { width: 100%; }
+        .list-block input[type=text].inputtxt{
+         padding: 0px 5px;
+border: 0;
+width: 100%;
+padding-top: 15px;
+font-size: 16px;
+height: 48px;
+/*border-bottom: 1px solid #d3d3d3;*/
+        }
+
+        .list-block input[type=text].inputtxt ~ span {
+          display: block;
+          width: 0;
+          height:2px;
+          background: #367fa9;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          -webkit-transition: all 0.125s ease;
+          transition: all 0.125s ease;
+        }
+
+        .list-block input[type=text].inputtxt:focus{ outline: 0; }
+
+        .list-block input[type=text].inputtxt:focus ~ span{
+          width: 100%;
+          -webkit-transition: all 0.075s ease;
+          transition: all 0.075s ease;
+        }
+        
+        

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Doctor Appointment</title>
+        <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <script  type="text/javascript"  src="js/jquery-1.9.1.js"></script> 
+        <script type="text/javascript" src="js/Calendar-ui.js"></script>
+        <link rel="stylesheet" type="text/css" href="js/Calendar-ui.css">
+        <script type="text/javascript" src="js/Doctormob.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+         <link rel="stylesheet" type="text/css" href="css/appointments.css">
+           <script type="text/javascript" src="js/date.js"></script>
+           <script type="text/javascript" src="js/LoadAppointment.js"></script>
+           <link href="css/FontFamillyloading.css" rel="stylesheet" type="text/css"/>
+        <style>
+            html,body{
+                color: rgba(0,0,0,1);
+                font-family: 'Open Sans', sans-serif;
+
+                margin: 0 auto;
+                -webkit-font-smoothing: subpixel-antialiased;
+            }
+            body{
+                font-size: 9pt; font-weight: normal;font-family: 'Open Sans', sans-serif;
+            }
+/*            th, td {
+                border: 1px solid #d3d3d3;
+                padding: 5px;
+                height: 30px;
+            }
+            .tblbg>tbody>tr:nth-child(odd){
+                background: #dfdfdf;
+            }
+
+            .thheader {
+                background:#054463;
+                color: #FFF;
+                font-size: 10pt;
+                font-weight: bold;
+                text-align: center;
+            }*/
+
+            .divforsearch{
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                z-index: 11111111;
+                position: fixed;
+                top: 0;
+                background: #fff;
+            }
+            .divforsearch header{
+                background: skyblue;
+                color: white;
+                padding: 0.5em 0.9em;
+                border-bottom: 1px solid #ddd;
+            }
+            a.close{
+                /* line-height: 1; */
+                font-size: 30px;
+                position: absolute;
+                top: 2%;
+                right: 2%;
+                text-decoration: none;
+                color: black;
+            }
+
+
+
+            /*Animation*/
+/*              .divforsearch{
+                   -o-animation:  mymove .5s infinite;
+                   -moz-animation:  mymove .5s infinite;
+                  -webkit-animation:  mymove .5s infinite;
+                   animation: mymove .5s infinite;
+                    -moz-animation-iteration-count:1;
+                     -o-animation-iteration-count:1;
+                -webkit-animation-iteration-count:1;
+                animation-iteration-count:1;
+                -o-animation-fill-mode: forwards;
+                -moz-animation-fill-mode: forwards;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+               overflow-x: hidden;
+               
+            }
+
+            @-webkit-keyframes  mymove {
+                0% { left:99%; right:0%;}
+                99% { left:0px; right:0px;}
+            }
+            @keyframes  mymove {
+                0% { left:99%; right:0%;}
+                99% { left:0px; right:0px;}
+            }*/
+/*            #mydiv {
+                height:100%;
+                width:100%;
+                position:fixed;
+                top:0;
+                left: 0;
+                padding: 0px;
+                padding:30% 0 0 40%;
+                z-index:999999999;
+                filter:alpha(opacity=70);
+            }
+            #mydiv .imgload{
+                 position: absolute;
+                top: 40%;
+                left: 42%;
+            }*/
+              .intbl tr td{
+                padding: 10px;
+                box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2), 0px 1px 2px rgba(0,0,0,0.4);
+                border-radius: 5px;
+                cursor: pointer;
+                background-color: #fff;
+ }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br{z-index: 9999999999999;}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+padding:10px;
+}
+.ui-datepicker{width:auto;}
+.tblbg>tbody>tr:nth-child(odd){
+                background: #dfdfdf;
+            }
+            
+            .tblbg>tbody>tr>td{   border-bottom: 1px solid #31708f;
+                padding: 5px;
+                height: 30px;}
+
+            .thheader {
+                background:#054463;
+                color: #FFF;
+                font-size: 10pt;
+    font-weight: bold;
+            }
+ 
+ .divforsearch{
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                -webkit-overflow-scrolling: auto;
+                z-index: 11111111;
+                position: fixed;
+                top: 0;
+                background: #fff;
+            }
+/*            .divforsearch header{
+                background: skyblue;
+                color: white;
+                padding: 0.5em 0.9em;
+                border-bottom: 1px solid #ddd;
+            }*/
+            a.close{
+                /* line-height: 1; */
+                font-size: 30px;
+                position: absolute;
+                top: 2%;
+                right: 2%;
+                text-decoration: none;
+                color: black;
+            }
+          
+
+/* .divforsearch{
+
+       -o-animation:  mymove .5s infinite;
+       -moz-animation:  mymove .5s infinite;
+      -webkit-animation:  mymove .5s infinite;
+       animation: mymove .5s infinite;
+        -moz-animation-iteration-count:1;
+         -o-animation-iteration-count:1;
+    -webkit-animation-iteration-count:1;
+    animation-iteration-count:1;
+    -o-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+   overflow-x: hidden;
+   
+}
+
+@-webkit-keyframes  mymove {
+    0% { left:99%; right:0%;}
+    99% { left:0px; right:0px;}
+}
+@keyframes  mymove {
+    0% { left:99%; right:0%;}
+    99% { left:0px; right:0px;}
+}*/
+/* #mydiv {
+            height:100%;
+            width:100%;
+            position:fixed;
+            top:0;
+            padding:20% 0 0 10%;
+            z-index:999999999;
+            filter:alpha(opacity=70);
+        }*/
+        .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+padding:10px;
+}
+
+.ui-datepicker{width:auto;}
+.iconbak{
+                   background: #31708f;
+    color: #fff;
+    text-shadow: none;
+    margin-bottom: 10px;
+/*    border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	
+	border-bottom: 10px solid #fff;*/
+            }
+        
+            .abc{transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-webkit-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+border:1px solid #367fa9;
+border-top: none;
+            }
+            .abc div.row1{border-bottom:1px solid #d3d3d3;padding: 5px;}
+            .abc div.row1:focus{border-bottom:5px solid #B5D8F5; background: #f8efc0;}
+            .abc div.row1:active{border-bottom:5px solid #B5D8F5; background: #f8efc0;}
+            .abc .imgdiv{border:none;}
+.abc .dctnmdiv{margin-top: 1%; float: left; border: none;}
+.nodoctor{padding: 5px 20px;
+    color: #FF2C28;
+    font-weight: bold;}
+
+.headtbl tr td{    border-bottom: 1px solid #d3d3d3;}
+.headtbl tr td.lblhed{    border-bottom: 2px solid #104158;}
+            .feedbacknavforpatient{
+                position:absolute; z-index: 99999; border-radius: 0px; top: 0;border: none; width: 100%;background:#367fa9;color: #fff;display: none;
+            }
+            .feedbackfooter{margin-left: -5px;}
+            #btnDone{height: 50px;}
+            .DOCtable .clkdiv:focus{border-bottom:5px solid #B5D8F5; background: #f8efc0;}
+            .DOCtable .clkdiv:active{border-bottom:5px solid #B5D8F5; background: #f8efc0;}
+            
+            .hdnglbl{
+                font-size: 10pt;
+                display: block;
+                white-space: nowrap;
+                overflow: hidden !important;
+                text-overflow: ellipsis;
+            }
+            .divnamhed{
+                width:90%;
+              float:left;
+              padding: 0px 5px;
+              padding-top:0px;  
+            }
+            .middledata{ width:88%;
+/*                 background: red;*/
+            }
+            @media screen and (max-width:430px){
+                .middledata{width:85%;}
+            }
+            @media screen and (max-width:360px){
+                .middledata{width:80%;}
+            }
+             @media screen and (max-width:310px){
+               .divnamhed{ width:85%;}
+                .middledata{width:78%;}            
+            }
+            @media screen and (max-width:260px){
+                .divnamhed{ width:80%;}
+                 .middledata{width:70%;}
+            }
+            .docdetl{margin-top: -10px;}
+        </style>
+    </head>
+    <body>
+        <div class="divforsearch">
+            <header style="position: fixed;border: none;color: #fff; z-index: 9999;top: 0;width: 100%;background:#367fa9;border-bottom: 5px solid #0C5C84;">
+                <label style="font-size: 16px; display: inline-block;margin-top: 5px;" id="formname"></label>
+                <span onclick="closebutton();" style="cursor: pointer; float: right; font-size: 24pt;" class="fa fa-close"></span>
+
+            </header>
+<div style='margin-bottom: 50px; z-index: -9; margin-top: 45px;overflow: auto; width: 100%;'>
+            <div class="row" style='margin: 0px;'>
+                <div class="col-md-12" style="padding-left:5px; padding-right: 5px;">
+                    <div id="displayschedules"> 
+                    </div>
+
+                </div>
+            </div>
+            <div id="displayforms" class="row" style='margin: 0px;'></div>
+            <div id="displayappts" class="row" style='margin: 0px;'></div>
+            
+        </div>
+        <div ID="mydiv1" style="text-align: center;display: none" >
+            <img border="0" src="images/xda2.gif" width='100' height='100' style='border-radius: 50%;'>
+        </div>
+        <div ID="mydiv" style="text-align: center;display: none" >
+            <img border="0" class="imgload" src="images/xda2.gif"  style='border-radius: 50%;'>
+        </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+.main-header,.setfooter,.grdtblhd,#tabcomp tr.topbg{background: #f54291 !important;color: #fff !important;}
+.setfooter{border-top:0px !important;}
+.iosstatusbar{background: #ca1967 !important;}
+.topnavbar,.tempmbcont .heading,.tempmbcont .grdtr,.divforsearch.divsrchnewcls header,.tablestriped>tbody>tr.srchtblhdr,.morercrdbtn,.btndiv .btndt{background: #f54291 !important;color: #fff !important;}
+.tempmbcont button,.tempmbcont input[type=button]{background: #f54291 !important;color: #fff;border:none !important;}
+.tempmbcont button:hover,.tempmbcont button:focus,.tempmbcont button:active,
+.tempmbcont button:visited{background: #f54291 !important;color: #fff;}
+.tempmbcont input[type=button]:hover,.tempmbcont input[type=button]:focus,
+.tempmbcont input[type=button]:active,.tempmbcont input[type=button]:visited{background: #f54291 !important;color: #fff;}
+.tblfrmdttodt tr td .glpcal{color: #f54291 !important;}
+.popup h2{background: #f54291 !important;color: #fff !important;}
+
+.info-box-icon{background: #f54291 !important;color: #fff;}
+.setfooter button a{color:#fff !important;}
+.hedrowtop,.navbarstyle,.dmmanav,.searchbtnicon{background: #f54291 !important;color: #fff;}
+#btnConnect{background: #f54291;color: #fff;}
+#btnConnect:hover,#btnConnect:focus,#btnConnect:active,#btnConnect:visited{background: #f54291;color: #fff;}
+
+.calhead{background: #f54291 !important;color: #fff;}
+.calbtnsub{background: #f54291;color: #fff;}
+.calbtnsub:hover,.calbtnsub:focus,.calbtnsub:active,.calbtnsub:visited{background: #f54291;color: #fff;}
+.glyleft,.spncalicn,.inlogininfo .active,.inlogininfo .checkbox-custom-label{color: #f54291 !important;}
+
+.menudivs .tap .buttonrep .btntxtrep{background: linear-gradient(#ffc7c7 50%,#ffb4b4  100%) !important;
+background: -webkit-linear-gradient(#ffc7c7 50%,#ffb4b4  100%) !important;color:#000 !important;}
+
+.menudivs .tap .buttonrep .btntxtrep:hover,.menudivs .tap .buttonrep .btntxtrep:active,.menudivs .tap .buttonrep .btntxtrep:focus,.menudivs .tap .buttonrep .btntxtrep:visited{background: linear-gradient(#ffb4b4 50%,#ffc7c7 100%) !important;
+background: -webkit-linear-gradient(#ffb4b4 50%,#ffc7c7 100%) !important;color: #000 !important;}
+
+#ui-datepicker-div .ui-widget-header, h5.gtmh5{background: #f54291 !important;}
+.btnMYWT{background: rgba(0,0,0,.2)}
+
+.contdiv .dildata .listtablegriddiv .listtablegriddiv1,.contdiv .dildata .listtablegriddiv  .listtablegriddiv1 .hdngrowlbl,.contdiv .dildata .listtablegriddiv  .hdngrow,.contdiv .dildata .listtablegriddiv  .hdngrow .hdngrowlbl{background: #ffc7c7 !important;}
+.skin-blue .main-header .logo{background: #f54291 !important;color:#fff !important;}
+.retdash a{background: #f54291 !important;color:#fff !important;}
+.retdash a:hover,.retdash a:focus,.retdash a:active,.retdash a:visited{background: #f54291;color: #fff;}
+
+#mymenu .ui-listview>.ui-li-divider{color: #f54291 !important;}
+#btnmore .btn{background: #f54291 !important;color:#fff !important;}
+#btnmore .btn:hover,#btnmore .btn:focus,#btnmore .btn:active,#btnmore .btn:visited{background: #f54291;color: #fff;}
+
+.srchpara .srchbtn{color: #f54291 !important;}
+.boxbdr .label1{background: #f54291 !important;color:#fff !important;}
+.clsepnl{background: #f54291 !important;color:#fff !important;}
+.clsepnl:hover,.clsepnl:focus,.clsepnl:active,.clsepnl:visited{background: #f54291;color: #fff;}
+
+.mddtp-picker .mddtp-picker__header, .mddtp-picker__body .mddtp-picker__viewHolder .mddtp-picker__grid span.mddtp-picker__cell--selected
+, .mddtp-picker__body .mddtp-picker__viewHolder .mddtp-picker__grid .mddtp-picker__tr span.mddtp-picker__cell:hover
+{background: #f54291 !important;color:#fff !important;}
+.mddtp-button{color: #f54291 !important;}
+
+.srchicondiv{background: #f54291 !important;}
+
+.body-containt1 .active1{color: #f54291 !important;}
+.body-containt1 .btnftr{background: #f54291 !important;color:#fff !important;}
+.body-containt1 .btnftr:hover,.body-containt1 .btnftr:focus,.body-containt1 .btnftr:active,.body-containt1 .btnftr:visited
+{background: #f54291;color: #fff;}
+
+.table-condensed thead tr:nth-child(1), .datetimepicker table tr td.active.active{background: #f54291 !important;color:#fff !important;}
+.table-condensed tfoot tr{background: transparent !important;color: #f54291 !important;}
+
+.hidegpla{background: #f54291 !important;}
+.slidebtntoup .heading{background: #f54291 !important;}
+
+.divdatachild table tr.dis2label{background: #f54291 !important;color:#fff !important;}
+table#divpacsid tr.dis2label{background: #f54291 !important;color:#fff !important;}
+#contentattach .btnuplod1{background: #f54291 !important;color:#fff !important;}
+#contentattach .btnuplod1:hover,#contentattach .btnuplod1:focus,#contentattach .btnuplod1:active,#contentattach .btnuplod1:visited
+{background: #f54291;color: #fff;}
+#contentattach #datetimepicker .input-group-addon .glyphicon-calendar{color: #f54291 !important;}
+#contentattach .modal-header{background: #f54291 !important;color:#fff !important;}
+
+.btnrow_01 table tr td .ajb{background: #f54291 !important;color:#fff !important;border:0px !important;}
+.btnrow_01 table tr td .ajb:hover,.btnrow_01 table tr td .ajb:focus,.btnrow_01 table tr td .ajb:active,.btnrow_01 table tr td .ajb:visited
+{background: #f54291;color: #fff;}
+
+.mdlwdt .modal-content .modal-header, .mdlwdt .modal-content .modal-header h2{background: #f54291 !important;color:#fff !important;}
+.mdlwdt .modal-content .modal-header .close{color:#fff !important;}
+.mdlwdt .modal-footer .btn.btn-danger{background: #f54291 !important;color:#fff !important;border:0px !important;}
+.mdlwdt .modal-footer .btn.btn-danger:hover,.mdlwdt .modal-footer .btn.btn-danger:focus,.mdlwdt .modal-footer .btn.btn-danger:active,.mdlwdt .modal-footer .btn.btn-danger:visited
+{background: #f54291;color: #fff;}
+
+#fixedtempdiv #formsdiv div.dis2label{background: #ffdaea !important;}
+/*#fixedtempdiv #formsdiv div.dis2label label#hAe{color:#fff !important;}
+#fixedtempdiv #formsdiv div.dis2label span{border: none !important;background: #fff !important;}*/
+#fixedtempdiv #formsdiv .col6row .divrfirst.grdtr.btn2{background: #f54291 !important;color:#fff !important;border:0px !important;}
+#fixedtempdiv #formsdiv .col6row .divrfirst.grdtr.btn2:hover,#fixedtempdiv #formsdiv .col6row .divrfirst.grdtr.btn2:focus,#fixedtempdiv #formsdiv .col6row .divrfirst.grdtr.btn2:active,#fixedtempdiv #formsdiv .col6row .divrfirst.grdtr.btn2:visited
+{background: #f54291;color: #fff;}
+
+.distbl .atchtblNew_01 tr td .btnattachnew_01{background: #f54291 !important;color:#fff !important;border:0px !important;}
+.distbl .atchtblNew_01 tr td .btnattachnew_01:hover,.distbl .atchtblNew_01 tr td .btnattachnew_01:focus,.distbl .atchtblNew_01 tr td .btnattachnew_01:active,.distbl .atchtblNew_01 tr td .btnattachnew_01:visited
+{background: #f54291;color: #fff;}
+
+.viewclk td a.viewnotes{background: #f54291 !important;color:#fff !important;border:0px !important;}
+.viewclk td a.viewnotes:hover,.viewclk td a.viewnotes:focus,.viewclk td a.viewnotes:active,.viewclk td a.viewnotes:visited
+{background: #f54291;color: #fff;}
+
+@media screen and (min-width:1200px){
+    .btnicon1,.btnsting{color: #f54291 !important;}
+}

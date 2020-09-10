@@ -1,0 +1,567 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7 Aug, 2018, 11:02:47 AM
+    Author     : shivam
+*/
+
+    .shivam .orderform{
+
+    }
+    .shivam .orderform .disorderleft{
+        width: 100%;
+        white-space: nowrap;
+        overflow: auto;
+        z-index:999999999;
+        position: fixed;
+        bottom: 40px;
+        background: #ECECEC;
+        padding: 5px 5px;
+    }
+    .shivam .orderform .disorderright{   
+       display: block;
+        width: 100%;
+        vertical-align: top;
+        word-wrap: break-word;
+        overflow: auto;
+        padding-top: 0px;
+        padding-bottom: 10px;
+        background: #E6E6E6;
+    }
+    .layoutdiv{
+        text-align: center;
+        display: block;
+        height: auto;
+        padding: 0px 0px;
+        padding-top: 5px;
+        background: #F1F1F1;
+        width: 100%;
+        float: left;
+        padding-bottom: 5px;
+    }
+    .shivam .orderform .disorderright .lblprscption{
+        vertical-align: top;
+        float: left;
+        padding: 5px;
+        color: #000;
+        width: 30%;
+    }
+    .shivam .orderform .disorderright .selcntolinorder{
+           position: relative;
+display: block;
+float: left;
+border: 1px solid #E2E2E2;
+margin: 0px 5px;
+padding: 4px 5px;
+color: #000;
+margin-bottom: 0px;
+border-radius: 3px;
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+background: #FFF;
+width: 30%;
+    }
+    .selcntolinorder:after{
+        content: "";
+    }
+    .shivam .orderform .tbllft{
+        display: inline-block;
+        width: 100%;
+    }
+    .shivam .orderform .tbltdDisorder{
+/*        width: 100%;
+        display: block;*/
+width: auto;
+display: inline-block;
+    }
+    .shivam .orderform .tbltdDisorder .lftlink_01{
+/*        width: 100%;
+        display: block;
+        color: #000;
+        word-wrap: break-word;
+        word-break: break-word;
+        text-align: center;
+        border-bottom: 1px solid #d3d3d3;
+        padding: 15px 2px;
+        line-height: normal;*/
+/*width: 100%;
+display: block;
+color: #000;
+word-wrap: break-word;
+word-break: break-word;
+text-align: center;
+padding: 10px 6px;
+line-height: normal;
+border: 1px solid #d3d3d3;
+border-radius: 4px;*/
+
+width: 100%;
+display: block;
+word-wrap: break-word;
+word-break: break-word;
+text-align: center;
+padding: 8px 6px;
+line-height: normal;
+border-radius: 3px;
+/*border: 1px solid #4D8BD6;
+background-color: #2196f3;*/
+color: #fff;
+    }
+    
+    .shivam .orderform .blockwise{
+        border: 0px;
+background: #FFF;
+
+margin:10px 6px;
+margin-top: 0px;
+/*box-shadow: 0px 2px 1px -1px rgba(0,0,0,.2),0px 1px 1px 0px rgba(0,0,0,.14),0px 1px 3px 0px rgba(0,0,0,.12);*/
+/*box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);*/
+box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1),0 3px 1px -2px rgba(0,0,0,0.1),0 1px 5px 0 rgba(0,0,0,0.1);
+    }
+    .col12{
+        padding: 0px;
+        width: 100%;
+        display: block;
+    }
+    .shivam .orderform .blockwise .col12{
+        width: 100%;
+        display: block;
+    }
+    .shivam .orderform .blockwise .Divdtl{
+        position: relative;
+    }
+    .shivam .orderform .blockwise .Divdtl.middlediv_01{
+        overflow: auto;
+    }
+    .shivam .orderform .blockwise .Divdtl .lblhedblck_01{
+        width: 100%;
+        font-size: 16px;
+        padding: 4px 5px;
+        color: #FFF;
+    }
+    .shivam .orderform .blockwise .Divdtl .clsebtnBw{
+        position: absolute;
+        right: 0px;
+        width: 40px;
+        top: 0px;
+        height: 32px;
+        border: 0px;
+        background: transparent;
+        color: #F00;
+        padding: 0px;
+        z-index: 99999999;
+    }
+    .shivam .orderform .blockwise .Divdtl .clsebtnBw.popclselink{
+        text-align: center;
+        padding-top: 3px;
+    }
+    .shivam .orderform .blockwise .Divdtl.lastrow{
+        text-align: right;
+        padding-right:5px;
+    }
+    .shivam .orderform .blockwise .Divdtl .Close_01{
+        font-size: 18px;
+    }
+    .shivam .orderform .blockwise .Divdtl .txtrea{
+        width: 100%;
+padding: 2px 7px;
+margin-bottom: 2px;
+    }
+    .shivam .orderform .blockwise .Divdtl .btndisO1{
+        margin-bottom: 5px;
+        padding: 6px 7px;
+        border-radius: 2px;
+        color: #fff;
+    }
+    .shivam .orderform .blockwise .Divdtl .intextbox{
+       background: #FFF1F1;
+        position: relative;
+        margin: 5px;
+        border: 1px solid #FFD1D1;
+        margin-bottom: 10px;
+        border-top: 0px;
+    }
+    .shivam .orderform .blockwise .Divdtl .intextbox .txtselcntol_01{
+        width: 100%;
+        border: 0px;
+        background: transparent;
+        padding: 6px;
+        border-top: 1px solid #FFD1D1;
+    }
+    .shivam .orderform .blockwise .Divdtl .intextbox.Whiteclr{
+        background: #FFFFFF;
+        border: 1px solid #F0F0F0;
+        border-top: 0px;
+    }
+    .shivam .orderform .blockwise .Divdtl .intextbox.Whiteclr .txtselcntol_01{
+         border-top: 1px solid #F0F0F0;
+    }
+    .shivam .orderform .blockwise .Divdtl .intextbox .prslbl{
+        line-height: normal;
+        width: 100%;
+        padding-left: 5PX;
+        font-size: 13px;
+        padding: 8px 5px;
+        padding-right: 40px;
+    }
+    
+    .shivam .popup-order{
+        width: 100%;
+        margin: 0px;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        height: auto;
+    }
+    .shivam .popup-order .block{
+        margin: 0px;
+        padding: 0px;
+    }
+    .shivam .popup-order .block .blockwise{margin: 0px;}
+    .shivam .popup-order .gridorder .prescptiondiv{
+       width: 100%;
+        background: #c60;
+        display: block;
+        padding: 3px 4px;
+        float: left;
+    }
+    .shivam .popup-order .gridorder .tblgrid{
+         width: 100%;
+        display: block;
+        float: left;
+        overflow: auto;
+    }
+    .shivam .popup-order .gridorder .prescptiondiv .SHOWPRVS{
+        background: transparent;
+color: #FFF;
+font-size: 16px;
+border: 1px solid #d3d3d3;
+padding: 4px 15px;
+outline: none;
+    }
+    .shivam .popup-order .gridorder .seltbl{
+        width: 100%;
+    }
+    .shivam .popup-order .gridorder .seltbl tr{
+        
+    }
+    .shivam .popup-order .gridorder .seltbl tr td{
+        position: relative;
+        padding: 4px 5px;
+        border-bottom: 1px solid #ECECEC;
+        border-right: 1px solid #ECECEC;
+    }
+    .shivam .popup-order .gridorder .seltbl tr td:nth-child(1){
+        width: 95%;
+    }
+    .shivam .popup-order .gridorder .seltbl tr td .tblspan{
+        
+    }
+    .shivam .popup-order .gridorder .seltbl tr td .tblspan{
+        
+    }
+    .shivam .popup-order .gridorder .seltbl tr td .btnicon_02{
+        width: 35px;
+        border: 0px;
+        padding: 0px;
+        height: 40px;
+        background: #FFF;
+        outline: none;
+    }
+    .shivam .popup-order .gridorder .seltbl tr td .btnicon_02 .icon_01{
+        
+    }
+    .shivam .popup-order .gridorder .seltbl tr td .btnicon_02 .icon_01.glyphicon-trash{
+        color: #E40404;
+    }
+        .shivam .orderform .blockwise .Divdtl .link.popup-close.clsebtnBw{
+            color: #FFFFFF;
+            outline: none;
+        }
+        
+        .shivam .dialog.Delgridrow{
+            border-radius: 0px;
+        }
+        .shivam .dialog.Delgridrow .dialog-inner{
+            padding: 0px;
+        }
+        .shivam .dialog.Delgridrow .dialog-inner .dialog-title{
+            background: #E2E2E2;
+            padding: 6px 8px;
+            color: #000;
+        }
+        .shivam .dialog.Delgridrow .dialog-inner .dialog-text{
+            margin: 0px;
+            padding: 18px 6px;
+            color: #000;
+            font-size: 16px;
+            text-align: center;
+        }
+        .shivam .dialog.Delgridrow .dialog-buttons{
+            padding: 0px;
+            height: auto;
+        }
+        .shivam .dialog.Delgridrow .dialog-buttons .dialog-button{
+/*            width: 46%;
+            background: #FFFFFF;
+            border-radius: 3px;
+            margin-right: 2%;
+            margin-left: 2%;
+            margin-bottom: 5px;
+            color: #2196f3;
+            border: 1px solid #2196f3;
+            font-weight: normal;*/
+        }
+        
+        .shivam .ordergridpopup{
+            padding: 0px;
+            margin: 0px;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            width: 100%;
+            height: 100%
+        }
+        .shivam .ordergridpopup .block{
+            margin: 0px;
+            padding: 0px;
+        }
+        .shivam .ordergridpopup .block .gridprevious{
+            
+        }
+        .shivam .ordergridpopup .block .gridprevious{
+            
+        }
+        .shivam .ordergridpopup .block .gridprevious .data-table .tblpre{
+            
+        }
+        .shivam .ordergridpopup .block .gridprevious .data-table .tblpre tr{
+            
+        }
+        .shivam .ordergridpopup .block .gridprevious .data-table .tblpre tr th{
+            height: auto;
+            color: #000;
+            font-size: 16px;
+            padding:8px 10px;
+            background: #F6F6F6;
+            border-right: 1px solid #E6E6E6;
+        }
+        .shivam .ordergridpopup .block .gridprevious .data-table .tblpre tr th .checkbox{
+            margin: 0px;
+        }
+        .shivam .ordergridpopup .block .gridprevious .data-table .tblpre tr td .checkbox{
+              margin: 0px;
+        }
+        .shivam .ordergridpopup .block .gridprevious .data-table .tblpre tr td{
+            height: auto;
+            color: #000;
+            font-size: 14px;
+              padding:5px 10px;
+            border-right: 1px solid #E6E6E6;
+            white-space: nowrap;
+            border-bottom: 1px solid #E6E6E6;
+        }
+        .shivam .ordergridpopup .block .gridprevious .data-table .tblpre tr td label{
+            font-weight: normal;
+            white-space: nowrap;
+        }
+        .shivam .ordergridpopup .block .gridprevious .data-table .tblpre tr td .btnedit1{
+            display: inline-block;
+width: 50%;
+border: 0px;
+background: #F0f0f0;
+padding: 6px 10px;
+border-radius: 3px;
+color: #055275;
+outline: none;
+        }
+        .shivam .ordergridpopup .block .gridprevious .data-table .tblpre tr th:before{height: 0px;}
+        .shivam .ordergridpopup .block .gridprevious .data-table .tblpre tr td:before{height: 0px;}
+        .shivam .ordergridpopup .block .gridprevious .data-table .tblpre tr td:nth-child(2){
+            
+        }
+        .shivam .ordergridpopup .popcloseprevious{
+            width: 50px;
+            text-align: center;
+            padding: 0px;
+            height: 50px;
+            padding-top: 6px;
+        }
+        .shivam .sheet-History .toolbar{height: 35px;background: #C60;}
+        .shivam .sheet-History .toolbar toolbar-inner{overflow: auto;}
+        .shivam .sheet-History .toolbar .left{font-size: 18px;padding: 0px 10px;}
+        .shivam .sheet-History .toolbar .sheet-close{height: 35px;min-height: 35px;vertical-align: middle;}
+        .shivam .sheet-History .sheet-modal-inner{
+            overflow: auto;
+        }
+        .shivam .sheet-History .sheet-modal-inner .list{margin: 0px;padding: 0px;}
+        .shivam .sheet-History .sheet-modal-inner .list li .item-link{
+            padding: 0px;
+            border-bottom: 1px solid #E2E2E2;
+            padding-left: 10px;
+            min-height: 40px;
+            font-size: 14px;
+        }
+        .shivam .popup-DisAttch{
+            width: 100%;
+            margin: 0px;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            height: auto;
+        }
+        .shivam .popup-DisAttch .block{
+            margin: 0px; padding: 0px;
+        }
+        .shivam .popup-DisAttch .block .headingdiv{
+            display: block;width: 100%;
+            background: #367fa9;
+            height: 40px;
+        }
+        .shivam .popup-DisAttch .block .headingdiv .clos_popup{
+            
+        }
+        .shivam .popup-DisAttch .DisAttachmentDiv{
+            
+        }
+        .shivam .popup-DisAttch .DisAttachmentDiv .imgeoutertemplate{}
+        .shivam .popup-DisAttch .DisAttachmentDiv .imgeoutertemplate .docdiv{
+            background: #F0F0F0;
+            font-size: 16px;
+            padding: 8px 10px;
+            display: inline-block;
+            width: 100%;
+        }
+        .shivam .popup-DisAttch .DisAttachmentDiv .imgeoutertemplate .disdate{display: inline-block;}
+        .shivam .popup-DisAttch .DisAttachmentDiv .imgeoutertemplate .docdocnm{display: inline-block;}
+        .shivam .popup-DisAttch .DisAttachmentDiv .imgeoutertemplate .imgcontainr{
+            width: 25%;
+display: block;
+float: left;
+padding: 5px 5px;
+        }
+        .shivam .popup-DisAttch .DisAttachmentDiv .imgeoutertemplate{
+            
+        }
+        .shivam .popup-DisAttch .DisAttachmentDiv .imgeoutertemplate .imgs{
+            text-align: center;
+            border: 1px solid #d3d3d3;
+            padding:0px;
+        }
+        .shivam .popup-DisAttch .DisAttachmentDiv .imgeoutertemplate .AttachImg{
+            width: 190px;
+            height: 100px;margin: 5px;
+        }
+        .shivam .popup-DisAttch .DisAttachmentDiv .imgeoutertemplate .textbtnAll{
+            text-align: right;background: #F7F7F7;
+        }
+        .shivam .popup-DisAttch .DisAttachmentDiv .imgeoutertemplate .imgDescrption{
+            width: 100%;
+padding: 1px 5px;
+background: #FFF;
+border-top: 1px solid #d3d3d3;
+        }
+        .shivam .popup-DisAttch .DisAttachmentDiv .imgeoutertemplate .dtbtn{
+            padding: 3px 10px;
+margin-bottom: 3px;
+margin-top: 3px;
+margin-right: 5px;
+outline: none;
+border-radius: 2px;
+        }
+        .shivam .popup-Attachment1{
+            width: 100%;
+            left: 0px;
+            margin: 0px;
+            padding: 0px;
+            top: initial;
+            right: 0px;
+            bottom: 0px;
+        }
+        .shivam .popup-Attachment1 .list{
+            margin: 0px;padding: 0px;
+        }
+        .shivam .popup-Attachment1 .list ul:after{height: 0px;}
+        .shivam .popup-Attachment1 .list ul:before{height: 0px;}
+        .shivam .popup-Attachment1 .list .list-button{
+
+        }
+        .shivam .popup-Attachment1 .list .list-button .iconleft{
+            display: inline-block;
+            vertical-align: middle;
+            color: #2F6FB4;
+        }
+        .shivam .popup-Attachment1 .list .list-button .lbmcanpopup{
+             display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+            color: #000;
+        }
+        .attachbackrdop{
+          display: none;  
+        }
+        .attachbackrdop.showbackdrop{
+          display: block;  
+        }
+        .popup-Attachment1:before{
+            content: "";
+            position: fixed;
+            top: -100%;
+            bottom: 100%;
+            left: 0px;
+            right: 0px;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+        }
+/*        .footerAttachDisorder{
+            width: 100%;
+            text-align: center;
+            height: 40px;
+            background: #C60;
+            position: fixed;
+            bottom: 0px;
+        }*/
+        .footerAttachDisorder .A_001{
+            color: #FFF;
+            font-size: 16px;
+            border: 1px solid #FFF;
+            height: 34px;
+            margin-top: 3px;
+            padding: 0px 8px;
+            border-radius: 3px;
+            outline: none;
+        }
+        .footerAttachDisorder .A_001 .icon_01{
+            display: none;
+        }
+        
+        .shivam .layoutfix{
+            width: 100%;
+        }
+        @media only screen and (max-width:840px){
+            .shivam .popup-DisAttch .DisAttachmentDiv .imgeoutertemplate .AttachImg{
+                width: 150px;
+            }
+        }
+         @media only screen and (max-width:670px){
+             .shivam .popup-DisAttch .DisAttachmentDiv .imgeoutertemplate .imgcontainr{
+                 width: 33%;
+             }
+            .shivam .popup-DisAttch .DisAttachmentDiv .imgeoutertemplate .AttachImg{
+                width: 120px; height:80px;
+            }
+        }
+        @media only screen and (max-width:520px){
+            .layoutdiv{padding-bottom: 5px;}
+            .shivam .popup-DisAttch .DisAttachmentDiv .imgeoutertemplate .imgcontainr{
+                 width: 50%;
+             }
+        }
+  

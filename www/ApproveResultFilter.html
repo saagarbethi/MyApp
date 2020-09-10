@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Approve Result Filter</title>
+
+       <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+        <script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+         <script type="text/javascript" src="js/colorchanges.js"></script>
+        <script src="bootstrap/bootstrap.min.js" type="text/javascript"></script>
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css"> 
+        <script type="text/javascript" src="cordova.js"></script>
+          <link href="css/settingsCSS.css" rel="stylesheet" type="text/css"/>
+        <script>
+            loadjsfile("DoctorApprovalvf.js");
+            
+var cssFilesArr = ["styles.css", "stylesGreentheme.css",  
+"stylesBluetheme.css", "stylesTealtheme.css",  
+"stylesdarkorangetheme.css", "stylesGraytheme.css", "stylesPeach.css",  
+"stylesPink.css", "stylesPurple.css", "stylesRed.css",  
+"stylesSkyblue.css", "stylesYellow.css"];
+   var cssFilesTitle = ["orange", "green", "blue", "teal", "yellow",  
+"gray", "peach", "pink", "purple", "red", "skyblue", "yellownew"];
+function loadcssfiles(cssFilesArr){
+for(var x = 0; x < cssFilesArr.length; x++) {
+   var fileref=document.createElement("link");
+   fileref.setAttribute("rel", "stylesheet");
+   fileref.setAttribute("type", "text/css");
+   fileref.setAttribute("title", cssFilesTitle[x]);
+cssFilesArr[x] = localStorage.ipadrs + "/themeCSS/" + cssFilesArr[x] + "?version=1";
+   fileref.setAttribute("href", cssFilesArr[x]);
+   document.getElementsByTagName("head")[0].appendChild(fileref);
+
+  }
+ var i, link_tag ;
+  var isExists = 0;
+     var css_title = localStorage.themecolor;
+     if(css_title != undefined && css_title != ""){
+         for (i = 0, link_tag = document.getElementsByTagName("link"); i < link_tag.length ; i++ ) {
+             if ((link_tag[i].rel.indexOf( "stylesheet" ) !== -1) &&
+                 link_tag[i].title) {
+                 link_tag[i].disabled = true ;
+                 if (link_tag[i].title === css_title) {
+                     link_tag[i].disabled = false ;
+                     isExists = 1;
+                 }
+             }
+         }
+     }
+     if(isExists == 0){
+         try{
+         var color = localStorage.themecolor;
+         color = color.replace("%23","#");
+         //confirm(color);
+         chnagecssnew(color);
+         //confirm(cssdata);
+     }catch(err){}
+     }
+}
+            $(document).ready(function () {
+                loadcssfiles(cssFilesArr);
+                });
+        </script>
+      
+        <style type="text/css">
+            body{
+                font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+                font-size:11pt; background: #e2e4e6;
+            }
+  body{
+                 padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
+            }
+            footer{
+    margin-bottom: constant(safe-area-inset-bottom);
+    margin-bottom: env(safe-area-inset-bottom);
+}
+            .container-fluid{padding: 0px;}
+            header{
+                position: fixed;
+                width: 100%;
+                height: 50px;
+                background: #367fa9;
+                z-index: 9999;
+            }
+            .body-content{
+                margin-top: 50px;
+                margin-bottom: 50px;
+                padding-bottom: 10px;
+                overflow: auto;
+                background: #e2e4e6;
+
+            }
+            footer{
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0px;
+                height:50px;
+                background-color: #C60;
+                z-index: 999;
+            }
+            .maindiv{
+                width: 600px;
+                margin: 0 auto;
+                /*                padding-top: 6px;*/
+                padding-bottom: 6px;
+                margin-top: 8px;
+                height: auto;
+                border: 1px solid #d3d3d3;
+                /*                padding: 5px;*/
+                background: #fff;
+                box-shadow: 0 2px 4px 0 rgba(0,0,0,0.03),0 2px 10px 0 rgba(0,0,0,0.1);
+            }
+            .row{margin: 0px;}
+            .pad{padding: 0px;}
+            .txtbox{}
+            .inrow{
+                margin-bottom: 5px;
+                padding-bottom: 5px;
+                padding-top: 5px;
+            }
+            .resultdiv{
+                height: 150px;
+                margin-bottom: 5px;
+                border-bottom:1px solid #d3d3d3;
+            }
+            .resultdivhed{
+                padding:5px;
+                background:#EFEFEF;
+                font-weight: normal;
+            }
+            .lblresult{
+                width: 100%;
+                padding-left: 5px;
+                font-size: 15pt;
+                color: #367fa9;
+                font-weight: normal;
+            }
+
+            .lblhed{
+                width:70%;
+                color: #FFF;
+                font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+                font-weight: normal;
+                font-size: 15pt;
+                padding-left: 10px;
+                margin: 0;
+                padding-top: 9px;
+            }
+            .lblhed2{
+                display: none;
+                color: #FFF;
+                right: 5px;
+                font-weight: normal;
+                position: absolute;
+                margin-top: 8px;
+                outline: none;
+                font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            }
+            .filtericon{
+                font-size: 15pt;
+                float: left;
+            }
+            .filterspan{
+                padding-left: 10px;
+            }
+            .lblleft{
+                width: 100%;
+                margin-top: 5px;
+                text-align: left;
+                color: #367fa9;
+                padding-top: 2px;
+                font-weight: normal;
+            }
+            .lblright{
+                width: 100%;
+                padding-top: 2px;
+                padding-left: 5px;
+                font-weight: normal;
+            }
+            .loadingimg{
+                display: none;
+                position: absolute;
+            }
+            .lblbtn{
+                margin: 0;
+                padding: 9px 6px;
+                text-align: left;
+                padding-left: 10px;
+                width: 31%;
+                font-size: 11pt;
+            }
+            .radiobtn{
+                vertical-align:-2px;
+            }
+            .btngo{
+                width:30%; 
+                font-size: 14pt;
+                padding: 6px;
+            }
+            .lbltopradio1{
+                padding: 0px;
+                margin: 0px;
+                padding-left:5px;
+                font-weight: normal;
+                padding-top: 13px;
+                padding-bottom: 13px;
+            }
+            .lbltopradio2{
+                padding: 0px;
+                margin: 0px;
+                padding-top: 13px;
+                padding-bottom: 13px;
+                padding-left:5px;
+                font-weight: normal;
+            }
+            .topradio1active{
+                background: #FFF;
+                color: #367fa9;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                box-shadow: inset 0px 0px 0px #367fa9, 0px 5px 0px 0px #367fa9, 0px 5px 0px;
+            }
+            .topradio2active{
+                background: #FFF;
+                color: #367fa9;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                box-shadow: inset 0px 0px 0px #367fa9, 0px 5px 0px 0px #367fa9, 0px 5px 0px;
+
+            }
+            .dtwiserow{
+                background: #F7F7F7;
+            }
+            @media only screen and (max-width: 768px) {
+                .maindiv{width:98%;}
+                .btngo{
+                    width:50%; }
+            }
+            @media only screen and (max-width:601px) {
+
+                .topradio1active, .lbltopradio1{font-size: 14pt;}
+                .topradio2active, .lbltopradio2{font-size: 14pt;}
+                .lblleft{font-size: 13pt;}
+                .lblbtn{font-size: 13pt;}
+                .dtwiserow {margin-bottom: 10px;}
+                .form-control{height: 40px;}
+                .btnclendr {height: 40px;}
+            }
+            @media only screen and (max-width:480px) {
+                .topradio1active, .lbltopradio1{font-size: 13pt;}
+                .topradio2active, .lbltopradio2{font-size: 13pt;}
+                .lblleft{font-size: 12pt;}
+                .lblbtn{font-size: 12pt;}
+                .dtwiserow {margin-bottom: 10px;}
+                .form-control{height: 40px;}
+                .btnclendr {height: 40px;}
+            }
+            @media only screen and (max-width:420px) {
+                .btngo{width:90%;} 
+                .lblleft{font-size: 10pt;}
+                .topradio1active, .lbltopradio1{font-size: 11pt;}
+                .topradio2active, .lbltopradio2{font-size: 11pt;}
+                .lblbtn{font-size: 10pt;}
+                .dtwiserow {margin-bottom:2px;}
+                .form-control{height:34px;}
+                .btnclendr {height:34px;}
+            }
+            .loader{
+                font-size:24px;
+                position: absolute;
+                right: 50px;
+                margin-top: 4px;
+                color:red;
+            }
+            .btnclendr{
+                outline: none;
+                color: #367fa9;
+            }
+            .fa-calendar{
+                outline: none;
+            }
+            #loader {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    border: 6px solid #222;
+    border-radius: 50%;
+    border-top: 6px solid #3498db;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+            @-webkit-keyframes spin {
+                0% { -webkit-transform: rotate(0deg); }
+                100% { -webkit-transform: rotate(360deg); }
+            }
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+
+            /* Add animation to "page content" */
+            .animate-bottom {
+                position: relative;
+                -webkit-animation-name: animatebottom;
+                -webkit-animation-duration: 1s;
+                animation-name: animatebottom;
+                animation-duration: 1s
+            }
+
+            @-webkit-keyframes animatebottom {
+                from { bottom:-100px; opacity:0 } 
+                to { bottom:0px; opacity:1 }
+            }
+
+            @keyframes animatebottom { 
+                from{ bottom:-100px; opacity:0 } 
+                to{ bottom:0; opacity:1 }
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container-fluid" id="divData">
+            <script>
+                function  _exit() {
+                    localStorage.filterback = "0";
+                    location.href = 'dashboardmenu.html';
+                }
+            </script>
+            <header class="dmmanav">
+                <label class="lblhed"></label>
+            </header>
+            <div class="body-content">
+                <div id="loader" >
+                </div>
+            </div>
+            <footer class="setfooter" style="padding-top:7px;text-align:center;">
+                    <button type="button" class="btn btn-default" style="cursor: pointer; font-size: 16pt; float:left;padding:6px 14px;border:none;outline:none;background:transparent;color:#fff;" onclick="_exit();">
+                        <span class="glyphicon  glyphicon-circle-arrow-left"></span>
+                    </button> 
+            </footer> 
+        </div>
+        <input type="hidden" id="hdnformid">
+        <input type="hidden" id="consdocid">
+        <input type="hidden" id="consdocnm">
+    </body>
+</html>

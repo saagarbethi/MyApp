@@ -1,0 +1,90 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+         <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <script  type="text/javascript"  src="js/jquery-1.9.1.js"></script>    
+            <script type="text/javascript" src="js/colorchanges.js"></script>
+<!--        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">        
+        <script type="text/javascript" src="js/highcharts.js"></script>
+        <script  type="text/javascript"  src="js/amcharts.js"></script>
+        <script src="js/Calendar-ui.js"  type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="js/Calendar-ui.css">
+        <script type="text/javascript" src="js/comparitive.js"></script>
+   
+          <link rel="stylesheet" type="text/css" href="css/style.css" />
+           <link href="css/settingsCSS.css" rel="stylesheet" type="text/css"/>
+<!--    <link href="themeCSS/styles.css?version=1" rel="alternate stylesheet" type="text/css" title="orange"/>
+     <link rel="alternate stylesheet" type="text/css" title="green" href="themeCSS/stylesGreentheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="blue" href="themeCSS/stylesBluetheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="teal" href="themeCSS/stylesTealtheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="yellow" href="themeCSS/stylesdarkorangetheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="gray" href="themeCSS/stylesGraytheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="peach" href="themeCSS/stylesPeach.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="pink" href="themeCSS/stylesPink.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="purple" href="themeCSS/stylesPurple.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="red" href="themeCSS/stylesRed.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="skyblue" href="themeCSS/stylesSkyblue.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="yellownew" href="themeCSS/stylesYellow.css?version=1">-->
+           <script>
+            var cssFilesArr = ["styles.css", "stylesGreentheme.css",  
+"stylesBluetheme.css", "stylesTealtheme.css",  
+"stylesdarkorangetheme.css", "stylesGraytheme.css", "stylesPeach.css",  
+"stylesPink.css", "stylesPurple.css", "stylesRed.css",  
+"stylesSkyblue.css", "stylesYellow.css"];
+   var cssFilesTitle = ["orange", "green", "blue", "teal", "yellow",  
+"gray", "peach", "pink", "purple", "red", "skyblue", "yellownew"];
+function loadcssfiles(cssFilesArr){
+for(var x = 0; x < cssFilesArr.length; x++) {
+   var fileref=document.createElement("link");
+   fileref.setAttribute("rel", "stylesheet");
+   fileref.setAttribute("type", "text/css");
+   fileref.setAttribute("title", cssFilesTitle[x]);
+cssFilesArr[x] = localStorage.ipadrs + "/themeCSS/" + cssFilesArr[x] + "?version=1";
+   fileref.setAttribute("href", cssFilesArr[x]);
+   document.getElementsByTagName("head")[0].appendChild(fileref);
+
+  }
+ var i, link_tag ;
+  var isExists = 0;
+     var css_title = localStorage.themecolor;
+     if(css_title != undefined && css_title != ""){
+         for (i = 0, link_tag = document.getElementsByTagName("link"); i < link_tag.length ; i++ ) {
+             if ((link_tag[i].rel.indexOf( "stylesheet" ) !== -1) &&
+                 link_tag[i].title) {
+                 link_tag[i].disabled = true ;
+                 if (link_tag[i].title === css_title) {
+                     link_tag[i].disabled = false ;
+                     isExists = 1;
+                 }
+             }
+         }
+     }
+     if(isExists == 0){
+         var color = localStorage.themecolor;
+         color = color.replace("%23","#");
+         //confirm(color);
+         chnagecssnew(color);
+         //confirm(cssdata);
+     }
+}
+
+$(document).ready(function () {
+                loadcssfiles(cssFilesArr);
+                });
+        </script>
+    </head>
+    <body>
+        <div id="divComparitive">
+            
+        </div>
+    </body>
+</html>

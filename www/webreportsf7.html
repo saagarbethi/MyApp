@@ -1,0 +1,297 @@
+<div class ="page RepotparaAll">
+    <div class="navbar">
+        <div class="navbar-inner sliding">
+            <div class="left">                </div>
+            <div class="title">
+                <label class="formname"></label>
+            </div>
+            <div class="right">  </div>
+        </div>
+    </div>
+    <div class="page-content doublpara">       
+        <div class="row">
+            <div class="col-sm-12 pdr">
+                <label class="hdlbl">Date Range</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 pdr frtodtconnr">
+                <div class="Lcontnr">
+                    <span class="snfromto" id="txtFromTime">From</span>
+                    <input type="text" class="calfrmtodt" id="txtFrom" value="27/09/2018" readonly="">
+                    <span class="snfromto" id="txtToTime">To</span>
+                    <input type="text" class="calfrmtodt txtfrdt" id="txtTo"  value="27/09/2018" readonly="">
+                </div>
+                <div class="Rcontnr">
+                    <input type="button" class="btn-primary btnsetdt" onclick="" value="Yesterday">
+                    <input type="button" class="btn-primary btnsetdt" onclick="" value="Last Month">
+                    <input type="button" class="btn-primary btnsetdt" onclick="" value="Last Year">
+                    <input type="button" class="btn-primary btnsetdt" onclick="" value="This Month Till Date">
+                </div>                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 pdr">
+                <label class="hdlbl">What is this Report ?</label>
+            </div>
+            <div class="col-sm-12 pdr"> 
+                <label id="txtDesc" class="DescDetail">undefined</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 pdr">
+                <label class="hdlbl">How do I verify this Report ?</label>
+            </div>
+            <div class="col-sm-12 pdr"> 
+                <label id="txtVerify" class="DescDetail">undefined</label>
+            </div>
+        </div>
+        <!--=================     Your Branches or Location =====================  -->
+        <div class="row">
+            <div class="col-sm-12 pdr">
+                <label class="hdlbl">Your Branches</label>
+            </div>
+            <div class="col-sm-12 pdr"> 
+                <div class="list" id="locationdemo">
+                </div>    
+            </div>
+        </div>
+        <!--=================      Select Organization or =====================  -->
+        <div class="dbleparacontainer">
+            <!--=================  Left Container Started    Select Organization or =====================  -->   
+            <div class="lftcntenr" id="specialization">
+                <div class="row">
+                    <div class="col-sm-12 pdr">
+                        <label class="hdlbl">Select Specialization</label>
+                    </div>               
+                </div>
+                <!--                <input type='search' placeholder='Search Doctor' class='srchtxt' onclick='srchreportpopup(this)'>-->
+                <div class="list">
+                    <ul>
+                        <li class="item-link">
+                            <div class="item-inner inrpotht">
+                                <form class="searchbar reportsrch">
+                                    <div class="searchbar-inner">
+                                        <div class="searchbar-input-wrap">
+                                            <input type="search" placeholder="Search" id="searchSpec" class="srchtxt" onclick="srchreportpopup1(this)">
+                                            <i class="searchbar-icon srchicon" ></i>
+                                            <span class="input-clear-button txtclrbtn"></span>
+                                        </div>
+                                        <span class="searchbar-disable-button">Cancel</span>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>                  
+                </div>
+            </div>
+
+            <!--=================  Right Container Started    Select Organization or =====================  -->   
+            <div class="rghtcntenr" id="doctor">
+                <div class="row">
+                    <div class="col-sm-12 pdr">
+                        <label class="hdlbl">Select Doctor</label>
+                    </div>
+                </div>
+                <div class="list" >
+                    <ul>
+                        <li class="item-link">
+                            <div class="item-inner inrpotht">
+                                <form class="searchbar reportsrch">
+                                    <div class="searchbar-inner">
+                                        <div class="searchbar-input-wrap">
+                                            <input type="search" placeholder="Search" class="srchtxt" id="divSearchDoctor" onfocus="srchreportpopup2(this)">
+                                            <i class="searchbar-icon srchicon" ></i>
+                                            <span class="input-clear-button txtclrbtn"></span>
+                                        </div>
+                                        <span class="searchbar-disable-button">Cancel</span>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+ <!--   =================== search Reoprt poup open (divSpecialization)========================-->
+    <div class="popup popup-reportsearch divSpecialization RepotparaAll" id="divSearchSpec">
+        <div class="block">
+            <div class="navbar">
+                <div class="navbar-inner sliding" >                
+                    <div class="title"><label class="formname">Select Specialization</label></div>                                  
+                </div>
+            </div> 
+            <div class="serchconrep_01">
+                <div class="row">
+                    <div class="col-sm-12 pdr">
+                        <form class="searchbar reportsrch" >
+                            <div class="searchbar-inner" >
+                                <div class="searchbar-input-wrap">
+                                    <input type="search" placeholder="Search" id="searchSpecification" class="srchtxt srcpoprept">
+                                    <i class="searchbar-icon srchicon" ></i>
+                                    <span class="input-clear-button txtclrbtn"></span>
+                                </div>
+                                <span class="searchbar-disable-button">Cancel</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 pdr">
+                        <div class="list" >
+                            <ul>
+                                <li class="hdlbl1">
+                                    <label class="item-checkbox item-content">
+                                        <input type="checkbox" id="chkParamAll" name="demo-checkbox" value="Choose This Option To Select All The Select Organisations"/>
+                                        <i class="icon icon-checkbox"></i>
+                                        <span class="item-inner">
+                                            <span class="item-title">Select All</span>
+                                        </span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 pdr">
+                        <div class="list" id='divSpecialization'>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+    <div class="footer_All">
+        <div class="left">
+            <a href="#" class="link_ftr" style="" onclick="srchreportpopupclse()">
+                <i class="icon icon-back"></i>
+            </a>
+        </div>
+        <div class="title">
+            <button class="button clsebtnrep_01" onclick="selchkSpec()">Select</button>
+        </div>
+    </div>
+        </div>
+    </div>
+    
+<!--   ============================== Close Specilization Container ================= -->
+    
+    
+<!-- ================ Second search Reoprt poup open (divDoctorName)======================-->
+    <div class="popup popup-reportsearch divDoctorName RepotparaAll" id="divSearchDoctorName">
+        <div class="block">
+            <div class="navbar">
+                <div class="navbar-inner sliding" >                
+                    <div class="title"><label class="formname">Select Doctor</label></div>                                 
+                </div>
+            </div> 
+            <div class="serchconrep_01">
+                <div class="row">
+                    <div class="col-sm-12 pdr">
+                        <form class="searchbar reportsrch" >
+                            <div class="searchbar-inner" >
+                                <div class="searchbar-input-wrap">
+                                    <input type="search" placeholder="Search" id="searchDoctor" class="srchtxt srcpoprept">
+                                    <i class="searchbar-icon srchicon" ></i>
+                                    <span class="input-clear-button txtclrbtn"></span>
+                                </div>
+                                <span class="searchbar-disable-button">Cancel</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 pdr">
+                        <div class="list" >
+                            <ul>
+                                <li class="hdlbl1">
+                                    <label class="item-checkbox item-content">
+                                        <input type="checkbox" name="demo-checkbox" value="Choose This Option To Select All The Select Organisations"/>
+                                        <i class="icon icon-checkbox"></i>
+                                        <span class="item-inner">
+                                            <span class="item-title">Select All</span>
+                                        </span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 pdr">
+                        <div class="list" id='divDoctorName'>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="footer_All">
+                <div class="left">
+                    <a href="#" class="link_ftr" style="" onclick="srchreportpopupclse()">
+                        <i class="icon icon-back"></i>
+                    </a>
+                </div>
+                <div class="title">
+                    <button class="button clsebtnrep_01" onclick="selchkDr()">Select</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <div class="row">
+                    <div class="col-sm-12 pdr">
+                        <div class="list" id='generalparmasdiv'>
+                        </div>
+                    </div>
+          </div>
+       <div>
+           
+           <input type="hidden" id="typevalue" style="display: none;width: 90%;" value=""/>
+           <input type="hidden" name="exc" checked id="chkPdf"/>&nbsp;&nbsp;Choose this option to export the report content in to PDF
+           <input type="hidden" id="txtfrange" style="width: 80%; border-radius:10px;border:1px solid lightgray;"  />
+           <input type="hidden" id="txttrange" style="width: 80%; border-radius:10px;border:1px solid lightgray;"  />
+       </div>
+       <div id="tdMsexcel" style="display: none;" class="col-md-6">
+            <input type="checkbox" name="" id="chkMsexcel"  name='pdf' value="ON"/>&nbsp;&nbsp;Choose this option to export the report content in to Excel
+        </div>
+
+        <table style="display: none;">
+    <tr>
+        <td height="25" align='left' colspan="3">
+            <input type="checkbox" id="chkMsexcel"  name='pdf' value="ON"/>Choose this option to export the report content in to Excel
+        </td>
+    </tr>
+    </table>
+
+    <div class="footer_All">
+        <div class="left">
+            <a href="#" class="link_ftr link back" style="">
+                <i class="icon icon-back"></i>
+            </a>
+        </div>
+        <div class="title reportpdfon">
+            <div class="inriconbtndiv">
+                <a  class="fabbtn" href="#" onclick="reportPDF1()">
+                    <i class="fa fa-eye inicon"></i>
+                    <span class="intxt">Show</span>                     
+                </a>
+            </div>
+            <div class="inriconbtndiv">
+                <a  class="fabbtn" href="#">
+                    <i class="material-icons iconclose inicon">clear</i>
+                    <span class="intxt">Cancel</span>                     
+                </a>
+            </div>
+        </div>
+        <div class="right">
+            <a href="#" class="link_ftr setting" onclick="Setting()">
+                <i class="material-icons">settings</i>
+            </a>
+        </div>
+    </div>
+</div>

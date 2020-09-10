@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Payment Get Way </title>
+        <meta charset="UTF-8"> 
+       <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <script src="js/jquery-1.9.1.js"></script>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="bootstrap/bootstrap.min.js" type="text/javascript"></script>
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">  
+        <script type="text/javascript">
+            loadjsfile('citrus.js');
+            loadjsfile('payment.js');
+            loadjsfile('mahpg.js');
+        </script>
+        <style>
+        #mydiv {
+            height:100%;
+            width:100%;
+            position:fixed;
+            top:0;
+            padding:0px;
+            z-index:999999999;
+            filter:alpha(opacity=70);
+        }
+        #mydiv img{position: absolute;left:40%;top:42%;}
+        </style>
+        <script type="text/javascript">
+        </script>
+        <script type="text/javascript">
+
+//            function citrusServerErrorMsg(errorResponse) {
+//                debugger;
+//                //alert(errorResponse);
+//                alert(errorResponse.txMsg);
+//            }
+//            function citrusClientErrMsg(errorResponse) {
+//                alert(errorResponse);
+//                console.log(errorResponse);
+//            }
+        </script>
+<!--        <script type="text/javascript">
+            function Citrus()
+            {
+                $('.Citrus').addClass('top1');
+                $('.Card').removeClass('top1');
+                $('.Net').removeClass('top1');
+                $("#cardPayment").css("display", "none");
+                $("#netbanking").css("display", "none");
+                $("#Citrus").css("display", "block");
+            }
+            function cardPayment()
+            {
+                $('.Card').addClass('top1');
+                $('.Citrus').removeClass('top1');
+                $('.Net').removeClass('top1');
+                $("#Citrus").css("display", "none");
+                $("#netbanking").css("display", "none");
+                $("#cardPayment").css("display", "block");
+            }
+            function netbanking()
+            {
+                $('.Net').addClass('top1');
+                $('.Card').removeClass('top1');
+                $('.Citrus').removeClass('top1');
+                $("#Citrus").css("display", "none");
+                $("#cardPayment").css("display", "none");
+                $("#netbanking").css("display", "block");
+
+            }
+        </script>-->
+
+        
+    </head>
+    <body>
+        <div id="divPg">
+          <div id="mydiv">
+            <img src="images/xda2.gif" width="100" height="100" style="border-radius: 50%;">
+            <span style="display: none;">Loading....</span>
+        </div>
+        </div>
+<!--        <header>
+            <div class="container-fluid pad">
+                <div class="row">
+                    <div class="col-xs-2 col-sm-1 hedrlftcontainer pad">
+                        <span class=" spangal input-group-addon">
+                            <i class="glyphicon glyphicon-menu-left glpfont1"></i> 
+                        </span>
+                    </div>
+                    <div class="col-xs-8 col-sm-10 pad headerMiddlecont">
+                        <label class="lblheader">Payment Getway</label>
+                    </div>
+                    <div class="lblrupis">
+                        <button type="button" class="btnn">
+                            <span class=" spangal">
+                                <i class="fa fa-inr glpfont1" style="font-size: 12pt;"></i>
+                            </span>200
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+        <div class="r2">
+            <div class="row ">
+                <div class="col-xs-4 col-sm-4 pad">
+                    <button class="Citrus toplinkbtn " onclick="Citrus()">
+                        Citrus Wallet
+                    </button>
+                </div>
+                <div class="col-xs-4 col-sm-4 pad">
+                    <button class="Card toplinkbtn top1" onclick="cardPayment()">
+                        Card Payment
+                    </button>
+                </div>
+                <div class=" col-xs-4 col-sm-4 pad">
+                    <button class="Net toplinkbtn" onclick="netbanking()">
+                        Net Banking
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="body-content">
+            <div class="container-fluid">
+                <div class="row row1">
+                    <div class="main-container">
+
+                         ================================================= saved Account ================================================ 
+                        <div id="SavedPaymentMode" class="pg" style="position: relative; top: 15%; display: block;">
+                            <div id="Members_section" style="display:block;" class="CreditDebitCard">
+                                <h3 id="loginErrorMessage" class="failedError" style="margin: 4px; color:#810E03; display:none">Please verify the username and password.</h3>
+                                <div class="row" id="Citrus" >
+                                    <div class="col-sm-12 pad">
+                                        <div class="form1">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-12 pad">
+                                                        <label for="citrusEmail">Email address</label>
+                                                    </div>
+                                                    <div class="col-sm-12 pad inputcol">
+                                                        <span class="glph">
+                                                            <i class="glyphicon glyphicon-envelope glpfont"></i> 
+                                                        </span>
+                                                        <input type="email" class="txt" id="citrusSavedEmail" placeholder="Email">
+                                                        <main id="errorIncorrectEmail" class="Citrus_Members_Errors" style="display:none">The email you entered is Incorrect</main>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-12 pad">
+                                                        <label for="citrusEmail">Password</label>
+                                                    </div>
+                                                    <div class="col-sm-12 pad inputcol">
+                                                        <span class="glph">
+                                                            <i class="glyphicon glyphicon-lock glpfont"></i> 
+                                                        </span>
+                                                        <input type="password" class="txt" id="citrusPassword" placeholder="Password">
+                                                        <main id="errorIncorrectEmailPassword" class="Citrus_Members_Errors" style="display:none">The password you entered is Incorrect</main>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="text-align: center;margin-bottom: 5px;">
+                                                <button type="button" class="btn btn-primary" id="citrusLoginButton">
+                                                    <i class="glyphicon glyphicon-log-in glpfontbtn"></i> 
+                                                    Log In
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        End Save Account
+                         ================================================= Credit/Debit Card ============================================ 
+                        <div id="CDPaymentMode" class="pg" style="display: block;">
+                            <div class="CreditDebitCard" id="creditInner" >
+                                <div id="creditDebitForm" class="form form-vertical" role="form" >
+                                    <input type="hidden" id="citrusFirstName" value="Sagar" />
+                                    <input type="hidden" id="citrusLastName" value="Bethi" />
+                                    <input type="hidden" id="citrusEmail" value="saagarbethi@gmail.com" />
+                                    <input type="hidden" id="citrusStreet1" value="" />
+                                    <input type="hidden" id="citrusStreet2" value="" />
+                                    <input type="hidden" id="citrusCity" value="" />
+                                    <input type="hidden" id="citrusState" value="" />
+                                    <input type="hidden" id="citrusCountry" value="" />
+                                    <input type="hidden" id="citrusZip" value="" />
+                                    <input type="hidden" id="citrusMobile" value="7416744269" />
+                                    <input type="hidden"  id="citrusAmount" value="1.00" />
+                                    <input type="hidden"  id="citrusMerchantTxnId" value="mah76588cc3" />
+                                    <input type="hidden"  id="citrusSignature" value="7223d200d01d3d16d848a30c38b67c70a19e0b79"/>
+                                    <input type="hidden"  id="citrusReturnUrl" value="http://localhost:8888/mahbobpg/citruspay/return.jsp" />
+                                    <input type="hidden"  id="citrusNotifyUrl" value="http://localhost:8888/mahbobpg/citruspay/return.jsp" />
+                                    <div class="row" id="cardPayment">
+                                        <div class="col-sm-12 pad">
+                                            <div class="form1">
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 pad">
+                                                            <label>Select Card Type</label>
+                                                        </div>
+                                                        <div class="col-sm-12 pad">
+                                                            <select class="sel" id="citrusCardType">
+                                                                <option value="credit">Credit</option>
+                                                                <option value="debit">Debit</option>
+                                                            </select>
+                                                            <input type="hidden" id="citrusScheme">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 pad">
+                                                            <label for="CardNumber1">Card Number</label>
+                                                        </div>
+                                                        <div class="col-sm-12 pad inputcol">
+                                                            <span class="glph">
+                                                                <i class="glyphicon glyphicon-credit-card glpfont"></i> 
+                                                            </span>
+                                                            <input type="text" class="txt" id="citrusNumber" placeholder="Card Number">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-xs-7 col-sm-7 pad">
+                                                        <div class="row">
+                                                            <div class="col-sm-12 pad">
+                                                                <label for="ExpiryDate">Expiry Date</label>
+                                                            </div>
+                                                            <div class="col-sm-12 pad inputcol ExpCvv input-group">
+                                                                <span class="glph">
+                                                                    <i class="glyphicon glyphicon-calendar glpfont"></i> 
+                                                                </span>
+                                                                <input type="text" class="txt" id="citrusExpiry" placeholder="MM/YY">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-5 col-sm-5  ">
+                                                        <div class="row ExpCvv input-group">
+                                                            <div class="col-sm-12 pad">
+                                                                <label for="CVV">CVV</label>
+                                                            </div>
+                                                            <div class="col-sm-12 pad inputcol">
+                                                                <span class="glph">
+                                                                    <i class="glyphicon glyphicon-credit-card glpfont"></i> 
+                                                                </span>
+                                                                <input type="password" class="txt txt1" id="citrusCvv" placeholder="CVV">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 pad">
+                                                            <label for="CardName">Card Name</label>
+                                                        </div>
+                                                        <div class="col-sm-12 pad inputcol">
+                                                            <span class="glph">
+                                                                <i class="glyphicon glyphicon-credit-card glpfont"></i> 
+                                                            </span>
+                                                            <input type="text" class="txt" id="citrusCardHolder" placeholder="Name On Card">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" id="citrusCardPayButton" style="text-align: center;margin-bottom: 5px;">
+                                                    <button type="button" class="btn btn-primary">
+                                                        Pay INR
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        End  Credit/Debit Card
+                         ================================================= Net Banking ================================================== 
+                        <div id="NetBankingPaymentMode" class="pg">
+                            <div class="row" id="netbanking">
+                                <div class="col-sm-12 pad">
+                                    <div class="form1">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-12 pad">
+                                                    <label>Select Bank Name</label>
+                                                </div>
+                                                <div class="col-sm-12 pad">
+                                                    <select class="sel" id="citrusAvailableOptions">
+                                                        <option>Select Bank</option>
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group" style="text-align: center;margin-bottom: 5px;">
+                                            <button type="button" id="citrusNetbankingButton" class="btn btn-primary">
+                                                Pay INR
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        End Netbankin
+                         ================================================= Citrus Bank ================================================== 
+                        <div id="CitrusBankPaymentMode" class="pg" style="display:none;">
+                            <div class="CreditDebitCard">
+                                <input id="citrusPrepaidCardHolder" type="text" placeholder="Prepaid Card Holder Name">
+                                <div style="margin:20px 0;">
+                                    <button id="citrusCashPayButton" value="Pay Now">
+                                        <span>Pay INR ?php echo $_POST['citrusAmount']; ?</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    End Citrus Bank
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 pad">
+
+                        </div>
+                        <div class="col-xs-6 col-sm-6 pad" style="text-align: right;">
+                            <img src="images/security_icon.png" alt="" class=" img1"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+                <footer>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 pad">
+        
+                            </div>
+                            <div class="col-xs-6 col-sm-6 pad" style="text-align: right;">
+                                <img src="images/security_icon.png" alt="" class=" img1"/>
+                            </div>
+                        </div>
+                    </div>
+        
+                </footer>-->
+    </body>
+<!--    <script>
+        //UI validations
+        cardPayment()
+        jQuery(document).ready(function () {
+            jQuery.support.cors = true;
+
+            // setup card inputs;	 	
+            jQuery('#citrusExpiry').payment('formatCardExpiry');
+            jQuery('#citrusCvv').payment('formatCardCVC');
+            jQuery('#citrusNumber').keyup(function () {
+                var cardNum = jQuery('#citrusNumber').val().replace(/\s+/g, '');
+                var type = jQuery.payment.cardType(cardNum);
+                console.log(type);
+                jQuery("#citrusNumber").css("background-image", "url(images/" + type + ".png)");
+                if (type != 'amex')
+                    jQuery("#citrusCvv").attr("maxlength", "3");
+                else
+                    jQuery("#citrusCvv").attr("maxlength", "4");
+                jQuery('#citrusNumber').payment('formatCardNumber');
+                jQuery("#citrusScheme").val(type);
+            });
+        });
+        $('#citrusNetbankingButton').on("click", function () {
+            makePayment("netbanking")
+        });
+        //Card Payment
+        $("#citrusCardPayButton").on("click", function () {
+            debugger;
+            makePayment("card")
+        });
+    </script>
+    <script>
+        $(".spinnerDiv").css("display", "block");
+        /*........................................... select tabs...........................................*/
+        function selectedPG(val, tab) {
+
+            for (i = 1; i < 4; i++) {
+                change(i, tab);
+            }
+
+            $(".pg").hide();
+            $("#" + val).show();
+            $("#citrusErrorMessage").html("");
+
+        }
+        function change(i, tab) {
+
+            if (i != tab) {
+                dom("circ" + i).style.display = 'block';
+                dom("chck" + i).style.display = 'none';
+                dom("box" + i).style.background = 'white';
+                dom("itm" + i).style.color = "#666666";
+                dom("txt" + i).style.color = "#666666";
+            }
+            else {
+                dom("circ" + i).style.display = 'none';
+                dom("chck" + i).style.display = 'block';
+                dom("box" + i).style.background = '#6b6661';
+                dom("itm" + i).style.color = "white";
+                dom("txt" + i).style.color = "balck";
+            }
+        }
+        /*............................................script for all Payment .......................................*/
+        //Library Error log functions
+        function citrusServerErrorMsg(errorResponse) {
+            console.log("here in citrus server error message");
+            $(".spinnerDiv").css("display", "none");
+            if (errorResponse.txMsg !== undefined && errorResponse.txMsg !== null)
+            {
+                $("#citrusErrorMessage").html(errorResponse.txMsg);
+            }
+            else
+            {
+                $("#citrusErrorMessage").html(errorResponse);
+            }
+        }
+        function citrusClientErrMsg(errorResponse) {
+            $(".spinnerDiv").css("display", "none");
+            $("#citrusErrorMessage").html(errorResponse);
+        }
+        //fetch the payment options
+        fetchPaymentOptions();
+        // get pg health
+        getPGhealth();
+        /*............................................Fetch Wallet................................................................*/
+        $("#citrusLoginButton").on("click", function (event) {
+            $(".spinnerDiv").css("display", "block");
+            var email = jQuery("#citrusEmail").val();
+            var password = jQuery("#citrusPassword").val();
+            event.preventDefault();
+            jQuery.ajax({
+                type: 'POST',
+                url: "loginService.php",
+                data: {username: email, password: password},
+                success: function (response) {
+                    response = JSON.parse(response);
+                    if (response.error)
+                    {
+                        $(".spinnerDiv").css("display", "none");
+                        $("#citrusErrorMessage").html("Please verify the username and password.");
+                    }
+                    else {
+                        response = response.paymentOptions;
+                        handleCitrusWallet(response);
+                    }
+                },
+                error: function (err) {
+                    console.log("Error in making request");
+                }
+            });
+        });
+        /*............................................Credit/Debit Guest checkout Payment .......................................*/
+        /* event on credit/debit button ------->                                                                                 */
+<!--        $("#citrusCardPayButton").on("click", function () {
+            try {
+                makePayment("card")
+            } catch (e) {
+                console.log(e);
+            }
+        });
+        $("#citrusCashPayButton").on("click", function () {
+            makePayment("citrusbanking")
+        });
+        /*............................................Payment Options  & Citrus wallet ............................................*/
+        //Merchants have to customize this function implementation in order to generate the UI of NetBanking DropDown &  Citrus wallet options
+        function handleCitrusPaymentOptions(citrusPaymentOptions) {
+            $(".spinnerDiv").css("display", "none");
+            $("#citrusErrorMessage").html("");
+            var optionString = "<option selected disabled>Select bank</option>";
+            var netbankingOptions = citrusPaymentOptions.netBanking;
+            for (var key in netbankingOptions) {
+                var obj = netbankingOptions[key];
+                optionString += '<option value ="' + obj.issuerCode + '">' + obj.bankName + '</option>';
+            }
+            jQuery('#citrusAvailableOptions').html(optionString);
+        }
+        function handlePGhealthResponse(resp) {
+            var pgHealthString = "";
+            $.each(resp, function (key, value) {
+                if (value < 50)
+                {
+                    switch (key)
+                    {
+                        case "CID002" :
+                            pgHealthString += " Axis Bank";
+                            break;
+                        case "CID005" :
+                            pgHealthString += " SBI Bank";
+                            break;
+                        case "CID012" :
+                            pgHealthString += " SBH Bank";
+                            break;
+                        case "CID001" :
+                            pgHealthString += " ICICI Bank";
+                            break;
+                        case "CID010" :
+                            pgHealthString += " HDFC Bank";
+                            break;
+                        case "CID033" :
+                            pgHealthString += " Kotak Mahindra Bank";
+                            break;
+                        case "CID027" :
+                            pgHealthString += " Indian Overseas Bank";
+                            break;
+                        case "CID008" :
+                            pgHealthString += " Indian Bank";
+                            break;
+                    }
+                }
+            });
+            $("#pgHealthResponse").html(pgHealthString + " seems to be down for a while.");
+        }
+        function handleCitrusWallet(citrusWalletresponse) {
+            $(".spinnerDiv").css("display", "none");
+            $("#citrusErrorMessage").html("");
+
+            //start implementing citrus wallet				
+            var wallet = "";
+            var len = citrusWalletresponse.length;
+            if (len > 0) {
+                //Please iterate through the entire array using following code snippet
+                for (var i = 0, len = citrusWalletresponse.length; i < len; i++)
+                {
+                    //code to render the citrus wallet
+                    if (citrusWalletresponse[i] !== undefined && citrusWalletresponse[i] !== null)
+                    {
+                        if (citrusWalletresponse[i].type == "credit" || citrusWalletresponse[i].type == "debit")
+                        {
+                            if (citrusWalletresponse[i].scheme === "amex")
+                            {
+                                var cvvLength = 4;
+                            } else {
+                                var cvvLength = 3;
+                            }
+                            wallet +=
+                                    '<li>' +
+                                    '	<input type="radio" value="' + i + '&' + citrusWalletresponse[i].token + '" name="CitrusWalletPaymentOption" class="savedAccountsRadio cardPayments" onclick="selectPaymentOption(this)" >' +
+                                    '	<img class="savedAccountsImg" src="images/' + citrusWalletresponse[i].scheme + '.png" >' +
+                                    '	<span class="savedAccountsCard" for="citrusPaymentOptionToken">' + citrusWalletresponse[i].number + '</span>' +
+                                    '	<label>' +
+                                    '		<input type="password" class="password savedAccountsCvv" maxlength="' + cvvLength + '" placeholder="CVV" id="CitrusMembercvv' + i + '" required="required">' +
+                                    '	<label>' +
+                                    '</li>';
+                        } else {
+                            wallet +=
+                                    '<li>' +
+                                    '	<input type="radio" value="' + citrusWalletresponse[i].token + '" name="CitrusWalletPaymentOption" class="savedAccountsRadio NetBankingPayments" onclick="selectPaymentOption(this)">' +
+                                    '	<img class="savedAccountsImg" src="images/NetBanking.png" > ' +
+                                    '	<span class="savedAccountsCard" for="citrusPaymentOptionToken">' + citrusWalletresponse[i].name.split(" - ")[1] + '</span>' +
+                                    '</li>';
+                        }
+                    }
+                }
+                $("#Members_section").css("display", "none");
+                $("#Wallet_section").css("display", "block");
+                $("#walletData").html(wallet);
+
+                //end of citrus wallet
+            } else {
+                $("#walletTab").css("display", "none");
+                $("#SavedPaymentMode").css("display", "none");
+                $("#CDPaymentMode").css("display", "block");
+
+            }
+        }
+        /*........................................Event on NetBanking button .....................................*/
+        $('#citrusNetbankingButton').on("click", function () {
+            makePayment("netbanking")
+        });
+        /*............................................Citrus wallet Payment .......................................*/
+        function selectPaymentOption(elem) {
+            if ($(elem).hasClass("cardPayments")) {
+                $(".walletBtn").prop("id", "citrusWalletCardPayButton");
+            }
+            else {
+                $(".walletBtn").prop("id", "citrusWalletNetbankingButton");
+            }
+            /*...........................................event on Citrus wallet ........................................*/
+            $("#citrusWalletCardPayButton").on("click", function () {
+                makePayment("card", true)
+            });
+            $("#citrusWalletNetbankingButton").on("click", function () {
+                makePayment("netbanking", true)
+            });
+        }-->
+<!--    </script>-->
+</html>

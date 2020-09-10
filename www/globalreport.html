@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="js/colorchanges.js"></script>
+        <script type="application/javascript" src="js/iscroll.js"></script>
+          <link href="css/FontFamillyloading.css" rel="stylesheet" type="text/css"/>
+	 <script type="text/javascript" src="cordova.js"></script>
+         <link href="css/settingsCSS.css" rel="stylesheet" type="text/css"/>
+<!--    <link href="themeCSS/styles.css?version=1" rel="alternate stylesheet" type="text/css" title="orange"/>
+     <link rel="alternate stylesheet" type="text/css" title="green" href="themeCSS/stylesGreentheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="blue" href="themeCSS/stylesBluetheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="teal" href="themeCSS/stylesTealtheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="yellow" href="themeCSS/stylesdarkorangetheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="gray" href="themeCSS/stylesGraytheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="peach" href="themeCSS/stylesPeach.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="pink" href="themeCSS/stylesPink.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="purple" href="themeCSS/stylesPurple.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="red" href="themeCSS/stylesRed.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="skyblue" href="themeCSS/stylesSkyblue.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="yellownew" href="themeCSS/stylesYellow.css?version=1">-->
+	 <script>
+            loadappjsfile("printreport.js");
+            var cssFilesArr = ["styles.css", "stylesGreentheme.css",  
+"stylesBluetheme.css", "stylesTealtheme.css",  
+"stylesdarkorangetheme.css", "stylesGraytheme.css", "stylesPeach.css",  
+"stylesPink.css", "stylesPurple.css", "stylesRed.css",  
+"stylesSkyblue.css", "stylesYellow.css"];
+   var cssFilesTitle = ["orange", "green", "blue", "teal", "yellow",  
+"gray", "peach", "pink", "purple", "red", "skyblue", "yellownew"];
+function loadcssfiles(cssFilesArr){
+for(var x = 0; x < cssFilesArr.length; x++) {
+   var fileref=document.createElement("link");
+   fileref.setAttribute("rel", "stylesheet");
+   fileref.setAttribute("type", "text/css");
+   fileref.setAttribute("title", cssFilesTitle[x]);
+cssFilesArr[x] = localStorage.ipadrs + "/themeCSS/" + cssFilesArr[x];
+   fileref.setAttribute("href", cssFilesArr[x]);
+   document.getElementsByTagName("head")[0].appendChild(fileref);
+
+  }
+   var i, link_tag ;
+  var isExists = 0;
+     var css_title = localStorage.themecolor;
+     if(css_title != undefined && css_title != ""){
+         for (i = 0, link_tag = document.getElementsByTagName("link"); i < link_tag.length ; i++ ) {
+             if ((link_tag[i].rel.indexOf( "stylesheet" ) !== -1) &&
+                 link_tag[i].title) {
+                 link_tag[i].disabled = true ;
+                 if (link_tag[i].title === css_title) {
+                     link_tag[i].disabled = false ;
+                     isExists = 1;
+                 }
+             }
+         }
+     }
+     if(isExists == 0){
+         var color = localStorage.themecolor;
+         color = color.replace("%23","#");
+         //confirm(color);
+         chnagecssnew(color);
+         //confirm(cssdata);
+     }
+
+}
+
+$(document).ready(function () {
+                loadcssfiles(cssFilesArr);
+                });
+    
+     function statusbar() {
+try{
+                     if(localStorage.devicetype.toLowerCase()==='iphone' || localStorage.devicetype.toLowerCase()==='ipad'){
+//                         confirm(localStorage.devicetype); 
+                        $('.iosstatusbar').css('display','block');
+                         $('#wrapper').css('top','70px');
+                    }
+    }catch(err){}
+    };
+    function settings() {
+    debugger;
+    location.href = 'settings.html';
+}
+          </script>
+
+
+        <style>
+            html,body{
+                background-color: #fff;
+                color: rgba(0,0,0,1);
+                margin: 0 auto;
+                }
+            .footer {
+                position: fixed;
+
+                bottom: 0;
+                width: 100%;
+            }
+            .navbar {
+                position: relative;
+                min-height: 0px;
+                margin-bottom: 0px;
+            }
+            .btn{font-size: 10pt; padding:3px 6px;}
+            .col-md-3{padding: 0; margin: 0;}
+
+            .ui-widget-header{color: #000; font-weight: normal;}
+            .btn-default{color:#fff; background: transparent;border: none;}
+            .btn-default:hover{color: #000; background: #ccc;transition: all 0.5s ease;
+                               -moz-transition: all 0.5s ease;
+                               -webkit-transition: all 0.5s ease;
+                               -o-transition: all 0.5s ease;
+                               -ms-transition: all 0.5s ease;}
+            .btn-default:focus{color: #000; background:#ccc;transition: all 0.5s ease;
+                               -moz-transition: all 0.5s ease;
+                               -webkit-transition: all 0.5s ease;
+                               -o-transition: all 0.5s ease;
+                               -ms-transition: all 0.5s ease;}
+
+            .table,.table-responsive td {
+                border: none;
+            }
+            .table-responsive{
+                border-top: 0;
+                border-bottom: none;
+            }
+
+            .tblbtn>tr>td:nth-child(odd){background-color:orange; color: #fff;}
+            .navbar {
+                border-radius: 0px;
+            }
+            .navbar-inverse{border: none;}
+
+            @media screen and (max-height:1024px) {
+                .mob{
+                    height:858px;
+                }
+            }
+
+            @media screen and (max-height:1050px) {
+                .mob{
+                    height:884px;
+                }
+            }
+
+            @media screen and (max-height:768px) {
+                .mob{
+                    height:602px;
+                }
+            }
+
+            @media screen and (max-height:600px) {
+                .mob{
+                    height:434px;
+                }
+            }
+
+            @media screen and (max-height:480px) {
+                .mob{
+                    height:314px;
+                }
+            }
+
+            @media screen and (max-height:320px) {
+                .mob{
+                    height:154px;
+                }
+            }
+            #divpdf img{
+                width: 100%;
+            }
+.iosstatusbar{height:20px;background: #31708F;width:100%;display:none;}
+        </style>
+        <style type="text/css" media="all">
+
+
+
+            /*            #footer {
+                            position:absolute;
+                            bottom:0; left:0;
+                            width:100%;
+                            height:48px;
+                            background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #999), color-stop(0.02, #666), color-stop(1, #222));
+                            background-image:-moz-linear-gradient(top, #999, #666 2%, #222);
+                            background-image:-o-linear-gradient(top, #999, #666 2%, #222);
+                            padding:0;
+                            border-top:1px solid #444;
+                        }*/
+
+            #wrapper {
+                position:absolute; 
+
+                top:50px; 
+                bottom:50px; 
+                left:0;
+                width:100%;
+                background:#aaa;
+                overflow:auto;
+            }
+
+
+            .scroller {
+                position:relative;
+                /*	-webkit-touch-callout:none;*/
+                -webkit-tap-highlight-color:rgba(0,0,0,0);
+
+                /*	width:640px;*/
+                padding:0;
+                background:#444;
+            }
+
+            p {
+                display:block;
+                width:624px;
+                margin-bottom:1em;
+                padding:8px;
+                font-size:14px;
+            }
+
+            p img {
+                margin:4px 8px;
+                -webkit-transform:translate3d(0,0,0);
+            }
+            .imgthumb{
+                width: 85px;
+                height: 100px;
+            }
+            img {width: 100% ;}
+            .navbar-brand{
+               padding: 5px 12px;
+               font-size: 11pt;   
+            }
+                  .imgpdfdiv{
+            border: 10px solid #aaaaaa;
+                      }
+
+            .hdrreport{
+                color:#fff;text-transform: uppercase; 
+                font-size: 20px;
+                width: 100%;
+                padding-top: 15px;
+            }
+            .dmmanav{position:fixed; z-index: 9999; top: 0; width: 100%;background:#367fa9;color: #fff;padding-top:0px;}
+            .dashmenucont{ margin:0px;margin-top:70px;margin-bottom: 50px;z-index: -9;padding: 0px;text-align: center;vertical-align: middle}
+        </style>
+    </head>
+    <body onload="load_home();statusbar();">
+        <nav class="navbar navbar-inverse dmmanav">
+            <div class="col-md-12 iosstatusbar"> </div>
+            <div class="container-fluid">
+                <div class="navbar-header" style="width: 100%;">
+                    <header class='navbar-brand hdrreport'  style="width: 100%;color:#fff;text-transform: uppercase; " id="heading" ></header>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li>
+
+                        </li>
+                        <li>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div style="display: none;" id="mydiv" >
+            <input type="image" src="images/xda2.gif" class="imgnload" style="border-radius: 50%;">
+        </div>
+        <div id="divpdf" class="container-fluid dashmenucont globalrepcont">
+                <img src="images/xda2.gif" style="border-radius: 50%;width:90px;height:90px;margin-top: 15%;">
+         </div>
+
+        <footer class="setfooter"  >
+            <button  type="button" class="btn btn-default btnlogout1" onclick="logout();" style="float: left;padding-left: 10px;font-size: 160% !important;width: 50px;height: 50px;padding-top: 5px; outline: none; border: none;cursor: pointer;color: inherit;">
+
+                <span class="glyphicon  glyphicon-circle-arrow-left"></span>
+            </button>
+            <!--            <a href="http://192.168.0.36:8888/ShivamHMSWebApplication///pdfjs-1.1.366-dist/web/apppdfs/U000000085.pdf" target="blank">Download Report</a>-->
+           <button  type="button" class="btn btn-default btnexist" onclick="existapp();" style="float: left;padding-left: 10px;font-size: 160% !important; width: 50px;height: 50px;padding-top: 5px;outline: none; border: none;cursor: pointer;display:none;color: inherit;">
+
+                <span class="glyphicon  glyphicon-circle-arrow-left"></span>
+            </button>
+         <button  type="button" style="float: right;padding-right: 10px; cursor: pointer; text-align: right; font-size: 160% !important; width: 50px;height: 50px;padding-top: 5px;outline: none; border: none;color: inherit;" class="btn btn-default btnsettings1" onclick="settings();">
+         <span class="glyphicon glyphicon-cog"></span>
+            </button>
+	    
+        </footer>
+    </body>
+</html>

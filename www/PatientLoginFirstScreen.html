@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Shivam Medisoft | Login</title>
+        <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+        <style>
+
+            html,body{
+                background-color:transparent;
+                color: rgba(0,0,0,1);
+                font-family: 'Open Sans', sans-serif;
+                font-size: 90%;
+                margin: 0 auto;
+                -webkit-font-smoothing: subpixel-antialiased;
+                background-color: #86A0B7;
+                color: rgba(0,0,0,1);
+                font-weight: normal;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 90%;
+                margin: 0px;
+                -webkit-font-smoothing: subpixel-antialiased;
+            }
+
+
+            body{
+                /*                background:#DDDEDE;*/
+                font-family:'Open Sans',sans-serif;                
+                /*                background: url(images/loginbg7.jpg) no-repeat center center fixed; 
+                                -webkit-background-size: cover;
+                                -moz-background-size: cover;
+                                -o-background-size: cover;
+                                background-size: cover;*/
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13px;
+                line-height: 21px;
+                font-weight: 300;
+                color: #000;
+            }
+
+            .button{
+                /* width:100px; */
+                /*                background:#31708F;*/
+                background:#2A4863;
+                /*background: rgba(255,255,255,.4);
+                -webkit-background: rgba(255,255,255,.4);
+                -moz-background: rgba(255,255,255,.4);
+                -o-background: rgba(255,255,255,.4);*/
+                display:block;
+                margin:0 auto;
+                /* margin-top:1%; */
+                padding:10px;
+                text-align:center;
+                text-decoration:none;
+                color:#fff;
+                cursor:pointer;
+                transition:background .3s;
+                -webkit-transition:background .3s;
+                font-size: 25px;
+                margin-right: -15px;
+                margin-left: -15px;
+            }
+
+
+            .login{
+                width:600px;
+                margin:0 auto;
+                margin-top:8px;
+                margin-bottom:2%;
+                transition:opacity 1s;
+                -webkit-transition:opacity 1s;
+
+            }
+
+            #triangle{
+                width:0;
+                border-top:12px solid transparent;
+                border-right:12px solid transparent;
+                border-bottom:12px solid #2A4863;
+                border-left:12px solid transparent;
+                margin:0 auto;
+            }
+
+            .login h1{
+                background:#2A4863;
+                /*background: rgba(255,255,255,.3);
+                -webkit-background: rgba(255,255,255,.3);
+                -moz-background: rgba(255,255,255,.3);
+                -o-background: rgba(255,255,255,.3);
+                */                padding:20px 0;
+                font-size:140%;
+                font-weight:300;
+                text-align:center;
+                color:#fff;
+                margin: 0px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+
+
+            form{
+                background:#f0f0f0;
+                /*background: rgba(255,255,255,.1);
+                -webkit-background: rgba(255,255,255,.1);
+                -moz-background: rgba(255,255,255,.1);
+                -o-background: rgba(255,255,255,.1);*/
+                padding:6% 4%;
+                /*                -moz-box-shadow: 0 5px 10px #777;
+                                box-shadow: 0 5px 10px #777;*/
+            }
+            .effect8
+            {
+                position:relative;
+                -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+                -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+                box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+            }
+            .effect8:before, .effect8:after
+            {
+                content:"";
+                position:absolute;
+                z-index:-1;
+                -webkit-box-shadow:0 0 20px rgba(0,0,0,0.7);
+                -moz-box-shadow:0 0 20px rgba(0,0,0,0.7);
+                box-shadow:0 0 20px rgba(0,0,0,0.7);
+                top:10px;
+                bottom:10px;
+                left:0;
+                right:0;
+                -moz-border-radius:100px / 10px;
+                border-radius:100px / 10px;
+            }
+            .effect8:after
+            {
+                right:10px;
+                left:auto;
+                -webkit-transform:skew(8deg) rotate(3deg);
+                -moz-transform:skew(8deg) rotate(3deg);
+                -ms-transform:skew(8deg) rotate(3deg);
+                -o-transform:skew(8deg) rotate(3deg);
+                transform:skew(8deg) rotate(3deg);
+            }
+            .btnfont{font-size:20px;}
+            .btngrp{margin: 0px 5px;}
+            @media only screen and (max-width: 380px) {
+                .login{width:100%;}
+                /*                .btnfont{font-size:12px;}*/
+                .btngrp{margin: 0px 1px;}
+                .btngrpholddiv{padding-left: 0px; padding-right: 0px;margin: 0px;}
+                form{padding: 6% 0.5%;}
+            }
+            @media only screen and (max-width: 320px) {
+                .abttm{margin: 5px 0px;}
+            }
+            @media only screen and (max-width: 768px) {
+                .login{width:100%;}
+            }
+            @media only screen and (max-width: 992px) {
+                .login{width:100%;}
+            }
+
+
+
+
+            .row{margin:0px;}
+
+            .bttm:focus{   background: #fff;
+                           box-shadow: 0 0 0 3px #fff38e, inset 0 2px 3px rgba( 0, 0, 0, 0.2 ), 0px 5px 5px rgba( 0, 0, 0, 0.15 );
+                           outline: none;}
+            </style>
+            <script>
+                localStorage.mah = '0';
+            </script>
+        </head>
+        <body>
+            <div class="container-fluid" style="padding:0px;">
+            <h2 class="button" style="margin:0px; font-size: 23px;height: 50px;"></h2>
+            <div class="row" style="padding-left:15px;padding-right: 15px; margin-top: 50px;">
+
+                <div class="login">
+
+                    <!--            <div id="triangle"></div>-->
+                    <div class="effect8">
+                        <h1 style="margin:0px;"><span style="font-size:25px;">Login As</span></h1>
+                        <form name="form">
+
+                            <div id='wrapper'>
+
+                                <div id='content'>
+
+                                    <div id='login'>
+
+                                        <div class="row" style="text-align:center;">
+                                            <div class="col-md-12 btngrpholddiv">
+                                                <a class="bttm" href="PatientLoginSecondScreen.html">
+                                                    <div class="btn-group btnfont btngrp  abttm">
+                                                        <button type="button" class="btn btn-primary btnfont">Patient</button>
+                                                        <button type="button" class="btn btn-primary btnfont">
+                                                            <span class="glyphicon glyphicon-user btnfont"></span>
+                                                        </button>
+                                                    </div></a>
+                                                <a class="bttm">
+                                                    <div class="btn-group btnfont btngrp  abttm">
+                                                        <button type="button" class="btn btn-primary btnfont">Doctor</button>
+                                                        <button type="button" class="btn btn-primary btnfont">
+                                                            <span class="fa fa-user-plus btnfont"></span>
+                                                        </button>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </body>
+</html>

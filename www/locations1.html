@@ -1,0 +1,150 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Shivam Medisoft | Dashboard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Windows Phone -->
+        <meta name="msapplication-navbutton-color" content="#4285f4">
+        <!-- iOS Safari -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="#4285f4">
+        <!--        
+                <meta id="themApply" name="theme-color" content="#4285f4">-->
+        <script src="js/jquery-1.9.1_1.js"></script>
+        <link href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+        <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>        
+        <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js" type="text/javascript"></script>
+        <link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+        <link href="f7css/framework7.min.css" rel="stylesheet" type="text/css"/>
+        <link href="f7css/app.css" rel="stylesheet" type="text/css"/>
+        <link href="f7css/FontFamillyloading.css" rel="stylesheet" type="text/css"/>
+
+        <link href="f7css/Entrence.css" rel="stylesheet" type="text/css"/>
+        <link href="f7css/DrillDashboard.css" rel="stylesheet" type="text/css"/>
+        <link href="f7css/ShivamDashboard.css" rel="stylesheet" type="text/css"/>
+        <link href="f7css/ShivamDashboared2.css" rel="stylesheet" type="text/css"/>
+
+        <link href="f7css/ShivamDashboardOrder.css" rel="stylesheet" type="text/css"/>
+
+        <link href="f7css/DisLeftPanalAllForm.css" rel="stylesheet" type="text/css"/>
+        <link href="f7css/MobileTemplate.css" rel="stylesheet" type="text/css"/>
+        <link href="f7css/ConsaltantApprove.css" rel="stylesheet" type="text/css"/>
+        <link href="f7css/ThemeSetting.css" rel="stylesheet" type="text/css"/>
+        <link href="f7css/IosThemeDefault.css" rel="stylesheet" type="text/css"/>
+        <link href="f7css/Reportparameter.css" rel="stylesheet" type="text/css"/>
+
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <style type="text/css">
+            .goog-te-banner-frame{display: none;}
+        </style>
+    </head>
+    <body>
+        <div id="app" class="shivam">
+            <div class="view view-main view-init location" >
+                <div  class = "page">
+                    <div class="navbar">
+                        <div class="navbar-inner sliding">
+                            <div class="left">                </div>
+                            <div class="title">
+                                <label class="formname">Locations</label>
+                            </div>
+                            <div class="right">  </div>
+                        </div>
+                    </div>
+                    <div class="page-content ptr-content">  
+                        <div class="ptr-preloader">
+                            <div class="preloader"></div>
+                            <div class="ptr-arrow"></div>
+                        </div>
+                        <div class="list" id="divlocation" >
+                        </div>
+                    </div>
+                    <div class="footer_All">
+                        <div class="left">
+                            <a href="#" class="link_ftr link back" style="display: none;">
+                                <i class="icon icon-back"></i>
+                            </a>
+                        </div>
+                        <div class="title">
+
+                        </div>
+                        <div class="right">
+                            <a href="#" class="link_ftr setting" onclick="settings()">
+                                <i class="material-icons">settings</i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>     
+
+            </div>
+        </div>
+        <script src="f7js/framework7.min.js"></script>
+        <script src="f7js/routes.js"></script>
+        <script src="f7js/app.js"></script>
+        <script src="f7js/settings.js"></script>
+        <script src="f7js/navigator.js"></script>
+        <script src="f7js/loadjsdynamic.js"></script>
+        <script src="f7js/locations.js"></script>
+        <script src="f7js/RippleWave.js"></script>
+        <script>
+                              loadf7jsfile("mobilefeatures.js");
+                              loadf7jsfile("subdepts.js");
+                              loadf7jsfile("dashboardmenu.js");
+                              loadf7jsfile("dashboardmenubuttons.js");
+                              loadf7jsfile("doctorselection.js");
+                              loadf7jsfile("disfirstscreen.js");
+                              loadf7jsfile("dissecondscreen.js");
+                              loadf7jsfile("myNotifications.js");
+                              loadf7jsfile("webreports.js");
+                              loadf7jsfile("EntrenceFunF7.js");
+                              loadf7jsfile("drilldashboardf7.js");
+                              loadf7jsfile("disformF7.js");
+        </script>
+        <!--        <script src="f7js/subdepts.js"></script>
+                <script src="f7js/dashboardmenu.js"></script>
+                <script src="f7js/dashboardmenubuttons.js"></script>-->
+        <div  class="panel panel-left panel-cover dispanl">
+            <div class="page dispnalpage">
+                <div class="page-content">
+                    <div class="block-title">
+                        Menu
+                        <a href="#" class="panel-close"><i class="material-icons iconclose">clear</i></a>
+                    </div>
+                    <div class="list links-list" id="menudata">
+
+                    </div>         
+                </div>
+            </div>
+        </div>
+
+        <!--    ==================================Note Info Started ===========================-->
+        <div class="panel panel-right panel-cover popup-Note" style="">
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <div class="left">
+                        <label class="dfllblconfig" >Note</label></div>
+                    <div class="right">
+                        <a class="panel-close" href="#">
+                            <i class="material-icons spicn">clear</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="sheet-modal-inner">
+                <div class="block" id="rightmenuDis">
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

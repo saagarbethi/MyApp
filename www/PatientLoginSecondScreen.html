@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html >
+    <head>
+         <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <title>Shivam Medisoft | Patient Login</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="css/Patientstyle.css">
+        <script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/cordova_1.js"></script>
+        <script type="text/javascript" src="js/PatientLoginSecondScreen.js"></script>
+<!--        <script src="js/SQLitePlugin.js" type="text/javascript"  ></script>-->
+        <script>
+            loadappjsfile("PatientLoginSecondScreensql.js");
+            $(document).on('focus active', '.form-input',function(){
+        $('.lblnms[for='+$(this).attr('name')+']').addClass('active');
+//        $('.lblnms[for='+$(this).attr('name')+']').css('position','relative');
+    });
+    $(document).on('blur', '.form-input',function(){
+        if($(this).val()===""){
+        $('.lblnms[for='+$(this).attr('name')+']').removeClass('active');
+//         $('.lblnms[for='+$(this).attr('name')+']').css('position','absolute');
+     }
+    });
+    
+         </script>
+         <link href="css/FontFamillyloading.css" rel="stylesheet" type="text/css"/>
+        <style>
+             
+            html, body {
+/*                background-color: #86A0B7;*/
+                background: #ffffff;
+                color: rgba(0,0,0,1);
+                font-weight: normal;
+                margin: 0px;
+            }
+            .login-form{
+                background: #FFFFFF;
+                width:600px;
+                margin:0 auto;
+                margin-top:8px;
+                margin-bottom:2%;
+                transition:opacity 1s;
+                -webkit-transition:opacity 1s;
+                height: auto;
+            }
+            @media only screen and (max-width: 602px) {
+                .login-form{width:100%;box-shadow: none;border:none;margin-top: 0px;}
+                .otp-button{}
+            }
+            .row{margin:0px;}
+            .form-input{min-width: 100%;}
+            .form-input:focus{   background: #fff;
+                                 border-bottom: 1px solid #367fa9;transition: border-bottom .5s ease-in-out;
+/*                                 box-shadow: 0 0 0 1px #367fa9, inset 0 2px 3px rgba( 0, 0, 0, 0.2 ), 0px 5px 5px rgba( 0, 0, 0, 0.15 );*/
+                                 outline: none;}
+            .form-inputUHID:focus{   background: #fff;
+                                      border-bottom: 1px solid #367fa9;transition: border-bottom .5s ease-in-out;
+/*                                     box-shadow: 0 0 0 1px #367fa9, inset 0 2px 3px rgba( 0, 0, 0, 0.2 ), 0px 5px 5px rgba( 0, 0, 0, 0.15 );*/
+                                     outline: none;}
+            .button{
+                /* width:100px; */
+/*                background:#2A4863;*/
+                background: #367fa9;
+                /*background: rgba(255,255,255,.4);
+                -webkit-background: rgba(255,255,255,.4);
+                -moz-background: rgba(255,255,255,.4);
+                -o-background: rgba(255,255,255,.4);*/
+                display:block;
+                margin:0 auto;
+                /* margin-top:1%; */
+                padding:10px;
+                text-align:center;
+                text-decoration:none;
+                color:#fff;
+                cursor:pointer;
+                transition:background .3s;
+                -webkit-transition:background .3s;
+                font-size: 25px;
+                margin-right: -15px;
+                margin-left: -15px;
+            }
+        #progressing{
+                 top: 40%;
+                 left: 42%;
+                 height:80px;
+                width:80px;
+            }
+            
+.checkbox-custom, .radio-custom {
+    opacity: 0;
+    position: absolute;   
+}
+
+.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.checkbox-custom-label, .radio-custom-label {
+    color: #0571a7;
+    font-weight:500;
+    text-shadow: 0 -1px 0 rgba(255, 255 ,255, .3);
+}
+
+.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+      width: 15px;
+     height: 15px; 
+    padding: 5px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.checkbox-custom:checked + .checkbox-custom-label:before {
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    background:#367fa9;
+    color: #fff;
+}
+
+.radio-custom + .radio-custom-label:before {
+    border-radius: 50%;
+}
+.errormsg{
+    font-weight: 500;
+    font-size: 12px;
+    margin: 0px;
+}
+/*@media only screen and (max-width: 480px) {
+    .urlinput{min-width: 95%;}
+}*/
+.lblnms{
+                font-size: 14px;
+                font-weight: 500;
+                position: absolute !important;
+                padding-top:15px;
+                color:#999;
+                transform: translate3d(0, 0, 0);
+    transition: all 0.1s;pointer-events: none;
+    transition: transform .4s cubic-bezier(.25,.8,.25,1),width .4s cubic-bezier(.25,.8,.25,1),-webkit-transform .4s cubic-bezier(.25,.8,.25,1);
+            }
+            .active{font-weight: normal;color: #0073b7 !important;font-size:10px; transform: translate3d(0, -10px, 0);padding: 8px 0px !important;}
+            .container{padding:0px;}
+            @media only screen and (min-width: 603px) {
+                .lblnms{font-size: 16px;}
+                .active{font-size: 14px;}
+                 .form-input{font-size: 16px;}
+            }
+        </style>
+    </head>
+    <body>
+        <input type="hidden" id="pwd" >
+        <input type="hidden" id="mobile">
+        <input type="hidden" id="hdnname">
+        
+        <div class="container">
+<!--             <div style="width:100%; background:#355571; height: 20px;"></div>-->
+            <h2 class="button" style="margin:0px; font-size: 23px;font-weight: 500;">Welcome to Hospital Login</h2>
+            <div class="form-container flip">
+                <div class="login-form">
+                    <img src="images/xda2.gif" style="position:absolute; border-radius: 50%;display: none;vertical-align: bottom;" id="progressing">
+                    <h3 class="title" style="font-size:22px;"><span class="fa fa-user"></span> &nbsp;&nbsp;Patient Login</h3>
+                     <div class="form-group" id="appname">
+                         <label class="lblnms" for="loginname">Name</label>
+                         <input class="form-input urlinput" name="loginname" id="name" type="text">
+                        <!--        <span id="username-tool" class="tooltip appurl-tooltip">What's App URL?</span>-->
+                    </div>
+                    <div class="form-group" id="appurl">
+                         <label class="lblnms" for="loginuser">App URL</label>
+                        <input class="form-input urlinput inptbnadr" name="loginuser" id="url" type="text">
+                        <!--        <span id="username-tool" class="tooltip appurl-tooltip">What's App URL?</span>-->
+                    </div>
+                    <div class="form-group" id="uhid">
+                         <label class="lblnms" for="mrno">UHID / MR No</label>
+                        <input class="form-input inptbnadr" name="mrno" id="no" type="text">
+                        <!--        <span id="username-tool" class="tooltip mrno-tooltip">What's UHID/MR No?</span>-->
+                      
+                    </div>
+                    <div class="form-group" id="password">
+                         <label class="lblnms" for="password">Password</label>
+                        <input type="password" class="form-input inptbnadr" name="password" id="pswrd">
+                        <!--        <span class="tooltip password-tooltip">What's password?</span>-->
+                    </div>
+                    <div class="checkbox icheck" style="text-align:right;padding-right:10px;">
+                                <input type="checkbox" id="chkShowPwd" onclick="showpwd();" class="checkbox-custom" name="chkShowPwd"> 
+                                <label for="chkShowPwd" class="checkbox-custom-label">Show Password</label>
+                            </div> 
+                    <span style="color: #dd4b39; font-weight:500;">&nbsp;&nbsp;&nbsp;<label id="errormsg" class="errormsg"></label></span>
+                    <div class="row">
+                       
+                        <div class="form-group" style="text-align:center;">
+                            <input type="button" class="login-button" value="Login" onclick="loginmethod()">
+                           
+                            <!--                        <input type="button" onclick="location.href = 'PatientLoginThirdScreen.html';" class="login-button" value="Login">-->
+                        </div>
+                         <input type="button" class="otp-button" value="Forget Password? Get Password" onclick="sendotp()">
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+

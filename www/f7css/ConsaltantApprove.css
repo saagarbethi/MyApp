@@ -1,0 +1,217 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 Aug, 2018, 12:19:51 PM
+    Author     : shivam
+*/
+
+    .shivam .Consaltant{
+
+    }
+    .shivam .Consaltant .loginContainer .toolbar{
+        background: #FFFFFF;
+    }
+    .shivam .Consaltant .loginContainer .toolbar .toolbar-inner{
+        
+    }
+     .shivam .Consaltant .loginContainer .toolbar .toolbar-inner .tab-link-highlight{
+        background: rgba(5, 89, 166, 0.8);
+    }
+    .shivam .Consaltant .loginContainer .toolbar .toolbar-inner .tab-link{
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: normal;
+        color: #000;
+    }
+    .shivam .Consaltant .loginContainer .toolbar .toolbar-inner .tab-link-active{
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: normal;
+        color: #000;
+    }
+    
+    .shivam .Consaltant .loginContainer .list .item-floating-label {
+        font-weight: normal;
+        font-size: 13px;
+    }
+    .shivam .Consaltant .loginContainer{
+        display: block;
+        width: 450px;
+        margin: 0px auto;
+        margin-top: 10px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+    }
+    .shivam .Consaltant .loginContainer{
+
+    }
+    .shivam .Consaltant .loginContainer .item-content select{
+        
+    }
+    .shivam .Consaltant .loginContainer .item-content select:after{
+        content: ' ';
+        width: 0px;
+        
+    }
+    .shivam .Consaltant .loginContainer .item-content select:after{
+        content: ' ';
+        position: relative;display: block;
+        
+    }
+    .shivam .Consaltant .loginContainer .btnconsltant{
+        position: relative;
+        overflow: hidden;
+        border: 0px;
+        border-radius: 2px;
+        margin-left: 4px;
+        font-size: 16px;
+        font-weight: normal;
+        padding: 9px 2px;
+        outline: none;
+    }
+    
+    .shivam .Consaltant .footer_All .ftrconslatant{
+        display: block;
+            position: absolute;
+            z-index: -99;
+            text-align: center;
+            width: 100%;
+            height: 40px;
+            padding: 3px;
+    }
+    .shivam .Consaltant  .footer_All .ftrconslatant .btngoconsaltant{
+        width: auto;
+        background: transparent;
+        color: #FFF;
+        font-size: 16px;
+        border: 1px solid #FFF;
+        outline: none;
+        padding: 4px 20px;
+    }
+     @media only screen and (max-width:550px) {
+         .shivam .Consaltant .loginContainer{
+             width: 100%;box-shadow: none;
+             margin-top: 0px;
+         }
+    }
+   
+            
+            div.sticky{
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+                background-color: #FFFFFF;
+                padding:1px;
+/*                font-size: 20px;*/
+                width: 100%;
+                display: inline-block;
+                top: 50px;
+            }
+            .flip{
+              background: #1B6F9F;
+            }
+            
+            .stickblock{
+                width: 100%;
+                margin: 0px auto;
+                border: 0px;
+                display: inline-block;
+            }
+            .stickblock .sticky{
+                padding: 0px;
+                background: transparent;
+                width: 100%;
+                display: block;
+                border: 0px;
+                z-index: 9999999;
+            }
+            .stickblock .sticky .flip{
+                color: #FFF;
+                width: 100%;
+                font-size: 18px;
+                font-weight: normal;
+                padding: 4px 5px;
+                overflow: hidden;
+                display: block;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                text-transform: capitalize;
+            }
+            .stickblock .contenrow{
+                
+            }
+           
+            .stickblock .contenrow .subtitli_01{
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+                padding: 3px 5px;
+                font-size: 16px;
+                display: block;
+                top: 80px;
+                background: #E8E8E8;
+                overflow: hidden;
+                text-transform: capitalize;
+                text-overflow: ellipsis;
+                width: 100%;
+                white-space: nowrap;
+                font-weight: normal;
+            }
+             .stickblock .contenrow .contentdetail{
+                padding: 0px 5px;
+            }
+            .shivam .butondivCR{
+                width: 100%;
+            }
+            .shivam .butondivCR .btnforwrd{
+              float: left;
+            }
+            .shivam .butondivCR .btnresultCR{
+                  float: right;
+            }
+            .shivam .butondivCR .btnresfwr{
+               width: auto;
+                border: 0px;
+                border-radius: 3px;
+                padding: 5px 10px;
+                font-size: 16px;
+                margin-bottom: 4px;
+                outline: none;
+            }
+            .shivam .Consaltant .filterbtn{
+                margin-right: 10px;
+                border-radius: 3px;
+                background: transparent;
+                border: 1px solid #F2F2F2;
+                outline: none;
+                position: relative;
+                overflow: hidden;
+                height: 35px;
+                font-size: 18px;
+            }
+            .shivam .Consaltant .filterbtn .iconfilter{
+                
+            }
+            .shivam .Consaltant .filterbtn .filtertxt{
+                
+            }
+            .shivam .Consaltant .CRPdtail{
+                
+            }
+            .shivam .Consaltant .CRPdtail .ptdtllblCR{
+                padding: 5px 5px;
+                font-weight: normal;
+            }
+            
+            @media only screen and (max-width:550px) {
+                .shivam .Consaltant .CRPdtail .ptdtllblCR {
+                    width: 50%;
+                    float: left;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    padding: 3px 8px;
+                }
+            }

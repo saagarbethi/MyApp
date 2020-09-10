@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Zoi Hospitals Login Form</title>
+        <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+        <script src="bootstrap/bootstrap.min.js" type="text/javascript"></script>
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css"> 
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script  src="js/SQLitePlugin.js" type="text/javascript"  ></script>
+        <link href="css/FontFamillyloading.css" rel="stylesheet" type="text/css"/>
+           <script>
+	    loadappjsfile("ankuranew.js");
+	</script>
+	<script>
+	    $(document).ready(function () {
+		try {
+		    var htldo = window.innerHeight;
+		    var asgnmrgn = htldo / 2;
+		    $('#mydiv img').css("margin-top", parseInt(asgnmrgn) + -50 + "px");
+		} catch (err) {
+		}
+		 
+	    });
+	     
+        </script>
+	<style>
+	    body{-webkit-overflow-scrolling:touch;
+		 overflow:auto;-webkit-overflow:auto;}
+            li {
+                list-style: none;
+                padding: 0;
+            }
+            /*
+	    */            ui-btn-up-c {
+                border: 1px solid #ccc;
+                background: #eee;
+                font-weight: bold;
+                color: #222;
+                text-shadow: 0 1px 0 #fff;
+                background-image: -webkit-gradient(linear,left top,left bottom,from( #fff ),to( #f1f1f1 ));
+                background-image: -webkit-linear-gradient( #fff,#f1f1f1 );
+                background-image: -moz-linear-gradient( #fff,#f1f1f1 );
+                background-image: -ms-linear-gradient( #fff,#f1f1f1 );
+                background-image: -o-linear-gradient( #fff,#f1f1f1 );
+                background-image: linear-gradient( #fff,#f1f1f1 );
+            }
+            .ui-datepicker-year{
+                color: black;
+            }
+            .ui-datepicker-month{
+                color: black;
+            }
+            .tempmbcont{height:865px; -webkit-overflow-scrolling: touch;
+			overflow: auto;
+			-webkit-overflow-scrolling: touch !important;
+			-webkit-overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="body-content">
+	    <div id="divgraphs">
+	    </div>   
+	    <div id="mydiv" style="display: block">
+		<img src="images/xda2.gif" class="imgnload" style="border-radius: 50%;">
+	    </div>
+
+	</div>
+        <footer>
+
+        </footer>
+    </body>
+</html>

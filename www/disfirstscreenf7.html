@@ -1,0 +1,739 @@
+<div class ="page DisFirst">
+     <div class="navbar">
+           <div class="navbar-inner sliding DisFirst">
+                <div class="left">
+                    <a href="#" class="link icon-only lftcn" onclick="openDis1panl()">
+                        <i class="icon material-icons md-only anmd">menu</i>
+                        <i class="icon f7-icons iosicn">menu</i>
+                    </a>
+                </div>
+                <div class="title">
+                    <div class="inputsrchdiv">
+                        <input type="text" placeholder="Search MR Number" id="txtSearchMrno" class="srcmrnotxbox">
+                        <button type="button" class="serchbtndis" onclick="selectMrno()" >
+                            <i class="searchbar-icon"></i>
+                        </button>
+                    </div>
+                </div>
+               <div class="right">
+                   <a href="#" class="popover-open cubicals" data-popover=".popover-menu" id="selCubicleNm">Select Cubicle</a> 
+                   <input type="hidden" id="selCubicleid">
+               </div>
+               
+            </div>
+        </div>   
+<!--    Started Inner Data-->
+<div class="page-content" id="divDis" style="overflow-x: hidden;">
+    
+<!--        div Row First Started-->
+<!--        <div class="row">
+            <div class="col-sm-12 pd" style="overflow: auto;width: 100%;">
+                <div class="apptdetail" style="">
+                    <div class="countdiv">
+                        <span class="countnumber" style="background:#f1505b">24</span>
+                        <label class="countlabel">Total Appointments </label>
+                    </div>
+                    <div class="countdiv">
+                        <span class="countnumber" style="background:#27bebe">6</span>
+                        <label class="countlabel">Total Patients Seen</label>
+                    </div>
+                    <div class="countdiv">
+                        <span class="countnumber" style="background:#f36510">3</span>
+                        <label class="countlabel">Waiting Patients</label>
+                    </div>
+                    <div class="countdiv">
+                        <span class="countnumber" style="background:#0bb586">2</span>
+                        <label class="countlabel">Pending Consultations</label>
+                    </div>
+                    <div class="countdiv">
+                        <span class="countnumber" style="background:#0a9fd8">31</span>
+                        <label class="countlabel">No.of In Patients</label>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+<!--
+ Row Second Started Here
+-->   
+<!--<div class="row">
+            <div class="col-sm-12 pd">
+                <div class="Block_Div">
+                    <div class="row Headrow">
+                        <div class="col-sm-12 pd">
+                            <label class="hedlbl">Appointment</label>
+                            <input type="button" value="Recall" class="btnrecalall btnprimary"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 pd mainpatdiv" onclick="SecondScreen()">
+                            <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <label class="patPhoton bg-red">GS</label>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Sukhwinder Kaur </label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                    <span class="glyphicon glyphicon-menu-right rghtaro"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pd mainpatdiv" onclick="FAB()">
+                           <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <img src="IconforApps/1.jpg" alt="" class="apptimg"/>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Narinder Kaur  </label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                    <span class="glyphicon glyphicon-star" style="color: #F00000;"></span>
+                                     <span class="glyphicon glyphicon-menu-right rghtaro"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pd mainpatdiv">
+                           <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <label class="patPhoton bg-green">GS</label>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Sukhwinder Kaur </label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                     <span class="glyphicon glyphicon-menu-right rghtaro"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pd mainpatdiv">
+                           <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <img src="IconforApps/3.jpg" alt="" class="apptimg"/>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Lachman Singh</label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                    <span class="glyphicon glyphicon-star" style="color: #F00000;"></span>
+                                     <span class="glyphicon glyphicon-menu-right rghtaro"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pd mainpatdiv">
+                           <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <img src="IconforApps/4.jpg" alt="" class="apptimg"/>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Sukhwinder Kaur </label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                     <span class="glyphicon glyphicon-menu-right rghtaro"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pd mainpatdiv">
+                            <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <img src="IconforApps/5.jpg" alt="" class="apptimg"/>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Bidhi Chand Verma </label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                     <span class="glyphicon glyphicon-menu-right rghtaro"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="Block_Div">
+                    <div class="row Headrow">
+                        <div class="col-sm-12 pd">
+                            <label class="hedlbl">Walk-in-Patients</label>
+                            <input type="button" value="Recall" class="btnrecalall btnprimary"/>
+                             <input type="button" value="All" class="btnrecalall btnprimary"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 pd mainpatdiv">
+                            <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <img src="IconforApps/6.jpg" alt="" class="apptimg"/>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Rajwinder  Kaur </label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                    <span class="glyphicon glyphicon-star" style="color:#ff0000"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pd mainpatdiv">
+                           <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <img src="IconforApps/DOC00741.jpg" alt="" class="apptimg"/>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Balwinder Singh r </label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                    <span class="glyphicon glyphicon-star" style="color:#a2b1fc"></span>
+                                     <span class="glyphicon glyphicon-menu-right rghtaro"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pd mainpatdiv">
+                           <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <img src="IconforApps/7.jpg" alt="" class="apptimg"/>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Vijay Kumar </label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                    <span class="glyphicon glyphicon-star" style="color:#a2b1fc"></span>
+                                    <span class="glyphicon glyphicon-menu-right rghtaro"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pd mainpatdiv">
+                           <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <img src="IconforApps/8.jpg" alt="" class="apptimg"/>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Pargan Singh</label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                    <span class="glyphicon glyphicon-star" style="color:#a2b1fc"></span>
+                                    <span class="glyphicon glyphicon-menu-right rghtaro"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pd mainpatdiv">
+                           <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <img src="IconforApps/DOC00741.jpg" alt="" class="apptimg"/>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Renu </label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                    <span class="glyphicon glyphicon-star" style="color:#a2b1fc"></span>
+                                    <span class="glyphicon glyphicon-menu-right rghtaro"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pd mainpatdiv">
+                            <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <img src="IconforApps/1.jpg" alt="" class="apptimg"/>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Harish Kumar</label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                    <span class="glyphicon glyphicon-star" style="color:#a2b1fc"></span>
+                                    <span class="glyphicon glyphicon-menu-right rghtaro"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="Block_Div">
+                    <div class="row Headrow">
+                        <div class="col-sm-12 pd">
+                            <label class="hedlbl">Pending Review</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 pd mainpatdiv">
+                            <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <img src="IconforApps/DOC00741.jpg" alt="" class="apptimg"/>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Sukhwinder Kaur </label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                    <span class="glyphicon glyphicon-star" style="color:#a2b1fc"></span>
+                                    <span class="glyphicon glyphicon-menu-right rghtaro"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pd mainpatdiv">
+                           <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <img src="IconforApps/10.png" alt="" class="apptimg"/>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Pargan Singh </label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                    <span class="glyphicon glyphicon-star" style="color:#a2b1fc"></span>
+                                    <span class="glyphicon glyphicon-menu-right rghtaro"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pd mainpatdiv">
+                           <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <img src="IconforApps/11.png" alt="" class="apptimg"/>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Kamlesh Handa</label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                    <span class="glyphicon glyphicon-star" style="color:#ff0000"></span>
+                                    <span class="glyphicon glyphicon-menu-right rghtaro"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pd mainpatdiv">
+                           <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <img src="IconforApps/DOC00741.jpg" alt="" class="apptimg"/>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Ranjit Kaur</label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                    <span class="glyphicon glyphicon-menu-right rghtaro"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pd mainpatdiv">
+                           <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <img src="IconforApps/DOC00741.jpg" alt="" class="apptimg"/>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Sukhwinder Kaur </label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                    <span class="glyphicon glyphicon-menu-right rghtaro"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 pd mainpatdiv">
+                            <div class="infotbl">
+                                <div class="infotbltd lfttd">
+                                    <img src="IconforApps/3.jpg" alt="" class="apptimg"/>
+                                </div>
+                                <div class="infotbltd rfttd">
+                                    <label class="patname">Dhanraj Singh </label>
+                                    <span class="patdata">327833</span>
+                                    <span class="patdata">08:49 Am</span>
+                                    <span class="patdata">10:15 Am</span>
+                                    <span class="patdata">Suresh Agrawal</span>
+                                </div>
+                                <div class="infotbltd colorindicate">
+                                    <span class="glyphicon glyphicon-star" style="color:#ff0000"></span>
+                                    <span class="glyphicon glyphicon-menu-right rghtaro"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="Block_Div" style="margin-bottom: 10px;">
+                    <div class="row Headrow">
+                        <div class="col-sm-12 col12indis pd">
+                            <label class="hedlbl">My Reminder</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col12indis pd">
+                            <div class="folderDetail_01">
+                                <div class="folderdiv" onclick="popreminder(this)">
+                                    <img src="IconforApps/folderremind.png" class="imgfldr" alt=""/>
+                                    <label class="fldername">Holep</label>
+                                </div>
+                                <div class="folderdiv" onclick="popreminder(this)">
+                                    <img src="IconforApps/folderremind.png" class="imgfldr" alt=""/>
+                                    <label class="fldername">interesting ca</label>
+                                </div>
+                                 <div class="folderdiv" onclick="popreminder(this)">
+                                    <img src="IconforApps/folderremind.png" class="imgfldr" alt=""/>
+                                    <label class="fldername">metabolic analysis</label>
+                                </div>
+                                <div class="folderdiv" onclick="popreminder(this)">
+                                    <img src="IconforApps/folderremind.png" class="imgfldr" alt=""/>
+                                    <label class="fldername">OT list</label>
+                                </div>
+                                <div class="folderdiv" onclick="popreminder(this)">
+                                    <img src="IconforApps/folderremind.png" class="imgfldr" alt=""/>
+                                    <label class="fldername">robotic cases</label>
+                                </div>
+                                <div class="folderdiv" onclick="popreminder(this)">
+                                    <img src="IconforApps/folderremind.png" class="imgfldr" alt=""/>
+                                    <label class="fldername">special acade</label>
+                                </div>
+                                <div class="folderdiv" onclick="popreminder(this)">
+                                <img src="IconforApps/folderremind.png" class="imgfldr" alt=""/>
+                                <label class="fldername">special academic cases</label>
+                            </div>
+                            </div>
+                            <div class="noteContainer">
+                                <div class="row">
+                                    <div class="col-sm-12 col12indis pd">
+                                        <div class="folderheading">
+                                             <label class="folername"></label>
+                                            <div class="Folteredit">
+                                                <img src="IconforApps/RemovFloder.png" class="remFimg" alt="" title="Remove Folder"/>
+                                                <button type="button" onclick="changefolder()" class="btnfolder">
+                                                    <span title="Click here to Rename folder" class="glyphicon glyphicon-edit flop"></span>
+                                                </button>
+                                                <button type="button" onclick="Closefolder()" class="Closefolderbtn">
+                                                    <i class="material-icons iconclose">clear</i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col12indis pd">
+                                            <div class="Dtailebox"> 
+                                    <div class="row">
+                                        <div class="col-sm-12 col12indis pd">
+                                            <label class="name_01">Nagnath Chivate</label>
+                                            <label class="MrNo_01">56778</label>
+                                            <button type="button" class="btnclse_note">
+                                                <i class="material-icons iconclose">clear</i>
+                                            </button>
+                                        </div>
+                                        <div class="col-sm-12 col12indis pd">
+                                            <div class="txtardiv">
+                                                <textarea class="textNoteEdit" rows="4" placeholder="Remarks"></textarea>
+                                                <span class="glyphicon glyphicon-pencil txtspan"></span>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Dtailebox"> 
+                                    <div class="row">
+                                        <div class="col-sm-12 col12indis pd">
+                                            <label class="name_01">Nagnath Chivate</label>
+                                            <label class="MrNo_01">56778</label>
+                                            <button type="button" class="btnclse_note">
+                                                <i class="material-icons iconclose">clear</i>
+                                            </button>
+                                        </div>
+                                        <div class="col-sm-12 col12indis pd">
+                                            <div class="txtardiv">
+                                                <textarea class="textNoteEdit" rows="4" placeholder="Remarks"></textarea>
+                                                <span class="glyphicon glyphicon-pencil txtspan"></span>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Dtailebox"> 
+                                    <div class="row">
+                                        <div class="col-sm-12 col12indis pd">
+                                            <label class="name_01">Nagnath Chivate</label>
+                                            <label class="MrNo_01">56778</label>
+                                            <button type="button" class="btnclse_note">
+                                                <i class="material-icons iconclose">clear</i>
+                                            </button>
+                                        </div>
+                                        <div class="col-sm-12 col12indis pd">
+                                            <div class="txtardiv">
+                                                <textarea class="textNoteEdit" rows="4" placeholder="Remarks"></textarea>
+                                                <span class="glyphicon glyphicon-pencil txtspan"></span>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Dtailebox"> 
+                                    <div class="row">
+                                        <div class="col-sm-12 col12indis pd">
+                                            <label class="name_01">Nagnath Chivate</label>
+                                            <label class="MrNo_01">56778</label>
+                                            <button type="button" class="btnclse_note">
+                                                <i class="material-icons iconclose">clear</i>
+                                            </button>
+                                        </div>
+                                        <div class="col-sm-12 col12indis pd">
+                                            <div class="txtardiv">
+                                                <textarea class="textNoteEdit" rows="4" placeholder="Remarks"></textarea>
+                                                <span class="glyphicon glyphicon-pencil txtspan"></span>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Dtailebox"> 
+                                    <div class="row">
+                                        <div class="col-sm-12 col12indis pd">
+                                            <label class="name_01">Nagnath Chivate</label>
+                                            <label class="MrNo_01">56778</label>
+                                            <button type="button" class="btnclse_note">
+                                                <i class="material-icons iconclose">clear</i>
+                                            </button>
+                                        </div>
+                                        <div class="col-sm-12 col12indis pd">
+                                            <div class="txtardiv">
+                                                <textarea class="textNoteEdit" rows="4" placeholder="Remarks"></textarea>
+                                                <span class="glyphicon glyphicon-pencil txtspan"></span>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Dtailebox"> 
+                                    <div class="row">
+                                        <div class="col-sm-12 col12indis pd">
+                                            <label class="name_01">Nagnath Chivate</label>
+                                            <label class="MrNo_01">56778</label>
+                                            <button type="button" class="btnclse_note">
+                                                <i class="material-icons iconclose">clear</i>
+                                            </button>
+                                        </div>
+                                        <div class="col-sm-12 col12indis pd">
+                                            <div class="txtardiv">
+                                                <textarea class="textNoteEdit" rows="4" placeholder="Remarks"></textarea>
+                                                <span class="glyphicon glyphicon-pencil txtspan"></span>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Dtailebox"> 
+                                    <div class="row">
+                                        <div class="col-sm-12 col12indis pd">
+                                            <label class="name_01">Nagnath Chivate</label>
+                                            <label class="MrNo_01">56778</label>
+                                            <button type="button" class="btnclse_note">
+                                                <i class="material-icons iconclose">clear</i>
+                                            </button>
+                                        </div>
+                                        <div class="col-sm-12 col12indis pd">
+                                            <div class="txtardiv">
+                                                <textarea class="textNoteEdit" rows="4" placeholder="Remarks"></textarea>
+                                                <span class="glyphicon glyphicon-pencil txtspan"></span>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Dtailebox"> 
+                                    <div class="row">
+                                        <div class="col-sm-12 col12indis pd">
+                                            <label class="name_01">Nagnath Chivate</label>
+                                            <label class="MrNo_01">56778</label>
+                                            <button type="button" class="btnclse_note">
+                                                <i class="material-icons iconclose">clear</i>
+                                            </button>
+                                        </div>
+                                        <div class="col-sm-12 col12indis pd">
+                                            <div class="txtardiv">
+                                                <textarea class="textNoteEdit" rows="4" placeholder="Remarks"></textarea>
+                                                <span class="glyphicon glyphicon-pencil txtspan"></span>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Dtailebox"> 
+                                    <div class="row">
+                                        <div class="col-sm-12 col12indis pd">
+                                            <label class="name_01">Nagnath Chivate</label>
+                                            <label class="MrNo_01">56778</label>
+                                            <button type="button" class="btnclse_note">
+                                                <i class="material-icons iconclose">clear</i>
+                                            </button>
+                                        </div> 
+                                        <div class="col-sm-12 col12indis pd">
+                                            <div class="txtardiv">
+                                                <textarea class="textNoteEdit" rows="4" placeholder="Remarks"></textarea>
+                                                <span class="glyphicon glyphicon-pencil txtspan"></span>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        
+    </div>
+    <div class="footer_All" style="">
+        <div class="left">
+            <a href="#" class="link_ftr link back" style="">
+                <i class="icon icon-back"></i>
+            </a>
+        </div>
+        <div class="title clrinicaotpopup">
+            <div class="disftrbtn"> 
+                <a class="fabbtn" href="#">
+                     <i class="glyphicon glyphicon-bullhorn ifont inicon"></i>
+                    <span class="intxt">Call Next Patient</span>                     
+                </a>
+            </div>
+            <div class="disftrbtn" style="text-align: center;margin-left: 0px;">
+                <i class="glyphicon glyphicon-calendar ifont inicon" style="color: #fff;margin-top: 4px;position: absolute;display: inline-block;margin-left: -2px;"></i>
+                <input type="text" class="dattxt" id="txtdate" onclick="dateselection()" readonly="" style="display: block;padding: 0px;background: transparent;color: #fff;padding-top: 18px;text-align: center;">
+            </div>
+
+
+
+<!--            <div class="disftrbtn">
+                <input type="text" class="dattxt" id="txtdate" onclick="dateselection()"  readonly=""/>
+            </div>-->
+            <div class="disftrbtn" style="">
+                <a class="panel-open fabbtn" href="#" data-panel="right" onclick="Notepopdtl()">
+                    <i class="material-icons inicon">info</i>
+                     <span class="intxt">Note</span> 
+                </a>
+             </div>
+            <div class="disftrbtn">
+                <a  class="fabbtn" href="#">
+                     <i class="material-icons inicon">loop</i>
+                    <span class="intxt">Refresh</span>                     
+                </a>
+            </div>
+                </div>
+        <div class="right" style="display: none;">
+            <a href="#" class="link_ftr setting" onclick="Setting()">
+            <i class="material-icons">settings</i>
+            </a>
+        </div>        
+    </div>
+   <!--    ==================================Note Info Started ===========================-->
+            <div class="" id="rightpnlnote" style="display: none;">  
+                    <div class="list">
+                                    <ul class="btnul">
+                                        <li class="btnli" style="">
+                                            <div class="clrincatediv">
+                                                <input type="text" class="clrsquer" style="background: #dbd2ec;" readonly="">&nbsp;
+                                                <span class="notespan">Patient Arrived Late</span>
+                                            </div>
+                                        </li>                    
+                                        <li class="btnli" style="">
+                                            <div class="clrincatediv">
+                                                <input type="text" class="clrsquer" style="background: #80ff80;" readonly="">&nbsp;
+                                                <span class="notespan">Few investigations result available</span>
+                                           </div>
+                                        </li>                    
+                                        <li class="btnli" style="">
+                                            <div class="clrincatediv">
+                                                <input type="text" class="clrsquer" style="background:  #c0060c;" readonly="">&nbsp;
+                                                <span class="notespan">Patient waiting more than 20 min</span>
+                                            </div>
+                                        </li>                    
+                                        <li class="btnli" style="">
+                                            <div class="clrincatediv">
+                                                <input type="text" class="clrsquer" style="background:  #408080;" readonly="">&nbsp;
+                                                <span class="notespan">All investigations result available</span>
+                                            </div>
+                                        </li>                    
+                                        <li class="btnli">
+                                            <div class="clrincatediv">
+                                                <input type="text" class="clrsquer" style="background:  #c0060c;" readonly="">&nbsp;
+                                                <span class="notespan">Patient waiting more than 20 min</span>
+                                            </div>
+                                        </li>                    
+                                        <li class="btnli">
+                                            <div class="clrincatediv">
+                                                <input type="text" class="clrsquer" style="background:  #c0060c;" readonly="">&nbsp;
+                                                <span class="notespan">Patient waiting more than 20 min</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                             </div>
+            </div>
+<!--   ======================== left menu Started Heare ============================-->
+<!--<div class="panel-backdrop"></div>-->
+<!--<div id="dis1menu" class="list links-list" style="display: none;">
+            <ul>
+              <li><a href="/accordion/" class="panel-close"> Time Motion Study</a></li>
+              <li><a href="/action-sheet/" class="panel-close"> Pending MO</a></li>
+              <li><a href="/badge/" class="panel-close">Pending Cross Consultation</a></li>
+            </ul>
+    </div>-->
+ <div class="popover popover-menu">
+    <div class="popover-angle"></div>
+    <div class="popover-inner">
+      <div class="list">
+        <ul id="ulcubicles">
+<!--          <li><a href="/dialog/" class="list-button item-link popover-close"> HN OPD C </a></li>
+          <li><a href="/tabs/" class="list-button item-link popover-close"> HN OPD B </a></li>
+          <li><a href="/panel/" class="list-button item-link popover-close"> Cubicle 1 </a></li>
+          <li><a href="/list/" class="list-button item-link popover-close"> Cubicle 2 </a></li>
+          <li><a href="/inputs/" class="list-button item-link popover-close"> HN OPD A</a></li>
+          <li><a href="/inputs/" class="list-button item-link popover-close"> HN OPD D</a></li>-->
+        </ul>
+      </div>
+    </div>
+  </div>
+<!--Reminder Detail-->   
+ 
+</div>

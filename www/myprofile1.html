@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <title>My Profile</title>
+        <style type="text/css">
+            html{height: 100%;overflow: hidden;}
+            body{
+                padding-top:5px;
+                height: 100%;
+            }
+            header{
+                position: fixed;
+                border: none;
+                color: #fff;
+                top: 0;
+                height:40px;
+                right: 0;
+                left: 0;
+                padding-left: 10px;
+                background: #367fa9;
+                z-index: 99999;
+            }
+            .glarrow:hover{cursor: pointer;}
+            .body-containt{
+                top: 40px;
+                position: absolute;
+                background: #F7F7F7;
+                overflow: auto;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body style="" onclick="rightclick();">
+            <div class="page patprofile" data-page="myprofile">
+                <div id="mydiv" style="display:none;">
+                    <img src="images/xda2.gif" class="imgnload"  style="border-radius: 50%;">
+                </div>
+               <div class="navbar hedmyprofile">
+                    <div class="navbar-inner sliding">
+                         <div class="left">
+                           <a href="#" class="link back">
+                             <i class="icon icon-back"></i>
+                           </a>
+                         </div>
+                         <div class="title">
+                             <label class="formname" id="formname"></label>
+                             <label class='patname' style=""></label> 
+                         </div>
+                    </div>
+                </div>
+                 <div class="CapcaturepOverlay"></div>
+                <div class="page-content">
+                    <div id="displayforms" class="cntblock"> 
+
+                    </div>                   
+                </div>
+           </div>
+      </body>
+</html>

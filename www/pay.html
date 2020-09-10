@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script>
+            loadjsfile('pgreturn.js');
+        </script>
+        <style>
+            #mydiv {
+                height:100%;
+                width:100%;
+                position:fixed;
+                top:0;
+                padding:30% 0 0 40%;
+                z-index:999999999;
+                filter:alpha(opacity=70);
+            }
+            .spn{
+                padding:50% 0 0 20%;
+            }
+	         .paylbln{   text-align: left;
+                    position: absolute;
+                    left: 0px;
+                    right: 0px; 
+	     }
+        </style>
+    </head>
+    <body onload="onLoad()">
+        <div id="pgdata">
+            <div id="mydiv">
+                <img src="images/xda.gif"  style="height: 50px; width:50px; border-radius: 50%;">
+                <br>
+                <label class="paylbln">you are redirecting, please wait....</label>
+            </div>
+
+        </div>
+    </body>
+</html>

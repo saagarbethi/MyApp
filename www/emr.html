@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <!--        <meta charset="UTF-8">-->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+             <script  src="js/SQLitePlugin.js" type="text/javascript"  ></script>
+        <link href="css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+          <script src="bootstrap/bootstrap.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/js/bootstrap.min.js">
+        <script type="text/javascript" src="js/cordova_1.js"></script>
+        <script  src="js/SQLitePlugin.js" type="text/javascript"  ></script>
+        <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>  
+        <link href="css/FontFamillyloading.css" rel="stylesheet" type="text/css"/>
+             <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css"> 
+        <!--<script type="text/javascript" src="js/PatientLoginSecondScreen.js"></script>-->
+        <style>
+            #mydiv {
+                height:100%;
+                width:100%;
+                position:fixed;
+                top:0;
+                padding:30% 0 0 40%;
+                z-index:999999999;
+                filter:alpha(opacity=70);
+            }
+
+            html,body{background-color:#ecf0f5;
+                      color: rgba(0,0,0,1);
+                      font-family: Helvetica,Arial,sans-serif;
+                      font-size: 90%;
+                      margin: 0 auto;
+                      -webkit-font-smoothing: subpixel-antialiased;}
+            .btn-default{color:#fff; background: transparent;border: none;}
+            .btn-default:hover{color: #000; background: #ccc;transition: all 0.5s ease;
+                               -moz-transition: all 0.5s ease;
+                               -webkit-transition: all 0.5s ease;
+                               -o-transition: all 0.5s ease;
+                               -ms-transition: all 0.5s ease;}
+            .btn-default:focus{color: #000; background:#ccc;transition: all 0.5s ease;
+                               -moz-transition: all 0.5s ease;
+                               -webkit-transition: all 0.5s ease;
+                               -o-transition: all 0.5s ease;
+                               -ms-transition: all 0.5s ease;}
+            .content-wrapper{margin-left: 0px;}
+
+            .info-box{
+                -webkit-transition-property: all;
+                transition-property: all;
+                -webkit-transition-duration: .3s;
+                transition-duration: .3s;
+            }
+            .info-box:hover{
+                background: #e3e3e3;
+                -webkit-transition-property: all;
+                transition-property: all;
+                -webkit-transition-duration: .3s;
+                transition-duration: .3s;
+                box-shadow: 0px 10px 6px -6px #777;
+                -webkit-box-shadow: 0px 10px 6px -6px #777;
+            }
+
+            .info-box:visited{
+                background: #f7ecb5;
+                -webkit-transition-property: all;
+                transition-property: all;
+                -webkit-transition-duration: .3s;
+                transition-duration: .3s;
+                box-shadow: 0px 10px 6px -6px #777;
+                -webkit-box-shadow: 0px 10px 6px -6px #777;
+            }
+            .info-box:focus{
+                background: #f7ecb5;
+                -webkit-transition-property: all;
+                transition-property: all;
+                -webkit-transition-duration: .3s;
+                transition-duration: .3s;
+                box-shadow: 0px 10px 6px -6px #777;
+                -webkit-box-shadow: 0px 10px 6px -6px #777;
+            }
+            .info-box:active{
+                background: #f7ecb5;
+                -webkit-transition-property: all;
+                transition-property: all;
+                -webkit-transition-duration: .3s;
+                transition-duration: .3s;
+                box-shadow: 0px 10px 6px -6px #777;
+                -webkit-box-shadow: 0px 10px 6px -6px #777;
+            }
+            .usernames{
+                font-size: 15pt;
+                color: #0C60A9;
+            }
+            .main-header .logo{width: auto;font-weight: bold;}
+            .test:after {
+                content: '\2807';
+                font-size: 25px;
+                float: right;
+            }
+            div.dropdownCont {
+                position: absolute;
+                right: 50px;
+                z-index: 500;
+                display: none;
+                background-color: #fff;
+                -webkit-background-clip: padding-box;
+                background-clip: padding-box;
+                border: 1px solid #999;
+                border: 1px solid rgba(0,0,0,.2);
+                border-radius: 6px;
+                outline: 0;
+                -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+                box-shadow: 0 5px 15px rgba(0,0,0,.5);
+
+
+            }
+
+            div.dropdownCont .dcWrapper {
+                background-color: #fff;
+                /*    width: 200px;*/
+                padding: 5px;
+                margin: 0;
+                color:#000;
+                white-space:nowrap;
+                list-style: none;
+                font-size: 16px;
+                border-radius: 2px;
+            }
+            .dcWrapper div{padding: 5px 20px;color:#000;text-align: left;}
+            .dcWrapper div:hover{background: #ececec;}
+            #progressing{
+                 height: 100%;
+                width: 100%;
+                position: fixed;
+                top: 0;
+                padding: 0px;
+                z-index: 10000;
+            }
+            #progressing img{
+                position: absolute;
+                top: 40%;
+                left: 42%;
+            }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                retrive();
+             });
+            function login(url, uhid, pwd) {
+
+            }
+
+            function retrive()
+            {      
+//                alert("retrivemethod");
+                debugger;
+                var db = window.openDatabase("Database", "1.0", "SHIVAMDB", 200000);
+//    db.transaction(populateDB,errorCB,successCB);
+                db.transaction(queryDB, errorCB);
+            }
+             function  toReportCaseTwoWords(name) {
+                debugger;
+                if (name == null) {
+                    return null;
+                }
+                var i = 0;
+                var ret = "";
+                var word = name.split(" ");
+                for (var j = 0; j < word.length; j++) {
+                    if (word[j] != "") {
+                        ret = ret + word[j].substring(0, 1).toUpperCase();
+                        i++;
+                    }
+                    if (i > 1) {
+                        break;
+                    }
+                }
+                return ret.toString();
+            }
+
+            function queryDB(tx)
+            {
+                debugger;
+                tx.executeSql('CREATE TABLE IF NOT EXISTS SignUp(id INTEGER PRIMARY KEY AUTOINCREMENT,hname TEXT,url TEXT,uname TEXT,pwd TEXT)');
+                tx.executeSql('SELECT * FROM SignUp', [], querrySuccess, errorCB);
+
+            }
+            function errorCB(err)
+            {
+                debugger;
+                alert("Error processing SQL" + err.code);
+            }
+        function  querrySuccess(tx, results) {
+            debugger;
+             
+              var len=0;
+               // var cnt= results.rows.item(0).mycount;
+                 var len = results.rows.length;
+//                 alert(len);
+                var idval,name, url, patmrno, patpassword = "";
+                if ( len  > 0) {
+//                    alert("len >0"+len);
+                    if (len == 1) {
+                        
+//                         alert("len ===1"+results.rows.item(0).id);
+//                        idval = results.rows.item(0).id;
+                        name = results.rows.item(0).hname;
+                        url = results.rows.item(0).url;
+                        patmrno = results.rows.item(0).uname;
+                        patpassword = results.rows.item(0).pwd;
+                       
+
+                    } else {
+                      for (var j = 0; j < len; j++)
+                         {    
+                               
+//                             idval = results.rows.item(j).id+ '|' + idval;
+                            name = results.rows.item(j).hname + '|' + name;               //'myemr';
+                            url = results.rows.item(j).url + '|' + url;
+                            patmrno = results.rows.item(j).uname + '|' + patmrno;
+                            patpassword = results.rows.item(j).pwd + '|' + patpassword;
+
+//                              alert("url  = " + results.rows.item(j).url+ "hname  = " + results.rows.item(j).hname+"ID  = " + results.rows.item(j).id+ " mrno = " + results.rows.item(j).uname + " pwd =  " + results.rows.item(j).pwd);
+                        }
+                        }
+                    if (patmrno === null || patmrno === undefined) {
+                       localStorage.appname = 'myemr';
+                        location.href = 'PatientLoginSecondScreen.html';
+                    } else {
+                        if (len === 1) {
+                          location.href = 'PatientLoginThirdScreen.html';
+                        } else {
+                            
+                            debugger;
+                var len = 0;
+                var len = results.rows.length;
+                var patlogintype, paturl, idval, mobile, email, patmrno, fname, patpassword = "";
+                var str = "", color = "";
+                if (len == 1) {
+                    localStorage.patname = results.rows.item(0).hname;
+                    localStorage.patmrno = results.rows.item(0).uname;
+                    location.href = 'PatientLoginThirdScreen.html';
+                } else if (len > 1) {
+                    debugger;
+//		    var valuen="1";
+//		    File img = new File(dao.gettomcatserverPath1() + "/webapps/" + extPathFolder + "/MRPhotos/" + key_id + ".png");
+//                  var imgurl=localStorage.appurl;
+//		  var imgurl=imgurl.index("/");
+//		        imgurl=imgurl.substr(0,imgurl.index("/"));
+//                         var path = localStorage.appurl+"MRPhotos/"+results.rows.item(0).patuid+".png";  
+                    for (var i = 0; i < len; i++) {
+                        if (i % 5 == 0) {
+                            color = "bg-aqua";
+                        } else if (i % 5 == 1) {
+                            color = "bg-red";
+                        } else if (i % 5 == 2) {
+                            color = "bg-blue";
+                        } else if (i % 5 == 3) {
+                            color = "bg-yellow";
+                        } else if (i % 5 == 4) {
+                            color = "bg-green";
+                        }
+
+                        var str1 = ".png";
+                        var str2 = ".jpg";
+                        var str3 = ".jpeg";
+                        var ig = 0;
+                        var extPathFolder = "";
+                        var ip = "", ind = "", app = "";
+                        debugger;
+
+                        str = str + " <div   class='row mainrow' onclick=\"login('" + results.rows.item(i).url + "','" + results.rows.item(i).uname + "','" + results.rows.item(i).pwd + "','" + results.rows.item(i).hname.trim().replace(/ /g, '&nbsp;') + "','1','UHID/MR_NO')\";> ";
+                        str = str + "<div class='col-xs-2 col-sm-1 pad icon-container'>";
+
+//                        if (ig === 1) {
+//
+//                            str = str + " <div class='imgiconp'><img src=" + image_url + "  class='imgform' alt=''/></div>"
+//                        } else {
+                            str = str + "<div class='spantxtclr'>";
+                            str = str + "<span class=" + color + ">" + toReportCaseTwoWords(results.rows.item(i).uname) + "</span></div>";
+//                        }
+                        str = str + "</div>";
+                        str = str + "<div class='col-xs-8 col-sm-8 pad main-container'>";
+                        str = str + "<div class='col-sm-12 pad'>";
+                        str = str + "<label class='lblpatientName'>" + results.rows.item(i).hname + "</label>";
+                        str = str + "<label class='lblmrno'>" + results.rows.item(i).uname + "</label>";
+                        str = str + "<label class='lblpwd' style='display:none'>" + results.rows.item(i).pwd + "</label>";
+//                        str = str + "<label class='lbllogintype' style='display:none'>" + results.rows.item(i).patlogintype + "</label>";
+                                         str = str + " </div>";
+                                         str = str + "</div>";
+
+                                         str = str + "<div class='col-sm-1 iconmark pad ' style='cursor:pointer;' onclick=rightclick(this,'divs" + i + "','" + i + "','" + results.rows.item(i).uname + "','" + results.rows.item(i).id + "') ><span ><i class='glyphicon glyphicon-option-vertical iclr'></span></i>";
+                                         str = str + "<div style='display:none;'  id='divs" + i + "' class='dropdownCont' onclick=deleteuser('divs" + i + "','" + i + "','" + results.rows.item(i).uname + "','" + results.rows.item(i).id + "')><div class='dcWrapper' id='editor-options'><div><label class='lblalrtms'>Delete</label> </div> </div></div>";
+                                         str = str + "</div>";
+                                         str = str + "</div>";
+
+                                     }
+                                 }
+//                              var arrayid = [];
+//                              var arrayname= [];
+//                              var arrayurls = [];
+//                              var arraymrno = [];
+//                              var arraypass = [];
+//                            debugger;
+//                            idval = idval.replace("undefined", "");
+//                            name = name.replace("undefined", "");
+//                            url = url.replace("undefined", "");
+//                            patmrno = patmrno.replace("undefined", "");
+//                            patpassword = patpassword.replace("undefined", "");
+//                            var storedid = idval.substr(0, idval.trim().length - 1);
+//                            var storedNames = name.substr(0, name.trim().length - 1);
+//                            var storedUrls = url.substr(0, url.trim().length - 1);
+//                            var storedUhids = patmrno.substr(0, patmrno.trim().length - 1);
+//                            var storedPwds = patpassword.substr(0, patpassword.trim().length - 1);
+//                            var row = "";
+//                               arrayid = storedid.split("|");
+//                              arrayname = storedNames.split("|");
+//                              arrayurls = storedUrls.split("|");
+//                              arraymrno = storedUhids.split("|");
+//                              arraypass = storedPwds.split("|");
+//                              for(var i = 0; i < len; i++) {
+//                                var color = '';
+//                                if (i % 4 == 0) {
+//                                    color = 'aqua';
+//                                } else if (i % 4 == 1) {
+//                                    color = 'red';
+//                                }
+//                                else if (i % 4 == 2) {
+//                                    color = 'green';
+//                                }
+//                                else if (i % 4 == 3) {
+//                                    color = 'yellow';
+//                                }
+//                                row = row + " <div id='divs" + i + "' class=' col-md-4 col-sm-6 col-xs-12'> " +
+//                                        "<div class='info-box' style='cursor:pointer;float:left;width:95%;' onclick=loginmethod1('" + arrayurls[i] + "','" + arraymrno[i] + "','" + arraypass[i] + "','" + arrayname[i] + "','1')  > " +
+//                                        "<span class='info-box-icon bg-" + color + "'><span class='fa fa-user'>" +
+//                                        "</span></span>" +
+//                                        "<div class='info-box-content'>" +
+//                                        "<span class='info-box-text'><label class='usernames'>" + arrayname[i] + "<label></span>" +
+//                                        "<span class='info-box-number'>" + arraymrno[i] + "</span>" +
+//                                        "</div>  </div> <div class='test' onclick=rightclick('div" + i + "') style='cursor:pointer;float:left;width:5%;margin-left:-20px;'><div style='display: none;' class='dropdownCont toggle' id='div" + i + "'><div class='dcWrapper' id='editor-options'><div onclick=deleteuser('divs" + i + "','" + i + "','" + arrayid[i] + "')><span class='glyphicon glyphicon-remove'> Delete </span></div></div></div></div></div> ";
+//
+//                            }
+//                            $('#divUrls').html(row);
+//                          
+$('#divUrls').html(str);
+  $('#progressing').hide();
+
+                        }
+                        if (localStorage.getItem("adduser") !== null) {
+                            localStorage.appname = 'myemr';
+                            localStorage.removeItem("adduser");
+                            location.href = 'PatientLoginSecondScreen.html';
+                        }
+                      }
+                } else {
+//                    alert("b");
+                    localStorage.appname = 'myemr';
+                    location.href = 'PatientLoginSecondScreen.html';
+                }
+                 if (localStorage.getItem("adduser") !== null) {
+                    localStorage.appname = 'myemr';
+                    localStorage.removeItem("adduser");
+                    location.href = 'PatientLoginSecondScreen.html';
+
+                }
+            }
+            function check() {
+                debugger;
+                localStorage.appname = 'myemr';
+                if (localStorage.appurl !== undefined) {
+                    if (localStorage.entrance === "Patient") {
+                        location.href = 'PatientLoginSecondScreen.html'
+                    } else if (localStorage.entrance === "Doctor") {
+                        localStorage.appname = 'dashboard';
+                        location.href = 'index_1.html'
+                    }
+//                    if(localStorage.entrance===Patient && localStorage.loginuser!==null){
+//                        location.href = 'PatientLoginThirdScreen.html'
+//                    }
+                }
+//                else {
+//                    location.href = 'PatientLoginSecondScreen.html'
+//                }
+            }
+          function loginmethod1(loginuser,mrno,password,name,multipleusers)
+            {
+//                 alert("adduser");
+                debugger;
+                var emrnames = [];
+                var emrurls = [];
+                var emruhids = [];
+                var emrpasswords = [];
+                if (loginuser == '') {
+                    document.getElementById("errormsg").innerHTML = "Please Enter URL";
+                    document.getElementById("url").focus();
+                    $('#url').css('border', '1px solid red');
+                    //  document.getElementById("url").style.borderColor="red";
+                    return;
+                } else {
+                    $('#url').css('border', 'none');
+                }
+
+                if (mrno == '') {
+                    document.getElementById("errormsg").innerHTML = "Please enter mrno";
+                    document.getElementById("no").focus();
+                    $('#no').css('border', '1px solid red');
+                    return;
+                } else {
+                    $('#no').css('border', 'none');
+                }
+                if (password == '') {
+                    document.getElementById("errormsg").innerHTML = "Please enter password";
+                    document.getElementById("pswrd").focus();
+                    $('#pswrd').css('border', '1px solid red');
+                    return;
+                } else {
+                    $('#pswrd').css('border', 'none');
+                }
+                var isExist = false;
+                debugger;
+                var path = loginuser + "/formviewlogin?mrno=" + mrno + "&password=" + password + "&loginuser=" + loginuser + "&mobile=login";
+                debugger;
+                $.ajax({
+                    url: getHttp(path),
+                    type: "GET",
+                    dataType: "json",
+                    success: function (responseJson) {
+                        if (responseJson.length > 0) {
+                            debugger;
+                            document.getElementById("progressing").style.display = "block";
+                            $("#pwd").val(responseJson[0]['PWD']);
+                            $("#mobile").val(responseJson[0]['MOB']);
+                            $("#hdnname").val(responseJson[0]['FNAME']);
+                            localStorage.appurl = getHttp(loginuser);
+                            localStorage.patmrno = mrno;
+                            localStorage.patpassword = password;
+                            emrnames[0] = name;
+                            emrurls[0] = loginuser;
+                            emruhids[0] = mrno;
+                            emrpasswords[0] = password;
+                            if (localStorage.getItem("emrnames") === null) {
+                                localStorage.setItem("emrnames", JSON.stringify(emrnames));
+                                localStorage.setItem("emrurls", JSON.stringify(emrurls));
+                                localStorage.setItem("emruhids", JSON.stringify(emruhids));
+                                localStorage.setItem("emrpasswords", JSON.stringify(emrpasswords));
+                            } else {
+                                var storedNames = JSON.parse(localStorage.getItem("emrnames"));
+                                var storedUrls = JSON.parse(localStorage.getItem("emrurls"));
+                                var storedUhids = JSON.parse(localStorage.getItem("emruhids"));
+                                var storedPwds = JSON.parse(localStorage.getItem("emrpasswords"));
+                                var i = 0;
+                                var existedVal = -1;
+                                for (i = 0; i < storedNames.length; i++) {
+                                    if (mrno !== storedUhids[i]) {
+                                        emrnames[i] = storedNames[i];
+                                        emrurls[i] = storedUrls[i];
+                                        emruhids[i] = storedUhids[i];
+                                        emrpasswords[i] = storedPwds[i];
+                                        isExist = false;
+                                    } else {
+                                        isExist = true;
+                                        existedVal = i;
+                                    }
+                                }
+                                if (multipleusers === "1") {
+                                    isExist = false;
+                                }
+                                if (!isExist) {
+                                    var emrsize = existedVal;
+                                    if (emrsize === -1) {
+                                        emrsize = emruhids.length;
+                                    }
+                                    emrnames[emrsize] = name;
+                                    emrurls[emrsize] = loginuser;
+                                    emruhids[emrsize] = mrno;
+                                    emrpasswords[emrsize] = password;
+                                }
+                                localStorage.setItem("emrnames", JSON.stringify(emrnames));
+                                localStorage.setItem("emrurls", JSON.stringify(emrurls));
+                                localStorage.setItem("emruhids", JSON.stringify(emruhids));
+                                localStorage.setItem("emrpasswords", JSON.stringify(emrpasswords));
+
+                            }
+                            location.href = 'PatientLoginThirdScreen.html';
+                        } else {
+                            document.getElementById("errormsg").innerHTML = "The mrno or password you entered don't match";
+                            document.getElementById("progressing").style.display = "none";
+                        }
+                    },
+                    error: function (error) {
+                        if (error.statusText == "OK") {
+                            alert(error.responseText);
+                        }
+                        else {
+                            localStorage.entrance = '';
+                            location.href = '404.html';
+
+                        }
+                    }
+
+                });
+
+            }
+            function getHttp(path) {
+                if(localStorage.isHttp == 1){
+                  if (path.indexOf("http://") < 0) {
+                    path = "http://" + path;
+                }  
+                }else{
+                if (path.indexOf("https://") < 0) {
+                    path = "https://" + path;
+                }
+            }
+                return path;
+            }
+            function adduser() {
+
+//    if (localStorage.appname == 'myemr') {
+                localStorage.adduser = '1';
+                location.href = 'emr.html';
+//    } 
+            }
+            //function rightclick(div){
+//    debugger;
+//                $('#'+div).removeClass("toggle");
+//                $('.toggle').hide();
+//                //alert($('#'+div).css('display'));
+//                
+//                if($('#'+div).css('display')=='block'){
+//                   
+//                    $('#'+div).hide();
+//                }else{
+//                    $('#'+div).show();
+//                }
+//                $('#'+div).addClass("toggle");
+//            }
+//            function deleteuser(div,i,mrno){
+//                debugger;
+//                if(confirm('Are you sure you want to delete this user?')){
+//                    $('#'+div).remove();
+//                    $('#tr'+i).remove();
+//                  var storedNames = JSON.parse(localStorage.getItem("emrnames"));
+//        var storedUrls = JSON.parse(localStorage.getItem("emrurls"));
+//        var storedUhids = JSON.parse(localStorage.getItem("emruhids"));
+//        var storedPwds = JSON.parse(localStorage.getItem("emrpasswords"));
+//        for (var i = 0; i < storedUhids.length; i++) {
+//            if (mrno === storedUhids[i]) {
+//                storedUhids.splice(i, 1);
+//                storedNames.splice(i, 1);
+//                storedUrls.splice(i, 1);
+//                storedPwds.splice(i, 1);
+//                break;
+//            }
+//        }
+//        localStorage.setItem("emrnames", JSON.stringify(storedNames));
+//        localStorage.setItem("emrurls", JSON.stringify(storedUrls));
+//        localStorage.setItem("emruhids", JSON.stringify(storedUhids));
+//        localStorage.setItem("emrpasswords", JSON.stringify(storedPwds));
+//         localStorage.adduser = '1';
+//         storedNames = JSON.parse(localStorage.getItem("emrnames"));
+//         if(storedUhids.length===1){
+//             localStorage.appurl = storedUrls[0];
+//             localStorage.patmrno = storedUhids[0];
+//         }
+//                }
+//            }
+//function rightclick(div){
+//                debugger;
+//                $('#'+div).removeClass("toggle");
+//                $('.toggle').hide();
+//                //alert($('#'+div).css('display'));
+//
+//                if($('#'+div).css('display')=='block'){
+//
+//                    $('#'+div).hide();
+//                }else{
+//                    $('#'+div).show();
+//                }
+//                $('#'+div).addClass("toggle");
+//            }
+//
+//            function deleteuser(div,i,idval) {
+//                 debugger;
+//                  if(confirm('Are you sure you want to delete this user?')){
+//                    $('#'+div).remove();
+//                    $('#tr'+i).remove(); 
+//                var db = window.openDatabase("Database", "1.0", "SHIVAMDB", 200000);
+//                db.transaction(function (tx) {
+//
+//                    var query = "DELETE FROM signup WHERE id = ?";
+//
+//                    tx.executeSql(query, [idval], function (tx, res) {
+//            // alert("Failed To Delete User" + res.insertId+"no of rows effected is :"+ res.rowsAffected);
+////            console.log("removeId: " + res.insertId);
+////            console.log("rowsAffected: " + res.rowsAffected);
+//                    },
+//                            function (tx, error) {
+////            console.log('DELETE error: ' + error.message);
+//                            });
+//                }, function (error) {
+//                    alert("Failed To Delete User");
+////        console.log('transaction error: ' + error.message);
+//                }, function () {
+//                    alert("Successfully Deleted User");
+////        console.log('transaction ok');
+//                });
+//
+//            }
+  debugger;
+            var server = getParameterByName("serverpath");
+            var users = getParameterByName("users");
+            var logintype = getParameterByName("logintype");
+            function rightclick(id, div, val, uids, idval) {
+                debugger;
+
+                event.stopPropagation();
+                $('.dropdownCont').hide();
+                $('#' + div).css('display', 'block');
+
+
+                var fn = 'deleteuser("' + div + '","' + val + '","' + uids + '","' + idval + '")';
+                $('#' + div).attr('onclick', fn);
+                try {
+                    document.getElementById("editor-options").innerHTML = document.getElementById("custom-menu").innerHTML;
+                } catch (error) {
+                }
+                document.getElementById('editor-options').style.display = "block";
+            }
+            function deleteuser(div, i, mrno, idval) {
+                debugger;
+
+
+                localStorage.entrance = '';
+                msg = 'Are you sure you want to delete this user?'
+                if (confirm(msg)) {
+                    $('#' + div).remove();
+                    $('#tr' + i).remove();
+
+                    $('.toggle').hide();
+                    event.stopPropagation();
+                    event.preventDefault();
+                    delUserFrmNotDevLst(mrno);
+
+                }
+                else {
+                    $('.toggle').hide();
+                    event.stopPropagation();
+                    event.preventDefault();
+                }
+            }
+            function  deleterecord(idval) {
+                var db = window.openDatabase("Database", "1.0", "SHIVAMDB", 200000);
+
+                db.transaction(function (tx) {
+
+                    var query = "DELETE FROM signup WHERE uname = ?";
+
+                    tx.executeSql(query, [idval], function (tx, res) {
+
+                    },
+                            function (tx, error) {
+                            });
+                }, function (error) {
+                    alert("Failed To Delete User");
+                }, function () {
+                    alert("Successfully Deleted User");
+                    retrive();
+                });
+
+            }
+            function delUserFrmNotDevLst(userid) {
+                debugger;
+                var regid = localStorage.deviceregid;
+                var path = localStorage.appurl + "/DeviceRegistrations?type=deleteregidfrmdev&regid=" + regid + "&userid=" + userid + "&apptype=patientapp";
+                $.ajax({
+                    url: getHttp(path),
+                    type: "POST",
+                    dataType: "",
+                    success: function (responseText) {
+                        if (responseText == "1") {
+                            deleterecord(userid);
+                            debugger;
+                            $(".seldiv").each(function () {
+                                this.remove();
+                                $(".countbtn").html("0");
+                                $(".deltionlongpress").css("display", "none");
+                            });
+                        }
+                    },
+                    error: function (error) {
+                        deleterecord(userid);
+
+                    }
+                });
+
+            }
+        </script>
+    </head>
+    <body>
+        <div id="progressing">
+            <img src="images/xda2.gif" width="100" height="100" style="border-radius: 50%;">
+            <br>
+            <span style="color: blue;display: none;">Loading..</span>
+        </div>
+
+        <div class="wrapper" style="margin-bottom: 50px;">
+
+            <header class="main-header" style='background:#367fa9;position: fixed; z-index: 9999; top: 0;width: 100%;padding-top: 10px;'>
+                <!-- Logo -->
+                <a href="#" class="logo" style='color:white'>My EMR Users</a>
+                <!-- Header Navbar: style can be found in header.less -->
+            </header>
+            <!-- Left side column. contains the logo and sidebar -->
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper" style="margin-top: 55px; z-index: -9;">
+                <!-- Content Header (Page header) -->
+
+                <!-- Main content -->
+                <section class="content">
+                    <!-- Info boxes -->
+                    <div class="row" id="divUrls">
+
+                    </div><!-- /.row -->
+                </section>
+            </div>
+
+        </div>
+        <script>
+            debugger;
+
+//            if (localStorage.getItem("emrnames") === null) {
+////                localStorage.appname = 'myemr';
+//
+//                localStorage.appname = 'myemr';
+//                location.href = 'PatientLoginSecondScreen.html';
+//            } else {
+//               
+//                var storedNames = JSON.parse(localStorage.getItem("emrnames"));
+//                var storedUrls = JSON.parse(localStorage.getItem("emrurls"));
+//                var storedUhids = JSON.parse(localStorage.getItem("emruhids"));
+//                var storedPwds = JSON.parse(localStorage.getItem("emrpasswords"));
+//                if (storedUrls.length === 1) {
+////                    localStorage.appname = 'myemr';
+//                    location.href = 'PatientLoginThirdScreen.html';
+////                    location.href = 'PatientLoginThirdScreen.html';
+//                } else {
+//                    var row = "";
+//                    for (var i = 0; i < storedUrls.length; i++) {
+//                        var color = '';
+//                        if (i % 4 == 0) {
+//                            color = 'aqua';
+//                        } else if (i % 4 == 1) {
+//                            color = 'red';
+//                        }
+//                        else if (i % 4 == 2) {
+//                            color = 'green';
+//                        }
+//                        else if (i % 4 == 3) {
+//                            color = 'yellow';
+//                        }
+//                        row = row + " <div id='divs"+i+"' class=' col-md-4 col-sm-6 col-xs-12'> " +
+//                                "<div class='info-box' style='cursor:pointer;float:left;width:95%;' onclick=loginmethod1('" + storedUrls[i] + "','" + storedUhids[i] + "','" + storedPwds[i] + "','" + storedNames[i] + "','1')  > " +
+//                                "<span class='info-box-icon bg-" + color + "'><span class='fa fa-user'>" +
+//                                "</span></span>" +
+//                                "<div class='info-box-content'>" +
+//                                "<span class='info-box-text'><label class='usernames'>" + storedNames[i] + "<label></span>" +
+//                                "<span class='info-box-number'>" + storedUhids[i] + "</span>" +
+//                                "</div>  </div> <div class='test' onclick=rightclick('div"+i+"') style='cursor:pointer;float:left;width:5%;margin-left:-20px;'><div style='display: none;' class='dropdownCont toggle' id='div"+i+"'><div class='dcWrapper' id='editor-options'><div onclick=deleteuser('divs"+i+"','"+i+"','"+storedUhids[i]+"')><span class='glyphicon glyphicon-remove'> Delete </span></div></div></div></div></div> ";
+//
+//                    }
+//                    $('#divUrls').html(row);
+//                    $('#progressing').hide();
+//                }
+//                if (localStorage.getItem("adduser") !== null) {
+//                    localStorage.appname = 'myemr';
+//                    localStorage.removeItem("adduser");
+//                    location.href = 'PatientLoginSecondScreen.html';
+//
+//                }
+//
+//            }
+
+
+        </script>
+        <footer style='background-color:#C60; position: fixed; bottom: 0; color: #fff; padding-top: 10px;padding-left: 0px; text-align: center; width: 100%; z-index: 9;height: 50px;'><input type='button' value='Add User' class='btn btn-primary btnwdth bg-green' onclick='adduser()'> </footer>
+
+    </body>
+</html>

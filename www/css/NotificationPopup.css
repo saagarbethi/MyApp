@@ -1,0 +1,104 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16 Dec, 2017, 5:57:18 PM
+    Author     : Nagnath
+*/
+.dynamicClass{
+        border-bottom: 1px solid #d3d3d3;
+        box-shadow: 0 2px 4px rgba(0,0,0,.22),0 1px 2px rgba(0,0,0,.24);
+        border: 0px;
+        height: auto;
+        text-align: center;
+        width: 60%;
+        position: absolute;
+        top: 0px;
+        left: 20%;
+        border-radius: 5px;
+        z-index: 999999999;
+        margin-top: 1px;
+        padding-bottom: 5px;
+        display: none;
+        background: #FFFFFF;
+    }
+    .divnotification_001{
+        display: table-cell;vertical-align: middle;display:none;
+    }
+    .divnotification_002{}
+    .divnotification_003{
+        text-align: left;font-size:16px;position: relative;display: flex;padding: 5px;
+        padding-left: 0px;font-weight: normal;
+        color:#222;font-family: Roboto, Arial, sans-serif;border-bottom: 1px solid #EBEBEB;
+    }
+    .imgnotificationicn{
+        width: 40px;
+        height: 40px;
+        float: left;
+        margin-left: 5px;
+    }
+    .Notificationhead{
+        margin: 0px;font-weight:normal;
+        float:left;width: 100%;z-index: -99;
+        color: #000;
+        font-size: 2vw;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    .notificlose{
+       position: absolute;
+        right: 2px;
+        z-index: 99999999999;
+        top: 0px;
+        width: 40px;
+        height: 40px;
+        border-radius: 0px;
+        border: 0px;
+        outline: none;
+        color: rgb(184, 23, 23);
+        font-size: 20px;
+        background: transparent;
+    }
+    .divnotification_004{
+       text-align: left;
+        padding-left: 10px;
+        padding-top: 5px;
+        font-size: 1.5vw;
+        color: #000;
+        font-weight: 500;
+    }
+    .divnotification_005{
+        text-align: left;padding-left: 15px;
+        padding-right: 15px;
+        padding-top:0px;
+        height:45px;
+        text-transform: capitalize;
+        padding-bottom: 2px;
+        overflow: hidden !important;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        font-size: 1.5vw;
+        text-overflow: ellipsis;
+    }
+    .textcontainer{}
+    @media only screen and (max-width:768px) {
+        .dynamicClass{width: 80%;left: 10%;}
+        .Notificationhead{font-size: 3vw;}
+        .divnotification_004{font-size: 2.5vw;}
+        .divnotification_005{font-size: 2vw;}
+    }
+    @media only screen and (max-width:590px) {
+        .dynamicClass{width:90%;left:5%;}
+        .Notificationhead{font-size:4vw;}
+        .divnotification_004{font-size:3.5vw;}
+        .divnotification_005{font-size:3vw;}
+    }
+    @media only screen and (max-width:455px) {
+        .dynamicClass{width:98%;left:1%;}
+        .Notificationhead{font-size:18px;}
+        .divnotification_004{font-size:16px;}
+        .divnotification_005{font-size:14px;}
+    }

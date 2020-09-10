@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+          <script type="text/javascript"  src="phonegap.js"></script>
+        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+        <link href="css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="js/mah.js"></script>
+        <script type="text/javascript" src="js/PatientLoginSecondScreen.js"></script>
+<!--        <script type="text/javascript" src="http://192.168.0.140:8888/fh/js/mah.js"></script>-->
+        
+        <style>
+
+            html,body{
+                background-color:transparent;
+                color: rgba(0,0,0,1);
+                font-family: 'Open Sans', sans-serif;
+                font-size: 90%;
+                margin: 0 auto;
+                -webkit-font-smoothing: subpixel-antialiased;
+                background-color: #86A0B7;
+                color: rgba(0,0,0,1);
+                font-weight: normal;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 90%;
+                margin: 0px;
+                -webkit-font-smoothing: subpixel-antialiased;
+            }
+
+
+            body{
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13px;
+                line-height: 21px;
+                font-weight: 300;
+                color: #000;
+            }
+
+            .button{
+                background:#2A4863;
+                display:block;
+                margin:0 auto;
+                /* margin-top:1%; */
+                padding:10px;
+                text-align:center;
+                text-decoration:none;
+                color:#fff;
+                cursor:pointer;
+                transition:background .3s;
+                -webkit-transition:background .3s;
+                font-size: 25px;
+                margin-right: -15px;
+                margin-left: -15px;
+            }
+
+            .row{margin:0px;}
+            .content-wrapper, .right-side{
+                background-color: #86A0B7;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="container-fluid" style="padding:0px;">
+            <h2 class="button" style="margin:0px; font-size: 23px;">Welcome to <br> Maharaja Agrasen Hospital</h2>
+            <div class="row" style="padding-left:15px;padding-right: 15px; margin-top: 50px;" id="divMain">
+
+                <div class="col-md-12" style="text-align:center;padding:20px;border: 1px solid #d3d3d3;background: #fff;">
+                    <div class="row">
+                        <label>Are you Existing Patient or Do you want to register with us?</label>
+                    </div>
+                    <div class="row" style="text-align:center;">
+                        <input type="button" value="Existing" id="btnExisting" class="btn btn-info">
+                        <input type="button" value="Register" id="btnRegister" class="btn btn-primary">
+                    </div>
+                </div>
+            </div>
+            <div class="content-wrapper" style="margin-top: 55px; z-index: -9;">
+                <!-- Content Header (Page header) -->
+
+                <!-- Main content -->
+                <section class="content">
+                    <!-- Info boxes -->
+                    <div class="row" id="divUrls">
+
+                    </div><!-- /.row -->
+                </section>
+            </div>
+        </div>
+                 <script>
+            debugger;
+             if (localStorage.getItem("adduser") !== null) {
+//                    localStorage.appname = 'myemr';
+                    localStorage.removeItem("adduser");
+                    //location.href = 'PatientLoginSecondScreen.html';
+
+            }else{
+            if (localStorage.getItem("emrnames") === null) {
+//                localStorage.appname = 'myemr';
+              //  location.href = 'PatientLoginSecondScreen.html';
+            } else {
+                var storedNames = JSON.parse(localStorage.getItem("emrnames"));
+                var storedUrls = JSON.parse(localStorage.getItem("emrurls"));
+                var storedUhids = JSON.parse(localStorage.getItem("emruhids"));
+                var storedPwds = JSON.parse(localStorage.getItem("emrpasswords"));
+                if (storedUrls.length === 1) {
+//                    localStorage.appname = 'myemr';
+                    //location.href = 'PatientLoginSecondScreen.html';
+                    location.href = 'PatientLoginThirdScreen.html';
+                } else {
+                    var row = "";
+                    for (var i = 0; i < storedUrls.length; i++) {
+                        var color = '';
+                        if (i % 4 == 0) {
+                            color = 'aqua';
+                        } else if (i % 4 == 1) {
+                            color = 'red';
+                        }
+                        else if (i % 4 == 2) {
+                            color = 'green';
+                        }
+                        else if (i % 4 == 3) {
+                            color = 'yellow';
+                        }
+                        row = row + " <div class=' col-md-4 col-sm-6 col-xs-12'> " +
+                                "<div class='info-box' style='cursor:pointer;' onclick=loginmethod1('" + storedUrls[i] + "','" + storedUhids[i] + "','" + storedPwds[i] + "','" + storedNames[i] + "','1')  > " +
+                                "<span class='info-box-icon bg-" + color + "'><span class='fa fa-user'>" +
+                                "</span></span>" +
+                                "<div class='info-box-content'>" +
+                                "<span class='info-box-text'><label class='usernames'>" + storedNames[i] + "<label></span>" +
+                                "<span class='info-box-number'>" + storedUhids[i] + "</span>" +
+                                "</div>  </div> </div> ";
+
+                    }
+                    $('#divMain').hide();
+                    $('#divUrls').show();
+                    $('#divUrls').html(row);
+                    $('#progressing').hide();
+                }
+               
+
+            }
+        }
+
+
+        </script>
+    </body>
+</html>

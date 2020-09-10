@@ -1,0 +1,1146 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 Jul, 2018, 5:23:39 PM
+    Author     : Nagnath
+*/
+    .with-panel-right-cover .panel-backdrop.panel-backdrop_001{ right: 260px; left: initial;}
+    .panel-left.panel-cover.dispanl{
+        border: 0px;
+        border-radius: 0px;
+    }
+    .panel-left.panel-cover.dispanl .page .page-content{padding: 0px;}
+    .panel-left.panel-cover.dispanl .page .page-content .links-list{}
+    .panel-left.panel-cover.dispanl .page .page-content .links-list li{}
+    .panel-left.panel-cover.dispanl .page .page-content .links-list li a{}
+    .panel-left.panel-cover.dispanl .page .page-content .links-list a:after{left: 0px;}
+    .panel-left.panel-cover.dispanl .page .page-content .block-title{
+       margin: 0px;
+        padding: 0px;
+        padding-left: 10px;
+        background: #F0F0F0;
+        color: #000;
+        font-size: 18px;
+        font-weight: 500;
+        height: 40px;
+        line-height: 40px;
+        vertical-align: middle;
+    }
+    .panel-left.panel-cover.dispanl .page .page-content .block-title .panel-close{
+        float: right;
+        position: absolute;
+        right: 0px;
+        padding: 0px;
+        width: 40px;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        vertical-align: middle;
+    }
+    .panel-left.panel-cover.dispanl .page .page-content .block-title .panel-close .iconclose{
+        color: #F00;
+        line-height: 40px;
+    }
+    .shivam .DisFirst .reminderDetail{
+        display: none;
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        background: #FFFFFF;
+        z-index: 999999999;
+    }
+    .shivam .DisFirst .reminderDetail .navbar{
+        height: 45px;
+        min-height: 45px;
+        background: #367fa9;
+        margin: 0px;
+        border-radius: 0px;
+        border: 0px;
+    }
+    @-webkit-keyframes mymove { 0% { left:99%; right:0%;} 99% { left:0px; right:0px;}}
+    @keyframes mymove { 0% { left:99%; right:0%;} 99% { left:0px; right:0px;}}
+   .shivam .DisFirst .noteContainer{
+/*        position: relative; */
+        -o-animation: mymove .5s infinite;
+        -moz-animation: mymove .5s infinite; 
+        -webkit-animation: mymove .5s infinite;
+        animation: mymove .5s infinite; 
+        -moz-animation-iteration-count:1;
+        -o-animation-iteration-count:1;
+        -webkit-animation-iteration-count:1;
+        animation-iteration-count:1; 
+        -o-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards; 
+        overflow-x: hidden;
+    }    
+    .shivam .DisFirst .reminderDetail.hideDtl{
+         position: relative;              
+        -o-animation: mymove .5s infinite;
+        -moz-animation: mymove .5s infinite;
+        -webkit-animation: mymove .5s infinite;
+        animation: mymove .5s infinite;
+        -moz-animation-iteration-count:1;
+        -o-animation-iteration-count:1;
+        -webkit-animation-iteration-count:1;
+        animation-iteration-count:1;
+        -o-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        overflow-x: hidden;
+    }
+    @keyframes mymove { 0% { left:99%; right:0%;} 99% { left:0px; right:0px;}}
+    @-webkit-keyframes mymove1 { 99% { left:99%; right:0%;} 0% { left:0px; right:0px;}}
+    @keyframes mymove1 { 99% { left:99%; right:0%;} 0% { left:0px; right:0px;}}
+
+    .DisFirst .folderdiv{
+        width: 120px;
+        display: inline-block;
+        text-align: center;
+        padding: 0px;
+        float: left;
+        vertical-align: middle;
+        margin: 3px;
+        cursor: pointer;
+    }
+    .DisFirst .folderdiv .imgfldr{
+        width: 60px;
+        height: 50px;
+    }
+    .DisFirst .folderdiv .fldername{
+        text-align: center;
+        height: 35px;
+        padding: 0px;
+        line-height: normal;
+        font-size: 14px;
+        font-weight: normal;
+        color: #000;
+        text-transform: capitalize;
+        display: table-cell;
+        vertical-align: middle;
+        width: 120px;
+    }
+    .DisFirst .col12indis{width: 100%;}
+    .shivam .DisFirst .folderDetail_01{
+        display: inline-block;
+        width: 100%;
+    }
+    .shivam .DisFirst .folderDetail_01.Showdtlnote{
+        display: inline-block;
+        width: 200px;
+        border-right:1px solid #F3F3F3;
+        z-index: 9999;
+        background: #FFFFFF;
+        max-height: 480px;
+        overflow: auto;
+        overflow-x: hidden;
+    }
+    .shivam .DisFirst .folderDetail_01.Showdtlnote .folderdiv{
+        width: 200px;
+        border-bottom: 1px solid #F3F3F3;
+        padding: 5px 3px;
+        margin: 0px;
+    }
+    .shivam .DisFirst .folderDetail_01.Showdtlnote .imgfldr{
+        width: 45px;height: 35px;
+    }
+    .shivam .DisFirst .folderDetail_01.Showdtlnote .fldername{
+        width: 200px;padding-right: 20px;
+    }
+    .shivam .DisFirst .folderDetail_01.Showdtlnote .folderdiv.Activfldr{
+        background: #DAE9FF;
+    }
+    .shivam .DisFirst .noteContainer{
+           display: table-cell;
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0px;
+            left: 0px;
+            z-index: 99;
+            margin-left: 200px;
+            padding-left: 0px;
+            max-height: 480px;
+            overflow: auto;
+            overflow-x: hidden;
+            background: #E9E9E9;
+            padding-bottom: 20px;
+    }
+    .shivam .DisFirst .noteContainer .Dtailebox{
+        margin-left: 0px;
+        border: 1px solid #ECECEC;
+        padding: 0px;
+        width: 24%;
+        display: block;
+        background: #FFFFFF;
+        z-index: 99999999;
+        border-radius: 4px;
+        margin: 0px;
+        float: left;
+        margin-bottom:5px;
+        margin-left: 5px;
+    }
+    .shivam .DisFirst .noteContainer .Dtailebox .name_01{
+       width: 100%;
+        font-size: 14px;
+        padding: 3px;
+        padding-left: 8px;
+        color: #FFF;
+        background: #3C88C4;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+    } 
+    .shivam .DisFirst .noteContainer .Dtailebox .MrNo_01{
+        font-weight: normal;
+        width: 100%;
+        padding: 5px;
+    } 
+    .shivam .DisFirst .noteContainer .Dtailebox .btnclse_note{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: 0px;
+        background: transparent;
+        color: #FFF;
+        right: 5px;
+        top: -2px;
+        text-align: right;
+        padding: 0px;
+        outline: none;
+    } 
+    .shivam .DisFirst .noteContainer .Dtailebox .iconclose{
+        font-size: 18px;
+    } 
+    .shivam .DisFirst .noteContainer .Dtailebox .txtardiv{
+        position: relative;
+        padding-bottom: 10px;
+    }
+    .shivam .DisFirst .noteContainer .Dtailebox .textNoteEdit{
+        width: 95%;
+        border: 1px solid #EAEAEA;
+        margin: 0px auto;
+        border-radius: 3px;
+        padding: 5px;
+    }
+    .shivam .DisFirst .noteContainer .Dtailebox .textNoteEdit:focus{
+        border: 1px solid #A6C4FC;
+    }
+    .shivam .DisFirst .noteContainer .Dtailebox .txtspan{
+        height: 20px;
+        width: 30px;
+        float: right;
+        top: -20px;
+        right: 2%;
+        color: #0A5F97;
+    }
+    .shivam .DisFirst .noteContainer .folderheading{
+        background: #FFFFFF;
+        padding: 5px;
+        margin-bottom: 10px;
+        display: inline-block;
+        width: 100%;
+        padding-bottom: 2px;
+    }
+    .shivam .DisFirst .noteContainer .folderheading .folername{
+        font-size: 16px;
+        font-weight: normal;
+        padding: 0px;
+        padding-left: 5px;
+        margin: 0px;
+        width: 55%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+    .shivam .DisFirst .noteContainer .folderheading .Folteredit{
+        display: inline-block;
+        float: right;        
+    }
+    .shivam .DisFirst .noteContainer .folderheading .remFimg{
+        width: 30px;
+        float: left;
+        cursor: pointer;
+    }
+    .shivam .DisFirst .noteContainer .folderheading .btnfolder{
+        background: transparent;
+        border: 1px solid #d3d3d3;
+        font-size: 16px;
+        border-radius: 3px;
+        width: 40px;
+        padding: 2px 0px;
+        margin-left: 10px;
+        padding-bottom: 0px;
+        text-align: center;
+        cursor: pointer;
+        float: left;
+        outline: none;
+    }    
+    .shivam .DisFirst .noteContainer .folderheading  .Closefolderbtn{
+          background: transparent;
+            border: 1px solid #d3d3d3;
+            font-size: 4px;
+            border-radius: 3px;
+            width: 40px;
+            padding: 0px 0px;
+            margin-left: 10px;
+            padding-bottom: 0px;
+            text-align: center;
+            cursor: pointer;
+            color: #F00000;
+            float: left;
+            outline: none;
+    }
+    .shivam .DisFirst .noteContainer .folderheading .btnfolder:hover{
+        background: #ECECEC;
+    }
+    .shivam .DisFirst .noteContainer .folderheading  .Closefolderbtn:hover{
+        background: #ECECEC;
+    }
+    
+    @media only screen and (max-width:990px) {
+        .shivam .DisFirst .noteContainer .Dtailebox{width: 31%;}
+        .shivam .DisFirst .noteContainer{margin-left: 150px;}
+         .shivam .DisFirst .folderDetail_01.Showdtlnote .folderdiv{width: 150px;}
+        .shivam .DisFirst .folderDetail_01.Showdtlnote .fldername{width: 150px;}        
+        .shivam .DisFirst .folderDetail_01.Showdtlnote{width: 150px;}
+    }
+    @media only screen and (max-width:768px) {
+       .shivam .DisFirst .noteContainer .Dtailebox{ width: 48%;}
+        .shivam .DisFirst .noteContainer{margin-left: 120px;}
+        .shivam .DisFirst .folderDetail_01.Showdtlnote .folderdiv{width: 120px;}
+        .shivam .DisFirst .folderDetail_01.Showdtlnote .fldername{width: 120px;}        
+        .shivam .DisFirst .folderDetail_01.Showdtlnote{width: 120px;}
+    }
+    @media only screen and (max-width:620px){
+        .DisFirst .folderdiv{ width: 25%;margin: 0px; }
+        .DisFirst .folderdiv .fldername{
+            text-overflow: ellipsis;
+            width: 100%;
+            display: block;
+            height: auto;
+            line-height: 25px;
+            overflow: hidden;
+            white-space: nowrap;
+    }
+        .shivam .DisFirst .noteContainer{margin-left: 100px;}
+        .shivam .DisFirst .folderDetail_01.Showdtlnote .folderdiv{width: 100px;}
+        .shivam .DisFirst .folderDetail_01.Showdtlnote .fldername{width: 100px;}        
+        .shivam .DisFirst .folderDetail_01.Showdtlnote{width: 100px;}
+    }
+    @media only screen and (max-width:570px){
+        .shivam .DisFirst .noteContainer .Dtailebox{width: 97%;}
+    }
+    @media only screen and (max-width:540px){
+     .DisFirst .folderdiv{ width:33.33%;margin: 0px; }     
+    }
+    @media only screen and (max-width:460px){
+    .shivam .DisFirst .folderDetail_01.Showdtlnote .folderdiv{width: 80px;}
+    .shivam .DisFirst .folderDetail_01.Showdtlnote{width: 80px;}
+    .DisFirst .folderdiv{ width:33.33%;margin: 0px; }
+    .DisFirst .folderdiv .fldername{font-size: 12px;padding:0px 3px;}
+    .shivam .DisFirst .folderDetail_01.Showdtlnote .fldername {
+        width: 100%;white-space: normal;line-height: normal;}
+    .shivam .DisFirst .noteContainer{margin-left: 80px;}
+    .shivam .DisFirst .noteContainer .folderheading .folername{width:51%;}
+    .shivam .DisFirst .noteContainer .folderheading .remFimg{
+          width: 30px;
+            height: 28px;
+            padding: 5px;
+            border-radius: 3px;
+            border: 1px solid #d3d3d3;
+     }
+     .shivam .DisFirst .noteContainer .folderheading .btnfolder{width: 30px;height: 28px;font-size: 14px;}
+     .shivam .DisFirst .noteContainer .folderheading .Closefolderbtn{width: 30px;height: 28px;padding-top: 2px;}
+     .shivam .DisFirst .noteContainer .folderheading .Closefolderbtn .iconclose{font-size: 18px}
+}
+/*Dis Second Screen Css Started*/
+    .shivam .Dis2Sceen .navbar .title{
+        padding: 0px;
+        white-space: normal;
+        width: 70%;
+    }
+    .shivam .Dis2Sceen .navbar .title .pname{
+        width: 100%;
+        font-size: 18px;
+        line-height: normal
+    }
+    .shivam .Dis2Sceen .navbar .title .PDetail{
+        font-size: 16px;
+        float: left;
+        padding: 1px 0px;
+        font-weight: normal;
+        white-space: nowrap;
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .shivam .navbar .title .PDetail{
+        font-size: 16px;
+        float: left;
+        padding: 1px 0px;
+        font-weight: normal;
+        white-space: nowrap;
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .shivam .Dis2Sceen .navbar .title .PDetail span{padding-right: 10px;}
+     .shivam .popover.popover-links{
+        left: 0px !important;
+        max-width: 100%;
+        width: 100%;
+        right: 0px;
+        margin-top: 10px;
+        border-radius: 0px;
+    }    
+    .fab-right-bottom.Fabbtn_01 .fab-buttons-top:before{
+        content: '';
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        top: 0px;
+        background: rgba(0, 0, 0, 0.5);
+        -webkit-transition-duration: .4s;
+        transition-duration: .4s;
+        will-change: opacity;    
+        z-index: -99;
+    }
+    .shivam .popover.popover-links li{    }
+ /*.shivam .Dis2Sceen .footer_All .clrinicaotpopup .centerdiv .A_001 .attahfle*/
+    .shivam .popover.popover-links li .list-button{
+        border-radius: 0px !important;
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid #ddd;
+        padding: 4px 10px;
+        outline: none;
+    }
+    .shivam .popover.popover-links .lbmcanpopup{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+        color: #000;
+    }    
+    .shivam .popover.popover-links .iconleft{
+        display: inline-block;
+        vertical-align: middle;
+        color: #2F6FB4;
+    }    
+    .fab-right-bottom.Fabbtn_01{    }
+    .fab-right-bottom.Fabbtn_01{
+        right: 0px !important;
+        bottom: 0px !important;
+        position: absolute;
+    }
+    .fab-right-bottom.Fabbtn_01 .linkfab{
+        width: 50px;
+        height: 40px;
+        background: transparent;
+        box-shadow: none;
+        padding: 0px;
+        text-align: center;
+        margin: 0px;
+        border-radius: 0px;
+        display:block;
+    }
+    .fab-right-bottom.Fabbtn_01 .linkfab .icon_01{
+        top: 2px;
+        font-size:20px;
+        width: 100%;
+        color: #FFF;
+        transform: none;
+        opacity: 1;
+        -moz-transition: -moz-transform 0.5s ease-in-out;
+        -o-transition: -o-transform 0.3s ease-in-out;
+        -webkit-transition: -webkit-transform 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out;
+        transform: rotate(138deg);
+    }
+    .fab-right-bottom.Fabbtn_01 .linkfab.rotate3d .icon_01{
+        transform: rotate(140deg);
+        -moz-transition: -moz-transform 0.5s ease-in-out;
+        -o-transition: -o-transform 0.3s ease-in-out;
+        -webkit-transition: -webkit-transform 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out;
+    }
+    .fab-right-bottom.Fabbtn_01 .linkfab .exit_01{
+       margin-top: 20px;
+        font-size: 14px;
+        color: #FFF;        
+    }
+    .fab-right-bottom.Fabbtn_01 .fab-buttons-top{
+        margin-left: -180px;
+    }
+    .fab-right-bottom.Fabbtn_01 .fab-buttons-top a{
+        width: 200px;
+        height: 40px;
+        background: transparent;
+        box-shadow: none;
+    }
+    .fab-right-bottom.Fabbtn_01 .fab-buttons-top .icon_02{
+        float: left;
+/*        background: #2196f3;*/
+        right: 0px;
+        position: absolute;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        padding-top: 8px;
+        font-size: 24px;
+    }
+    .fab-right-bottom.Fabbtn_01 .fab-buttons-top .spantxt{
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        margin-right: 8px;
+        padding: 4px 12px;
+        border-radius: 3px;
+        background: #fff;
+        color: #000;
+        /* white-space: nowrap; */
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        pointer-events: none;
+        box-shadow: 0 3px 3px -2px rgba(0,0,0,.2),0 3px 4px 0 rgba(0,0,0,.14),0 1px 8px 0 rgba(0,0,0,.12);
+    }
+    .shivam .Dis2Sceen .footer_All .clrinicaotpopup{
+        text-align: center;
+    }
+    .shivam .Dis2Sceen .footer_All .clrinicaotpopup .centerdiv{
+        display: inline-block;
+        vertical-align: middle;
+        box-shadow: none;
+        margin-left: 5px;
+        width: auto;
+    }
+    .shivam .Dis2Sceen .footer_All .clrinicaotpopup .centerdiv .A_001{
+       display: block;
+        text-align: center;
+        height: 40px;
+        overflow: hidden;
+        padding: 2px 5px;
+        vertical-align: middle;
+        outline: none;
+    }
+    .shivam .Dis2Sceen .footer_All .clrinicaotpopup .centerdiv .A_001 .icon_01{
+        color: #FFF;
+        font-size: 18px;
+        height: 20px;
+        display: block;
+        text-align: center;
+        margin: 0px auto;
+        min-height: 20px;
+        vertical-align: middle;
+    }
+    .shivam .Dis2Sceen .footer_All .clrinicaotpopup .centerdiv .A_001 .attahfle{
+       transform: rotate(50deg);
+        overflow: hidden;
+        width: 30px;
+        font-size: 16px;
+        padding-top: 2px;
+    }
+    .shivam .Dis2Sceen .footer_All .clrinicaotpopup .centerdiv .A_001 .textspna{
+        width: 100%;
+        display: block;
+        padding: 0px;
+        margin: 0px;
+        color: #FFF;
+        height: 20px;
+        min-height: 20px;
+        vertical-align: middle;
+        float: left;
+    }
+    .shivam .sheet-modal_01{    }
+    .shivam .sheet-modal_01 .toolbar{
+        background: #C60;
+    }
+    .shivam .sheet-modal_01 .sheet-modal-inner{  }
+    .shivam .sheet-modal_01 .sheet-modal-inner .page-content{
+        padding: 0px !important;
+    }
+    .shivam .sheet-modal_01 .sheet-modal-inner .page-content .links-list{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    .shivam .sheet-modal_01 .sheet-modal-inner .page-content .links-list .inlinkDis2{
+        position: relative;
+        display: block;
+        width: 25%;
+        margin: 0px;
+        padding: 0px;
+        float: left;
+        height:80px;
+    }
+    .shivam .sheet-modal_01 .sheet-modal-inner .page-content .links-list .btnDis2{
+        border: 0px;
+        background: transparent;
+        outline: none;
+        width: 100%;
+        margin: 0px 0px;
+        padding: 5px 3px;
+        padding-bottom: 0px;
+        display: inline-block;
+        text-align: center;
+        height: auto;
+    }
+    .shivam .sheet-modal_01 .sheet-modal-inner .page-content .links-list a:after{
+        height: 0px;left: 0px;
+    }
+    .shivam .sheet-modal_01 .sheet-modal-inner .page-content .links-list .btnDis2 .Icon_03{
+        color: #4094E0;
+        font-size: 34px;
+        height: 40px;
+        width: 50px;
+        text-align: center;
+        line-height: 40px;
+        vertical-align: middle;
+    }
+    .shivam .sheet-modal_01 .sheet-modal-inner .page-content .links-list .btnDis2 .Icon_03.order{
+        font-size: 48px;
+    }
+    .shivam .sheet-modal_01 .sheet-modal-inner .page-content .links-list .btnDis2 .lblspan_03{
+        width: 100%;
+        display: block;
+        color: #000;
+        font-size: 16px;
+        text-align: center;
+        padding-top: 5px;
+    }
+    .Dis2Sceen .gplacontainer{display: none;}
+    .Dis2Sceen .gplacontainer .gpladata{
+        display: inline-block;
+        width: 100%;
+        border-bottom: 1px solid #ECECEC;
+        white-space: nowrap;
+        overflow: auto;
+         background: #FFF;
+    }
+    .Dis2Sceen .gplacontainer .tblgpla{width: 100%;}
+    .Dis2Sceen .gplacontainer .tblgpla tr{}
+    .Dis2Sceen .gplacontainer .tblgpla tr td{
+        border-right: 1px solid #ECECEC;
+        padding: 0px 5px;
+    }
+    .Dis2Sceen  .chartframework{display: none;}
+    .Dis2Sceen .chartframework{    }
+    @-webkit-keyframes mymoveDis { 0% { left:99%; right:0%;} 99% { left:0px; right:0px;}}
+    @keyframes mymoveDis { 0% { left:99%; right:0%;} 99% { left:0px; right:0px;}}
+    .Dis2Sceen .chartframework{ 
+        position: relative; 
+        -o-animation: mymoveDis .5s infinite;
+        -moz-animation: mymoveDis .5s infinite;
+        -webkit-animation: mymoveDis .5s infinite;
+        animation: mymoveDis .5s infinite; 
+        -moz-animation-iteration-count:1;
+        -o-animation-iteration-count:1; 
+        -webkit-animation-iteration-count:1;
+        animation-iteration-count:1; 
+        -o-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards; 
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards; 
+        overflow-x: hidden;
+    }
+    @media only screen and (max-width:620px){
+       .shivam .sheet-modal_01 .sheet-modal-inner .page-content .links-list .inlinkDis2{
+        width: 33.33%;
+      } 
+    }    
+    .pd{padding: 0px;}
+    .shivam .Dis2Sceen .DisHistoryContainer{
+        
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list{
+        padding-top: 2px;
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li{    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list ul:after{
+/*        height: 0px;*/
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list ul:before{
+        height: 0px;
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li .item-content{
+        padding: 0;
+        min-height: 45px;
+        height: 45px;
+        margin-bottom: 0px;
+        background-color: #FFFFFF !important;
+    }
+    .DisHistoryContainer .col-sm-12{
+        width: 100%;
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li .item-content .item-inner{
+        min-height: 45px;
+        height: 45px;
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li .item-content .item-inner .item-title{
+/*        color: #FFF;*/
+        font-size: 16px;
+        font-weight: normal;
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li.accordion-item-opened .item-content{
+        background-color: #347AA3 !important;
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li.accordion-item-opened .item-content .item-inner .item-title{
+        color: #FFF;
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li .item-content .item-inner .item-title:after{
+/*        height: 0px;*/
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li .item-content.checklbl{
+        text-align: left;
+        margin: 0px;
+        background: transparent !important;
+        float: left;
+        padding: 0px 10px;
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li .item-content.checklbl .icon_check{
+        right: 0px;
+        margin: 0;
+        float: left;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        border: 2px solid #BCBCBC;
+        margin-top: -1px;
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li .item-content.checklbl .txtcheck{
+        float: left;
+        display: inline-block;
+        width: 100%;
+        font-weight: normal;
+        color: #000;
+        padding-left: 10px;
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list .item-title{
+        padding-left: 10px;
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li .accordion-item-content{
+        
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li.accordion-item-opened{
+        border: 1px solid #347AA3;
+        border-top: 0px;
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li .block{
+          padding: 0px;
+          margin: 0px;
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li.accordion-item-opened .accordion-item-content .block{
+/*        padding: 0px 5px;*/
+    }
+     .shivam .Dis2Sceen .gplabtn{
+       padding: 4px 4px;
+        text-transform: capitalize;
+        width: 50px;
+        min-width: 40px;
+        word-break: break-word;
+        white-space: normal;
+        word-wrap: break-word;
+        font-size: 11px;
+        border: 1px solid #CBCBCB;
+        margin-right: 4px;
+        height: 35px;
+        border-radius: 2px;
+        line-height: normal;
+        min-height: 35px;
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li.accordion-item-opened .accordion-item-content .block .data-table{
+       border: 1px solid #F1F1F1;
+        border-top: 0px;
+        border-bottom: 0px;
+
+    }
+    .DisHistoryContainer .list li .accordion-item-content .block .data-table .tbl1 tr td .viebtn{
+        height: auto;
+        display: inline-block;
+        color: #FFF;
+        border-radius: 2px;
+        padding: 2px 8px;
+        text-transform: capitalize;
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .data-table tbody td:before{height: 0px;}
+    .shivam .Dis2Sceen .DisHistoryContainer .list li.accordion-item-opened .accordion-item-content .block .data-table .tbl1{
+        
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li.accordion-item-opened .accordion-item-content .block .data-table .tbl1 tr th{
+        height: auto;
+        text-align: left;
+        color: #000;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 5px 10px;
+        padding-right: 0px;
+        background: #F7F7F7;
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li .accordion-item-content .block .data-table .tbl1 tr td{
+       height: auto;
+        text-align: left;
+        padding: 5px 10px;
+        padding-right: 0px;
+        font-size: 14px;
+        color: #000;
+        border-bottom: 1px solid #F1F1F1;
+        cursor: pointer;
+    }
+    .shivam .Dis2Sceen .DisHistoryContainer .list li .accordion-item-content .block .data-table .tbl1 tr th:nth-child{width: 10%}
+    .shivam .Dis2Sceen .DisHistoryContainer .list li .accordion-item-content .block .data-table .tbl1 tr td:nth-child{width: 10%}
+    .shivam .popup-pdf{
+        left: 0px;
+        right: 0px;
+        width: 100%;
+        margin: 0px;
+        top: 0px;
+        bottom: 0px;
+        height: 100%;
+    }
+        .shivam .popup-pdf .block{margin: 0px;padding: 0px;}
+        .shivam .popup-pdf .poppdfhed{
+            height: 45px;
+            min-height: 45px;
+            background: #367fa9;
+            display: block;
+            width: 100%;
+        }
+        .shivam .popup-pdf .poppdfhed .closeicon_0A{
+            color: #FFFFFF;
+            opacity: 1;
+            width: 45px;
+            height: 45px;
+            float: right;
+        }
+        .shivam .popup-pdf .divimg{
+           overflow: auto;
+            display: block;
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 52px;
+            bottom: 10px;
+        }
+        .shivam .popup-pdf .divimg .img_01{
+            width: 100%;
+        }
+        .shivam .popup-pdf .divimg .vdo{
+            height:99%;
+            width: 100%;
+            object-fit: initial;
+        }
+        .shivam .DisHistoryContainer .Attacbtn{
+            display: block;
+            width: 80px;
+            float: left;
+            height: 32px;
+            min-height: 32px;
+            vertical-align: middle;
+            text-align: center;
+            color: #FFF;
+            margin: 10px 0px;
+            margin-bottom: 5px;
+            border-radius: 3px;
+            padding: 0px 0px;
+            padding-top: 5px;
+            padding-left: 4px;
+        }
+        .shivam .DisHistoryContainer .Attacbtn .iconattch{
+            font-size: 18px;
+            float: left;
+            display: block;
+            height: 20px;
+            margin: 0px auto;
+            transform: rotate(40deg);
+            padding-top: 2px;
+            margin-left: 2px;
+            width: 20px;
+        }
+        .shivam .DisHistoryContainer .Attacbtn .textAttch{
+            display: inline-block;
+            margin: 0px;
+            text-align: center;
+            float: left;
+            font-size: 16px;
+        }
+        .shivam .popup-Attachment{
+            width: 100%;
+            left: 0px;
+            margin: 0px;
+            padding: 0px;
+            top: initial;
+            right: 0px;
+            bottom: 0px;
+        }
+        .shivam .popup-Attachment .list{
+            margin: 0px;padding: 0px;
+        }
+        .shivam .popup-Attachment .list ul:after{height: 0px;}
+        .shivam .popup-Attachment .list ul:before{height: 0px;}
+        .shivam .popup-Attachment .list .list-button{        }
+        .shivam .popup-Attachment .list .list-button .iconleft{
+            display: inline-block;
+            vertical-align: middle;
+            color: #2F6FB4;
+        }
+        .shivam .popup-Attachment .list .list-button .lbmcanpopup{
+             display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+            color: #000;
+        }
+        .popup.popup-gridtr{
+            width: 100%;
+            height: 100%;
+            left: 0px;
+            right: 0px;
+            margin: 0px;
+            top: 0px;
+        }
+        .popup.popup-gridtr .block{margin: 0px;padding: 0px;}
+        .popup.popup-gridtr .block .poppdfhed{
+            height: 50px;
+            min-height:50px;
+            background: #367fa9;
+            display: block;
+            width: 100%;
+        }
+        .popup.popup-gridtr .block .poppdfhed .closeicon_0A{
+            color: #FFFFFF;
+            opacity: 1;
+            width: 45px;
+            height: 45px;
+            float: right;
+        }
+        .popup.popup-gridtr .block .poppdfhed .iconclose{        }
+        .popup.popup-gridtr .block .Gridcontent{
+            overflow: auto;
+            display: inline-block;
+            width: 100%;
+        }
+        .popup.popup-gridtr .block .Gridcontent .col-leftgrid{
+            display: inline-block;
+            width: 60%;
+             float: left;
+        }
+        .popup.popup-gridtr .block .Gridcontent .col-rghtgrid{
+            width: 37%;
+            float: left;
+            display: inline-block;
+        }
+        .popup.popup-gridtr .block .Gridcontent .tbldetail {        }        
+        .popup.popup-gridtr .block .Gridcontent .tbldetail tr td{
+            height: auto;
+            line-height: normal;
+            padding: 5px 5px;
+            padding-right: 5px;
+            font-size: 14px;
+            border-bottom: 1px solid #F7f7f7;
+            border-right: 1px solid #f7f7f7;
+        }
+        .popup.popup-gridtr .block .Gridcontent .tbldetail tr:nth-child(1) td{
+            background: #F7f7f7;
+            font-weight: 700;
+        }
+       .shivam .popup.popup-gridtr .data-table tbody td:before{
+            height: 0px;
+        }
+        .popup.popup-gridtr .block .Gridcontent .tbldetail tr td .btntrend{
+            padding: 3px 10px;
+            border-radius: 3px;
+            outline: none;
+        }
+        .popup.popup-gridtr .block .Gridcontent .grphdiv{
+            background: #F7F7F7;padding-bottom: 15px;
+        }
+        .popup.popup-gridtr .block .Gridcontent .grphdiv .ajab8{
+            padding: 5px;
+            display: inline-block;
+            width: 100%;
+        }
+        .popup.popup-gridtr .block .Gridcontent .grphdiv .chartslctgrph{
+            padding: 5px;
+            border: 1px solid #E2E2E2;
+            background: #FFF;
+            float: right;
+            border-radius: 4px;
+        }
+        .popup.popup-gridtr .block .Gridcontent .grphdiv .divchart1{
+            width: 94%;
+            overflow: hidden;
+            margin: 0px auto;
+        }        
+        .popup.popup-gridtr .block .Gridcontent .tabsdiv{
+            width: 100%;
+            padding: 0px;
+            white-space: nowrap;
+            background: #D9D9D9;
+        }
+        .popup.popup-gridtr .block .Gridcontent .tbscontent{
+            display: inline-block;
+            text-align: center;
+            width: auto;
+            position: relative;
+            border-right: 1px solid #B1ADAD;
+            background: #D9D9D9;
+        }
+        .popup.popup-gridtr .block .Gridcontent .tabsdiv .tabs1{        }
+        .popup.popup-gridtr .block .Gridcontent .tabsdiv .tablink{
+            display: inline-block;
+            min-height: 40px;
+            height: 40px;
+            vertical-align: middle;
+            float: left;
+            white-space: nowrap;
+            padding: 10px 5px;
+            color: #000;
+        }
+        .popup.popup-gridtr .block .Gridcontent .tabsdiv .tablinkclose{
+            display: inline-block;
+            min-height: 40px;
+            height: 40px;
+            color: #F00;
+            width: 50px;
+            text-align: center;
+            padding-top: 10px;
+        }
+        .popup.popup-gridtr .block .Gridcontent .tabsdiv .tbscontent.active{
+            background: #FFFFFF;
+        }
+        @media only screen and (max-width:620px){
+            .popup.popup-gridtr .block .Gridcontent .col-leftgrid{width: 100%;}
+            .popup.popup-gridtr .block .Gridcontent .col-rghtgrid{width: 100%;}
+            .shivam .Dis2Sceen .DisHistoryContainer .list li .item-content.checklbl .txtcheck{padding-left: 3px;}
+        }
+        .shivam .ChangeUser{ }
+        .shivam .ChangeUser .DivShowPass{
+            text-align: right;
+            width: 100%;
+            border-bottom: 1px solid rgba(0,0,0,.12);
+            height: 35px;
+            min-height: 35px;
+        }
+        .shivam .ChangeUser .DivShowPass:after{height: 0px;}
+        .shivam .ChangeUser .DivShowPass .item-checkbox{
+            display: inline-block;
+            width: auto;
+            float: right;
+            position: absolute;
+            right: 0px;
+            padding-right: 16px;
+        }
+        .shivam .ChangeUser .DivShowPass .item-checkbox .icon-checkbox{
+            margin: 0px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .shivam .ChangeUser .DivShowPass .item-checkbox .checktxt{
+            float: right;
+            display: block;
+            padding-top: 2px;
+            width: auto;           
+        }        
+        .shivam .ChangeUser .Divbtnsign{
+            text-align: right;
+            width: 100%;
+            position: relative;
+            display: block;
+            overflow: hidden;
+            
+        }
+        .shivam .ChangeUser .Divbtnsign .btnsign{
+           outline: none;
+            border: 0px;
+            font-size: 18px;
+            padding: 7px 2px;
+            
+        }
+        .shivam .ChangeUser .item-inner{
+            padding-top: 0px;   
+        }
+        .shivam .ChangeUser .loginContainer{
+            display: block;
+            width: 360px;
+            margin: 0px auto;
+            margin-top: 10px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset
+        }
+        .shivam .ChangeUser .lblhedDshbord{
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #E9E9E9;
+            color: #000;
+            font-weight: 400;
+            background: rgba(189, 183, 183, 0.1);
+            margin-bottom: 10px;
+        }
+        .shivam .ChangeUser .list .item-floating-label{
+            font-weight: normal;
+        }
+        .shivam .ChangeDate {        }
+        .shivam .ChangeDate .tblcalender{
+            display: table;
+            height: 100%;
+            width: 100%;
+        }
+        .shivam .ChangeDate .tblcalender .tltdCalender{
+            display: table-cell;
+            height: 100%;
+            width: 100%;
+            vertical-align:middle;
+        }
+        .shivam .ChangeDate .tblcalender .tltdCalender .DateConainer_D1{
+            margin-top: -100px;
+            width: 400px;
+            margin: 0px auto;
+             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+             padding: 15px;              
+        }
+        .shivam .ChangeDate .tblcalender .tltdCalender .DateConainer_D1 .fromDtlabl{
+            width: 100%;
+            padding: 8px 0px;
+            color: #000;
+            font-size: 16px;
+        }
+        .shivam .ChangeDate .tblcalender .tltdCalender .DateConainer_D1 .inputcal{
+            padding: 10px 0px;
+            border: 1px solid #d3d3d3;
+            border-radius: 3px;
+            width: 100%;
+            padding-left: 10px;
+            color: #000;
+            font-weight: normal;
+        }
+        .shivam .ChangeDate .tblcalender .tltdCalender .DateConainer_D1 .btnsub{
+            padding: 8px 0px;
+            font-size: 16px;
+            margin-top: 10px;
+            outline: none;
+        }
+        .shivam .popup-pdf .divimg .vdo{ height:95%;}
+        @media only screen and (max-width:590px){
+             .shivam .popup-pdf .divimg .vdo{ height:85%;}
+        }
+        @media only screen and (max-width:580px){
+            .shivam .ChangeUser .loginContainer{box-shadow: none;width: 100%;}
+            .shivam .ChangeUser .lblhedDshbord{background: transparent;}
+        }
+         @media only screen and (max-width:450px){
+             .shivam .ChangeDate .tblcalender .tltdCalender .DateConainer_D1{
+                 width: 90%;
+             }
+            .shivam .popup-pdf .divimg .vdo{ height:96%;}
+        }

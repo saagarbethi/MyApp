@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<!--To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.-->
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="PrintPDF.js"></script>
+        <script type="text/javascript" src="http://192.168.0.140:8888/fh/js/mobile.js"></script>
+    </head>
+    <body>
+        <div>Click Here To Capture</div>
+        <input type="button" value="Capture" onclick="capturePhoto()">
+        <input type="image" id="smallImage" style="width: 100px;height: 200px;">
+        <label id="lbinfo"> 
+
+        </label>
+        <input type="button" onclick="printpdf()" value="printpdf">
+        <input type="button" onclick="printpdf2()" value="printpdf2">
+        <input type="button" onclick="download()" value="download">
+        <input type="button" onclick="download1()" value="download1">
+        <input type="button" onclick="print1()" value="print1">
+        <input type="button" onclick="print2()" value="print2">
+        <input type="button" onclick="print3()" value="print3">
+        <div id="notice">
+            test print
+        </div>
+        <input type="button" onclick="openpdf()" value="openpdf">
+        <input type="button" onclick="printpdf()" value="printpdf">
+        <input type="button" onclick="printpdf2()" value="printpdf_static">
+        <input type="button" onclick="printpdf3()" value="printpdf_local">
+    </body>
+</html>

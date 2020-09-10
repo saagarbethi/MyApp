@@ -1,0 +1,177 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 13, 2019, 1:50:40 PM
+    Author     : Ajab
+*/
+
+.header{
+            position: fixed;
+            border: none;
+            color: #fff;
+            border-radius: 0px;
+            z-index: 9999;
+            margin: 0px;
+            min-height: 40px;
+            top: 0;
+            height: 40px;
+            width: 100%;
+            background: #367fa9;
+        }
+        .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header{margin:0px;}
+        .headrlbl{
+            font-weight: 500;
+            font-size: 20px;
+            color: #fff;
+            margin: 0px;
+            padding-top: 6px;
+            padding-left: 10px;
+        }
+        .row{margin: 0px;}
+        .pad, .container-fluid{padding: 0px;}
+        .form-horizontal .form-group{padding: 0px;margin: 0px;}
+/*        footer{
+            background-color:#C60; 
+            position: fixed; 
+            color: #fff; 
+            text-align: center; 
+            vertical-align: middle;
+            bottom: 0;
+            width: 100%;
+            z-index: 9;
+            height: 40px;
+            padding:0px;
+        }*/
+        label{margin:0px;font-weight: 500;}
+        .row_001{margin-top: 10px;}
+        .form-horizontal{
+            margin: 0px auto;
+            width: 275px;
+/*            height: 500px;*/
+            z-index: 999999;
+/*            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;*/
+        }
+        .input-group-addon.tempspan{
+            position: absolute;
+            left:10px;
+/*            top:80px;*/
+            opacity: 0;
+            visibility: hidden;
+        }
+        .lblcal{
+            height: 34px;
+            left: 0;
+            z-index: 99;
+            position: absolute;
+            padding: 6px 12px;
+            font-size: 14px;
+            font-size: 100% !important;
+            font-weight: 400;
+            font-weight: 500;
+            line-height: 1;
+            color: #6F6F6F;
+            text-align: center;
+            background-color: #FFF;
+            border: 1px solid #E0E0E0;
+        }
+        .spncalicn{
+            font-size: 16px;
+            margin-top: 2px;
+            color: #367fa9;
+        }
+        .glyphicon-remove{
+            color: rgb(251, 20, 20);
+            font-size: 16px;
+        }
+        .input-group-addon{
+            padding: 6px 12px;
+            font-size: 14px;
+            font-size: 135% !important;
+            font-weight: 400;
+            line-height: 1;
+            color: red;
+            text-align: center;
+            background-color: #FFF;
+            border: 1px solid #E0E0E0;
+        }
+        .inputtxt{
+            width: 100%;
+           border: 1px solid #E0E0E0;
+            height: 34px;
+            border-right: 0px;
+            padding-left: 25px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .btn-block{border-radius:0px;outline: none;border: 0px;}
+        .table-condensed thead tr:nth-child(1){
+            background: #367fa9;
+        }
+        .table-condensed thead tr:nth-child(1) th{
+            color: #FFF;
+            font-weight: 500;
+            font-size: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .dropdown-menu{
+            margin: 80px 0 0;
+        }
+        [class*=" datetimepicker-dropdown"]:before{
+            
+        }
+        
+        .table-condensed  tfoot tr{background: #C60;};
+        .table-condensed tfoot tr:hover{background: #C60;}
+        .table-condensed thead tr{background:#F0F0F0;}
+        .table-condensed thead tr th{ font-weight:500;font-size: 16px;}
+        .table-condensed thead tr:nth-child(1) th.switch{width: 200px;}
+        .table-condensed thead tr:nth-child(1) th:hover{color:#000 !important;background: transparent;}
+        .table-condensed thead tr:nth-child(1) th.prev{border-right: 1px solid #FFF;border-left: 1px solid rgba(255, 255, 255, 0.83);}
+        .table-condensed thead tr:nth-child(1) th.next{border-left:1px solid #FFF;border-right:1px solid rgba(255, 255, 255, 0.83);}
+        .datetimepicker td, .datetimepicker th{
+            border-radius:0px;
+        }
+        tfoot tr{color:#fff;}
+        .datetimepicker tfoot tr th{color: inherit;font-weight:500;font-size:20px;border-left: 1px solid #fff;}
+        .datetimepicker tfoot tr:first-child th:hover{font-weight:600;background: transparent;}
+        .table-condensed>tbody>tr>td{
+            border-right: 1px solid #F4F4F4;
+            border-bottom: 1px solid #F4F4F4;
+            color: #000;
+            font-size: 16px;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+         .cntnrnagn{margin-top: 80px;}
+        .lbl1{font-size:14px;font-size: 100% !important;}
+        @media(min-width:1300px){
+            .form-horizontal{width:400px;}
+        }
+        
+        @media(min-width:275px){
+            .form-horizontal{width:275px;}
+            .lbl1{font-size: 135% !important;}
+            .inputtxt{font-size: 135% !important;height:50px;}
+            .btn-block{font-size: 150% !important;height: 45px;}
+             .input-group-addon{font-size: 135% !important;}
+             .spncalicn{font-size:30px;}
+             .glyphicon-remove{font-size:25px;}
+             .lblcal{height:50px;}
+             .input-group.date .input-group-addon span{width:25px;}
+        }
+        @media(min-width:600px){
+            .cntnrnagn{margin-top:80px;}
+        }
+        @media(min-width:580px){
+            .form-horizontal{width:500px;}
+            .col-lbl{width:40%}
+            .col-dt{width:60%;}
+            .lbl1{padding-top: 10px;width: 100%;text-align: center;}
+            .form-horizontal .control-label{text-align: center;}
+            .cntnrnagn{margin-top: 50px;}
+        }
+        .iosstatusbar{height:20px;background: #31708F;width:100%;display:none;}

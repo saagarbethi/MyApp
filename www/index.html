@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Shivam Medisoft | Login</title>
+         <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+          <script type="text/javascript" src="phonegap.js"></script>
+        <style>
+@font-face {
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-style: normal;
+	src:
+		url(css/fonts/roboto-regular-webfont.woff2) format('woff2'),
+		url(css/fonts/roboto-regular-webfont.woff) format('woff'),
+		url(css/fonts/roboto-regular-webfont.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-weight: 500;
+	font-style: normal;
+	src:
+		url(css/fonts/roboto-medium-webfont.woff2) format('woff2'),
+                url(css/fonts/Roboto-Medium-webfont.woff) format('woff'),
+                url(css/fonts/roboto-medium-webfont.ttf) format('truetype');
+}
+            html,body{
+                background-color:transparent;
+                color: rgba(0,0,0,1);
+                font-family: Roboto, Arial, sans-serif;
+                font-size: 90%;
+                margin: 0 auto;
+                -webkit-font-smoothing: subpixel-antialiased;
+/*                background-color: #86A0B7;*/
+                background: #ECEBEB;
+                color: rgba(0,0,0,1);
+                font-weight: normal;
+                font-size: 90%;
+                margin: 0px;
+                -webkit-font-smoothing: subpixel-antialiased;
+            }
+  body{
+                 padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
+            }
+            footer{
+    margin-bottom: constant(safe-area-inset-bottom);
+    margin-bottom: env(safe-area-inset-bottom);
+}
+
+            body{
+                /*                background:#DDDEDE;*/
+               font-family: Roboto, Arial, sans-serif;               
+                /*                background: url(images/loginbg7.jpg) no-repeat center center fixed; 
+                                -webkit-background-size: cover;
+                                -moz-background-size: cover;
+                                -o-background-size: cover;
+                                background-size: cover;*/
+                font-size: 13px;
+                line-height: 21px;
+                font-weight: 300;
+                color: #000;
+            }
+
+            .button{
+                /* width:100px; */
+/*                background:#31708F;*/
+/*                background:#2A4863;*/
+/*                 background: #F7F7F7;*/
+                background: #367fa9;
+                  font-family: Roboto, Arial, sans-serif;
+                /*background: rgba(255,255,255,.4);
+                -webkit-background: rgba(255,255,255,.4);
+                -moz-background: rgba(255,255,255,.4);
+                -o-background: rgba(255,255,255,.4);*/
+                display:block;
+                margin:0 auto;
+                /* margin-top:1%; */
+                padding:10px;
+                text-align:center;
+                text-decoration:none;
+                color:#FFFFFF;
+                cursor:pointer;
+                transition:background .3s;
+                -webkit-transition:background .3s;
+                font-size: 25px;
+                margin-right: -15px;
+                margin-left: -15px;
+                border-bottom: 1px solid #d3d3d3;
+                font-weight: 500;
+            }
+
+
+            .login{
+                width:600px;
+                margin:0 auto;
+                margin-top:4%;
+                margin-bottom:2%;
+                transition:opacity 1s;
+                -webkit-transition:opacity 1s;
+
+            }
+
+            #triangle{
+                width:0;
+                border-top:12px solid transparent;
+                border-right:12px solid transparent;
+                border-bottom:12px solid #2A4863;
+                border-left:12px solid transparent;
+                margin:0 auto;
+            }
+
+            .login h1{
+/*                background:#2A4863;*/
+                background: #F7F7F7;
+                /*background: rgba(255,255,255,.3);
+                -webkit-background: rgba(255,255,255,.3);
+                -moz-background: rgba(255,255,255,.3);
+                -o-background: rgba(255,255,255,.3);
+                */                
+                padding:20px 0;
+                 font-family: Roboto, Arial, sans-serif;
+                font-size:140%;
+                font-weight:500;
+                text-align:center;
+                color:#367fa9;
+                margin: 0px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                border-bottom: 1px solid #d3d3d3;
+                border-top: 1px solid #d3d3d3;
+            }
+            .login h1:before{
+                content: " ";
+                border-top: 12px solid transparent;
+                border-right: 12px solid transparent;
+                border-bottom: 12px solid #F7F7F7;
+                border-left: 12px solid transparent;
+                position: absolute;
+                top: -22px;
+                margin-left: 30px;
+            }
+
+            form{
+/*                background:#f0f0f0;*/
+                background: #FFFFFF;
+                /*background: rgba(255,255,255,.1);
+                -webkit-background: rgba(255,255,255,.1);
+                -moz-background: rgba(255,255,255,.1);
+                -o-background: rgba(255,255,255,.1);*/
+                padding:6% 4%;
+                /*                -moz-box-shadow: 0 5px 10px #777;
+                                box-shadow: 0 5px 10px #777;*/
+            }
+            .effect8
+            {
+                position:relative;
+                -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+                -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+                box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+                background: #FFFFFF;
+            }
+            .effect8:before, .effect8:after
+            {
+                content:"";
+                position:absolute;
+                z-index:-1;
+                -webkit-box-shadow:0 0 20px rgba(0,0,0,0.7);
+                -moz-box-shadow:0 0 20px rgba(0,0,0,0.7);
+                box-shadow:0 0 20px rgba(0,0,0,0.7);
+                top:10px;
+                bottom:10px;
+                left:0;
+                right:0;
+                -moz-border-radius:100px / 10px;
+                border-radius:100px / 10px;
+            }
+            .effect8:after
+            {
+                right:10px;
+                left:auto;
+                -webkit-transform:skew(8deg) rotate(3deg);
+                -moz-transform:skew(8deg) rotate(3deg);
+                -ms-transform:skew(8deg) rotate(3deg);
+                -o-transform:skew(8deg) rotate(3deg);
+                transform:skew(8deg) rotate(3deg);
+            }
+            .btnfont{font-size:22px;font-family: Roboto, Arial, sans-serif;}
+            .btngrp{margin: 0px 5px;}
+            @media only screen and (max-width: 380px) {
+                .login{width:100%;}
+                .btnfont{font-size:19px;}
+                .btngrp{margin: 0px 1px;}
+                .btngrpholddiv{padding-left: 0px; padding-right: 0px;margin: 0px;}
+                form{padding:10% 0.5%;}
+            }
+            @media only screen and (max-width: 320px) {
+                .abttm{margin: 5px 0px;}
+                .btnfont{font-size:10px;}
+            }
+            @media only screen and (max-width: 768px) {
+                .login{width:100%;}
+            }
+            @media only screen and (max-width: 992px) {
+                .login{width:100%;margin-top:7%;}
+            }
+             @media only screen and (max-width: 420px) {
+                .login{width:100%;margin-top: 10%;}
+            }
+            .row{margin:0px;}
+
+        </style>
+        <script>
+            function check() {
+                debugger;
+                
+                try{ 
+                    var deviceType = (navigator.userAgent.match(/iPad/i)) == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i)) == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : (navigator.userAgent.match(/BlackBerry/i)) == "BlackBerry" ? "BlackBerry" : "null"; 
+//                   confirm(deviceType); 
+                    localStorage.devicetype = deviceType; 
+                }catch(err){}
+                
+                try{
+		      localStorage.removeItem("disback");
+	    localStorage.removeItem("repback");
+	    localStorage.removeItem("apptback");
+	  
+                var i, link_tag ;
+                 var isExists = 0;
+                              link_tag = document.getElementsByTagName("link") ;
+    var css_title = localStorage.themecolor;
+            StatusBar.backgroundColorByHexString("#31708F");
+            if(css_title != undefined && css_title != ""){
+                  for (i = 0, link_tag = document.getElementsByTagName("link"); i < link_tag.length ; i++ ) {
+             if ((link_tag[i].rel.indexOf( "stylesheet" ) !== -1) &&
+                 link_tag[i].title) {
+                 if (link_tag[i].title === css_title) {
+                     isExists = 1;
+                 }
+             }
+         }
+                if (css_title === "orange") {
+                    StatusBar.backgroundColorByHexString("#c72915");
+                    }
+                    else if (css_title === "green"){
+                         StatusBar.backgroundColorByHexString("#496b03");
+                    }
+                    else if (css_title === "blue"){
+                         StatusBar.backgroundColorByHexString("#033261");
+                    }
+                    else if (css_title === "teal"){
+                         StatusBar.backgroundColorByHexString("#00635f");
+                    }
+                    else if (css_title === "yellow"){
+                         StatusBar.backgroundColorByHexString("#5e6100");
+                    }
+                    else if (css_title === "gray"){
+                         StatusBar.backgroundColorByHexString("#383838");
+                    }
+                    else if (css_title === "peach"){
+                         StatusBar.backgroundColorByHexString("#a04d00");
+                    }
+                    else if (css_title === "pink"){
+                         StatusBar.backgroundColorByHexString("#ca1967");
+                    }
+                    else if (css_title === "purple"){
+                         StatusBar.backgroundColorByHexString("#37196f");
+                    }
+                    else if (css_title === "red"){
+                         StatusBar.backgroundColorByHexString("#4b0150");
+                    }
+                    else if (css_title === "skyblue"){
+                         StatusBar.backgroundColorByHexString("#005b65");
+                    }
+                    else if (css_title === "yellownew"){
+                         StatusBar.backgroundColorByHexString("#946e00");
+                    }
+                    }
+                     if(isExists == 0){
+         var color = localStorage.themecolor;
+         color = color.replace("%23","#");
+         //confirm(color);
+         chnagecssnew(color);
+         //confirm(cssdata);
+     }
+                }catch(err){
+                    
+                }
+                localStorage.appname = 'dashboard';
+                if(location.href.indexOf("show=1") == -1){
+		location.href = 'index_1.html?ab=1&isFromLogin=1';
+            }else{
+                location.href = 'index_1.html';
+            }
+//                if (localStorage.appurl !== undefined) {
+//                    if (localStorage.entrance === "Patient") {
+//                        location.href = 'PatientLoginThirdScreen.html'
+//                    } else
+//			if (localStorage.entrance === "Doctor") {
+//                        localStorage.appname = 'dashboard';
+//                        location.href = 'index_1.html'
+//                    }
+//                    if(localStorage.entrance===Patient && localStorage.loginuser!==null){
+//                        location.href = 'PatientLoginThirdScreen.html'
+//                    }
+//                }
+//                else {
+//                    location.href = 'PatientLoginSecondScreen.html'
+//                }
+            }
+            function entrance(type) {
+                debugger;
+                localStorage.entrance = type;
+                if (type === "Patient") {
+                    location.href = 'PatientLoginSecondScreen.html'
+                } else {
+                    location.href = 'index_1.html'
+                }
+            }
+        </script>
+    </head>
+    <body onload="check()">
+<!--        <div class="container-fluid" style="padding:0px;">
+             <div style="width:100%; background: #41729D; height: 20px;"></div>
+             <div class="row" style="margin: 0px;">
+                 <div class="col-sm-12" style="padding: 0px; background: #ffffff;">
+                     <h2 class="button" style="margin:0px; font-size: 23px;">Welcome to Hospital Login</h2>
+                 </div>
+             </div>
+            <div class="row" style="padding-left:15px;padding-right: 15px;margin: 0px;">
+
+                <div class="login">
+
+                    <div id="triangle" style="display: none;"></div>
+                    <div class="effect8">
+                        <h1 style="margin:0px;"><span style="font-size:23px;">Login As</span></h1>
+                        <form name="form">
+
+                            <div id='wrapper'>
+
+                                <div id='content'>
+
+                                    <div id='login'>
+
+                                        <div class="row" style="text-align:center;margin: 0px;">
+                                            <div class="col-md-12 btngrpholddiv" style="padding:0px;">
+                                                <div class="btn-group btnfont btngrp  abttm" style="margin: 0px 5px;" onclick="entrance('Patient')">
+                                                    <button type="button" class="btn btn-primary btnfont" >Patient</button>
+                                                    <button type="button" class="btn btn-primary btnfont" >
+                                                        <span class="glyphicon glyphicon-user"></span>
+                                                    </button>
+                                                </div>
+                                                <div class="btn-group btnfont btngrp  abttm" style="margin: 0px 5px;" onclick="entrance('Doctor')">
+                                                    <button type="button" class="btn btn-primary btnfont" >Doctor</button>
+                                                    <button type="button" class="btn btn-primary btnfont">
+                                                        <span class="fa fa-user-plus"></span>
+                                                    </button>
+                                                </div>
+                                                <div class="btn-group btnfont btngrp  abttm" style="margin: 0px 5px;">
+                                                    <button type="button" class="btn btn-primary btnfont" ></button>
+                                                    <button type="button" class="btn btn-primary btnfont">
+                                                        <a href="AppIntro.html">Fh</a>
+                                                    </button>
+                                                </div>
+                                                 <div class="btn-group btnfont btngrp  abttm" style="margin: 0px 5px;" onclick="entrance('Doctor')">
+                                                     <a href="mah_index.html"><button type="button" class="btn btn-primary btnfont" >Doctor</button></a>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>-->
+    </body>
+</html>

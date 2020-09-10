@@ -1,0 +1,809 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22 Aug, 2018, 10:22:07 AM
+    Author     : shivam
+*/
+
+//MobileTemplate Css Started
+    .shivam .mobileTemplate{
+        
+    }
+   .shivam .mobileTemplate .navbar{
+        
+    }
+    .shivam .mobileTemplate .navbar .right{
+        
+    }
+    .shivam .mobileTemplate .navbar .right .switch{
+        height: 50px;
+        line-height: 50px;
+    }
+    .shivam .mobileTemplate .navbar .right .switch .fa-spin{
+        font-size: 25px;
+    }
+    .shivam .popover.popover-Setting{
+        padding: 0px;
+        border-radius: 0px;
+        border: 0px;
+    }
+    .shivam .popover.popover-Setting .popover-Heading{
+       
+    }
+    .shivam .popover.popover-Setting .lblhd{
+        width: 100%;
+            padding: 5px 8px;
+            background: #F0F0F0;
+            font-size: 18px;
+    }
+    .shivam .popover.popover-Setting .block{
+         margin: 0px;
+        padding: 0px;
+    }
+    .shivam .popover.popover-Setting .listcontainr{
+        
+    }
+    .shivam .popover.popover-Setting .listcontainr{
+        
+    }
+    .shivam .popover.popover-Setting .listcontainr li{
+        border-bottom: 1px solid #EBEBEB;
+    }
+    .shivam .popover.popover-Setting .listcontainr li .linkD_01{
+        color: #000;
+        padding: 8px 5px;
+        height: auto;
+        display: block;
+    }
+    .shivam .mobileTemplate .mobineewcontinr{
+/*        margin-bottom: 5px;*/
+    }
+    .shivam .mobileTemplate .list.layoutMobile1{
+        
+    }
+    .shivam .mobileTemplate .list.layoutMobile1{
+        
+    }
+    .shivam .mobileTemplate .list.layoutMobileFixed li{
+        padding: 0px;
+    }
+    .shivam .mobileTemplate .list.layoutMobileFixed li .itminner{
+        padding: 0px; min-height: 35px;
+    }
+    .shivam .mobileTemplate .list.layoutMobileFixed li .itminner .leftdivfixed{
+        
+    }
+    .shivam .mobileTemplate .list.layoutMobileFixed li .item-inner .rightcntoldiv{
+        
+    }
+    .shivam .mobileTemplate .list.layoutMobileFixed li .itminner .rightcntoldiv .txtbx::-webkit-input-placeholder {
+       font-size: 14px;
+    }
+    .shivam .mobileTemplate .list.layoutMobileFixed li .itminner .rightcntoldiv .txtbx:-moz-placeholder { /* Firefox 18- */
+    font-size: 14px;
+    }
+    .shivam .mobileTemplate .list.layoutMobileFixed li .itminner .rightcntoldiv .txtbx::-moz-placeholder {  /* Firefox 19+ */
+    font-size: 14px;
+    }
+    .shivam .mobileTemplate .list.layoutMobileFixed li .itminner .rightcntoldiv .txtbx:-ms-input-placeholder {  
+        font-size: 14px;
+    }
+    
+     .shivam .mobileTemplate .list.layoutMobileFixed li .radioinner .rightcntoldiv .checkboxdiv{
+        display: block;
+        overflow: auto;
+        max-height: 180px;
+    }
+    .shivam .mobileTemplate .list.layoutMobileFixed li .radioinner .rightcntoldiv .checkboxdiv .item-checkbox{
+         display: block;
+        width:100%;
+        padding:5px 0px;
+        padding-right: 10px;
+        font-size: 14px;
+        font-weight: normal;
+        position: relative;        
+    }
+     .shivam .mobileTemplate .list.layoutMobileFixed li .radioinner .rightcntoldiv .checkboxdiv .item-checkbox .icon-checkbox{
+         margin: 0px;
+        float: left;
+        display: inline-block;
+        margin-top: 2px;
+        margin-right: 5px;
+        position: absolute;
+        border: 2px solid #BCBCBC;
+        
+    }
+     .shivam .mobileTemplate .list.layoutMobileFixed li .radioinner .rightcntoldiv .checkboxdiv .item-checkbox .checktxt{
+        float: left;
+        display: inline-block;
+        padding-left: 25px;
+    }
+    .shivam .mobileTemplate .list.layoutMobileFixed li .radioinner .rightcntoldiv .item-radio{
+        display: block;
+        float: left;
+        padding:5px 0px;
+        padding-right: 10px;
+        font-size: 14px;
+    }
+    .shivam .mobileTemplate .list.layoutMobileFixed li .radioinner .rightcntoldiv .item-radio .icon-radio{
+        margin: 0px;
+        float: left;
+        display: inline-block;
+        margin-top: 2px;
+        margin-right: 5px;
+        position: absolute;
+        border: 2px solid #BCBCBC;
+    }
+    .shivam .mobileTemplate .list.layoutMobileFixed li .radioinner .rightcntoldiv .item-radio .radio_text{
+        float: left;
+        display: inline-block;
+        padding-left: 25px;
+        margin-top: 4px;
+        font-weight: normal;
+        line-height: normal;
+    }
+    .shivam .mobileTemplate .list.layoutMobileFixed li .itminner .leftlbldiv{
+         position: relative;
+         padding-left: 5px !important;
+    }
+    
+    .shivam .mobileTemplate .list.layoutMobileFixed li .itminner .leftlbldiv .slidespanasterick{
+      color: #F00;
+        position: absolute;
+        left: 3px;
+        margin-top:2px;
+        display: none;
+    }
+    
+    .shivam .mobileTemplate .list.layoutMobileFixed li.OnelyRadiocheck{
+        
+    }
+    .shivam .mobileTemplate .list.Mobtemlay2 li.OnelyRadiocheck .itminner{
+         border-bottom: 1px solid #E2E2E2;
+    }
+    .shivam .mobileTemplate .list.layoutMobileFixed li.OnelyRadiocheck .item-checkbox{
+        width: 100%;
+        padding:10px 0px;
+        padding-left: 26%;float: left;
+        font-weight: normal;
+        font-size: 14px;
+    }
+    .shivam .mobileTemplate .list.layoutMobileFixed li.OnelyRadiocheck .item-checkbox .icon-checkbox{
+        display: block;
+        float: left;
+        margin: 0px;
+        margin-top:0px;
+        margin-right:10px;
+        border: 2px solid #BCBCBC;
+    }
+/*    Button Li Started*/
+        .shivam .mobileTemplate .list.layoutMobileFixed li.Buttonli{
+
+        }
+        .shivam .mobileTemplate .list.layoutMobileFixed li.Buttonli .itminner{
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        }
+        .shivam .mobileTemplate .list.layoutMobileFixed li.Buttonli .itminner .ButtonDiv{
+            display: block;
+            width: 100%;
+            float: left;
+            text-align: center;
+        }
+        .shivam .mobileTemplate .list.layoutMobileFixed li.Buttonli .itminner .ButtonDiv .btnMT{
+            outline: none;
+            border: 0px;
+            padding: 3px 10px;
+            margin-top: 2px;
+            border-radius: 3px;
+        }
+        
+        
+    
+    .shivam .mobileTemplate .list.Mobtemlay1{
+        
+    }
+    .shivam .mobileTemplate .list.Mobtemlay1 li .itminner{
+        display: table;
+        width: 100%;
+        border-bottom: 1px solid #F2F2F2;
+    }
+    .shivam .mobileTemplate .list.Mobtemlay1 li .itminner .leftlbldiv{
+        display: table-cell;
+        width: 35%;
+        vertical-align: middle;
+        padding: 0px 5px;
+        background: #F6F6F6;
+        font-size: 14px;
+        text-transform: capitalize;
+    }
+    .shivam .mobileTemplate .list.Mobtemlay1 li .itminner .rightcntoldiv{
+        display: table-cell;
+        width:65%;
+        vertical-align: middle;
+    }
+    
+    
+    
+    .shivam .mobileTemplate .list.Mobtemlay1 li .itminner .rightcntoldiv .txtbx{
+        padding: 5px 5px;;
+        font-size: 14px;
+    }
+    .shivam .mobileTemplate .list.Mobtemlay1 li .itminner .rightcntoldiv .input-clear-button{
+        display: none;
+    }
+    .shivam .mobileTemplate MobtepDesign{
+        
+    }
+    
+    .shivam .mobileTemplate .list.Mobtemlay1 li .itminner .rightcntoldiv .txtbx::-webkit-input-placeholder {
+        color:transparent;
+    }
+    .shivam .mobileTemplate .list.Mobtemlay1 li .itminner .rightcntoldiv .txtbx:-moz-placeholder { /* Firefox 18- */
+       color:transparent; 
+    }
+    .shivam .mobileTemplate .list.Mobtemlay1 li .itminner .rightcntoldiv .txtbx::-moz-placeholder {  /* Firefox 19+ */
+       color:transparent; 
+    }
+    .shivam .mobileTemplate .list.Mobtemlay1 li .itminner .rightcntoldiv .txtbx:-ms-input-placeholder {  
+       color:transparent;
+    }
+    
+    .shivam .mobileTemplate .list.Mobtemlay1 li .itminner .rightcntoldiv .txtbx.input-focused{
+        border-bottom: 1px solid #F00;
+        -webkit-transition: all 250ms ease;
+        -moz-transition: all 250ms ease;
+        -ms-transition: all 250ms ease;
+        -o-transition: all 250ms ease;
+        transition: all 250ms ease;       
+    }
+/* radio button Design for layout one started Here*/
+    .shivam .mobileTemplate .list.Mobtemlay1 li .radioinner{
+        display: table;
+        width: 100%;
+        border-bottom: 1px solid #E2E2E2;
+    }
+    .shivam .mobileTemplate .list.Mobtemlay1 li .radioinner .leftlbldiv{
+        display: table-cell;
+        width: 35%;
+        vertical-align: middle;
+        padding: 0px 5px;
+        background: #F6F6F6;
+        font-size: 14px;
+        text-transform: capitalize;
+    }
+    .shivam .mobileTemplate .list.Mobtemlay1 li .radioinner .rightcntoldiv{
+        display: table-cell;
+        width: 70%;
+        vertical-align: middle;
+        padding: 0px 5px;
+    }
+   
+    .shivam .mobileTemplate .list.layoutMobileFixed .Selectcntrol .rightcntoldiv select{
+        font-size: 14px;
+        padding-left: 5px;
+    }
+    
+    .md .radio input[type=radio]:checked~.icon-radio, 
+    .md label.item-radio input[type=radio]:checked~* .icon-radio, 
+    .md label.item-radio input[type=radio]:checked~.icon-radio{
+        border-color: #2196f3 !important;
+    }
+    .md .checkbox input[type=checkbox]:checked~i,
+    .md label.item-checkbox input[type=checkbox]:checked~* .icon-checkbox, 
+    .md label.item-checkbox input[type=checkbox]:checked~.icon-checkbox{
+        background-color: #2196f3 !important;
+        border-color: #2196f3 !important;
+    }
+    
+    
+/*    Mobile Template Second Layout Started*/
+        .shivam .mobileTemplate .list.Mobtemlay2 li{
+                padding: 0px;
+                min-height: 35px;
+                padding-left: 5px;
+        }
+        .shivam .list.Mobtemlay2{
+            background: #FFF;
+        }
+        .shivam .list.Mobtemlay2 .lifixMT{
+            background: #FFFFFF;
+        }
+        .shivam .list.Mobtemlay2 .item-input-with-value .item-floating-label{
+                padding-top: 5px;
+                max-width: 100%;
+                height: auto;
+                line-height: normal;
+                padding-bottom: 5px;
+            }
+        .shivam .list.Mobtemlay2  .item-input-focused .item-floating-label,.md .item-input-focused .item-label{
+                   padding-top: 10px;
+        }
+    .shivam .mobileTemplate .list.Mobtemlay2 li .itminner{
+        padding-right: 5px;
+    }
+    
+    .shivam .mobileTemplate .list.Mobtemlay2 li .itminner .leftlbldiv{
+        padding-left:5px;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    
+    .shivam .mobileTemplate .list.Mobtemlay2 li.item-input-focused .itminner .leftlbldiv.item-floating-label{
+        -webkit-transform: scale(1) translateY(0px);
+        transform: scale(1) translateY(0px);
+    }
+    .shivam .mobileTemplate .list.Mobtemlay2 li.item-input-with-value .itminner .leftlbldiv.item-floating-label{
+        -webkit-transform: scale(1) translateY(0px);
+        transform: scale(1) translateY(0px);
+    }
+    .shivam .mobileTemplate .list.Mobtemlay2 li .itminner .leftlbldiv.item-floating-label{
+        -webkit-transform: scale(1.2222) translateY(11px);
+        transform: scale(1.2222) translateY(11px);
+        line-height: normal;
+text-transform: capitalize;
+    }
+    .shivam .mobileTemplate .list.Mobtemlay2 li .itminner .rightcntoldiv{
+       min-height:25px;
+    }
+    .shivam .mobileTemplate .list.Mobtemlay2 li .itminner .rightcntoldiv .txtbx{
+        height: auto;
+padding: 0px;
+padding-left:5px;
+    }
+    .shivam .mobileTemplate .list.Mobtemlay2 li .itminner .rightcntoldiv .txtbx:focused{
+        border-bottom: 1px solid #F00;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+       
+    }
+    .shivam .mobileTemplate .list.Mobtemlay2 .radioblock{
+        display: block;
+width: 100%;
+padding:7px;
+    }
+    .shivam .mobileTemplate .list.Mobtemlay2 .radioblock .radioinner{
+        display: inline-block;
+        border:0px;
+        width: 100%;
+        background: #FFF;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+        padding-bottom: 10px;
+    }
+    .shivam .mobileTemplate .list.Mobtemlay2 .radioblock .radioinner .leftlbldiv{
+        background: #F3F3F3;
+        padding: 2px 5px;
+    }
+    .shivam .mobileTemplate .list.Mobtemlay2 .radioblock .radioinner .rightcntoldiv{
+        display: block;
+        width: 100%;
+        padding: 0px 5px;
+    }
+    .shivam .mobileTemplate .list.Mobtemlay2 .Selectcntrol{
+        padding-right: 5px;
+    }
+    .shivam .mobileTemplate .list.Mobtemlay1 .Selectcntrol .rightcntoldiv{
+        padding-left: 5px;
+    }
+    
+    .shivam .mobileTemplate .list.Mobtemlay2 .Selectcntrol .itminner{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    }
+    .shivam .mobileTemplate .list.Mobtemlay2 .Selectcntrol .itminner .leftlbldiv{
+        color: #165F89;
+        padding: 5px;
+        padding-bottom: 0px;
+    }
+    
+    
+    .shivam .mobileTemplate .subhed_001{
+       width: 100%;
+        padding:2px 8px;
+        background: #367fa9;
+        color: #FFF;
+        font-size: 18px; 
+    }
+    .shivam .mobileTemplate .srchbtnrght{
+        display: inline-block;
+        width: 40px;
+        text-align: center;
+        position: absolute;
+        bottom: 0px;
+        top: 0px;
+        padding-top: 8px;
+        right: 5px;
+        z-index: 999999999;
+    }
+    .shivam .mobileTemplate .Mobtemlay2 .srchbtnrght{
+         top: -5px;
+    }
+    .shivam .mobileTemplate .Mobtemlay2 .srchbtnrght{
+        padding-top: 0px;
+    }
+    .shivam .mobileTemplate .srchbtnrght .gridSrchicon{
+        color: #ACA9A9;
+    }
+    .shivam .mobileTemplate .footer_All .left{
+        height: 40px;
+        text-align: center;
+        width: 10%;
+        float: left;
+    }
+   .shivam .mobileTemplate .footer_All .mobileftrdata{
+        height: 40px;
+        text-align: center;
+        width:90%;
+        float: left;
+    }
+    .shivam .mobileTemplate .footer_All .mobileftrdata .mobiltembtn{
+        min-height: 40px;
+        height: 40px;
+        display: inline-block;
+        vertical-align: top;
+        color: #FFF;
+        padding: 0px 3px;
+        padding-top: 4px;
+    }
+    .shivam .mobileTemplate .footer_All .mobileftrdata .mobiltembtn .iconmoftr{
+        line-height: normal;
+        display: block;
+        width: 45px;
+        margin: 0px auto;
+        margin-bottom: 2px;
+    }
+    .shivam .mobileTemplate .footer_All .mobileftrdata .mobiltembtn .icntrash{
+        font-size: 12px;
+        padding-top: 2px;
+         width: 100%;
+        line-height: normal;
+    }
+    .shivam .mobileTemplate .footer_All .mobileftrdata .mobiltembtn .irefresh{
+        font-size: 18px;
+        padding-top: 3px;
+        margin: 0px;
+        top: 0px;
+        line-height: normal;
+        float: left;
+         width: 100%;
+    }
+    .shivam .mobileTemplate .footer_All .mobileftrdata .mobiltembtn .txtmobtemftr{
+        
+    }
+    .shivam .search_poupMobtemp{
+        width: 100%;
+        margin: 0px;
+        left: 0px;
+        right: 0px;
+        height: 100%;
+        top: 0px;
+    }
+    .shivam .search_poupMobtemp .poppdfhed{
+         height: 45px;
+        min-height: 45px;
+        background: #367fa9;
+        display: block;
+        width: 100%;
+        float: left;
+    }
+    .shivam .search_poupMobtemp .poppdfhed .closeicon_0A{
+        color: #FFFFFF;
+        opacity: 1;
+        width: 45px;
+        height: 45px;
+       float: right;
+    }
+    .shivam .search_poupMobtemp .poppdfhed .iconclose{
+        
+    }
+    .shivam .search_poupMobtemp .subnavbar{
+        float: left;
+        top: 40px;
+   }
+    .shivam .search_poupMobtemp .GridDetailsrech{
+        padding: 0px;
+        float: left;
+        width: 100%;
+        display: block;
+        overflow: auto;
+        height: 87%;
+        margin-top: 45px;
+        padding-bottom: 50px;
+    }
+   .shivam .search_poupMobtemp .GridDetailsrech .tblsrchgrid{
+        border-bottom: 1px solid #E4E4E4;
+    }
+    .shivam .search_poupMobtemp .GridDetailsrech .tblsrchgrid tr{
+        
+    }
+    .shivam .search_poupMobtemp .GridDetailsrech .tblsrchgrid tr th{
+        font-weight: 500;
+        background: #F0F0F0;
+        font-size: 16px;
+        padding: 6px 10px;
+        border-right: 1px solid #E4E4E4;
+    }
+     .shivam .search_poupMobtemp .GridDetailsrech .tblsrchgrid td{
+        height: auto;
+        color: #000;
+        font-size: 14px;
+        padding: 8px 10px;
+        vertical-align: middle;
+         border-right: 1px solid #E4E4E4;
+    }
+    .shivam .my-SreachTMDetail{
+        
+    }
+    .shivam .my-SreachTMDetail .toolbar{
+        background: #C60;
+        height: 40px;
+    }
+    .shivam .my-SreachTMDetail .toolbar .toolbar-inner{
+        
+    }
+    .shivam .my-SreachTMDetail .toolbar .toolbar-inner .left{
+        font-size: 20px;
+        padding-left: 10px;
+    }
+    .shivam .my-SreachTMDetail .toolbar .toolbar-inner .right{
+        height: 40px;
+        padding: 0px;
+        vertical-align: middle;
+    }
+    .shivam .my-SreachTMDetail .toolbar .toolbar-inner .right .sheet-close{
+        height: 40px;
+    }
+    .shivam .my-SreachTMDetail .sheet-modal-inner{
+        
+    }
+    .shivam .my-SreachTMDetail .sheet-modal-inner .block{
+        margin: 0px;padding: 0px;
+    }
+    .shivam .my-SreachTMDetail .sheet-modal-inner .block .fromdatodate{
+        
+    }
+    .shivam .my-SreachTMDetail .sheet-modal-inner .block .fromdatodate .tblfrmto_01{
+        width: 100%;
+    }
+    .shivam .my-SreachTMDetail .sheet-modal-inner .block .fromdatodate .tblfrmto_01 tr td{
+        padding: 10px 5px;
+        color: #000;
+        font-size: 14px;
+        text-align: left;
+        padding-left: 10px;
+        border-bottom: 1px solid #E0E0E0;
+    }
+    .shivam .my-SreachTMDetail .sheet-modal-inner .block .fromdatodate .tblfrmto_01 tr td.tdtxt{
+        background: #F0F0F0;
+        width: 40%;
+    }
+    .shivam .my-SreachTMDetail .sheet-modal-inner .block .fromdatodate .spntxt_01{
+        color: #000;
+    }
+    .shivam .my-SreachTMDetail .sheet-modal-inner .block .fromdatodate .tblfrmto_01 tr td .dttxt{
+        width: 100%;
+        padding: 6px 2px;
+    }
+     .shivam .my-SreachTMDetail .sheet-modal-inner .block .srchdivshet_01{
+       box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+        font-size: 14px;
+        margin-top: 10px;
+        position: relative;
+        display: inline-block;
+        float: left;
+        border-radius: 5px;
+        width: 94%;
+        margin-left: 3%;
+        background: #FFF;
+        height: 45px;
+        border: 1px solid #E0E0E0;
+    }
+    .shivam .my-SreachTMDetail .sheet-modal-inner .block .srchdivshet_01 .txtboxsrch{
+        font-size: 16px;
+        width: 100%;
+        padding: 5px;
+        height: 40px;
+        color: #000;
+    }
+    .shivam .my-SreachTMDetail .sheet-modal-inner .block .srchdivshet_01 .searchbar-input-wrap{
+        height: 40px;
+        position: absolute;
+        padding-left: 5px;
+        width: 100%;
+        padding-right: 50px;
+    }
+    .shivam .my-SreachTMDetail .sheet-modal-inner .block .srchdivshet_01 .searchbar-icon{
+        width: 45px;
+        height: 40px;
+        margin-top: 0px;
+        float: right;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: inherit;
+        border-left: 1px solid #E0E0E0;
+    }
+    
+    .shivam .mobileTemplate .grid_divMain{
+        
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid{
+        display: block;
+        width: 100%;
+        background: #F0F0F0;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr{
+        width: 98%;
+        display: inline-block;
+        margin: 3px 0px;
+        border: 0px;
+        border-bottom: 0px;
+        margin-left: 1%;
+/*        box-shadow: 0px 1px 0px 0px #d3d3d3;*/
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+        background: #FFFFFF;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr:nth-last-child(1){
+        
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid.griddeladdrow tr:last-child{
+        
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid.griddeladdrow tr:last-child td{
+/*        border: 0px;*/
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr:last-child(1){
+        
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td{
+        display:block;
+        width: 16.6666%;
+        float: left;
+        position: relative;
+        padding: 5px 4px;
+        vertical-align: middle;
+        border-bottom: 1px solid #ECECEC;
+        color: #000;
+        font-size: 14px;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td:after{clear: both;}
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdtxtgrid{
+        background: #F5F5F5;
+        padding: 5px 0px;
+        white-space: nowrap;
+        height: 46px;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdcntrolgrid{
+/*        border-right: 1px solid #F0F0F0;*/
+        background: #FFF;
+         height: 46px;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td .fntinput{
+        width: 100%;
+        padding: 5px 5px;
+        height: 35px;
+        overflow: hidden;
+        line-height: normal;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td .fntinput.txtareagrid{
+        padding: 2px 5px;
+        line-height: normal;
+        padding-right: 35px;
+        height: 35.5px;
+        border: 0px;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td.textartd .textareainfo{
+        width: 35px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        text-align: center;
+        height: 30px;
+        padding-top: 5px;
+        color: #2875A7;
+    }
+    .shivam .dialog.Delgridrow.txtrainfo .dialog-inner .dialog-text{
+        overflow: auto;
+    }
+    .shivam .dialog.Delgridrow.txtrainfo {
+        width: 310px;
+        margin-left: -155px;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td.textartd .textareainfo .infoicn{
+        width: 35px;
+        font-size: 28px;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td .lbltxt{
+        padding: 5px 5px;
+        height: 29px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        font-weight: normal;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdtxtgrid.buttontd{
+        background: #FFFFFF;
+        width: 100%;
+        text-align: center;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdtxtgrid.buttontd .btn_01{
+        border: 0px;
+        width: 40%;
+        font-size: 16px;
+        outline: none;
+        color: #FFF;
+        border-radius: 3px;
+    }
+/*    Add Del Td css Starded Here*/
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdtxtgrid.AddDeltd{
+        background: #FFFFFF;
+        width: 100%;
+        padding-left: 10px;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdtxtgrid.AddDeltd .AddDelbtn{
+        border: 0px;
+        outline: none;
+        border-radius: 3px;
+        padding: 3px 15px;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdtxtgrid.AddDeltd .addbtn{
+       background-color: #3F78A7;
+       color: #fff;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdtxtgrid.AddDeltd .delbtn{
+       background: rgb(227, 108, 85);
+       color: #fff;
+    }
+    
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdtxtgrid.Checkradiotd{
+        background: #FFFFFF;
+        width: 100%;
+        padding: 0px;
+        padding-left: 10px
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdtxtgrid.Checkradiotd .item-checkbox{
+        width: 100%;
+padding:12px 0px;
+float: left;
+font-weight: normal;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdtxtgrid.Checkradiotd .item-checkbox .icon-checkbox{
+        margin: 0px;
+float: left;
+margin-right: 5px;
+margin-top: 0px;
+border: 2px solid #BCBCBC;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdtxtgrid.Checkradiotd .item-checkbox .checktxt{
+        float: left;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdcntrolgrid.srchgrid{
+        position: relative;
+    }
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdcntrolgrid.srchgrid .fntinput{
+        padding-right: 40px;
+    }
+    
+    .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdcntrolgrid.srchgrid .srchgridbtn{
+        position: absolute;
+        right: 0px;
+        width: 40px;
+        text-align: center;
+        top: 0px;
+        color: #ACA9A9;
+        font-size: 16px;
+        padding: 10px 0px;
+        z-index: 999999999;
+    }
+    @media only screen and (max-width:1020px){
+        .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdtxtgrid{width:40%;}
+        .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdcntrolgrid{width:60%;}
+    }
+     @media only screen and (max-width:590px){
+        .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdtxtgrid{width:30%;}
+        .shivam .mobileTemplate .grid_divMain .tblgrid tr td.tdcntrolgrid{width:70%; }
+    }

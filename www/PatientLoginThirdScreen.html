@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/panelstyle1.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/js/bootstrap.min.js">
+        <script  type="text/javascript"  src="js/jquery-1.9.1.js"></script>
+<!--        <script type="text/javascript" src="js/PatientLoginThirdScreen.js"></script>-->
+        <script src="js/main1.js"></script>
+         <script type="text/javascript" src="cordova.js"></script>
+        <script>
+	   
+            loadappjsfile("PatientLoginThirdScreen.js");
+//	      loadjsfile("mobile1.js");
+        </script>
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+<!--<script src="js/jquery.prevue.min.js"></script>-->
+<!--<link rel="stylesheet" href="css/font-awesome-eyes.css">-->
+        <!--        <script>
+                    function loginpage() {
+                        localStorage.entrance = '';
+                        location.href = 'index.html';
+                    }
+                </script>-->
+        <style>
+@font-face {
+                    font-family: 'Roboto';
+                    font-weight: 400;
+                    font-style: normal;
+                    src:
+                            url(css/fonts/roboto-regular-webfont.woff2) format('woff2'),
+                            url(css/fonts/roboto-regular-webfont.woff) format('woff'),
+                            url(css/fonts/roboto-regular-webfont.ttf) format('truetype');
+            }
+            @font-face {
+                    font-family: 'Roboto';
+                    font-weight: 500;
+                    font-style: normal;
+                    src:
+                            url(css/fonts/roboto-medium-webfont.woff2) format('woff2'),
+                            url(css/fonts/Roboto-Medium-webfont.woff) format('woff'),
+                            url(css/fonts/roboto-medium-webfont.ttf) format('truetype');
+            }
+            html,body{
+                background-color:transparent;
+                color: rgba(0,0,0,1);
+                font-family: Roboto, Arial, sans-serif;
+                font-size: 90%;
+                margin: 0 auto;
+                -webkit-font-smoothing: subpixel-antialiased;
+/*                background-color: #86A0B7;*/
+                color: rgba(0,0,0,1);
+                font-weight: normal;
+                margin: 0px;
+                -webkit-font-smoothing: subpixel-antialiased;
+            }
+ body {
+padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+padding-top: env(safe-area-inset-top); /* iOS 11.2 */
+}
+            footer{
+margin-bottom: constant(safe-area-inset-bottom); /* iOS 11.0 */
+margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
+}
+
+            body{
+                /*                background:#DDDEDE;*/
+                font-family: Roboto, Arial, sans-serif;              
+                /*                background: url(images/loginbg7.jpg) no-repeat center center fixed;
+                                -webkit-background-size: cover;
+                                -moz-background-size: cover;
+                                -o-background-size: cover;
+                                background-size: cover;*/
+                font-size: 13px;
+                line-height: 21px;
+                font-weight: 300;
+                color: #000;
+            }
+            .button{
+                /* width:100px; */
+                /*                background:#31708F;*/
+                background:#2A4863;
+                /*background: rgba(255,255,255,.4);
+                -webkit-background: rgba(255,255,255,.4);
+                -moz-background: rgba(255,255,255,.4);
+                -o-background: rgba(255,255,255,.4);*/
+                display:block;
+                margin:0 auto;
+                /* margin-top:1%; */
+                padding:10px;
+                /*                text-align:center;*/
+                text-decoration:none;
+                color:#fff;
+                cursor:pointer;
+                transition:background .3s;
+                -webkit-transition:background .3s;
+                font-size: 25px;
+                margin-right: -15px;
+                margin-left: -15px;
+            }
+            .patientimg{
+                font-size: 36px;
+            }
+/*            .divbtn{
+                width: 100%;
+                padding:10px 2px;
+                border-radius: 4px;
+                border-radius: 5px;
+                background-color:#F4F2F2;
+                background-image: linear-gradient(#fff 5%,#F4F2F2 95%);
+                border:none;
+                -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+                -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+                box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            }*/
+            .btnfont{color: #0F96D8; font-size: 10pt;}
+            .btnfonticon{padding: 7px;font-size: 52px; color: orange;}
+            .col-xs-6, .col-sm-4, .col-md-3, .col-lg-3{
+                margin: 5px 0px;
+                padding: 0px 10px;
+
+            }
+            .divcnt{width: 100%; font-size: 10pt; padding: 10px 5px; border-bottom: 1px solid #707070; cursor: pointer;}
+            /*.divcnt1{width: 100%; font-size: 10pt; padding: 15px 0px;cursor: pointer;color:#fff;}*/
+            .btn-info{background:transparent;}
+            a.close{
+                /* line-height: 1; */
+                font-size: 30px;
+                position: absolute;
+                top: 2%;
+                right: 2%;
+                text-decoration: none;
+                color: black;
+            }
+             /*.modal-body .form-group{margin-bottom: 5px;}*/
+             #myModal-remarks {
+                background-color: #524D4D;
+                opacity: 0.96;
+                filter: alpha(opacity=50);
+               }
+               .inner-addon { position: relative; }
+               /* style icon */
+               .inner-addon .glyphicon {
+                   position: absolute;
+                   padding:6px;
+                   /*color:#000;*/
+                   font-size: 16px;
+               }
+               /* align icon */
+               .left-addon .glyphicon  { left:15px;}
+               .right-addon .glyphicon {right: 16px;}
+               .lbleye
+               {
+                   color: #017FBD;
+                   background: #FFF;
+                   outline: none;
+                   border: 0px;
+               }
+               .glyphicon-eye-open 
+               {
+                   color:#017FBD;
+                   background: #FFF;
+                   outline: none;
+                   border: 0px;
+               }
+        </style>
+         <script type="text/javascript">
+        
+    </script>
+    </head>
+    <body>
+        <!--        <nav class="navbar navbar-inverse" style="position:fixed; z-index: 9999; border-radius: 0px; top: 0;border: none; width: 100%;">
+        
+                    <h2 class="button" style="margin:0px; font-size: 20px;height: 60px;">
+                                    <span class="fa fa-female patientimg"></span>
+                        <img src="images/woman.png" width="40" height="40">&nbsp;&nbsp;<label style="position: absolute;padding-top: 12px;">Mrs. Shakira Page</label>
+                        <button class="btn btn-info" style="border: none;float:right;margin-top: 5px;outline: none;">
+                        <span class="glyphicon glyphicon-cog" style="margin-right: 5px;font-size: 20px;" ></span>
+                        </button>
+                    </h2>
+        
+                </nav>
+        
+                <main class="cd-main-content1">
+        
+                    <a href="#0" class="cd-btn1" >
+                        <span class="glyphicon glyphicon-th-list" style="font-size:20pt;margin-top: -15px; color: #fff; font-weight: normal;"></span>
+                    </a>
+                     your content here
+                </main>
+        
+                <div class="cd-panel1 from-right1">
+                    <header class="cd-panel-header1">
+                        <h1 style="font-weight:normal;font-size: 18px; color: #fff;">Setting</h1>
+                        <a href="#0" class="cd-panel-close1">Close</a>
+                    </header>
+        
+                    <div class="cd-panel-container1">
+                        <div class="cd-panel-content1" id="divSecondDtls" style="padding-bottom:50px;">
+                            <div class="divcnt">
+                                <input type="button" value="Logout" class="btn btn-primary" onclick="loginpage()">
+                            </div>
+                        </div>  cd-panel-content
+                    </div>  cd-panel-container
+                </div>  cd-panel
+                <div class="container-fluid" style="padding:0px 15px;;margin-top: 70px;">
+        
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="divbtn btn btn-primary">
+                                <div class="btn-group btnfont btngrp  abttm">
+                                                                <span  class="btnfont">
+                 <span class="glyphicon glyphicon-user btnfonticon"></span>
+                                         </span>
+                                    <img src="images/woman.png" width="66" height="66">
+                                    <br>
+                                    <span class="btnfont">My Profile</span>
+        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="divbtn btn btn-primary">
+                                <div class="btn-group btnfont btngrp  abttm">
+                                                                <span  class="btnfont">
+             <span class="glyphicon glyphicon-user btnfonticon"></span>
+                                     </span>
+                                    <img src="images/doctor.png" width="66" height="66">
+                                    <br>
+                                    <span class="btnfont">My Doctors</span>
+        
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="divbtn btn btn-primary">
+                                <div class="btn-group btnfont btngrp  abttm">
+                                                                <span  class="btnfont">
+               <span class="glyphicon glyphicon-user btnfonticon"></span>
+                                       </span>
+                                    <img src="images/family-icon.png" width="66" height="66">
+                                    <br>
+                                    <span class="btnfont">My Family</span>
+        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="divbtn btn btn-primary">
+                                <div class="btn-group btnfont btngrp  abttm">
+                                                                <span  class="btnfont">
+               <span class="glyphicon glyphicon-user btnfonticon"></span>
+                                       </span>
+                                    <img src="images/myappointment.svg" width="66" height="66">
+                                    <br>
+                                    <span class="btnfont">My Appointments</span>
+        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="divbtn btn btn-primary">
+                                <div class="btn-group btnfont btngrp  abttm">
+                                                                <span  class="btnfont">
+        <span class="glyphicon glyphicon-user btnfonticon"></span>
+               </span>
+                                    <img src="images/book.png" width="66" height="66">
+                                    <br>
+                                    <span class="btnfont">Book Appointment</span>
+        
+                                </div>
+                            </div>
+                        </div>
+        
+        
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="divbtn btn btn-primary">
+                                <div class="btn-group btnfont btngrp  abttm">
+                                                                <span  class="btnfont">
+                                        <span class="glyphicon glyphicon-user btnfonticon"></span>
+                                                                </span>
+                                    <img src="images/emr.png" width="66" height="66">
+                                    <br>
+                                    <span class="btnfont">My EMR</span>
+        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="divbtn btn btn-primary">
+                                <div class="btn-group btnfont btngrp  abttm">
+                                                                <span  class="btnfont">
+                                        <span class="glyphicon glyphicon-user btnfonticon"></span>
+                                                                </span>
+                                    <img src="images/investigation.png" width="66" height="66">
+                                    <br>
+                                    <span class="btnfont">My Investigations</span>
+        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="divbtn btn btn-primary">
+                                <div class="btn-group btnfont btngrp  abttm">
+                                                                <span  class="btnfont">
+                                        <span class="glyphicon glyphicon-user btnfonticon"></span>
+                                                                </span>
+                                    <img src="images/prescrption.png" width="66" height="66">
+                                    <br>
+                                    <span class="btnfont">My Prescriptions</span>
+        
+                                </div>
+        
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="divbtn btn btn-primary">
+                                <div class="btn-group btnfont btngrp  abttm">
+                                                                <span  class="btnfont">
+                                        <span class="glyphicon glyphicon-user btnfonticon"></span>
+                                                                </span>
+                                    <img src="images/medical_report.png" width="66" height="66">
+                                    <br>
+                                    <span class="btnfont">Medical Reports</span>
+        
+                                </div>
+        
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="divbtn btn btn-primary">
+                                <div class="btn-group btnfont btngrp  abttm">
+                                                                <span  class="btnfont">
+                                        <span class="glyphicon glyphicon-user btnfonticon"></span>
+                                                                </span>
+                                    <img src="images/frendrefer.png" width="66" height="66">
+                                    <br>
+                                    <span class="btnfont">Refer To Friends</span>
+        
+                                </div>
+        
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                            <div class="divbtn btn btn-primary">
+                                <div class="btn-group btnfont btngrp  abttm">
+                                                                <span  class="btnfont">
+                                        <span class="glyphicon glyphicon-user btnfonticon"></span>
+                                                                </span>
+                                    <img src="images/communication1.jpeg" width="66" height="66">
+                                    <br>
+                                    <span class="btnfont">Communication</span>
+        
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+        <div id="divscreen" class="divbtn1">       
+        </div>
+        
+    </body>
+</html>

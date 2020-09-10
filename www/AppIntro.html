@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>App Intro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="cordova.js"></script>
+
+        <script src="js/bxslider.js" type="text/javascript"></script>
+        <link href="css/bxsliderforappintro.css" rel="stylesheet" type="text/css"/>
+        <script>
+            function getParameterByName(name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                        results = regex.exec(location.search);
+                return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+            }
+            $(document).ready(function () {
+                try {
+                    var htldo = window.innerHeight;
+                    var asgnmrgn = htldo / 2;
+                    $('#mydiv .imgnload').css("margin-top", parseInt(asgnmrgn) + -50 + "px");
+                } catch (err) {
+                }
+                try {
+                    document.addEventListener("backbutton", function (e) {
+                        exitapp();
+                    }, false);
+                } catch (error) {
+                }
+                var formid = getParameterByName('formid');
+                $.ajax({
+                    url: localStorage.appurl + '/admin/appIntro.jsp?webformid=' + formid,
+                    type: 'POST',
+                    success: function (responseText) {
+                        $('#divIntro').html(responseText);
+                        
+                        try {
+                            if (localStorage.appname === 'fernandez') {
+
+                            } else {
+                                StatusBar.backgroundColorByHexString("black-opaque");
+                            }
+                        } catch (err) {
+                            //alert(err);
+                        }
+                        try {
+                            setTimeout(function () {
+                                try{
+                                    navigator.notification.activityStop();
+                                }catch(err){
+                                    
+                                }
+                            }, 1500);
+                        } catch (err) {
+                        }
+                        try {
+                            setTimeout(function () {
+                                 try{
+                                    SpinnerDialog.hide();
+                                }catch(err){
+                                    
+                                }
+                            }, 1500);
+
+                        } catch (err) {
+                        }
+                    },
+                    error: function () {
+//                        alert("error");
+                    }
+                })
+            });
+
+            function exitapp() {
+
+                try {
+                    playBeep();
+                    var exitappname = "";
+                    if (localStorage.appname === 'fernandez') {
+                        exitappname = "Feranandez Hospital";
+                    } else if (localStorage.appname === 'patel') {
+                        exitappname = "Patel Hospital";
+                    } else if (localStorage.appname === 'bvc') {
+                        exitappname = "Bellevue Clinic";
+                    } else if (localStorage.appname === 'ankura') {
+                        exitappname = "Ankura Hospital";
+                    } else if (localStorage.appname === 'mah') {
+                        exitappname = "Maharaja Agrasen Hospital";
+                    } else if (localStorage.appname === 'kbh') {
+                        exitappname = "Kamalnayan Bajaj Hospital";
+                    } else if (localStorage.appname === 'kbh') {
+                        exitappname = "Zoi Hospitals";
+                    }else if (localStorage.appname === 'johal') {
+                        exitappname = "johal Hospital";
+                    }  else if (localStorage.appname === 'myemr') {
+                        exitappname = "My EHR";
+                    }  else {
+                        exitappname = "App";
+                    }
+                    navigator.notification.confirm(
+                            'Do you want to exit the app?', // message
+                            onConfirm, // callback to invoke with index of button pressed
+                            exitappname, // title
+                            ['No', 'Yes']         // buttonLabels
+                            );
+                } catch (err) {
+                    alert(err)
+                }
+
+            }
+            function playBeep() {
+                try {
+                    navigator.notification.beep(1);
+                } catch (error) {
+                }
+            }
+            function onConfirm(buttonIndex) {
+                try {
+                    if (buttonIndex === 2) {
+                        navigator.app.exitApp();
+                    }
+                } catch (error) {
+                }
+            }
+
+        </script>   
+    </head>
+    <body>
+        <div id="divIntro">
+            <div id="mydiv">
+                <img src="images/xda2.gif" class="imgnload" style="border-radius: 50%;">
+            </div>
+        </div>
+    </body>
+</html>

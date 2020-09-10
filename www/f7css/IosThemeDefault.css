@@ -1,0 +1,105 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29 Aug, 2018, 10:03:18 AM
+    Author     : shivam
+*/
+
+.ios .shivam{
+    
+}
+.ios .shivam .navbar-inner{
+    padding: 0px;
+}
+.ios .shivam .navbar .title{
+    left: 0px !important;
+    width: 100%;
+text-align: left;
+color: #FFF;
+font-size: 20px;
+font-weight: normal;
+}
+.ios .shivam .navbar .title label{font-weight: normal;}
+.ios .shivam .navbar .right{
+    padding-left: 0px;
+}
+.ios .shivam .navbar .right .switch{
+   color: #FFF;
+    font-size: 14px;
+    width: 40px;
+    text-align: center;
+    display: block;
+    padding: 0px;
+    padding-top: 3px;
+}
+.ios .shivam .footer_All{
+    
+}
+.ios .icon-back {
+background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23ffffff'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+
+.ios .shivam .navbar a.icon-only{
+    color: #FFF;
+}
+.ios .shivam .page-content{
+    background: #FFFFFF;
+}
+.ios .shivam .dialog.Delgridrow .dialog-inner .dialog-title{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.ios .shivam .sheet-modal{
+    background: #FFFFFF;
+}
+.ios .shivam .my-SreachTMDetail .toolbar .toolbar-inner .left{
+    color: #FFFFFF;
+}
+.ios .shivam .my-SreachTMDetail .toolbar .toolbar-inner .right .sheet-close{
+    color: #FFF;
+}
+.ios .shivam .my-SreachTMDetail .sheet-modal-inner .block .srchdivshet_01 .searchbar-icon{
+    width: 45px;
+height: 44px;
+margin-top: 0px;
+float: right;
+position: absolute;
+top: 0px;
+right: 8px;
+left: inherit;
+border-left: 1px solid #E0E0E0;
+background-size: 18px 18px;
+}
+.ios .shivam .navbar:after{
+    height: 0px;
+}
+.ios .shivam .subnavbar{
+    display: block;
+width: 100%;
+background: #FFFFFF;
+}
+.ios .shivam .subnavbar:after{
+    height: 0px;
+}
+.ios .list ul:before{height: 0px;}
+.ios .navbar~.page-with-subnavbar:not(.no-navbar) .page-content, .ios .navbar~:not(.no-navbar) .subnavbar~* .page-content, .ios .navbar~:not(.no-navbar) .subnavbar~.page-content, .ios .page-with-subnavbar .navbar~.page-content{
+    padding-top: 100px;
+}
+/*.ios .shivam .searchbar:after{
+    height: 0px;
+}
+.ios .shivam .searchbar-input-wrap{
+    height: 40px;
+}
+.ios .shivam .searchbar{
+    height: 48px;
+}*/
+
+/*color theme Css Started Here */
+.ios .color-theme-red .navbar, .md .color-theme-red.navbar {
+    background: #f44336;
+}

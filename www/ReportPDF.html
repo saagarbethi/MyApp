@@ -1,0 +1,60 @@
+<div class ="page Pdfreport">
+    <div class="navbar">
+        <div class="navbar-inner sliding">
+            <div class="left">                </div>
+            <div class="title" id="divReportName">
+                <label class="formname" >Report Pdf</label>
+            </div>
+            <div class="right">  </div>
+        </div>
+    </div>  
+    <!--    Started Inner Data-->
+    <div class="page-content page-error" style="">
+        <div class="pdfdiv" id="divPdf" align="center" style="size: 50%;">
+            <img src="" id="imgreport" class="img_01" alt="">
+
+        </div>
+        <div class="ErrorReport" style="display: none;">
+            <div class="firstrow">
+                <label class="lblreperr">Report Error Page</label>
+            </div>
+            <section class="content">
+
+                <div class="error-page">
+                    <div class="error-content">
+                        <h3>
+                            <i class="fa fa-warning text-yellow"></i> Oops! something went wrong while displaying this Report</h3>
+                        <p class="para1">
+                            We could not find the report you were looking for.
+                            Meanwhile, you may <a onclick="logout()" style="cursor: pointer"><b>return to dashboard</b></a>.
+                        </p>
+                        <div class="para2">
+                            <label class="lblerror" style="">Error Details</label><br>
+                            <div id="error" class="Errdiv" style="padding: 10px;">error : java.io.FileNotFoundException: /home/shivam/apache-tomcat-8.0.9/ExtRerortFiles/CREDIT_ADMISSIONS.jasper </div>
+                            <label class="lblerror">Complete Error Details</label><br>
+                            <div id="cerror" class="Errdiv" style="padding: 10px;"> net.sf.jasperreports.engine.JRException: java.io.FileNotFoundException: /home/shivam/apache-tomcat-8.0.9/ExtRerortFiles/CREDIT_ADMISSIONS.jasper<br>SELECT   ipinfo.ipno, ipinfo.regdt, ipinfo.regtm, ipinfo.NAME, ipinfo.age,
+                                DECODE (ipinfo.sex, 0, `Female`, `Male`) AS sex, REFERRALS.NAME AS ORG,special.SPECIALISATION,ipinfo.casesheetnumber uno
+                                FROM ip.ipinfo, ADMIN.REFERRALS, ip.special
+                                WHERE ipinfo.sourceid = REFERRALS.sourceid and ipinfo.SPECIALISATION = special.SPID 
+                                and ipinfo.regdt between TO_DATE (`</div>
+                        </div>
+                    </div>
+                </div><!-- /.error-page -->
+            </section>
+        </div>
+    </div>
+    <div class="footer_All" style="">
+        <div class="left">
+            <a href="#" class="link_ftr link back" style="">
+                <i class="icon icon-back"></i>
+            </a>
+        </div>
+        <div class="title">
+        </div>
+        <div class="right">
+            <a href="#" class="link_ftr setting" onclick="Setting()">
+                <i class="material-icons">settings</i>
+            </a>
+        </div>        
+    </div>
+</div>

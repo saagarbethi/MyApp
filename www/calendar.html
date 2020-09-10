@@ -1,0 +1,230 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+         <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="js/colorchanges.js"></script>
+        <script type="text/javascript" src="js/cordova.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css"> 
+<!--        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
+            <link href="css/FontFamillyloading.css" rel="stylesheet" type="text/css"/>
+            <link href="css/settingsCSS.css" rel="stylesheet" type="text/css"/>
+             <link href="css/calendarmobilecss.css" rel="stylesheet" type="text/css"/>
+<!--    <link href="themeCSS/styles.css?version=1" rel="alternate stylesheet" type="text/css" title="orange"/>
+     <link rel="alternate stylesheet" type="text/css" title="green" href="themeCSS/stylesGreentheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="blue" href="themeCSS/stylesBluetheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="teal" href="themeCSS/stylesTealtheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="yellow" href="themeCSS/stylesdarkorangetheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="gray" href="themeCSS/stylesGraytheme.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="peach" href="themeCSS/stylesPeach.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="pink" href="themeCSS/stylesPink.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="purple" href="themeCSS/stylesPurple.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="red" href="themeCSS/stylesRed.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="skyblue" href="themeCSS/stylesSkyblue.css?version=1">
+        <link rel="alternate stylesheet" type="text/css" title="yellownew" href="themeCSS/stylesYellow.css?version=1">-->
+    
+           <script>
+           var cssFilesArr = ["styles.css", "stylesGreentheme.css",  
+"stylesBluetheme.css", "stylesTealtheme.css",  
+"stylesdarkorangetheme.css", "stylesGraytheme.css", "stylesPeach.css",  
+"stylesPink.css", "stylesPurple.css", "stylesRed.css",  
+"stylesSkyblue.css", "stylesYellow.css"];
+   var cssFilesTitle = ["orange", "green", "blue", "teal", "yellow",  
+"gray", "peach", "pink", "purple", "red", "skyblue", "yellownew"];
+function loadcssfiles(cssFilesArr){
+for(var x = 0; x < cssFilesArr.length; x++) {
+   var fileref=document.createElement("link");
+   fileref.setAttribute("rel", "stylesheet");
+   fileref.setAttribute("type", "text/css");
+   fileref.setAttribute("title", cssFilesTitle[x]);
+cssFilesArr[x] = localStorage.ipadrs + "/themeCSS/" + cssFilesArr[x];
+   fileref.setAttribute("href", cssFilesArr[x]);
+   document.getElementsByTagName("head")[0].appendChild(fileref);
+
+  }
+  var i, link_tag ;
+  var isExists = 0;
+     var css_title = localStorage.themecolor;
+     if(css_title != undefined && css_title != ""){
+         for (i = 0, link_tag = document.getElementsByTagName("link"); i < link_tag.length ; i++ ) {
+             if ((link_tag[i].rel.indexOf( "stylesheet" ) !== -1) &&
+                 link_tag[i].title) {
+                 link_tag[i].disabled = true ;
+                 if (link_tag[i].title === css_title) {
+                     link_tag[i].disabled = false ;
+                     isExists = 1;
+                 }
+             }
+         }
+     }
+     if(isExists == 0){
+         var color = localStorage.themecolor;
+         color = color.replace("%23","#");
+         //confirm(color);
+         chnagecssnew(color);
+         //confirm(cssdata);
+     }
+}
+
+$(document).ready(function () {
+                loadcssfiles(cssFilesArr);
+                });
+        </script>
+        <script>
+        $(document).ready(function(){
+            $('#btnOk').click(function(){
+               localStorage.fromdt = $('#txtFrom').val();
+               localStorage.todt = $('#txtTo').val();
+               location.href = 'dashboardmenu.html';
+            });
+//            var h5 = window.innerHeight;
+//             if(h5>200){
+//                 debugger;
+//                 alert("hi");
+//                  h1=window.innerHeight;
+//                 var frmht = $(".frmdivht").height();
+//                    var final=h1-frmht;
+//                    var final1=final/2;
+//                    $('.cntnrnagn').css("margin-top",parseInt(final1)+-80+"px"); 
+//             }   
+        });
+         function statusbar() {
+try{
+                   if(localStorage.devicetype.toLowerCase()==='iphone' || localStorage.devicetype.toLowerCase()==='ipad'){
+//                         confirm(localStorage.devicetype); 
+                        $('.iosstatusbar').css('display','block');
+                        $('.calhead').css('min-height','60px');
+                    }
+    }catch(err){}
+    };
+    </script>
+    <style>
+        .calbtnsub{border-radius: 25px;}
+    </style>
+    </head>
+    <body onload="statusbar();">
+        <nav class="navbar navbar-inverse header calhead">
+             <div class="col-md-12 iosstatusbar"> </div>
+            <div class="container-fluid">
+              <div class="navbar-header">
+                    <label class="headrlbl">CALENDER - Date Picking</label>
+              </div>
+            </div>
+        </nav>
+        <div class="container-fluid cntnrnagn" style="margin-bottom: 10px; z-index: -9;">
+            <form action="" class="form-horizontal frmdivht"  role="form">
+                <fieldset>
+                    <div class="form-group">
+                        <div class="row">
+<!--            Row First-->
+                            <div class="col-xs-12 col-lbl pad row_001">
+                                 <label for="dtp_input2" class="control-label lbl1">From Date</label>
+                            </div>
+<!--            Row Second-->
+                            <div class="col-xs-12 col-dt pad row_001">
+                                <div class="input-group date form_date Date2" data-date="" data-date-format="dd/mm/yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                    <input class="inputtxt" size="16" type="text" value="" id="txtFrom" readonly>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                    <label class="lblcal"><span class="glyphicon glyphicon-calendar spncalicn"></span></label>
+                                    <span class="input-group-addon tempspan"><span class="glyphicon glyphicon-calendar"></span></span>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="row">
+<!--            Row Third-->
+                            <div class="col-xs-12 pad col-lbl row_001">
+                                <label for="dtp_input2" class="control-label lbl1">To Date</label>
+                            </div>
+<!--            Row Forth-->
+                            <div class="col-xs-12 col-dt pad row_001">
+                                <div class="input-group date form_date Date2" data-date="" data-date-format="dd/mm/yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                    <input class="inputtxt" size="16" type="text" value=""   id="txtTo" readonly>
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                    <label class="lblcal"><span class="glyphicon glyphicon-calendar spncalicn"></span></label>
+                                    <span class="input-group-addon tempspan"><span class="glyphicon glyphicon-calendar"></span></span>
+                                </div>
+                            </div>
+                        </div>
+<!--            Row Fifth-->
+                    <div class="row">
+                        <div class="col-sm-12 pad row_001" style="margin-top: 20px;">
+                                                    <button type="button" id="btnOk" class="btn-primary btn-block btn-flat calbtnsub">Submit</button>
+                                                </div>
+                    </div>
+                        </div>
+                </fieldset>
+            </form>
+        <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="bootstrap/bootstrap-datetimepicker.js"></script>
+        <script type="text/javascript">
+            $('.form_datetime').datetimepicker({
+                //language:  'fr',
+                weekStart: 1,
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                startView: 2,
+                forceParse: 0,
+                showMeridian: 1
+            });
+            $('.Date2').datetimepicker({
+                language:  'fr',
+                weekStart: 1,
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                startView: 2,
+                minView: 2,
+                forceParse: 0
+            });
+            $('.form_time').datetimepicker({
+                language:  'fr',
+                weekStart: 1,
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                startView: 1,
+                minView: 0,
+                maxView: 1,
+                forceParse: 0
+            });
+            $('.form_time').datetimepicker({
+                
+            });
+        $('#txtFrom').val(localStorage.fromdt);
+        $('#txtTo').val(localStorage.todt);
+        var i, link_tag ;
+    var css_title = localStorage.themecolor;
+    if(css_title != undefined && css_title != ""){
+        for (i = 0, link_tag = document.getElementsByTagName("link") ;i < link_tag.length ; i++ ) {
+            if ((link_tag[i].rel.indexOf( "stylesheet" ) !== -1) &&
+                link_tag[i].title) {
+                link_tag[i].disabled = true ;
+                if (link_tag[i].title === css_title) {
+                    link_tag[i].disabled = false ;
+                }
+            }
+            //set_cookie( style_cookie_name, css_title,style_cookie_duration );
+        }
+    }
+        </script>
+        <footer class="setfooter">
+<!--           <button type="button" class="btn btn-default" style="cursor: pointer; font-size: 12pt; float: left;padding-left: 10px;">
+         <span class="glyphicon  glyphicon-circle-arrow-left"></span>
+          </button>  -->
+<!--           <button type="button" class="btn btn-default" style="float: right;padding-right: 10px;cursor: pointer; font-size: 12pt;">
+          <span class="glyphicon glyphicon-cog" ></span>
+           </button>-->
+        </footer>
+        </div>
+    </body>
+</html>

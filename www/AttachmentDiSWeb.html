@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Attachment Pop up</title>
+        <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+        <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js" type="text/javascript"></script>
+              <style type="text/css">
+            .container-fluid{padding:0px;}
+            .row{margin: 0px;}
+            .pd{padding: 0px;}
+            .AttachmentPopup{display: none;}
+            .heading{
+                margin: 0px;
+                padding-left: 20px;
+                font-size: 20px;
+            }
+            .Attacheader{
+                background: rgb(255,219,212);
+                color: #000;
+                padding: 3px;
+            }
+            .clremicon{}
+            .Attmain_001{
+                float: left;
+                width: 20%;
+            }
+            .marinerdiv{
+                position: relative;
+                background: #FFF;
+                padding: 3px;
+                margin: 3px;
+                box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+            }
+            body{
+/*                background-color: #FCFCFC;*/
+                background-color: #F8F8F8;
+                background-color: #ecf0f5;
+            }
+            .imagecontainer{
+                width: 60px;
+                height:55px;
+                text-align: center;
+                vertical-align: middle;
+                display: table-cell;
+            }
+            .Datacontainer{
+                display: table-cell;
+                vertical-align: middle;
+                width: 85%;
+                z-index: -99;
+                padding-left:5px;
+            }
+            
+            .updadelcotainr{
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                width: 50px;
+                background: #FFF;
+            }
+            .btnattach{margin: 8px;float: right;}
+            .btnclos_0a{
+                float: right;
+                padding: 0px;
+                width: 50px;
+                height: 30px;
+                border-radius: 0px;
+                background: transparent;
+                border: 0px;
+                color: #888282;
+                font-size: 18px;
+                outline: none;
+            }
+            .frmuplod{
+                width: auto;
+                display: inline-block;
+                padding-left: 10px;
+            }
+            .lblatch{
+                margin: 0px;
+                padding: 5px;
+                font-size: 14px;
+                font-weight: normal;
+                color: #000;
+            }
+            .txtsel1{
+                width: 110px;
+                border: 1px solid #d3d3d3;
+                background: #FFF;
+                padding: 3px;
+                outline: none;
+                padding-left:5px;
+            }
+            .attacimg{width:50px;height:50px;}
+            .docdetails{
+                margin: 0px;
+                width: 100%;
+                font-weight: normal;
+                font-size: 13px;
+                padding-right: 50px;
+                line-height: normal;
+            }
+            .catagirysrch{position: relative; }
+            .srchtxt{
+                padding-left: 10px;
+                width: 95%;
+                height: 35px;
+                outline: none;
+                border: 1px solid #E4E4E4;
+                border-radius: 3px;;
+            }
+            .upload{
+                background: linear-gradient(rgb(253, 138, 115) 0%, rgb(224, 65, 34) 100%);
+                border: 0px;
+                color: #FFF;
+                font-size: 14px;
+                padding: 5px 15px;
+                outline: none;
+                cursor: pointer;
+                text-transform: capitalize;
+            }
+            .btnserch{
+               position: absolute;
+                right: 15px;
+                height: 32px;
+                width: 40px;
+                padding: 5px;
+                background: #FFF;
+                font-size: 20px;
+                outline: none;
+                border: 0px;
+                color: #CCC;
+                top: 2px;
+                border-left: 1px solid #E4E4E4;
+            }
+            .rowsnd{
+                background: #FFF;
+                padding: 5px;
+                border-bottom: 1px solid #EEEEEE;
+            }
+            .btmEdit{
+               border: 0px;
+                outline: none;
+                font-size: 12px;
+                color: #B8B8B8;
+                float: left;
+                padding: 5px 2px;
+                width: 100%;
+                background: #FCFCFC;
+                border-bottom: 1px solid #F3F3F3;
+                margin-bottom: 0px;
+            }
+            .sndblk_01{float: left;}
+            .inpopup_001{}
+            
+             @-webkit-keyframes bummer {
+
+                100% {
+                    transform: scale(1,1);
+                }
+            }
+            .btnedidel{
+                width: 100%;
+                border-radius: 0px;
+                outline: none;
+                background: #FFF;
+                border: 0px;
+                padding: 7px 5px;
+                border-bottom: 1px solid #F8F8F8;
+            }
+            .btnedidel:hover{
+                background: #F8F8F8;
+            }
+            .btnedidel:active{
+                 outline: none;
+                 border: 0px;
+            }
+            .btnedidel:focus{
+                 outline: none;
+                 border: 0px;
+            }
+            .selcontrl{
+                width:100%;
+                padding: 5px;
+                background: #FFF;
+                outline: none;
+                border: 1px solid #EEEEEE;
+                border-radius: 2px;
+            }
+            .selcontrl:hover{
+                border: 1px solid #B4BCF8;
+                cursor:pointer;
+            }
+            .selcontrl:focus, .selcontrl:active{
+                border: 1px solid #B4BCF8;
+                cursor:pointer;
+            }
+            
+            .AttachmentPopup{
+                 position: relative;
+                -o-animation:  mymove .5s infinite;
+                -moz-animation:  mymove .5s infinite;
+                -webkit-animation:  mymove .5s infinite;
+                animation: mymove .5s infinite;
+                -moz-animation-iteration-count:1;
+                -o-animation-iteration-count:1;
+                -webkit-animation-iteration-count:1;
+                animation-iteration-count:1;
+                -o-animation-fill-mode: forwards;
+                -moz-animation-fill-mode: forwards;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+            }
+             @-webkit-keyframes  mymove {
+                0% { left:90%; right:0%;}
+                90% { left:0px; right:0px;}
+            }
+            @keyframes  mymove {
+                0% { left:90%; right:0%;}
+                90% { left:0px; right:0px;}
+            }
+            .eddelicon{float: left;}
+            .btmEdit:hover{background: #F8F8F8;}
+            .edit{color: #0000D6;}
+            .del1{color: rgb(245, 17, 17);}
+            .txticn{
+                float: left;
+                padding-left: 5px;
+            }
+        </style>
+        <script type="text/javascript">
+            function Attachment(){
+                $(".AttachmentPopup").show();
+                 $(".btnattach").hide();
+            }
+            function closeattach(){
+                $(".btnattach").show();
+                 $(".AttachmentPopup").hide();
+                 
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 pd">
+                    <button type="button" class="btn btn-primary btnattach" onclick="Attachment()">Attachment</button>
+                </div>
+            </div>
+            <div class="AttachmentPopup">
+<!--             Heading Row OR  First Row-->
+                <div class="row Attacheader">
+                    <div class="col-xs-12 col-sm-12 pd">
+                        <label class="heading">Attachment</label>
+                        <button type="button" class="btnclos_0a" onclick="closeattach()"><span class="glyphicon glyphicon-remove clremicon"></span> </button>
+                    </div>
+                </div>  
+<!--New row-->
+<div class="row rowsnd">
+    <div class="col-xs-12 col-sm-12 pd">
+        <div class="sndblk_01">
+            <label class="lblatch"> Type</label>
+            <input type="text" class="txtsel1" >
+        </div>
+        <div class="sndblk_01">
+            <label class="lblatch"> Categorization</label>
+            <select class="txtsel1">
+               <option>Select</option>
+           </select>
+        </div>
+        <div class="sndblk_01">
+            <label class="lblatch"> File Name</label>
+            <input type="text" class="txtsel1" >
+        </div>
+        <div class="sndblk_01">
+            <label class="lblatch"> File Date</label>
+            <input type="text" class="txtsel1" >
+        </div>
+       
+        <div>
+            <form class="frmuplod">
+            <input type="file" name="file" id="file" style="; font-weight: normal;">
+            <div id="upload" style="color:red;"></div>
+         </form>
+        <input style="; font-weight: normal;" class="upload" type="button" value="Upload" onclick="fileUpload(this.form, './AttachDocuments', 'upload');return false;">
+
+        </div>
+        
+       
+    </div>
+    
+    
+</div>
+<!--New row-->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 pd">
+                    <div class="Attmain_001">
+                        <div class="marinerdiv">
+                            <div class="imagecontainer">
+                            <img class="attacimg" src="images/392.png" alt=""/>
+                        </div>
+                        <div class="Datacontainer">
+                             <label class="docdetails">Sr No.</label>
+                            <label class="docdetails">File Name</label>
+                        </div>
+                        <div class="updadelcotainr">
+                            <button type="button" class="btmEdit edit" value="0">
+                                <span class="glyphicon glyphicon-edit eddelicon"></span>
+                                <span class="txticn">Edit</span>
+                            </button>
+                            <button type="button" class="btmEdit del1" value="0">
+                                <span class="glyphicon glyphicon-trash eddelicon"></span>
+                                <span class="txticn">Del</span>
+                            </button>
+                        </div>
+                        <div class="catagirysrch">
+                                <select class="selcontrl">
+                                    <option>Select</option>
+                                     <option>Option1</option>
+                                </select>
+                        </div>
+                    </div>
+                    </div>
+                    
+<!--                    2nd-->
+ <div class="Attmain_001">
+                        <div class="marinerdiv">
+                            <div class="imagecontainer">
+                            <img class="attacimg" src="images/392.png" alt=""/>
+                        </div>
+                        <div class="Datacontainer">
+                             <label class="docdetails">Sr No.</label>
+                            <label class="docdetails">File Name</label>
+                        </div>
+                        <div class="updadelcotainr">
+                            <button type="button" class="btmEdit edit" value="0">
+                                <span class="glyphicon glyphicon-edit eddelicon"></span>
+                                <span class="txticn">Edit</span>
+                            </button>
+                            <button type="button" class="btmEdit del1" value="0">
+                                <span class="glyphicon glyphicon-trash eddelicon"></span>
+                                <span class="txticn ">Del</span>
+                            </button>
+                        </div>
+                        <div class="catagirysrch">
+                                <select class="selcontrl">
+                                    <option>Select</option>
+                                     <option>Option1</option>
+                                </select>
+                        </div>
+                    </div>
+                    </div>
+<!--3rd-->
+<div class="Attmain_001">
+                        <div class="marinerdiv">
+                            <div class="imagecontainer">
+                            <img class="attacimg" src="images/392.png" alt=""/>
+                        </div>
+                        <div class="Datacontainer">
+                             <label class="docdetails">Sr No.</label>
+                            <label class="docdetails">File Name</label>
+                        </div>
+                        <div class="updadelcotainr">
+                            <button type="button" class="btmEdit edit" value="0">
+                                <span class="glyphicon glyphicon-edit eddelicon"></span>
+                                <span class="txticn">Edit</span>
+                            </button>
+                            <button type="button" class="btmEdit del1" value="0">
+                                <span class="glyphicon glyphicon-trash eddelicon"></span>
+                                <span class="txticn">Del</span>
+                            </button>
+                        </div>
+                        <div class="catagirysrch">
+                                <select class="selcontrl">
+                                    <option>Select</option>
+                                     <option>Option1</option>
+                                </select>
+                        </div>
+                    </div>
+                    </div>
+
+<!--4Th-->
+<div class="Attmain_001">
+                        <div class="marinerdiv">
+                            <div class="imagecontainer">
+                            <img class="attacimg" src="images/392.png" alt=""/>
+                        </div>
+                        <div class="Datacontainer">
+                             <label class="docdetails">Sr No.</label>
+                            <label class="docdetails">File Name</label>
+                        </div>
+                        <div class="updadelcotainr">
+                            <button type="button" class="btmEdit edit" value="0">
+                                <span class="glyphicon glyphicon-edit eddelicon"></span>
+                                <span class="txticn">Edit</span>
+                            </button>
+                            <button type="button" class="btmEdit del1" value="0">
+                                <span class="glyphicon glyphicon-trash eddelicon"></span>
+                                <span class="txticn">Del</span>
+                            </button>
+                        </div>
+                        <div class="catagirysrch">
+                                <select class="selcontrl">
+                                    <option>Select</option>
+                                     <option>Option1</option>
+                                </select>
+                        </div>
+                    </div>
+                    </div>
+
+<!--5th-->
+<div class="Attmain_001">
+                        <div class="marinerdiv">
+                            <div class="imagecontainer">
+                            <img class="attacimg" src="images/392.png" alt=""/>
+                        </div>
+                        <div class="Datacontainer">
+                             <label class="docdetails">Sr No.</label>
+                            <label class="docdetails">File Name</label>
+                        </div>
+                        <div class="updadelcotainr">
+                            <button type="button" class="btmEdit edit" value="0">
+                                <span class="glyphicon glyphicon-edit eddelicon"></span>
+                                <span class="txticn">Edit</span>
+                            </button>
+                            <button type="button" class="btmEdit del1" value="0">
+                                <span class="glyphicon glyphicon-trash eddelicon"></span>
+                                <span class="txticn">Del</span>
+                            </button>
+                        </div>
+                        <div class="catagirysrch">
+                                <select class="selcontrl">
+                                    <option>Select</option>
+                                     <option>Option1</option>
+                                </select>
+                        </div>
+                    </div>
+                    </div>
+
+<!--6th-->
+
+                </div>
+            </div>
+<!--New row-->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 pd">
+                    
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>

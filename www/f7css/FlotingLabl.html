@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+            font-size: 0.75em;
+            color: #8e44ad;
+            top: -2.25rem;
+            -webkit-transition: all 0.125s ease;
+            transition: all 0.125s ease;
+        }
+        .styled-input {
+          float: left;
+          width: 33.3333%;
+          margin: 2rem 0 1rem;
+          position: relative;
+        }
+        .styled-input label {
+          color: #999;
+          padding: 1rem;
+          position: absolute;
+          top: 0;
+          left: 0;
+          -webkit-transition: all 0.25s ease;
+          transition: all 0.25s ease;
+          pointer-events: none;
+        }
+.styled-input.wide { width: 100%; }
+
+        input,textarea {
+          padding: 1rem 1rem;
+          border: 0;
+          width: 100%;
+          font-size: 1rem;
+        }
+
+        input ~ span,
+        textarea ~ span {
+          display: block;
+          width: 0;
+          height: 3px;
+          background: #8e44ad;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          -webkit-transition: all 0.125s ease;
+          transition: all 0.125s ease;
+        }
+
+        input:focus,
+        textarea:focus { outline: 0; }
+
+        input:focus ~ span,
+        textarea:focus ~ span {
+          width: 100%;
+          -webkit-transition: all 0.075s ease;
+          transition: all 0.075s ease;
+        }
+
+        textarea {
+          width: 100%;
+          min-height: 15em;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="styled-input">
+            <input type="text" required />
+            <label>Name</label>
+            <span></span> 
+        </div>
+        <div class="styled-input wide">
+          <textarea required></textarea>
+          <label>Message</label>
+          <span></span> </div>
+            </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <script src="phonegap.js" type="text/javascript"></script>
+        <script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+        <script>
+            document.addEventListener("deviceready", function onDeviceReady() {
+                try {
+                    var backgroundcolor = "", apppath = "",apppage="";
+                    cordova.getAppVersion.getAppName(function (name) {
+                        if (name === "PatelHospital") {
+                            backgroundcolor = "black-opaque";
+                            apppath = "http://patel.myemrhub.com/";
+                            apppage = "patel_index.html";
+                            localStorage.appname = "patel";
+                        } else if (name === "MAH") {
+                            apppath = "http://mah.myemrhub.com/";
+                            apppage = "mah_index.html";
+                            localStorage.appname = "mah";
+                        }
+                        else if (name === "Kamalnayan Bajaj Hospital") {
+                            apppath = "http://kbh.myemrhub.com/";
+                            apppage = "kbh_index.html";
+                            localStorage.appname = "kbh";
+
+                        } else if (name === "Johal Hospital") {
+                            apppath = "http://johal.myemrhub.com/";
+                            apppage = "johal_index.html";
+                            localStorage.appname = "johal";
+
+                        } else if (name === "Fernandez") {
+                            apppath = "http://fh.myemrhub.com/";
+                            apppage = "fh_index.html";
+                            localStorage.appname = "fernandez";
+
+                        } else if (name === "Belle VUE Clinic") {
+                            apppath = "http://bvc.myemrhub.com/";
+                            apppage = "belve_index.html";
+                            localStorage.appname = "bvc";
+
+                        } else if (name === "Ankura Hospitals") {
+                            apppath = "http://ankura.myemrhub.com/";
+                            apppage = "ankura_index.html";
+                            localStorage.appname = "ankura";
+                        } else if (name === "Mehta Hospitals") {
+                            apppath = "http://mehta.myemrhub.com/";
+//                            apppath = "http://123.201.142.71:9999/MEHTAST";
+//                            apppage = "mehta_index.html";
+                            localStorage.appname = "mehta";
+                        } else if (name === "SMF Hospital") {
+                            apppath = "http://smf.myemrhub.com/";
+//                            apppath = "http://180.151.69.2:9999/shivam";
+//                            apppage = "mehta_index.html";
+                            localStorage.appname = "smf";
+                        }
+                        else {
+                            alert("No app with name " + name);
+                            return;
+                        }
+                        
+                        localStorage.newappath = apppath;
+                        localStorage.newapppage =apppage;
+                        localStorage.apporginalname =name;
+                        location.href = "appintronew.html";
+                    });
+                } catch (err) {
+                    //        alert(err);
+                }
+            });
+            function loading(){
+                localStorage.newappath = "http://localhost:9999/fhnew/";
+//                localStorage.newapppage = "mehta_index.html";
+                localStorage.appname = "fernandez";
+                localStorage.apporginalname ="Fernandez Hospitals";
+                location.href = "appintronew.html";
+              
+            }
+            //comment this function calling while uploading
+      //  loading();
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
